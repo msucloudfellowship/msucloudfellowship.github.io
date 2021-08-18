@@ -1,0 +1,8 @@
+site_name: MSU Cloud Fellowship
+nav:
+    - Home: index.md
+    - workshop 1: workshop1.md
+theme: 
+  name: material
+  palette:
+    primary: indigo
