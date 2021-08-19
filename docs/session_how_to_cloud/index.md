@@ -1,4 +1,4 @@
-# How Does the Cloud Work?
+# What is the cloud and how does it work?
 
 ## Introduction
 
@@ -6,7 +6,10 @@ When many people think of "cloud computing" they think of computers in the cloud
 
 ## Pre-session activity:
 
-  * TBD: links on "All about Cloud" page
+Reading
+
+  - [What's the difference between cloud and virtualization?](https://www.redhat.com/en/topics/cloud-computing/cloud-vs-virtualization) from RedHat, a Linux Operating system company
+
   
 ## Workshop
 

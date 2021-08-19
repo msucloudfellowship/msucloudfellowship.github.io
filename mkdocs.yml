@@ -12,3 +12,5 @@ theme:
     - navigation.sections
   palette:
     primary: black
+markdown_extensions:
+  - attr_list
