@@ -2,7 +2,7 @@
 
 Hands-on workshop to build a Virtual Machine and use it to compute something
 
-## Pre-requsities
+## Pre-session activity:
 
   * Read tutorials and liks on our  "All about Cloud" page
   * Microsoft Azure account provisioned by workshop managers for this workshop

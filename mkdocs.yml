@@ -1,8 +1,11 @@
 site_name: MSU Cloud Fellowship
 nav:
     - Home: index.md
-    - workshop 1: workshop1.md
+    - Outline:
+      - 1. Introduction: session-introduction/index.md
+      - 2. How does the cloud work?: session_how_to_cloud/index.md
+    - People: people.md 
 theme: 
   name: material
   palette:
-    primary: indigo
+    primary: black

@@ -11,5 +11,25 @@ The MSU Cloud Fellowship is cross disciplinary program produced by MSU’s Insti
 
 ## Background
 
-MSU doctoral students and postdoctoral researchers are invited to apply in the summer and approximately 18 are select each year.  The program started in 2021.   If you find this website, please check back in the Summer of 2022 for announcements for invitation to participate for MSU grads and postdocs.  
+MSU doctoral students and postdoctoral researchers are invited to apply in the summer and approximately 18 are select each year.  The program started in 2021.   If you find this website, please check back in the Summer of 2022 for announcements for invitation to participate for MSU grads and postdocs.    Here is the [Previous 2021 Invitation (now closed)](https://icer.msu.edu/about/announcements/msu-cloud-computing-fellowship-application-deadline-friday-july-30-2021)
 
+## Contacting Us
+
+Cloud fellowship participants should not hesistat to contact us at any time if you have any questions, issues, or suggestions for course content during the course or questions:  Pat Bills billspat@msu.edu  
+  
+## Schedule for Fall 2021
+
+ * Introduction
+    * Sept 3: Introductory Meeting
+ * Session 2: What is the cloud and how does it work?
+    * Sept 10: Workshop Virtual Machine
+ * Sept 24: Data Storage
+ * Oct 8: Moving Data
+ * Oct 22: TBD
+ * Oct 29: TBD
+ * Nov  12: TBD
+ * Dec 3: Project proposal review
+
+## Schedule for Winter/Spring 2022
+
+Dates to be determined, but monthly group discussion sessions on project progress, and additional montly 1-1 sessions with fellowship coordinators on projects 
