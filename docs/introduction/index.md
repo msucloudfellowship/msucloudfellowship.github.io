@@ -3,8 +3,11 @@
 
 ## Pre-session activity:
 
- - log-in to Teams and post "hi" message.   
-       You should have all been given access to a Team "TEAM NAME TBD" via your NetID.  See documentaiton on how to log-in to https://tech.msu.edu/technology/collaborative-tools/spartan365/
+Please complete the following activities prior to our first synchronmous meeting September 3 to ensure you have access to the ways we will communicate. 
+
+ - Teams: 
+   You should have all been given access to a Team "TEAM NAME TBD" via your NetID.  See documentaiton on how to log-in to https://tech.msu.edu/technology/collaborative-tools/spartan365/
+    * exercise: please log-in to Teams and post  message in the main channel just saying "hello" with your name and department and you prefer to be addressed
 
 
  - ensure access to Azure Portal
@@ -14,11 +17,10 @@
    * on the main page (Azure calls this the 'dashboard') ensure you see a "resource group" called TBD
    * you don't need to (and shouldn't) create any new resources, simply confirm you can see the resources
 
- - download the Azure Cloud Storage Explorer 
-    
- - watch instructor introduction videos on course website
-
--  
+- watch instructor introduction videos on course website
+    - [Pat Bills](#), lead instructor  <!-- TODO create introduction video and post to media space -->
+    - Brian O'shea
+    - Brian O'shea
 
 - Introduce yourself 
   We will be using Google drive for writing documents.   

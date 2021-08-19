@@ -1,6 +1,6 @@
 # MSU Cloud Fellowship 2021
 
-## Introduction
+## About
 
 The MSU Cloud Fellowship is cross disciplinary program produced by MSU’s Institute of Cyber-Enabled Research and the ITS Analytics and Data Solutions group for invited MSU doctoral students and postdoctoral researchers to join the first cohort of MSU Cloud Computing Fellows.  As a part of this program, fellows will participate in a series of workshops during the fall semester to:
 
@@ -19,11 +19,12 @@ Cloud fellowship participants should not hesistat to contact us at any time if y
   
 ## Schedule for Fall 2021
 
- * Introduction
+ * [Introduction](introduction)
     * Sept 3: Introductory Meeting
- * Session 2: What is the cloud and how does it work?
+ * [Session 2](session_how_to_cloud): What is the cloud and how does it work?
     * Sept 10: Workshop Virtual Machine
- * Sept 24: Data Storage
+ * [Session 3](): Data Storage
+     * Sept 24: Workshop on Data Storage
  * Oct 8: Moving Data
  * Oct 22: TBD
  * Oct 29: TBD
