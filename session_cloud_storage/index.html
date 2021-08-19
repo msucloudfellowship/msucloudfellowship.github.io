@@ -14,7 +14,7 @@
     
     
       
-        <title>How Does the Cloud Work? - MSU Cloud Fellowship</title>
+        <title>Cloud Storage 101 - MSU Cloud Fellowship</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-does-the-cloud-work" class="md-skip">
+        <a href="#cloud-storage-101" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How Does the Cloud Work?
+              Cloud Storage 101
             
           </span>
         </div>
@@ -229,7 +229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="." class="md-nav__link">
+      <a href="../session_how_to_cloud" class="md-nav__link">
         2. How does the cloud work?
       </a>
     </li>
@@ -241,7 +241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../session_cloud_storage" class="md-nav__link">
+      <a href="." class="md-nav__link">
         3. Cloud Storage
       </a>
     </li>
@@ -302,22 +302,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pre-session-activity" class="md-nav__link">
-    Pre-session activity:
+  <a href="#pre-session-activities" class="md-nav__link">
+    Pre-session activities
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#workshop" class="md-nav__link">
-    Workshop
+  <a href="#workshop-using-cloud-storage" class="md-nav__link">
+    Workshop : using Cloud storage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-workshop-discussion" class="md-nav__link">
-    Post-workshop discussion
+  <a href="#optional-exercise" class="md-nav__link">
+    Optional Exercise
   </a>
   
 </li>
@@ -335,16 +335,59 @@
               
                 
                 
-                <h1 id="how-does-the-cloud-work">How Does the Cloud Work?</h1>
+                <h1 id="cloud-storage-101">Cloud Storage 101</h1>
 <h2 id="introduction">Introduction</h2>
-<p>When many people think of "cloud computing" they think of computers in the cloud, or virtual machines.   Cloud computing companies offer much more than just virtualized hardware, but this is a good place to start.   This session is designed to be a hands-on workshop where we walk-through creating the resources needed for to run a computer in the cloud, logging into this computer, copying data and using that data in a program.    At the end of the session you should have a good introduction of what it means to "cloud compute."</p>
-<h2 id="pre-session-activity">Pre-session activity:</h2>
+<p>Central to using cloud for nearly all services is storing data.   Cloud storage is quite different from what most are used to related to saving a file to your disk or USB removable media or even our HPC.   During our <a href="../session_how_to_cloud">workshop on creating a VM</a> we didn't use cloud storage, we simply create a VM "virtual disk" that is attached to the VM just like your hard drive is attached to your own computer.   However there are disadvantats to this : 
+  1. the main OS disk is typically deleted when the VM is deleted, although yuo can create a 'durable' disk to share
+  1. the data on the main OS disk is tied to that Virtual Machine and hence that operating system, that is, it's typically unacceesbile from other cloud services 
+  1. it is limited in size.  The largest of virtual disks are around 1 TB.  Azure Cloud storage accounts are limited to 5 TB and you may have multiple storage accounts. <br />
+  1. You can only move data to/from a virtual or shared disk storage using a virtual machine
+  1. Most importantly virtual disks very expensive compared to cloud storage </p>
+<p>Cloud companies think of "storage" as anything that save files, or perhaps more importantly anything they can market to you as something to save files.   </p>
+<h2 id="pre-session-activities">Pre-session activities</h2>
 <ul>
-<li>TBD: links on "All about Cloud" page</li>
+<li>Reading : <a href="https://s3.us-east-2.amazonaws.com/a-book/storage.html">Storage as a Service</a> from "Cloud Computing for Science and Engineering"</li>
+<li>Reading : <a href="https://azure.microsoft.com/en-us/product-categories/storage/">Azure Storage Product Offerings</a></li>
+<li>Download and install the <a href="https://azure.microsoft.com/en-us/features/storage-explorer/">Azure Cloud Storage Explorer</a>  See the <strong>"Download now"</strong> button at the top of that page.  You may review the content of the page     </li>
+<li>complete exercise <a href="exercise_using_azure_cloud_storage/">Using Azure Cloud Storage</a></li>
 </ul>
-<h2 id="workshop">Workshop</h2>
-<p><a href="workshop-creatingvm/">Creating a Virtual Machine with Azure</a></p>
-<h2 id="post-workshop-discussion">Post-workshop discussion</h2>
+<p><strong> <em>If you have trouble installing the Storage explorer or completing the excersize please contact us for help</em> </strong></p>
+<ul>
+<li>case study TBD</li>
+</ul>
+<h2 id="workshop-using-cloud-storage">Workshop : using Cloud storage</h2>
+<ul>
+<li>
+<p>discussion </p>
+<ul>
+<li>what is cloud storage?  review of provided materials</li>
+<li>concept review: cloud storage vs VM disks</li>
+<li>discuss exercise : success</li>
+</ul>
+</li>
+<li>
+<p>demonstration</p>
+<ul>
+<li>copy data from HPC to Virtual machine</li>
+<li>using Python with </li>
+</ul>
+</li>
+</ul>
+<h2 id="optional-exercise">Optional Exercise</h2>
+<ul>
+<li>
+<p>For Intermediate Python users, and if you have time and interest, consider this tutorial from Azure:
+   <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python">Quickstart: Manage blobs with Python v12 SDK</a></p>
+<ul>
+<li>Requirements:</li>
+<li>use the blob storage account you created in the excercise above</li>
+<li>familiarity with Azure portal </li>
+<li>Python installed on your cmputer (suggest python 3.6 minimal)</li>
+<li>familiarity with the terminal and command line</li>
+<li>We can only provide help/troubleshooting after the workshop session</li>
+</ul>
+</li>
+</ul>
                 
               
               
