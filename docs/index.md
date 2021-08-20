@@ -21,7 +21,7 @@ Sessions are organized with pre-meeting materials (readings and videos), pre-req
 
 Our first meeting is September 3rd.  
 
- * [Session 1](introduction): Introduction to the 21-22 Fellowship
+ * [Session 1](session_introduction): Introduction to the 21-22 Fellowship
      * Sept 3: Introductions and program overview.  
  * [Session 2](session_how_to_cloud): What is the cloud and how does it work?
     * Sept 10: Workshop Virtual Machine
