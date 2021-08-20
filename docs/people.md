@@ -1,53 +1,34 @@
-# People
+# About Us
 
-## Contacting Us
+## Cloud Fellowship Organizers
 
-If you are a cloud fellowship participant this year (or past participant!) please contact the instructors [Pat Bills](mailto:billspat@msu.edu) or [Mahmoud Parvizi](mailto:parvizim@msu.edu) if you have any issues or questions.  
-
-
-<!-- TODO: determine generic email for inquiries
- If you are not a current have general questions about this program please contact us via TBD
--->
-
-## Meet the Fellowship Organizers
-
-**Danielle Barnes** Assistant Director, ADS, MSU IT Services
-
+**Danielle Barnes** Assistant Director, ADS, MSU IT Services<br>
 *Role: Program Co-lead*
 
- - bio
- - photo
+ - bio/photo
 
-**Chelsea Beck** Data Warehouse Lead, ADS, MSU IT Services
-
+**Chelsea Beck** Data Warehouse Lead, ADS, MSU IT Services<br>
 *Role: Logistics and Organization*
 
- - bio
- - photo
+ - bio/photo
  
-**Patrick Bills**  Data Science Technical Lead, MSU IT Services
-
+**[Patrick Bills](mailto:billspat@msu.edu)**  Data Science Technical Lead, MSU IT Services<br>
 *Role: Lead Instructor* 
 
- - bio
- - photo
- 
-**Dr. Brian O'shea** Professor and Director, MSU ICER
+![Pat Bills](img/people/patbills_photo.jpg){ align=right}  My research background is in data systems for ecology (MS Entomology, MSU).  I have experience in database design, R, Python and web application programming.  I've worked in research IT for over 25 yrs for departments and labs across MSU, including for MSU ICER as a research consultant and trainer.   I'm currently the technical lead for the data science team in the Analytics and Data Solutions or A.D.S , part of MSU's central IT services.  
+Like many I've built and worked with on-campus linux systems for many years including the MSU HPC.  I started my cloud journey in 2017 during a workshop at the HPC conference where I saw [Ian Foster](https://scholar.google.com/citations?user=VGoSakQAAAAJ&hl=en) (our textbook author) present his vision of research on the cloud.    Since then I've used cloud services from Google, Amazon and Azure, currently focusing on Microsoft Azure.  At MSU ADS we use cloud services where appropriate for our data systems or applications, and I'll use examples directly from our work in this class.  
 
+ 
+**Dr. Brian O'shea** Professor and Director, MSU ICER<br>
 *Role: Program Co-lead*
 
- - bio
- - photo
+ - bio/photo
   
-**Dr. Mahmoud Parvizi**  Research Consultant, MSU ICER
-
+**Dr. Mahmoud Parvizi**  Research Consultant, MSU ICER<br>
 *Role: Assistant Instructor* <!--add co-instructor 2020 session? ; list as secondary contact-->
 
- - bio 
- - photo
+ - bio/photo
  
-
-
 ## Previous Cloud Fellows
 
 **2019-2020**
