@@ -1,6 +1,6 @@
 # MSU Cloud Fellowship 2021
 
-![Facing The Clouds](img/facing_the_atlantic_clouds_psbills_2021.gif)
+![Ebene_bei_Auvers_van_Gogh_1890](img/cropped_cloud_painting_Vincent_van_Gogh_Ebene_bei_Auvers_1890_Neue_Pinakothek_Munich.jpg)
 
 ## About
 
@@ -13,26 +13,34 @@ The MSU Cloud Fellowship is cross disciplinary program produced by MSU’s Insti
 
 ## Background
 
-MSU doctoral students and postdoctoral researchers are invited to apply in the summer and approximately 18 are select each year.  The program started in 2021.   If you find this website, please check back in the Summer of 2022 for announcements for invitation to participate for MSU grads and postdocs.    Here is the [Previous 2021 Invitation (now closed)](https://icer.msu.edu/about/announcements/msu-cloud-computing-fellowship-application-deadline-friday-july-30-2021)
-
-## Contacting Us
-
-Cloud fellowship participants should not hesistat to contact us at any time if you have any questions, issues, or suggestions for course content during the course or questions:  Pat Bills billspat@msu.edu  
+MSU doctoral students and postdoctoral researchers are invited to apply in the summer and approximately 18 are select each year.  The program started in 2019.   If you are an MSU graduate student or post-doc and interested in participating next year, please check back in the Summer of 2022 for announcements for invitation to participate, or request to join the [MSU ICER mailing list](https://icer.msu.edu/getting-latest-hpcc-updates)
   
 ## Schedule for Fall 2021
 
- * [Introduction](introduction)
-    * Sept 3: Introductory Meeting
+Sessions are organized with pre-meeting materials (readings and videos), pre-requisites and activities, to prepare for our Friday meeting for hands-on activities and discussion.  
+
+Our first meeting is September 3rd.  
+
+ * [Session 1](introduction): Introduction to the 21-22 Fellowship
+     * Sept 3: Introductions and program overview.  
  * [Session 2](session_how_to_cloud): What is the cloud and how does it work?
     * Sept 10: Workshop Virtual Machine
- * [Session 3](): Cloud Storage
-     * Sept 24: Workshop on Data Storage
- * Oct 8: Moving Data
- * Oct 22: TBD
- * Oct 29: TBD
- * Nov  12: TBD
- * Dec 3: Project proposal review
+ * [Session 3](session_cloud_storage): Cloud Storage
+    * Sept 24: Workshop on Data Storage
+ * Session 4: Moving Data
+    * October 8: Workshop using Data utilities and Azure Data Factory
+ * Session 5: Big Data Systems and the cloud
+    * Oct 22: TBD
+ * Session 6: Serverless,Workflow and Pipelines
+    * Oct 29: TBD
+ * Session 7: Websites and applications
+    * Nov 12: TBD
+ * Wrap up: project proposals
+    * Dec 3: project proposal review and general discussion
 
 ## Schedule for Winter/Spring 2022
 
-Dates to be determined, but monthly group discussion sessions on project progress, and additional montly 1-1 sessions with fellowship coordinators on projects 
+We will schedule monthly group discussion sessions on project progress, and additional montly 1-1 sessions with fellowship coordinators to assist with participant projects. Dates to be determined. 
+
+Participants will present their projects during a symposium to be held in late Spring of 2022.  
+
