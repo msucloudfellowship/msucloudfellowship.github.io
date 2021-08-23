@@ -2,12 +2,12 @@ site_name: MSU Cloud Fellowship
 nav:
     - Home: index.md
     - Sessions:
-      - 1. Introduction: session_introduction
-      - 2. How does the cloud work?: session_how_to_cloud
-      - 3. Cloud Storage: session_cloud_storage
+      - 1. Introduction: session_introduction/index.md
+      - 2. How does the cloud work?: session_how_to_cloud/index.md
+      - 3. Cloud Storage: session_cloud_storage/index.md
     - About Us: people.md 
     - Contact: contact.md
-    - References: references
+    - References: references/index.md
 theme: 
   name: material
   features:

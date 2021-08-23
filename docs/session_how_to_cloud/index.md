@@ -8,10 +8,14 @@ When many people think of "cloud computing" they think of computers in the cloud
 
 Reading
 
+  - [The NIST Definition of Cloud Computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)  The framework that most widely used to describe aspects of cloud computing, and categorize cloud sevices. 
+  - [Microsoft Reference Architecture: What is Infrastructure as a Service?](https://social.technet.microsoft.com/wiki/contents/articles/4633.microsoft-reference-architecture-what-is-infrastructure-as-a-service.aspx)
   - [What's the difference between cloud and virtualization?](https://www.redhat.com/en/topics/cloud-computing/cloud-vs-virtualization) from RedHat, a Linux Operating system company
 
-  
-## Workshop
+
+## Fellowship Workshop
+
+Sept 10
 
 [Creating a Virtual Machine with Azure](workshop-creatingvm.md)
 

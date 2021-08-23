@@ -13,7 +13,7 @@ The MSU Cloud Fellowship is cross disciplinary program produced by MSU’s Insti
 
 ## Background
 
-MSU doctoral students and postdoctoral researchers are invited to apply in the summer and approximately 18 are select each year.  The program started in 2019.   If you are an MSU graduate student or post-doc and interested in participating next year, please check back in the Summer of 2022 for announcements for invitation to participate, or request to join the [MSU ICER mailing list](https://icer.msu.edu/getting-latest-hpcc-updates)
+MSU doctoral students and postdoctoral researchers are invited to apply in the summer and approximately 18 are selected each year.  The program started in 2019.   If you are an MSU graduate student or post-doc and interested in participating next year, please check back in the Summer of 2022 for announcements for invitation to participate, or request to join the [MSU ICER mailing list](https://icer.msu.edu/getting-latest-hpcc-updates)
   
 ## Schedule for Fall 2021
 
@@ -24,11 +24,11 @@ Our first meeting is September 3rd.
  * [Session 1](session_introduction): Introduction to the 21-22 Fellowship
      * Sept 3: Introductions and program overview.  
  * [Session 2](session_how_to_cloud): What is the cloud and how does it work?
-    * Sept 10: Workshop Virtual Machine
+    * Sept 10: Using Virtual Machines workshop 
  * [Session 3](session_cloud_storage): Cloud Storage
-    * Sept 24: Workshop on Data Storage
+    * Sept 24: Cloud Storage Workshop 
  * Session 4: Moving Data
-    * October 8: Workshop using Data utilities and Azure Data Factory
+    * October 8: Data utilities and services workshop (e.g. Azure Data Factory)
  * Session 5: Big Data Systems and the cloud
     * Oct 22: TBD
  * Session 6: Serverless,Workflow and Pipelines
