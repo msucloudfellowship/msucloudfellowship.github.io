@@ -10,6 +10,12 @@
 
 The goals of this session are to orient you to this program, set-up our technology, introduce ourselves, provide some background on cloud computing, and discuss what all of our expectations are.    For this session, like the others, we have some pre-session activities for the week, followed by a meeting Friday 2-3:30pm.  
 
+## Readings  
+
+  * [Chapter 1: Orienting in the cloud universe](https://s3.us-east-2.amazonaws.com/a-book/Orienting.html) <br>from **"Cloud Computing for Science and Engineering", Foster and Gannon**  
+     ( *[Alternative link to publisher preview chapter](https://mitpress.ublish.com/ereader/239/?preview#page/1)*  )
+  * [Using Cloud Computing for Academic Research](../references/DRAFT_cloud_computing_for_academic_research_parvizi_2021.pdf), Mahmoud Parvizi (draft version)
+
 ## Activities:
 
 Please complete the following activities prior to our first synchronmous meeting September 3. 
@@ -38,13 +44,7 @@ We will use google drive for sharing documents and files
   * please create a new document, titled with your name inside the folder there "participant bios"
       - include your name, department, brief summary of your work  
      
-**Readings**  
-
-  * [Chapter 1: Orienting in the cloud universe](https://s3.us-east-2.amazonaws.com/a-book/Orienting.html) <br>from **"Cloud Computing for Science and Engineering", Foster and Gannon**
-  * [Using Cloud Computing for Academic Research](../references/DRAFT_cloud_computing_for_academic_research_parvizi_2021.pdf), Mahmoud Parvizi 
-
-  
-## Fellowship Meeting: Introductions and program overview. 
+## Meeting: Introductions and program overview. 
 
 **September 3rd, 2021;  Location/Zoom TBD**
 
@@ -57,7 +57,7 @@ We will use google drive for sharing documents and files
      - Participant in first Fellowship cohort
   * Pat Bills, Main Instructor
   
-### Fellowship Program Overview, Pat Bills
+### Fellowship Program Overview
 
   * Why and What: 15 minute lecture on broad topics and goals of the course 
   * How the course will run: activiites, sessions, projects, teams
@@ -66,17 +66,6 @@ We will use google drive for sharing documents and files
      * pre-session materials and activities
      * session activity
      * expectations
-
-
-### About Cloud Computing
- 
-  * Introducing computing vs. Research computing vs. HPC vs cloud computing
-        learning how to learn about cloud
-        cloud perceptions vantage points
-  * Using workflow computational and computational thinking 
-  * Cloud and scripting and this fellowship
-  * Security lecture
-  * Acknowledging bias in access to cloud computing across research cultures
 
 ### Participant Introductions & discussion
 
@@ -88,4 +77,19 @@ We will use google drive for sharing documents and files
   * Why are you here?
     * What do you think the cloud is or is good for?
   * discussion on availability to complete class and projects
+  
+### Lecture: About Cloud Computing
+ 
+  * Introducing computing vs. Research computing vs. HPC vs cloud computing
+        learning how to learn about cloud
+        cloud perceptions vantage points
+  * Using workflow computational and computational thinking 
+  * Cloud and scripting and this fellowship
+  * Security lecture
+  * Acknowledging bias in access to cloud computing across research cultures
+
+### Demo: Using the Azure Portal
+
+A Quick demonstration orienting you to the azure portal.  Our next session activities will include a more thorough introduction. 
+
   

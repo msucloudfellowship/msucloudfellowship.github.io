@@ -1,4 +1,6 @@
-# Cloud Storage 101
+# Session 3: Cloud Storage
+
+![storage_units](../img/storage_units.jpg)
 
 ## Introduction
 
@@ -11,16 +13,15 @@ Central to using cloud for nearly all services is storing data.   Cloud storage 
   
 Cloud companies think of "storage" as anything that save files, or perhaps more importantly anything they can market to you as something to save files.   
 
-## Pre-session activities
+## Readings
 
-- Reading : [Storage as a Service](https://s3.us-east-2.amazonaws.com/a-book/storage.html) from "Cloud Computing for Science and Engineering"
-- Reading : [Azure Storage Product Offerings](https://azure.microsoft.com/en-us/product-categories/storage/)
-- Download and install the [Azure Cloud Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)  See the **"Download now"** button at the top of that page.  You may review the content of the page     
-- complete exercise [Using Azure Cloud Storage](exercise_using_azure_cloud_storage.md)
+  - [Storage as a Service](https://s3.us-east-2.amazonaws.com/a-book/storage.html) from "Cloud Computing for Science and Engineering"  
+  - [Azure Storage Product Offerings](https://azure.microsoft.com/en-us/product-categories/storage/)
+ 
+## Activities
 
-** *If you have trouble installing the Storage explorer or completing the excersize please contact us for help* **
-
-- case study TBD
+  - Download and install the [Azure Cloud Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)  See the **"Download now"** button at the top of that page.  You may review the content of the page     
+  - complete exercise [Using Azure Cloud Storage](exercise_using_azure_cloud_storage.md)
     
 ## Workshop : using Cloud storage
 
@@ -32,7 +33,6 @@ Cloud companies think of "storage" as anything that save files, or perhaps more 
  - demonstration
      - copy data from HPC to Virtual machine
      - using Python with 
-
 
 ## Optional Exercise
 
