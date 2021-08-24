@@ -47,4 +47,14 @@ We will schedule monthly group discussion sessions on project progress, and addi
 
 Participants will present their projects during a symposium to be held in late Spring of 2022.  
 
-## Getting help 
+## Communications
+
+You are encouraged to contact us with questions or if you are every stuck on an activity we've assigned.  Please feel free to reach on out MS Teams (plesae mention one of us e.g. @billspat or @parvizm to get our attention).  Additionally you may email us at any time, see the [Contact page](contact.md) for details.   
+
+We are fostering community communications so if you see a quesiton on Teams please feel free to add any info or advice you may have.    
+
+If you need interactive on-going help it may be better to schedule a help session with one of us and we are happy to do that.   This may be especially effective when you are developing your projects.  
+
+We are saving time during our meetings for group discussions so please bring up any concerns, difficulties, or successes! 
+
+   
