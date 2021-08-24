@@ -62,7 +62,7 @@ We will use google drive for sharing documents and files
   * Why and What: 15 minute lecture on broad topics and goals of the course 
   * How the course will run: activiites, sessions, projects, teams
     * Text: **["Cloud Computing for Science and Engineering"](https://cloud4scieng.org/)**, Ian Foster and Dennis Gannon. A book from MIT Press and a website with preview-chapter provided.   
-  * Review [Syllabus](../syllabus.md)
+  * Review [Syllabus](../index.md#syllabus)
      * pre-session materials and activities
      * session activity
      * expectations
