@@ -20,9 +20,9 @@ The goals of this session are to orient you to this program, set-up our technolo
 
 Please complete the following activities prior to our first synchronmous meeting September 3. 
 
-**Start with Microsoft Teams**
+**Introduce yourself on Microsoft Teams**
  
-   You should have all been given access to a Team "MSU ICER Cloud Fellowship" via your NetID.  See MSU's documentation on how to use MS Teams here:  [https://tech.msu.edu/technology/collaborative-tools/spartan365/](https://tech.msu.edu/technology/collaborative-tools/spartan365/)  ( the link on that page requires yet another MSU log-in)    
+   You should have all been given access to a Team "MSU ICER Cloud Fellowship" via your NetID.  See MSU's documentation on how to use MS Teams here:  [https://tech.msu.edu/technology/collaborative-tools/spartan365/](https://tech.msu.edu/technology/collaborative-tools/spartan365/)  ( the link on that page requires yet another MSU log-in).  
 
   * please log-in to Teams and post message in the main channel just saying "hello" with your name and department and how you prefer to be addressed.   
 
@@ -34,16 +34,7 @@ Please complete the following activities prior to our first synchronmous meeting
   * on the main page (Azure calls this the 'dashboard') ensure you see a "resource group" called TBD 
   <!-- TODO create resource group -->
   * you don't need to (and shouldn't) create any new resources or work with this website,  simply confirm you have access and can see the resources.  thank you!
-  
-**Introduce yourself!**  
-
-We will use google drive for sharing documents and files
-
-  * log-in to drive.google.com and look in the "Shared Drives" you should see "CloudFellows21"
-  * in the Shared drive, confirm you see a sub-folder called "for_participants"
-  * please create a new document, titled with your name inside the folder there "participant bios"
-      - include your name, department, brief summary of your work  
-     
+       
 ## Meeting: Introductions and program overview. 
 
 **September 3rd, 2021;  Location/Zoom TBD**
