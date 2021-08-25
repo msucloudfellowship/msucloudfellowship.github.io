@@ -69,11 +69,11 @@ Please complete the following activities prior to our first synchronmous meeting
     * What do you think the cloud is or is good for?
   * discussion on availability to complete class and projects
   
-### Lecture: About Cloud Computing
- 
+### [Lecture: About Cloud Computing](lecture_introduction_to_cloud_computing_research.md)
+  
   * Introducing computing vs. Research computing vs. HPC vs cloud computing
-        learning how to learn about cloud
-        cloud perceptions vantage points
+     - learning how to learn about cloud
+     - cloud perceptions vantage points
   * Using workflow computational and computational thinking 
   * Cloud and scripting and this fellowship
   * Security lecture
