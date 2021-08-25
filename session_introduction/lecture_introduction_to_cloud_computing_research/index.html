@@ -1,0 +1,539 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>Practical Suggestions for Researchers on Azure - MSU Cloud Fellowship</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practical-suggestions-for-researchers-on-azure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MSU Cloud Fellowship" class="md-header__button md-logo" aria-label="MSU Cloud Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSU Cloud Fellowship
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practical Suggestions for Researchers on Azure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MSU Cloud Fellowship" class="md-nav__button md-logo" aria-label="MSU Cloud Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    MSU Cloud Fellowship
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Sessions
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sessions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Sessions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        1. Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_how_to_cloud/" class="md-nav__link">
+        2. How does the cloud work?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_cloud_storage/" class="md-nav__link">
+        3. Cloud Storage
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../people/" class="md-nav__link">
+        About Us
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        References
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#methods-to-interact-with-azure" class="md-nav__link">
+    Methods to interact with Azure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-levels-and-you" class="md-nav__link">
+    Service Levels and You
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-packaging-of-open-sources" class="md-nav__link">
+    The Packaging of Open Sources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#costs" class="md-nav__link">
+    Costs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-cloud-materials" class="md-nav__link">
+    Reading Cloud materials
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading Cloud materials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hpcc-vs-cloud" class="md-nav__link">
+    HPCC vs Cloud
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="practical-suggestions-for-researchers-on-azure">Practical Suggestions for Researchers on Azure</h1>
+<!-- goal: mapping of whitepaper and first chapter to azure services; fill gaps -->
+
+<h3 id="methods-to-interact-with-azure">Methods to interact with Azure</h3>
+<p>Cloud systems are on-demand and hence need a programming interface to create cloud resources. </p>
+<ul>
+<li>"REST" is synonymous for URL-based web interface<ul>
+<li>for URL example, see https://catfact.ninja/fact from https://catfact.ninja/ </li>
+<li>of course more complex and requires log-in</li>
+<li>all vendors use them</li>
+<li>most other interfaces are based on the API</li>
+<li>not friendly to use</li>
+<li>Azure calls their main cloud api "Azure Resource Manager" (ARM)</li>
+</ul>
+</li>
+<li>Web Interface: Portal<ul>
+<li>User Interface to issue API calls via forms</li>
+</ul>
+</li>
+<li>Command Line Interface<ul>
+<li>Linux/Bash or Windows/Powershell</li>
+<li>similar but not the same. </li>
+<li>requirer installation of azure utilty and library</li>
+</ul>
+</li>
+<li>
+<p>Programming interface aka SDK</p>
+<ul>
+<li>why leave python or R if don't have to?</li>
+<li><a href="https://github.com/Azure/AzureR">AzureR</a><ul>
+<li>example : </li>
+</ul>
+</li>
+<li>Azure for Python:<ul>
+<li>Overview: https://docs.microsoft.com/en-us/azure/developer/python/</li>
+<li>SDK: https://azure.github.io/azure-sdk-for-python/</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Third-party Programming Languages</p>
+<ul>
+<li>Terraform</li>
+<li>Can work with any vendor including Azure</li>
+<li>Focus on maintaining consistent systems </li>
+<li>Syntax remarkably simple not does not cover all services</li>
+</ul>
+</li>
+<li>
+<p>Cloud from Cloud</p>
+<ul>
+<li>somee services can create other cloud services on demand</li>
+<li>Azure "Logic Apps" - given an event like a file is created, create and start other cloud resources like a computer to process data frrom the event</li>
+</ul>
+</li>
+</ul>
+<h3 id="service-levels-and-you">Service Levels and You</h3>
+<p>What does "X as a service" actually mean, and where are the lines drawn?   Like the species concept in biology, it's not always cut and dried.</p>
+<h3 id="the-packaging-of-open-sources">The Packaging of Open Sources</h3>
+<p><strong>MySQL </strong></p>
+<p>Open source, free Relational database, e.g. SQL. Relational databases store tabular, linked data.   Used by some bioinformatics packages (e.g. https://orthomcl.org/orthomcl/app) and millions of websites. </p>
+<ul>
+<li>project: https://www.mysql.com/products/community/ and  https://mariadb.org/</li>
+<li>DIY on Azure instructions: <a href="https://github.com/Huachao/azure-content/blob/master/articles/virtual-machines/virtual-machines-linux-install-mysql.md">someone's DIY Mysql</a> - don't follow these, they are old and may not work, just an example of the steps involved</li>
+<li>AWS Vesion: <a href="https://aws.amazon.com/rds/mysql/">Amazon RDS for MySQL</a></li>
+<li>Azure Version: <a href="https://azure.microsoft.com/en-us/services/mysql/">Azure Database for MySQL</a> </li>
+<li>Google Version <a href="https://cloud.google.com/sql/">Cloud SQL</a> </li>
+<li>
+<p>other companies, such as <a href="https://aiven.io/mysql">Aiven for MySQL</a></p>
+</li>
+<li>
+<p>Spin-offs: Amazon also offers <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html">AWS Aurora</a>  which is a cloud scale database service that is MySQL-compatible see <a href="https://dl.acm.org/doi/10.1145/3035918.3056101">Amazon Aurora Paper</a> </p>
+</li>
+</ul>
+<p>What would an SaaS for tabular datbases look like?   <a href="https://www.airtable.com/">https://www.airtable.com/</a> ?</p>
+<h3 id="security">Security</h3>
+<p>TBD </p>
+<h3 id="costs">Costs</h3>
+<ul>
+<li>Costs = $ + Time + Risk</li>
+<li>Time = development time + wait time + compute time</li>
+<li>Risk is rarely non-significant.  Never say "I won't get hacked..."</li>
+</ul>
+<h2 id="reading-cloud-materials">Reading Cloud materials</h2>
+<p>Cloud documentation is written for some main audiences:  executives/decision makes, systems administrators, programmers &amp; developers.  Rarely for researchers with some exceptions.    The goal of this program is not to teach system administration or cloud programming but enough concepts for you to DIY computational resources for your personal research.    </p>
+<h3 id="hpcc-vs-cloud">HPCC vs Cloud</h3>
+<p>just like many pre-developed workflows are diff to port from HPC to cloud, some cloud workflows are difficult run on HPC (but never say never):</p>
+<ul>
+<li>Big Data systems (see magpie project)</li>
+<li>Long-running Data Systems like database servers</li>
+<li>Web-based applications (see on-demand project)</li>
+<li>Containers (see singularity project)</li>
+</ul>
+<h2 id="discussion">Discussion</h2>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+    
+  </body>
+</html>
