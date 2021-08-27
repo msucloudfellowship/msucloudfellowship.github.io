@@ -32,7 +32,6 @@ Please complete the following activities prior to our first synchronmous meeting
   * log-in with your MSU netid and password
   * click on the 'subscriptions' button and confirm the MSU cloud fellowship is there
   * on the main page (Azure calls this the 'dashboard') ensure you see a "resource group" called TBD 
-  <!-- TODO create resource group -->
   * you don't need to (and shouldn't) create any new resources or work with this website,  simply confirm you have access and can see the resources.  thank you!
        
 ## Meeting: Introductions and program overview. 
@@ -48,39 +47,36 @@ Please complete the following activities prior to our first synchronmous meeting
      - Participant in first Fellowship cohort
   * Pat Bills, Main Instructor
   
-### Fellowship Program Overview
-
-  * Why and What: 15 minute lecture on broad topics and goals of the course 
-  * How the course will run: activiites, sessions, projects, teams
-    * Text: **["Cloud Computing for Science and Engineering"](https://cloud4scieng.org/)**, Ian Foster and Dennis Gannon. A book from MIT Press and a website with preview-chapter provided.   
-  * Review [Syllabus](../index.md#syllabus)
-     * pre-session materials and activities
-     * session activity
-     * expectations
-
 ### Participant Introductions & discussion
 
   * Introductions
   * Research synopsis, Research Methods skills (non-IT)
-  * IT/Computational background
   * Current research computing hurdles, roadblocks, challenges & triumphs
-  * How will (or has) cloud computing affected research, or your future in research
-  * Why are you here?
+  * How will (or has) cloud computing affected your research?
+  * You goals for this fellowship
     * What do you think the cloud is or is good for?
   * discussion on availability to complete class and projects
   
+### Fellowship Program Overview
+
+  * Why and What: 15 minute lecture on broad topics and goals of the course 
+  * Review [Syllabus](../index.md#syllabus)
+     * pre-session materials and activities, "textbook"
+     * session activity
+     * expectations
+
 ### [Lecture: About Cloud Computing](lecture_introduction_to_cloud_computing_research.md)
   
   * Introducing computing vs. Research computing vs. HPC vs cloud computing
      - learning how to learn about cloud
      - cloud perceptions vantage points
-  * Using workflow computational and computational thinking 
-  * Cloud and scripting and this fellowship
-  * Security lecture
+     - Using workflow computational and computational thinking 
+  * [The interfaces to Cloud computing](cloud_interfaces_lecture.md)
+  * Security : a finger wagging lecture
   * Acknowledging bias in access to cloud computing across research cultures
 
 ### Demo: Using the Azure Portal
 
-A Quick demonstration orienting you to the azure portal.  Our next session activities will include a more thorough introduction. 
+A Quick, live demonstration orienting you to the azure portal.  Our next session activities will include a more thorough introduction. 
 
-  
+### Discussion and questions
