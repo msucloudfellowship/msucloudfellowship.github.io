@@ -14,11 +14,11 @@ The site was build with the amazing python package "MkDocs" and Markdown.   For 
 For MSU colleagues, to collaborate on this website, install as follows: 
 
 ```sh
-pip install mkdocs
-pip install mkdocs-material
 git clone git@github.com:msucloudfellowship/msucloudfellowship.github.io.git
 
 cd msucloudfellowship.github.io
+# create a python environment, if you like
+pip install -r requirements.txt
 mkdocs serve  # build and preview the site
 # edit markdown files in /docs folder per mkdocs docs
 
