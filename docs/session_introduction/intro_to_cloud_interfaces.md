@@ -1,11 +1,12 @@
 # Interfacing with Cloud Services
 
-Cloud Services are by design DIY infrastructure and hence require an interface to thes services.  All of the cloud companies use a web interface, so-called REST API.   Knowing the details of REST is not important but it's often the basis for all of the other style of interfaces.    Very few researchers would ever use the REST api directly, instead would use the web interface or even better the command line or programming language interface which achieves the same goal with less work.   
+Cloud Services are by design DIY or on-demand and hence need a programming interface to create cloud resources.  This is only possible becuase inside the data center, computer configuration can be done completely with code (Infrastructure as Code.  Amazon's insight was that they could slap a website on top of that, a systems for metering usage, and sell it.  
+
+infrastructure and hence require an interface to thes services.  All of the cloud companies use a web interface, so-called REST API.   Knowing the details of REST is not important but it's often the basis for all of the other style of interfaces.    Very few researchers would ever use the REST api directly, instead would use the web interface or even better the command line or programming language interface which achieves the same goal with less work.   
 
 
 In Azure, everything you could possibly create is called a "resource:" a machine, a data service, a single network address.   The system to work with Azure resources is the "Azure Resource Manager" or ARM and the primary interface for the Resource Manager is their web (REST) api.    You may see references to resources in documentation and that means any web doo-dad. 
-
-A "software developer kit" is simply a collection of utilities, libraries/packages and documentation for a specific language to work with a specific service.  All the cloud vendors have SDKs, and they all have SDKs for Python.    SDK simply means you can create, delete, interact with cloud services from your program. 
+ 
 
 ## Summary of Cloud Interfaces
 
@@ -24,17 +25,26 @@ The command line interface is a great way to interact with cloud services becaus
 
 Azure has two command line interfaces:  The "CLI" which is based on Linux and will work in any linux or Mac terminal (or shell script) and the "Powershell" interface which is for Windows Powershell users.   Since Powershell has been ported to Linux and Mac and the Linux Shell  and Azure CLI can also be used on Windows, so both are operating system independent but in practice, Windows users use powershell and everyone else uses the CLI.   Your choice depends on the kinds of other systems you'll be working with.  For example, the MSU HPC uses Linux command shell  but Windows servers and other Windows services like SQLServer work well with Powershell. 
 
+### SDK : Software Developer Kit
 
 
-### Python
+A "software developer kit" is simply a collection of utilities, libraries/packages and documentation for a specific language to work with a specific service.  All the cloud vendors have SDKs, and they all have SDKs for Python.    SDK simply means you can create, delete, interact with cloud services from your program.
+
+Why leave python or R if don't have to?
+
+#### Python SDK
 
 All cloud vendors have SDKs to work with Python.   After installing the SDK, you import the libraries and issue commands to create resources, then use those cloud resources to do work via client libraries (either Azure libraries or others).   Azure has extensive documentation for using Python: https://docs.microsoft.com/en-us/azure/developer/python/?view=azure-python
 
 Example Azure code to create cloud storage, compared with how you would see the resources in the azure portal, and similar commands using the CLI : https://docs.microsoft.com/en-us/azure/developer/python/azure-sdk-example-storage?tabs=cmd
 
+Note that Azure also has a service "Azure Cloud Functions" that run python that are not the same thing as the SDK.  These are 'serverless' resources (similar to AWS Lambda), which we will learn about later in the course. 
 
-### Python Notebooks
+Both AWS and Google Cloud have Python SDKs, and probably other vendors.  
 
+#### Python Notebooks
+
+this is nothing special or separate, just athat you can use the Python cloud libraries 
 ### R
 
 Unlike th other vendors, Microsoft maintains R packages to in

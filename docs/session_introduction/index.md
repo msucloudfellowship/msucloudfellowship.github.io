@@ -71,7 +71,7 @@ Please complete the following activities prior to our first synchronmous meeting
      - learning how to learn about cloud
      - cloud perceptions vantage points
      - Using workflow computational and computational thinking 
-  * [The interfaces to Cloud computing](cloud_interfaces_lecture.md)
+  * [The interfaces to Cloud computing](intro_to_cloud_interfaces.md)
   * Security : a finger wagging lecture
   * Acknowledging bias in access to cloud computing across research cultures
 
