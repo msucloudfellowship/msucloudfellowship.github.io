@@ -1,16 +1,25 @@
-# About Us
- <!-- this people.md page superceded by an 'about' page  -->
+# About The MSU Cloud Fellowship
+
+The MSU Cloud Fellowship is cross disciplinary program produced by MSU’s Institute of Cyber-Enabled Research and the ITS Analytics and Data Solutions group for invited MSU doctoral students and postdoctoral researchers to join the first cohort of MSU Cloud Computing Fellows.  As a part of this program, fellows will participate in a series of workshops during the fall semester to:
+
+  * Determine the aspects of your research that can be accomplished with cloud computing;
+  * Incorporate cloud-based systems into your research application or workflow; and
+  * Understand the strengths and limitations of commercial cloud computing with the goal of improving research yield and minimizing cost, and develop a workflow that utilizes that knowledge.
+ 
+## Background
+
+MSU doctoral students and postdoctoral researchers are invited to apply in the summer and approximately 18 are selected each year.  The program started in 2019.   If you are an MSU graduate student or post-doc and interested in participating next year, please check back in the Summer of 2022 for announcements for invitation to participate, or request to join the [MSU ICER mailing list](https://icer.msu.edu/getting-latest-hpcc-updates)
+
 ## Cloud Fellowship Organizers
+
+**Dr. Brian O'shea** Professor and Director, MSU ICER<br>
+
+*Role: Program Lead, ICER*
+
+![Dr. Brian O'shea](img/people/b_oshea_headshot_0.jpg){ align=right } Dr. Brian O'Shea is a computational and theoretical astrophysicist studying cosmological structure formation, including galaxy formation and the behavior of the hot, diffuse plasma in the intergalactic medium and within galaxy clusters. He is also a co-author of the Enzo AMR code, an expert in high performance computing, and an advocate for open-source computing and open-source science. He received his B.S. in Engineering Physics at the University of Illinois in Urbana-Champaign (UIUC) in 2000, and his PhD in physics from UIUC in 2005 (with 2002-2005 being spent as a graduate student in residence at the Laboratory for Computational Astrophysics at UC San Diego and in the Theoretical Astrophysics Group at Los Alamos National Laboratory). Following that, he was a Director's Postdoctoral Fellow at Los Alamos National Laboratory, with a joint appointment between the Theoretical Astrophysics Group and the Applied Physics Division. Since 2008, he has been a member of the faculty at Michigan State University, with a joint appointment between the Department of Computational Mathematics, Science and Engineering (2015-present), the Department of Physics and Astronomy (2008-present), and the National Superconducting Cyclotron Laboratory (2014-present). From 2008-2015, Dr. O'Shea was a member of Lyman Briggs College. He has authored or co-authored over 75 peer-reviewed journal articles in astrophysics, computer science, and education research journals, and has received a variety of awards for his teaching and public outreach efforts. In 2016, he became a Fellow of the American Physical Society, and in 2019 he became the director of MSU's Institute for Cyber-Enabled Research.
 
 **Danielle Barnes** Assistant Director, ADS, MSU IT Services<br>
 *Role: Program Lead, IT Services*
-
- - bio/photo
-
-**Chelsea Beck** Data Warehouse Lead, ADS, MSU IT Services<br>
-*Role: Logistics and Organization*
-
- - bio/photo
  
 **[Patrick Bills](mailto:billspat@msu.edu)**  Data Science Technical Lead, MSU IT Services<br>
 *Role: Lead Instructor* 
@@ -18,12 +27,6 @@
 ![Pat Bills](img/people/patbills_photo.jpg){ align=right}  My research background is in data systems for ecology (MS Entomology, MSU).  I have experience in database design, R, Python and web application programming.  I've worked in research IT for over 25 yrs for departments and labs across MSU, including for MSU ICER as a research consultant and trainer.   I'm currently the technical lead for the data science team in the Analytics and Data Solutions or A.D.S , part of MSU's central IT services.  
 Like many I've built and worked with on-campus linux systems for many years including the MSU HPC.  I started my cloud journey in 2017 during a workshop at the HPC conference where I saw [Ian Foster](https://scholar.google.com/citations?user=VGoSakQAAAAJ&hl=en) (our textbook author) present his vision of research on the cloud.    Since then I've used cloud services from Google, Amazon and Azure, currently focusing on Microsoft Azure.  At MSU ADS we use cloud services where appropriate for our data systems or applications, and I'll use examples directly from our work in this class.  
 
- 
-**Dr. Brian O'shea** Professor and Director, MSU ICER<br>
-
-*Role: Program Lead, ICER*
-
-![Dr. Brian O'shea](img/people/b_oshea_headshot_0.jpg){ align=right } Dr. Brian O'Shea is a computational and theoretical astrophysicist studying cosmological structure formation, including galaxy formation and the behavior of the hot, diffuse plasma in the intergalactic medium and within galaxy clusters. He is also a co-author of the Enzo AMR code, an expert in high performance computing, and an advocate for open-source computing and open-source science. He received his B.S. in Engineering Physics at the University of Illinois in Urbana-Champaign (UIUC) in 2000, and his PhD in physics from UIUC in 2005 (with 2002-2005 being spent as a graduate student in residence at the Laboratory for Computational Astrophysics at UC San Diego and in the Theoretical Astrophysics Group at Los Alamos National Laboratory). Following that, he was a Director's Postdoctoral Fellow at Los Alamos National Laboratory, with a joint appointment between the Theoretical Astrophysics Group and the Applied Physics Division. Since 2008, he has been a member of the faculty at Michigan State University, with a joint appointment between the Department of Computational Mathematics, Science and Engineering (2015-present), the Department of Physics and Astronomy (2008-present), and the National Superconducting Cyclotron Laboratory (2014-present). From 2008-2015, Dr. O'Shea was a member of Lyman Briggs College. He has authored or co-authored over 75 peer-reviewed journal articles in astrophysics, computer science, and education research journals, and has received a variety of awards for his teaching and public outreach efforts. In 2016, he became a Fellow of the American Physical Society, and in 2019 he became the director of MSU's Institute for Cyber-Enabled Research.
   
 **Dr. Mahmoud Parvizi**  Research Consultant, MSU ICER<br>
 *Role: Assistant Instructor* <!--add co-instructor 2020 session? ; list as secondary contact-->
@@ -32,6 +35,9 @@ Like many I've built and worked with on-campus linux systems for many years incl
 
 Mahmoud’s diverse research interests include mathematical and theoretical physics, data-intensive astrophysics, machine learning for precision health, and cloud-computing platforms for academic research. His expertise include: 1) quantum field theory in curved/non-stationary spacetimes; 2) finite temperature quantum field theory and open quantum systems; 3) automated and end-to-end intelligent data pipelines for signal processing using compressed sensing and applied harmonic analysis; 4) machine learning and cloud-computing applications for precision health.
 
+
+**Chelsea Beck** Data Warehouse Lead, ADS, MSU IT Services<br>
+*Role: Logistics and Organizational expertise*
 
 ## Previous Cloud Fellows
 
@@ -44,6 +50,7 @@ Mahmoud’s diverse research interests include mathematical and theoretical phys
 
   * Introducing the [2020 Cloud Fellows](https://icer.msu.edu/about/announcements/2020-msu-cloud-computing-fellows)
   * [20-21 Cloud Computing Fellowship Culminates in Impressive Symposium](https://icer.msu.edu/about/announcements/cloud-computing-fellowship-culminates-impressive-symposium)
+
 
 
 
