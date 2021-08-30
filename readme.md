@@ -1,8 +1,10 @@
 ## Website for the MSU CloudFellowship 2021
 
-https://msucloudfellowship.github.io
+Website: https://msucloudfellowship.github.io
 
-This github repository is the source code for the website for materials for the 2021-2022 MSU Cloud fellowship, used by the fellowship organizers.   Students do not need to use this source code, simply visit the site above
+Current home for website code:  https://github.com/msucloudfellowship/msucloudfellowship.github.io
+
+This (old) github repository for the source code for the website for materials for the 2021-2022 MSU Cloud fellowship, used by the fellowship organizers.   Students do not need to use this source code, simply visit the site above
 
 See the home page of the site for information about the cloud fellowship.   
 
