@@ -18,5 +18,6 @@ theme:
     primary: black
 markdown_extensions:
   - attr_list
+  - pymdownx.magiclink
 extra:
   generator: false
