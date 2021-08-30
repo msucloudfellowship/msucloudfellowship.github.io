@@ -25,37 +25,37 @@ Command-line progamming of Cloud Services
 
  
 ## Storage
-Create a Storage Account 
+Create a Storage Account: 
 
 https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account 
 
-Azure Storage Explorer : https://azure.microsoft.com/en-us/features/storage-explorer/ 
+Azure Storage Explorer: https://azure.microsoft.com/en-us/features/storage-explorer/ 
 
-Blob Storage Documentation : https://docs.microsoft.com/en-us/azure/storage/blobs/  
+Blob Storage Documentation: https://docs.microsoft.com/en-us/azure/storage/blobs/  
 
-Create and Manage a Storage Account : 
+Create and Manage a Storage Account: 
 https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account 
 
  
-Using the CLI with Storage Reference :
+Using the CLI with Storage Reference:
 https://docs.microsoft.com/en-us/cli/azure/storage/account 
 
 
-Using PowerShell Storage Reference :
+Using PowerShell Storage Reference:
 https://docs.microsoft.com/en-us/powershell/module/azure.storage 
 
-Create blob storage with CLI :
+Create blob storage with CLI:
 
 https://docs.microsoft.com/en-us/azure/storage/common/storage-azure-cli 
 
 
-Create blob storage with PowerShell :
+Create blob storage with PowerShell:
 
 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-powershell 
  
 
 ## Compute 
-Overview of Compute Options :
+Overview of Compute Options:
 https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-overview 
 
  
@@ -93,7 +93,7 @@ https://github.com/Azure/azure-sdk-for-python
 
 https://github.com/Azure/azure-storage-python 
 
-https://azure.github.io/azure-sdk/releases/latest/all/python.html ( Note that pypi.org/project/azure/  is deprecated/obsolete if you find that via google)
+https://azure.github.io/azure-sdk/releases/latest/all/python.html (Note that pypi.org/project/azure/  is deprecated/obsolete if you find that via google)
 
 
 ### MATLAB and Azure 
