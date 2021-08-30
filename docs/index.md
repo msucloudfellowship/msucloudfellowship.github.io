@@ -6,7 +6,7 @@ Welcome to the website for the MSU Cloud fellowship for 2021-2022.  See our "[ab
 
 ## Syllabus 
 
-The program runs Fall 2021 and Spring 2021 Semester.  Sessions are organized with pre-meeting materials (readings and videos), pre-requisites and activities, to prepare for our Friday meeting for hands-on activities and discussion.  
+The program runs from Fall 2021 to Spring 2022 semester.  Sessions are organized with pre-meeting materials (readings and videos), pre-requisites, and activities, which allow fellows to prepare for our Friday meetings where we will have hands-on activities and discussion.  
 
 ### Schedule for Fall 2021
 
@@ -30,7 +30,7 @@ The program runs Fall 2021 and Spring 2021 Semester.  Sessions are organized wit
 
 ### Schedule for Winter/Spring 2022
 
-We will schedule group discussion sessions on project progress, and additional montly 1-1 sessions with fellowship coordinators to assist with participant projects. Dates to be determined. 
+We will schedule group discussion sessions on project progress, and additional monthly 1-1 sessions with fellowship coordinators to assist with participant projects. Dates to be determined. 
 
 Fellows will present their projects during a symposium to be held April 2022.  
 
@@ -47,13 +47,13 @@ The book website does provide open access to individual chapters.
 
 ## Communications
 
- Fellows are encouraged to contact us with questions or if you are every stuck on an activity we've assigned.  In addition to email, we are utilizing Microsoft Teams at MSU (Fellows recieve a link in the welcome email).   Please feel free to reach on out the MS Teams channel sent to participants at the beginning of the program.  Mentioning one of us e.g. @billspat or @parvizm will help get our attention.  Additionally you may email us at any time.   If you are not participant but have questions about the program, see the [Contact page](contact.md) for how to get in touch with us.   
+ Fellows are encouraged to contact us with questions or if they are ever stuck on an activity we've assigned.  In addition to email, we are utilizing Microsoft Teams at MSU (Fellows recieve a link in the welcome email).   Please feel free to reach on out the MS Teams channel sent to participants at the beginning of the program.  Mentioning one of us e.g. @billspat or @parvizm will help get our attention.  Additionally you may email us at any time.   If you are not a participant but have questions about the program, see the [Contact page](contact.md) for how to get in touch with us.   
 
- and you see a quesiton or discussion on Teams please feel free to add any info or advice you may have, or even let us know that you have a similar question or issue.    
+If you see a question or discussion on Teams please feel free to add any info or advice you may have, or even let us know that you have a similar question or issue.    
 
-If you need interactive, on-going help it may be better to schedule a help session with one of us and we are happy to do that.   This may be especially effective when you are developing your projects.  
+If you need interactive, on-going help it may be better to schedule a help session with a fellowship coordinator; and we are happy to meet individually for additional support.   This may be especially effective when fellows are developing their projects.  
 
-We also save time during our synchronous meetings for group discussions so please bring up any concerns, difficulties, or successes! 
+We also save time during our synchronous meetings for group discussions, so please bring any concerns, difficulties, or successes to our sessions! 
 
 ## Meeting location
 
