@@ -416,11 +416,32 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    Firewall
+  </a>
+  
+    <nav class="md-nav" aria-label="Firewall">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#gpu" class="md-nav__link">
     GPU
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-address" class="md-nav__link">
+    IP Address
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Address">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#object-storage" class="md-nav__link">
@@ -447,6 +468,11 @@
   <a href="#service-level-agreement-sla" class="md-nav__link">
     Service Level Agreement (SLA)
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -553,11 +579,32 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    Firewall
+  </a>
+  
+    <nav class="md-nav" aria-label="Firewall">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#gpu" class="md-nav__link">
     GPU
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-address" class="md-nav__link">
+    IP Address
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Address">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#object-storage" class="md-nav__link">
@@ -584,6 +631,11 @@
   <a href="#service-level-agreement-sla" class="md-nav__link">
     Service Level Agreement (SLA)
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -623,8 +675,12 @@
 <p>This has many definitions but for researchers the shortcut is using code to make IT infrastructure.  Helping developers (like you) do Ops (like sysadmins) with code.   see IaC</p>
 <h4 id="file-storage-azure">File Storage (Azure)</h4>
 <p>Azure cloud storage that is more traditional file sharing, and that can be connected (mounted) to computers and other services using the SMB protocal, making it similar experience to departmental shared fileserver</p>
+<h3 id="firewall">Firewall</h3>
+<p>A common concept in networking, firewall software on a computers networking components limits which kind of traffic can come in or out, and restrict which computer internet address can connect.    best practices suggest closing all connections via the firewall, and only opening those connections for services you need, and only to those users (e.g. your own computer) you need to.    Azure additionally has an option to "allow connections from azure networks so that you can freely connect from the portal, 'cloud shell', or connect from on azure service to another.   The implication is that you trust all azure services. </p>
 <h4 id="gpu">GPU</h4>
 <p>from wikipedia: <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">https://en.wikipedia.org/wiki/Graphics_processing_unit</a>  GPUs can be very helpful for some code written to use them, especially many machine learning libraries, and Virtual Machiens may be provisiioned with GPUs.  </p>
+<h3 id="ip-address">IP Address</h3>
+<p>a unique string of characters that identifies each computer using the Internet Protocol to communicate over a network.   Your computer will have a different IP address depending on where you are located (home, work, field).   In addition, a home wifi router will assign a 'local' ip address for inside your home, but your 'public' internet IP address will be different.  To find your own IP address, simply google "what is my ip."   All Azure services (VMs, data systems, etc) are assigned IP addresses via networking.  see <a href="https://docs.microsoft.com/en-us/azure/virtual-network/public-ip-addresses">https://docs.microsoft.com/en-us/azure/virtual-network/public-ip-addresses</a></p>
 <h4 id="object-storage">Object Storage</h4>
 <p>"...also known as object-based storage, is a strategy that manages and manipulates data storage as distinct units, called objects. These objects are kept in a single storehouse and are not ingrained in files inside other folders. Instead, object storage combines the pieces of data that make up a file, adds all its relevant metadata to that file, and attaches a custom identifier." from <a href="https://www.netapp.com/data-storage/storagegrid/what-is-object-storage/">NetApp "What is object storage?</a>    Blob storage is object storage.   Objects (e.g. files) are retrieved from a large system via their identifier, not their name.   Amazon S3 and Google Cloud storage are also object stores.  </p>
 <h4 id="virtual-machine-vm">Virtual Machine (VM)</h4>
