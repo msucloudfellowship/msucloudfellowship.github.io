@@ -27,19 +27,22 @@ This has many definitions but for researchers the shortcut is using code to make
 #### File Storage (Azure)
 Azure cloud storage that is more traditional file sharing, and that can be connected (mounted) to computers and other services using the SMB protocal, making it similar experience to departmental shared fileserver
 
-### Firewall
+#### Firewall
 A common concept in networking, firewall software on a computers networking components limits which kind of traffic can come in or out, and restrict which computer internet address can connect.    best practices suggest closing all connections via the firewall, and only opening those connections for services you need, and only to those users (e.g. your own computer) you need to.    Azure additionally has an option to "allow connections from azure networks so that you can freely connect from the portal, 'cloud shell', or connect from on azure service to another.   The implication is that you trust all azure services. 
 
 
 #### GPU 
 from wikipedia: [https://en.wikipedia.org/wiki/Graphics_processing_unit](https://en.wikipedia.org/wiki/Graphics_processing_unit)  GPUs can be very helpful for some code written to use them, especially many machine learning libraries, and Virtual Machiens may be provisiioned with GPUs.  
 
-### IP Address
+#### IP Address
 a unique string of characters that identifies each computer using the Internet Protocol to communicate over a network.   Your computer will have a different IP address depending on where you are located (home, work, field).   In addition, a home wifi router will assign a 'local' ip address for inside your home, but your 'public' internet IP address will be different.  To find your own IP address, simply google "what is my ip."   All Azure services (VMs, data systems, etc) are assigned IP addresses via networking.  see https://docs.microsoft.com/en-us/azure/virtual-network/public-ip-addresses
 
  
 #### Object Storage
 "...also known as object-based storage, is a strategy that manages and manipulates data storage as distinct units, called objects. These objects are kept in a single storehouse and are not ingrained in files inside other folders. Instead, object storage combines the pieces of data that make up a file, adds all its relevant metadata to that file, and attaches a custom identifier." from [NetApp "What is object storage?](https://www.netapp.com/data-storage/storagegrid/what-is-object-storage/)    Blob storage is object storage.   Objects (e.g. files) are retrieved from a large system via their identifier, not their name.   Amazon S3 and Google Cloud storage are also object stores.  
+
+#### On-prem
+"On Premise" refers to technology (computers, disks, networking, etc) that are on your institutions computer centers or in your own lab.   Note that for some researchers, "on-prem" can still mean remove (e.g. our HPC is only accessible remotely, so it may not be obvious that it's on premise to users).  
 
 #### Virtual Machine (VM)
 Creating a simpulated computer hardware using software, to be able run an guest operating system inside a host system, such that the guest thinks it's running on an actual computer.   Many computer prowith versions of all the things an operating system
