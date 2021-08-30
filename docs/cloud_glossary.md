@@ -42,7 +42,7 @@ a unique string of characters that identifies each computer using the Internet P
 From [NetApp "What is object storage?](https://www.netapp.com/data-storage/storagegrid/what-is-object-storage/):  "...also known as object-based storage, is a strategy that manages and manipulates data storage as distinct units, called objects. These objects are kept in a single storehouse and are not ingrained in files inside other folders. Instead, object storage combines the pieces of data that make up a file, adds all its relevant metadata to that file, and attaches a custom identifier." Blob storage is object storage.   Objects (e.g. files) are retrieved from a large system via their identifier, not their name.   Amazon S3 and Google Cloud storage are also object stores.  
 
 #### Virtual Machine (VM)
-Creating a simpulated computer hardware using software, to be able run a guest operating system inside a host system, such that the guest thinks it's running on an actual computer.
+Creating a simulated computer hardware using software, to be able run a guest operating system inside a host system, such that the guest thinks it's running on an actual computer.
 
 #### Tensor Processing Unit (TPU)
 [Google Tensor Processing Unit](https://en.wikipedia.org/wiki/Tensor_Processing_Unit) which leads to the question of "what is a tensor" and that depends on who you ask.  Complimentary to GPUs, used by deep learning libraries such as [TensorFlow](https://www.tensorflow.org/)
