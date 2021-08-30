@@ -6,8 +6,11 @@ Main Azue Documentation : https://docs.microsoft.com/en-us/azure/
 
 List of All Azure Services : https://portal.azure.com/#allservices 
 
-Azure Portal Documentation https://docs.microsoft.com/en-us/azure/azure-portal/ 
+Azure Portal Documentation :  https://docs.microsoft.com/en-us/azure/azure-portal/ 
 
+Azure Tips and Tricks : https://microsoft.github.io/AzureTipsAndTricks/
+
+## Interface: Command Line
 
 Command-line progamming of Cloud Services
 
@@ -17,66 +20,49 @@ Command-line progamming of Cloud Services
 
  * Azure Command Line Interface (CLI) (MacOS, Linux): https://docs.microsoft.com/en-us/cli/azure 
 
+    * Introduction to Azure CLI https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest 
+
+
  
 ## Storage
 Create a Storage Account 
 
 https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account 
 
- 
-
 Azure Storage Explorer : https://azure.microsoft.com/en-us/features/storage-explorer/ 
 
+Blob Storage Documentation : https://docs.microsoft.com/en-us/azure/storage/blobs/  
 
-
-
-Introduction to CLI 
-
-https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest 
-
-Cloud Storage Resources in Microsoft Azure 
-
-
-Blob Storage Documentation 
-https://docs.microsoft.com/en-us/azure/storage/blobs/ 
-
- 
-
-Create and Manage a Storage Account 
+Create and Manage a Storage Account : 
 https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account 
 
  
-
-CLI Storage Reference 
+Using the CLI with Storage Reference :
 https://docs.microsoft.com/en-us/cli/azure/storage/account 
 
- 
 
-PowerShell Storage Reference 
+Using PowerShell Storage Reference :
 https://docs.microsoft.com/en-us/powershell/module/azure.storage 
 
- 
-
-Create blob storage with CLI 
+Create blob storage with CLI :
 
 https://docs.microsoft.com/en-us/azure/storage/common/storage-azure-cli 
 
-  
 
-Create blob storage with PowerShell 
+Create blob storage with PowerShell :
 
 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-powershell 
-
  
 
-Overview of Compute Options 
+## Compute 
+Overview of Compute Options :
 https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-overview 
 
  
 
 ## Programming
 
-R and Azure 
+### R and Azure 
 
 https://blog.revolutionanalytics.com/2018/12/azurestor.html 
 
@@ -92,9 +78,9 @@ https://github.com/Azure/AzureR
 
 https://github.com/Azure/AzureRMR 
 
-https://www.r-bloggers.com/how-to-evaluate-r-models-in-azure-machine-learning-studio/ 
+<!-- check that ml studio is still supported 
+https://www.r-bloggers.com/how-to-evaluate-r-models-in-azure-machine-learning-studio/ -->
 
- 
  
 
 ### Python and Azure 
@@ -107,7 +93,7 @@ https://github.com/Azure/azure-sdk-for-python
 
 https://github.com/Azure/azure-storage-python 
 
-https://pypi.org/project/azure/ (deprecated. see https://azure.github.io/azure-sdk/releases/latest/all/python.html instead) 
+https://azure.github.io/azure-sdk/releases/latest/all/python.html ( Note that pypi.org/project/azure/  is deprecated/obsolete if you find that via google)
 
 
 ### MATLAB and Azure 
