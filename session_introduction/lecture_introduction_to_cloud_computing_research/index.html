@@ -194,6 +194,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../about/" class="md-nav__link">
         About
       </a>
@@ -214,14 +229,14 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
-      <label class="md-nav__link" for="__nav_3">
+      <label class="md-nav__link" for="__nav_4">
         Sessions
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Sessions" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Sessions
         </label>
@@ -289,38 +304,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact/" class="md-nav__link">
-        Contact
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../references/" class="md-nav__link">
         References
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cloud_glossary/" class="md-nav__link">
-        Glossary
       </a>
     </li>
   
@@ -352,8 +337,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#methods-to-interact-with-azure" class="md-nav__link">
-    Methods to interact with Azure
+  <a href="#cloud-ducmentation-for-the-researcher" class="md-nav__link">
+    Cloud ducmentation for the researcher
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-make-cloud-things" class="md-nav__link">
+    How to make cloud things
   </a>
   
 </li>
@@ -428,44 +420,33 @@
                 
                 <h1 id="practical-suggestions-for-researchers-on-azure">Practical Suggestions for Researchers on Azure</h1>
 <!-- goal: mapping of whitepaper and first chapter to azure services; fill gaps -->
-
-<h3 id="methods-to-interact-with-azure">Methods to interact with Azure</h3>
-<p>Cloud systems are on-demand and hence need a programming interface to create cloud resources. </p>
+<p>Hello, Researcher.   I hear you want to use the cloud.   You may have looked at the various websites and poked around the web, and found it's just not clear at all how cloud computing may be helpful to you.  The companies all say how great it is!  </p>
+<p>The don't write documents for you.  Cloud training and documentation are written for : Infrastructure person (System admins and architects), Software Developers, Business Person, Agency managers.   You are a little of all of those things. </p>
+<p>From our vantage point, using university systems is not much different than cloud systems: they are remote and we rarely see them.  </p>
+<p>The conceptual models depense on your approach, and training materials do not consider this
+            What does that mean for Researchers?  There is very little written from our vantage point</p>
+<h3 id="cloud-ducmentation-for-the-researcher">Cloud ducmentation for the researcher</h3>
+<p>First there are two major approaches to learning how to cloud</p>
+<ol>
+<li>Building IT systems for public or institutational use: Systems<ul>
+<li>built for someone else to use, e.g. a service</li>
+<li>must be available at scale and</li>
+</ul>
+</li>
+<li>Building IT components to achieve computation (in the general sense, processing)<ul>
+<li>built just for you or for your work group</li>
+<li>can scale but must be easily reproduced to document methods</li>
+</ul>
+</li>
+</ol>
+<p>Documentation is written for 1.  There are services geared for machine learning or data science, but those often quickly veer off in to building systems for production inference, again not what you are interested in</p>
+<p>What is available?  </p>
 <ul>
-<li>"REST" is synonymous for URL-based web interface<ul>
-<li>for URL example, see <a href="https://catfact.ninja/fact">https://catfact.ninja/fact</a> from <a href="https://catfact.ninja/">https://catfact.ninja/</a> </li>
-<li>of course more complex and requires log-in</li>
-<li>all vendors use them</li>
-<li>most other interfaces are based on the API</li>
-<li>not friendly to use</li>
-<li>Azure calls their main cloud api "Azure Resource Manager" (ARM)</li>
+<li><a href="https://cloud4scieng.org/">https://cloud4scieng.org/</a>  this is very conceptual and </li>
 </ul>
-</li>
-<li>Web Interface: Portal<ul>
-<li>User Interface to issue API calls via forms</li>
-</ul>
-</li>
-<li>Command Line Interface<ul>
-<li>Linux/Bash or Windows/Powershell</li>
-<li>similar but not the same. </li>
-<li>requirer installation of azure utilty and library</li>
-</ul>
-</li>
-<li>
-<p>Programming interface aka SDK</p>
+<h3 id="how-to-make-cloud-things">How to make cloud things</h3>
+<p>see <a href="../intro_to_cloud_interfaces/">Introduction to Cloud Interfaces</a></p>
 <ul>
-<li>why leave python or R if don't have to?</li>
-<li><a href="https://github.com/Azure/AzureR">AzureR</a><ul>
-<li>example : </li>
-</ul>
-</li>
-<li>Azure for Python:<ul>
-<li>Overview: <a href="https://docs.microsoft.com/en-us/azure/developer/python/">https://docs.microsoft.com/en-us/azure/developer/python/</a></li>
-<li>SDK: <a href="https://azure.github.io/azure-sdk-for-python/">https://azure.github.io/azure-sdk-for-python/</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li>
 <p>Third-party Programming Languages</p>
 <ul>
