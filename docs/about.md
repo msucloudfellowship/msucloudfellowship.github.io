@@ -10,6 +10,12 @@ The MSU Cloud Fellowship is a cross-disciplinary program produced by MSU’s Ins
 
 MSU doctoral students and postdoctoral researchers are invited to apply in the summer and approximately 18 are selected each year.  The program started in 2019.   If you are an MSU graduate student or post-doc and interested in participating next year, please check back in the Summer of 2022 for announcements on the invitation to participate, or request to join the [MSU ICER mailing list](https://icer.msu.edu/getting-latest-hpcc-updates)
 
+## Citing the MSU ICER Cloud Computing Fellowship in Research Publications 
+
+We encourage cloud fellows to acknowledge the fellowship in publications arising from computational work performed during your fellowship project. Please let us know that you have referenced the fellowship, and we will link to your publication on the ICER publication site, which will further increase the visibility of your work. A sample statement can be:  
+
+"This work was supported in part through Michigan State University’s Institute for Cyber-Enabled Research Cloud Computing Fellowship, with computational resources and services provided by Information Technology Services and the Office of Research and Innovation at Michigan State University.”  
+ 
 ## Cloud Fellowship Organizers
 
 **Dr. Brian O'Shea** Professor and Director, MSU ICER<br>
