@@ -10,30 +10,40 @@
 
 The goals of this session are to orient you to this program, set up our technology, introduce ourselves, provide some background on cloud computing, and discuss what all of our expectations are.    For this session, like the others, we have some pre-session activities for the week, followed by a meeting Friday, September 3, from 2:00-3:30pm.  
 
+
+## Activities:
+
+Please complete the following activities prior to our first synchronous meeting September 3. 
+
+**Complete a Brief Survey**
+
+All 2021-22 participants were sent an introductory email that included a link to a brief survey.  preferences and techmology exposure.   Please complete this survey prior to our first meeting. 
+
+
+**Introduce yourself on Microsoft Teams**
+ 
+You should have all been given access to a Team "MSU ICER Cloud Fellowship" via your NetID.  
+
+  * Please log in to Teams (via the web https://teams.microsoft.com/ or using the Teams client)
+  * Post a new message in the "general" channel just saying "hello" and include your name, department and how you prefer to be addressed.   
+  * If necessary MSU IT has documentation about MS Teams here:  [https://tech.msu.edu/technology/collaborative-tools/spartan365/](https://tech.msu.edu/technology/collaborative-tools/spartan365/)  ( the link on that page requires yet another MSU log-in)
+
+**Confirm Access to Azure Portal**
+
+  * Go to [https://portal.azure.com](https://portal.azure.com).
+  * Log in with your MSU netid and password.
+  * Ensure you can access the Azure main web "portal."  
+  * You don't need to (and shouldn't) create any new resources or work with this website; simply confirm you have access.   You may see a list of "resources" and will introduce Azure during our first meeting. 
+
+If you have any issues, trouble with these activities, or won't be able to attend the introductory meeting, or have any questions at all about your participating in the fellowship, please [contact us](contact.md).  Note there will be time for questions and dicussion during our first meeting. 
+
 ## Readings  
 
   * [Chapter 1: Orienting in the cloud universe](https://s3.us-east-2.amazonaws.com/a-book/Orienting.html) <br>from **"Cloud Computing for Science and Engineering", Foster and Gannon**  
      ( *[Alternative link to publisher preview chapter](https://mitpress.ublish.com/ereader/239/?preview#page/1)*  )
   * [Using Cloud Computing for Academic Research](../references/DRAFT_cloud_computing_for_academic_research_parvizi_2021.pdf), Mahmoud Parvizi (draft version)
 
-## Activities:
-
-Please complete the following activities prior to our first synchronous meeting September 3. 
-
-**Introduce yourself on Microsoft Teams**
- 
-   You should have all been given access to a Team "MSU ICER Cloud Fellowship" via your NetID.  See MSU's documentation on how to use MS Teams here:  [https://tech.msu.edu/technology/collaborative-tools/spartan365/](https://tech.msu.edu/technology/collaborative-tools/spartan365/)  ( the link on that page requires yet another MSU log-in).  
-
-  * Please log in to Teams and post a message in the main channel just saying "hello" with your name, department and how you prefer to be addressed.   
-
-**Confirm Access to Azure Portal**
-
-  * Go to [https://portal.azure.com](https://portal.azure.com).
-  * Log in with your MSU netid and password.
-  * Click on the 'subscriptions' button and confirm the _MSU cloud fellowship_ subscription is there.
-  * On the main page (Azure calls this the 'dashboard') ensure you see a "resource group" called _TBD_.
-  * You don't need to (and shouldn't) create any new resources or work with this website; simply confirm you have access and can see the resources.  Thank you!
-       
+    
 ## Meeting: Introductions and program overview. 
 
 **September 3rd, 2021;  Location/Zoom TBD**
@@ -65,13 +75,13 @@ Please complete the following activities prior to our first synchronous meeting 
      * Session activity
      * Expectations
 
-### [Lecture: About Cloud Computing](lecture_introduction_to_cloud_computing_research.md)
+### Lecture: About Cloud Computing <!-- []](lecture_introduction_to_cloud_computing_research.md -->
   
   * Introducing computing vs. research computing vs. HPC vs. cloud computing
      - Learning how to learn about cloud
      - Cloud perceptions vantage points
      - Using workflow computational and computational thinking 
-  * [The interfaces to Cloud computing](intro_to_cloud_interfaces.md)
+  * The interfaces to Cloud computing <!--  [ ]](intro_to_cloud_interfaces.md) -->
   * Security: a finger wagging lecture
   * Acknowledging bias in access to cloud computing across research cultures
 
