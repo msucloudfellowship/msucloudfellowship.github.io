@@ -70,10 +70,11 @@ If you have any issues, trouble with these activities, or won't be able to atten
 ### Fellowship Program Overview
 
   * Why and What: 15 minute lecture on broad topics and goals of the course 
-  * Review [syllabus](../index.md#syllabus)
+  * Review our "[syllabus](../index.md#syllabus)"
      * Pre-session materials and activities, "textbook"
      * Session activity
      * Expectations
+  * Projects: Mahmoud Parvizi
 
 ### Lecture: About Cloud Computing <!-- []](lecture_introduction_to_cloud_computing_research.md -->
   
@@ -82,8 +83,11 @@ If you have any issues, trouble with these activities, or won't be able to atten
      - Cloud perceptions vantage points
      - Using workflow computational and computational thinking 
   * The interfaces to Cloud computing <!--  [ ]](intro_to_cloud_interfaces.md) -->
-  * Security: a finger wagging lecture
+  * About Cloud Security
+  * Costs and Budget overview
   * Acknowledging bias in access to cloud computing across research cultures
+  * Additional comments (Mahmoud)
+  * Questions?
 
 ### Demo: Using the Azure Portal
 
