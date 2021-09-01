@@ -10,6 +10,8 @@ Azure Portal Documentation :  https://docs.microsoft.com/en-us/azure/azure-porta
 
 Azure Tips and Tricks : https://microsoft.github.io/AzureTipsAndTricks/
 
+Choosing an Azure Service:  https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+
 ## Interface: Command Line
 
 Command-line progamming of Cloud Services
@@ -25,6 +27,7 @@ Command-line progamming of Cloud Services
 
  
 ## Storage
+
 Create a Storage Account: 
 
 https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account 
