@@ -11,7 +11,7 @@ The program runs from Fall 2021 to Spring 2022 semester.  Sessions are organized
 ### Schedule for Fall 2021
 
  * [Session 1](session_introduction): Introduction to the 21-22 Fellowship
-     * Sept 3: Meeeting : program tntroductions and program overview.  (On-line)
+     * Sept 3: Meeing : program introductions and program overview (via zoom)
  * [Session 2](session_how_to_cloud): Using the cloud for computing
     * Sept 10: Using Virtual Machines workshop 
  * [Session 3](session_cloud_storage): Cloud Storage
