@@ -4,6 +4,10 @@
 
 Researchers using the cloud must know a little about a lot of information technology to get computational work done in their domain specialty.   Most cloud glossaries are for systems administrators, not the rest of us.  This glossary is much more brief than Wikipedia and hopefully also provides the context a researcher needs to find what you need to use cloud services in your work.    Do you have an item to add? Please [contact us](contact.md)! 
 
+#### Other Glossaries
+
+https://www.cloudbank.org/cloud-terms
+
 ## The Glossary
 
 #### Azure Resource Manager
@@ -54,11 +58,23 @@ From [NetApp "What is object storage?](https://www.netapp.com/data-storage/stora
 #### On-prem
 "On Premise" refers to technology (computers, disks, networking, etc) that are on your institutions computer centers or in your own lab.   Note that for some researchers, "on-prem" can still mean remove (e.g. our HPC is only accessible remotely, so it may not be obvious that it's on premise to users).  
 
-#### Virtual Machine (VM)
-Creating a simulated computer hardware using software, to be able run a guest operating system inside a host system, such that the guest thinks it's running on an actual computer.
+#### Resource
+For AWS and Azure, a resource is an entity that you can work with.  The means something you can created, edit or delete via their cloud interface.  Could be a computer (virtual machine), a whole cluster (azure batch pool), or some tiny network setting (IP address). Resoures almost always cost money.  Resources are listed in your standard dashboard.  
+
+#### Resource Group
+Organizational scheme unique to Azure.  Nearly all resources must be part of a group and the resource group must be selected (or created ) when creating other resources.   Resource groups could be used for specific projects, for 'personal' resources used for multiple projects (or for azure things like cloud shell).  
+
+#### Resource Manager
+Azure calls the system they use to interface between you and cloud resources the "Azure Resource Manager" or ARM.   There used to be a different way to interact with resources hence this has a specific name, also becuase it adds consistency to the interface to 
+
+#### Virtual Machine
+(aka VM) Creating a simulated computer hardware using software, to be able run a guest operating system inside a host system, such that the guest thinks it's running on an actual computer.
 
 #### Tensor Processing Unit (TPU)
-[Google Tensor Processing Unit](https://en.wikipedia.org/wiki/Tensor_Processing_Unit) which leads to the question of "what is a tensor" and that depends on who you ask.  Complimentary to GPUs, used by deep learning libraries such as [TensorFlow](https://www.tensorflow.org/)
+[Google Tensor Processing Unit](https://en.wikipedia.org/wiki/Tensor_Processing_Unit) is specialized computer chip similar to [GPUs](#gpu), used by deep learning libraries such as [TensorFlow](https://www.tensorflow.org/) ( which leads to the question of "what is a tensor" and that depends on who you ask but similar to matrix.  
 
 #### Service Level Agreement (SLA)
-Level of service you expect from a vendor, laying out the metrics by which service is measured, as well as remedies or penalties should agreed-on service levels not be achieved.  In Cloud this is often spells out 'uptime,' which is percent of time the system is not down, e.g. 99.99%, and guarantees against data loss and availability.   For most research, uptime is not important as we are our own customer and can tolerate some downtime.   
+Level of service you expect from a vendor, laying out the metrics by which service is measured, as well as remedies or penalties should agreed-on service levels not be achieved.  In Cloud this is often spells out 'uptime,' which is percent of time the system is not down, e.g. 99.99%, and guarantees against data loss and availability.   For most research, uptime is not important as we are our own customer and can tolerate some downtime.
+
+#### Services
+Cloud "services" are often bundles of [resources](#resource) pulled together for coordinate function.   Cloud companies offer hundreds of often closely overlapping services.   
