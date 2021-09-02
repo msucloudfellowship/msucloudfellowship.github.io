@@ -21,8 +21,15 @@ Central Processing Unit
 #### Arm CPU
 Most computers run Intel CPUs, but another company has compatible processessor that are slightly different.  Some computational work is sensitive to CPU choice, and CPU choice can affect costs.  
 
+#### Containers
+Or Docker Containers (not all containers need to be Docker the vast majority of container system use Docker).  For R users, see https://colinfay.me/docker-r-reproducibility/   For Python users, there is https://www.netguru.com/blog/python-docker-tutorial  although you could read either. 
+Containers are a way to create a Linux-in-a-box that is more effieccient than a VM, and has a language for building containers meaning you can provision an entire system from code down to installing all the packages you need and copying your own program into it.   Containers are widely use to package and distribute complex research software systems for example Bioinformatics workflow system "Cromwell."  This way reseearches can download and use a pre-installed system without the trouble of getting all of the pre-requistes (dependencies) installed on their machine.   Docker is great for DevOps. 
+
 #### DevOps
 This has many definitions but for researchers the shortcut is using code to make IT infrastructure.  Helping developers (like you) do Ops (like sysadmins) with code.   see IaC.
+
+#### Docker
+Docker is the most prevalent form of "Containers", e.g Docker is to containers as google is to search.   See containers above for details.  Note that Docker is many things as once:  a method and format for Linux containers, a program for working with container ( e.g. `docker build...`), a Company, and that's company's hub or repository for storing and access free containers (or your own).    Cloud companies also have "hubs" or repositories for storing your own Docker containers.    
 
 #### File Storage (Azure)
 Azure cloud storage that is more traditional file sharing, and that can be connected (mounted) to computers and other services using the SMB protocal, making it similar experience to departmental shared fileserver
