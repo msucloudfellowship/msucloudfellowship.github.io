@@ -352,6 +352,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#desktop-applications" class="md-nav__link">
+    Desktop Applications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#command-line" class="md-nav__link">
     Command Line
   </a>
@@ -374,18 +381,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#python-notebooks" class="md-nav__link">
-    Python Notebooks
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#r" class="md-nav__link">
     R
   </a>
@@ -396,10 +391,42 @@
     </nav>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-company-frameworks" class="md-nav__link">
+    Cloud company frameworks
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud company frameworks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-arm-templates" class="md-nav__link">
+    Azure: ARM templates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#using-the-azure-web-portal" class="md-nav__link">
-    using the Azure Web Portal
+  <a href="#third-party-programming-with-terraform" class="md-nav__link">
+    Third-party programming with Terraform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-cloud-from-cloud" class="md-nav__link">
+    Building Cloud from Cloud
   </a>
   
 </li>
@@ -408,19 +435,6 @@
   <a href="#references" class="md-nav__link">
     References
   </a>
-  
-    <nav class="md-nav" aria-label="References">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#aws" class="md-nav__link">
-    AWS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -438,13 +452,24 @@
                 
                 
                 <h1 id="interfacing-with-cloud-services">Interfacing with Cloud Services</h1>
-<p>Cloud Services are by design DIY or on-demand and hence need a programming interface to create cloud resources.  This is only possible becuase inside the data center, computer configuration can be done completely with code (Infrastructure as Code.  Amazon's insight was that they could slap a website on top of that, a systems for metering usage, and sell it.  </p>
-<p>infrastructure and hence require an interface to thes services.  All of the cloud companies use a web interface, so-called REST API.   Knowing the details of REST is not important but it's often the basis for all of the other style of interfaces.    Very few researchers would ever use the REST api directly, instead would use the web interface or even better the command line or programming language interface which achieves the same goal with less work.   </p>
+<p>Cloud Services are by design DIY or on-demand and hence need a programming interface to create cloud resources.  This is only possible becuase inside the data center, computer configuration can be done completely with code, also knows as "Infrastructure as Code" (IaC).  <a href="https://en.wikipedia.org/wiki/Amazon_Web_Services#Founding_(2000–2005)">Amazon's insight</a> was that they could slap a website on top of that, put a system for tracking (metering) usage, and sell it.  </p>
+<p>All of the cloud companies as their base use a web interface, so-called <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST API</a>.   Knowing the details of REST is not important but it's often the basis for all of the other style of interfaces.  </p>
+<p>Here is an <a href="https://www.7timer.info/bin/astro.php?lon=113.2&amp;lat=23.1&amp;ac=0&amp;unit=metric&amp;output=json&amp;tzshift=0">example web api URL for weather forecast</a>, with parameters for coordinates, units and format of output</p>
+<p><code>https://www.7timer.info/bin/astro.php?lon=113.2&amp;lat=23.1&amp;ac=0&amp;unit=metric&amp;output=json&amp;tzshift=0</code>  </p>
+<p>Very few researchers would ever use the REST api directly, instead would use the web interface or even better the command line or programming language interface which achieves the same goal with less work.  </p>
 <p>In Azure, everything you could possibly create is called a "resource:" a machine, a data service, a single network address.   The system to work with Azure resources is the "Azure Resource Manager" or ARM and the primary interface for the Resource Manager is their web (REST) api.    You may see references to resources in documentation and that means any web doo-dad. </p>
 <h2 id="summary-of-cloud-interfaces">Summary of Cloud Interfaces</h2>
-<p>Here is a summary of ways to interact with cloud services, with specifics for Azure.  </p>
+<p>This summary is focused on Microsoft Azure, but the other cloud companies have similar concepts. </p>
 <h3 id="graphical-web-interface">Graphical Web Interface</h3>
 <p>Most people want a graphical user interface, and for azure that's the "Portal" or <a href="https://portal.azure.com">https://portal.azure.com</a>.  For Google cloud it's the "console" and for AWS it's also called the console.  See below for an introduction to using the portal.   Note that the Azure portal and Google console both have web-based terminals that allow you to use the CLI directly in the web interface.    </p>
+<h3 id="desktop-applications">Desktop Applications</h3>
+<p>Azure provides some desktop applications for working with a few of the widely used cloud services : </p>
+<ul>
+<li>Azure Storage Explorer: <a href="https://azure.microsoft.com/en-us/features/storage-explorer/">https://azure.microsoft.com/en-us/features/storage-explorer/</a><br />
+    Can create cloud storage and upload/download data.  We will use that for our session on Storage</li>
+<li>Azure Data Studio:  <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is-azure-data-studio?view=sql-server-ver15">https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is-azure-data-studio?view=sql-server-ver15</a> <br />
+    Can connect to and work with data systems (such as databases ) that are on your computer, on a system on campus, or hosted in Azure</li>
+</ul>
 <h3 id="command-line">Command Line</h3>
 <p>For those not familar wiht the command line, see <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-the-linux-terminal">https://www.digitalocean.com/community/tutorials/an-introduction-to-the-linux-terminal</a> for linux and for Windows Powershell see <a href="https://programminghistorian.org/en/lessons/intro-to-powershell">https://programminghistorian.org/en/lessons/intro-to-powershell</a></p>
 <p>The command line interface is a great way to interact with cloud services because it's imperative and all options are specified in a single command.   With the web interface, you may have to hunt through the user interface to find the checkbox for an option, but for command line </p>
@@ -457,15 +482,29 @@
 <p>Example Azure code to create cloud storage, compared with how you would see the resources in the azure portal, and similar commands using the CLI : <a href="https://docs.microsoft.com/en-us/azure/developer/python/azure-sdk-example-storage?tabs=cmd">https://docs.microsoft.com/en-us/azure/developer/python/azure-sdk-example-storage?tabs=cmd</a></p>
 <p>Note that Azure also has a service "Azure Cloud Functions" that run python that are not the same thing as the SDK.  These are 'serverless' resources (similar to AWS Lambda), which we will learn about later in the course. </p>
 <p>Both AWS and Google Cloud have Python SDKs, and probably other vendors.  </p>
-<h4 id="python-notebooks">Python Notebooks</h4>
-<p>this is nothing special or separate, just athat you can use the Python cloud libraries </p>
-<h3 id="r">R</h3>
-<p>Unlike th other vendors, Microsoft maintains R packages to in</p>
-<h2 id="using-the-azure-web-portal">using the Azure Web Portal</h2>
+<h4 id="r">R</h4>
+<p>Unlike the other vendors, Microsoft maintains an SDK for R Users which allows you to create cloud services directly from Rstudio.  See their github pages <a href="https://github.com/Azure/AzureR">https://github.com/Azure/AzureR</a> and excellent documentation throughout the packages.  </p>
+<h3 id="cloud-company-frameworks">Cloud company frameworks</h3>
+<p>In addition to the "SDKs" for existing languages, cloud companies often have their own frameworks for using code to build (provision) infrastructure. 
+For Azure, these are "ARM Templates" and for AWS it's <a href="https://aws.amazon.com/cloudformation/">Cloud Formation</a>. </p>
+<h4 id="azure-arm-templates">Azure: ARM templates</h4>
+<p>Azure has a system for submitting a template, or essentially a configuration file to the Azure Resource Manager (ARM) that dictates which cloud resources are to be created.   For Azure these are JSON-formatted files  that are "declaritive" (rather than procedural or imperative like Python).   The best way to understand these is to explore the many that Microsoft posts on github, and to try them.   If you do, be mindful to delete any resources you create so as not to be charged for them. </p>
+<pre><code>- Overview of ARM templates: https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
+- Quick start ARM templates (github): https://github.com/Azure/AzureStack-QuickStart-Templates
+</code></pre>
+<h2 id="third-party-programming-with-terraform">Third-party programming with Terraform</h2>
+<p>There are other ways to 'program the cloud' from companies outside of the big three.  One widely used frame is "Terraform" from Hashicorp, not affiliated with any cloud company.   The ad</p>
+<pre><code>- Terraform: https://www.terraform.io
+- Can work with any vendor including Azure
+- Often more readable than ARM templates, Syntax remarkably simple 
+- Focus on maintaining consistent systems ( declarative) 
+- Does not cover all services, but can fall back to ARM templates when necessary
+</code></pre>
+<h2 id="building-cloud-from-cloud">Building Cloud from Cloud</h2>
+<p>This may not be an 'interface' but is operationally similar.  It's possible to use some of the above interfaces on existing cloud services, e.g.   creating new cloud resources automaticaly from existing cloud resources.   Your cloud architecture may need different types of resources, or parameterized resources only as needed (e.g. depending data inputs, a web-gateway for cloud on demand).    </p>
+<p>For example Azure <a href="https://azure.microsoft.com/en-us/services/logic-apps/">Logic Apps</a> can create resources when they are run (e.g. provision and start a computer) and a logic app can be triggered by events such as when a new file is created, or using a web api (e.g. REST POST command that sends data and parameters).   This adds significant complexity and is only valuable for event-based systems opens up using the cloud as a big computer programming language. </p>
 <h2 id="references">References</h2>
-<h3 id="aws">AWS</h3>
-<p>The SDKs for various programming languages: <a href="https://aws.amazon.com/tools/">https://aws.amazon.com/tools/</a></p>
-<p>AWS CLI: <a href="https://aws.amazon.com/cli/">https://aws.amazon.com/cli/</a></p>
+<p>See our <a href="../references">references page</a> for curated Azure links.   For AWS, see <a href="https://aws.amazon.com/tools/">https://aws.amazon.com/tools/</a> and more about the AWS CLI: <a href="https://aws.amazon.com/cli/">https://aws.amazon.com/cli/</a></p>
                 
               
               

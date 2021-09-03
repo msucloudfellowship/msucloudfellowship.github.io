@@ -341,6 +341,19 @@
     Why?
   </a>
   
+    <nav class="md-nav" aria-label="Why?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#other-glossaries" class="md-nav__link">
+    Other Glossaries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -387,8 +400,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#devops" class="md-nav__link">
     DevOps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
   </a>
   
 </li>
@@ -443,8 +470,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#virtual-machine-vm" class="md-nav__link">
-    Virtual Machine (VM)
+  <a href="#resource" class="md-nav__link">
+    Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-group" class="md-nav__link">
+    Resource Group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-manager" class="md-nav__link">
+    Resource Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine" class="md-nav__link">
+    Virtual Machine
   </a>
   
 </li>
@@ -459,6 +507,13 @@
           <li class="md-nav__item">
   <a href="#service-level-agreement-sla" class="md-nav__link">
     Service Level Agreement (SLA)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    Services
   </a>
   
 </li>
@@ -484,6 +539,8 @@
                 <h1 id="glossary-of-cloud-terms">Glossary of Cloud Terms</h1>
 <h2 id="why">Why?</h2>
 <p>Researchers using the cloud must know a little about a lot of information technology to get computational work done in their domain specialty.   Most cloud glossaries are for systems administrators, not the rest of us.  This glossary is much more brief than Wikipedia and hopefully also provides the context a researcher needs to find what you need to use cloud services in your work.    Do you have an item to add? Please <a href="../contact/">contact us</a>! </p>
+<h4 id="other-glossaries">Other Glossaries</h4>
+<p><a href="https://www.cloudbank.org/cloud-terms">https://www.cloudbank.org/cloud-terms</a></p>
 <h2 id="the-glossary">The Glossary</h2>
 <h4 id="azure-resource-manager">Azure Resource Manager</h4>
 <p>ARM</p>
@@ -495,8 +552,13 @@
 <p>Central Processing Unit</p>
 <h4 id="arm-cpu">Arm CPU</h4>
 <p>Most computers run Intel CPUs, but another company has compatible processessor that are slightly different.  Some computational work is sensitive to CPU choice, and CPU choice can affect costs.  </p>
+<h4 id="containers">Containers</h4>
+<p>Or Docker Containers (not all containers need to be Docker the vast majority of container system use Docker).  For R users, see <a href="https://colinfay.me/docker-r-reproducibility/">https://colinfay.me/docker-r-reproducibility/</a>   For Python users, there is <a href="https://www.netguru.com/blog/python-docker-tutorial">https://www.netguru.com/blog/python-docker-tutorial</a>  although you could read either. 
+Containers are a way to create a Linux-in-a-box that is more effieccient than a VM, and has a language for building containers meaning you can provision an entire system from code down to installing all the packages you need and copying your own program into it.   Containers are widely use to package and distribute complex research software systems for example Bioinformatics workflow system "Cromwell."  This way reseearches can download and use a pre-installed system without the trouble of getting all of the pre-requistes (dependencies) installed on their machine.   Docker is great for DevOps. </p>
 <h4 id="devops">DevOps</h4>
 <p>This has many definitions but for researchers the shortcut is using code to make IT infrastructure.  Helping developers (like you) do Ops (like sysadmins) with code.   see IaC.</p>
+<h4 id="docker">Docker</h4>
+<p>Docker is the most prevalent form of "Containers", e.g Docker is to containers as google is to search.   See containers above for details.  Note that Docker is many things as once:  a method and format for Linux containers, a program for working with container ( e.g. <code>docker build...</code>), a Company, and that's company's hub or repository for storing and access free containers (or your own).    Cloud companies also have "hubs" or repositories for storing your own Docker containers.    </p>
 <h4 id="file-storage-azure">File Storage (Azure)</h4>
 <p>Azure cloud storage that is more traditional file sharing, and that can be connected (mounted) to computers and other services using the SMB protocal, making it similar experience to departmental shared fileserver</p>
 <h4 id="firewall">Firewall</h4>
@@ -511,12 +573,20 @@
 <p>From <a href="https://www.netapp.com/data-storage/storagegrid/what-is-object-storage/">NetApp "What is object storage?</a>:  "...also known as object-based storage, is a strategy that manages and manipulates data storage as distinct units, called objects. These objects are kept in a single storehouse and are not ingrained in files inside other folders. Instead, object storage combines the pieces of data that make up a file, adds all its relevant metadata to that file, and attaches a custom identifier." Blob storage is object storage.   Objects (e.g. files) are retrieved from a large system via their identifier, not their name.   Amazon S3 and Google Cloud storage are also object stores.  </p>
 <h4 id="on-prem">On-prem</h4>
 <p>"On Premise" refers to technology (computers, disks, networking, etc) that are on your institutions computer centers or in your own lab.   Note that for some researchers, "on-prem" can still mean remove (e.g. our HPC is only accessible remotely, so it may not be obvious that it's on premise to users).  </p>
-<h4 id="virtual-machine-vm">Virtual Machine (VM)</h4>
-<p>Creating a simulated computer hardware using software, to be able run a guest operating system inside a host system, such that the guest thinks it's running on an actual computer.</p>
+<h4 id="resource">Resource</h4>
+<p>For AWS and Azure, a resource is an entity that you can work with.  The means something you can created, edit or delete via their cloud interface.  Could be a computer (virtual machine), a whole cluster (azure batch pool), or some tiny network setting (IP address). Resoures almost always cost money.  Resources are listed in your standard dashboard.  </p>
+<h4 id="resource-group">Resource Group</h4>
+<p>Organizational scheme unique to Azure.  Nearly all resources must be part of a group and the resource group must be selected (or created ) when creating other resources.   Resource groups could be used for specific projects, for 'personal' resources used for multiple projects (or for azure things like cloud shell).  </p>
+<h4 id="resource-manager">Resource Manager</h4>
+<p>Azure calls the system they use to interface between you and cloud resources the "Azure Resource Manager" or ARM.   There used to be a different way to interact with resources hence this has a specific name, also becuase it adds consistency to the interface to </p>
+<h4 id="virtual-machine">Virtual Machine</h4>
+<p>(aka VM) Creating a simulated computer hardware using software, to be able run a guest operating system inside a host system, such that the guest thinks it's running on an actual computer.</p>
 <h4 id="tensor-processing-unit-tpu">Tensor Processing Unit (TPU)</h4>
-<p><a href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">Google Tensor Processing Unit</a> which leads to the question of "what is a tensor" and that depends on who you ask.  Complimentary to GPUs, used by deep learning libraries such as <a href="https://www.tensorflow.org/">TensorFlow</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">Google Tensor Processing Unit</a> is specialized computer chip similar to <a href="#gpu">GPUs</a>, used by deep learning libraries such as <a href="https://www.tensorflow.org/">TensorFlow</a> ( which leads to the question of "what is a tensor" and that depends on who you ask but similar to matrix.  </p>
 <h4 id="service-level-agreement-sla">Service Level Agreement (SLA)</h4>
-<p>Level of service you expect from a vendor, laying out the metrics by which service is measured, as well as remedies or penalties should agreed-on service levels not be achieved.  In Cloud this is often spells out 'uptime,' which is percent of time the system is not down, e.g. 99.99%, and guarantees against data loss and availability.   For most research, uptime is not important as we are our own customer and can tolerate some downtime.   </p>
+<p>Level of service you expect from a vendor, laying out the metrics by which service is measured, as well as remedies or penalties should agreed-on service levels not be achieved.  In Cloud this is often spells out 'uptime,' which is percent of time the system is not down, e.g. 99.99%, and guarantees against data loss and availability.   For most research, uptime is not important as we are our own customer and can tolerate some downtime.</p>
+<h4 id="services">Services</h4>
+<p>Cloud "services" are often bundles of <a href="#resource">resources</a> pulled together for coordinate function.   Cloud companies offer hundreds of often closely overlapping services.   </p>
                 
               
               
