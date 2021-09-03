@@ -66,6 +66,10 @@ Choosing an Azure Compute Service (Decision Tree):  https://docs.microsoft.com/e
  
 ## Interface: ARM templates
 
+Azure Resource Manager Templates are JSON-formatted configuration files that dictate which resources to create.   
+
+Overview of ARM templates:  https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
+
 explore quick start ARM templates (web): https://azure.microsoft.com/en-us/resources/templates/
 
 explore quick start ARM templates (github): https://github.com/Azure/AzureStack-QuickStart-Templates
