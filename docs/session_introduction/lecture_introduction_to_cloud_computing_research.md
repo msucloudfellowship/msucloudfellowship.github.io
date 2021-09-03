@@ -1,30 +1,32 @@
 # Practical Introduction for Researchers on Azure
 
 ## Introducing cloud computing vs. research computing
-     
+
 ### Learning how to learn about cloud
 
-The challenge for researchers learning about cloud is that they don't write cloud documentation for you (most of the time).  You may have looked at the various websites and poked around the web, and found it's just not clear at all how cloud computing may be helpful to you, even though it all sounds great.  
+You may have looked at the various websites and poked around the web, and found it's just not clear at all how cloud computing may be helpful to you, even though it all sounds great.  The challenge for researchers learning about cloud is that most cloud documentation for isn't written for you.  
 
-Cloud training and documentation are written for IT professionals like System admins and architects, Software Developers, Business people, and Agency managers.  Most researchers are a little of all of those things.   
- 
-The conceptual models depense on your approach, and this is not obvious in most training materials.  Our goal as researchers is to get our work (or the work of our lab) done, not to build systems used by hundreds of people or for business purposes.   That can make it difficult to decipher which kind of cloud service will work best for your use case.   As Dr. Parvizi writes, cloud is very different from using traditional research-oriented technology like workstations or HPC.   There are hundreds of services to choose from but many users will find the conceptually straightfoward path of creating cloud computers and install what they need.   Our goal for this fellowship is to provide context and background, and help you explore some of the so-called "cloud native" technologies like "serverless" systems that let you run your scripts without dealing with operating system installs. 
+Cloud training and documentation are mostly written for IT professionals like system admins and architects, software developers, business people, and agency managers.  Researchers tend to be a little of all of those things.   
 
+Training materials ofen have an embedded  conceptual models of computing, and this model depend on your approach.  Our goal as researchers is to get our work (or the work of our lab) done, not to build systems used by hundreds of people or for business purposes.   That can make it difficult to decipher which kind of cloud service will work best for your use case.   As Dr. Parvizi writes, cloud is very different from using traditional research-oriented technology like workstations or HPC.   There are hundreds of services to choose from but we find many researchers will reach for the conceptually straightfoward path of creating cloud computers and install what they need.   Our goal for this fellowship is to provide context and background, and help you explore some of the so-called "cloud native" technologies like "serverless" systems that let you run your scripts without dealing with operating system installs. 
 
 The target audience for most cloud companies are IT professional building IT systems for public or institutational use.  Let's call this the "Systems" perspective:
+
   - built for someone else to use, e.g. a service
   - must be available at scale and ultimately reliable
   - documentation is in terms of historic IT systems house in on-premise corporate data centers 
   - "production" systems
   - often very concerned with authentication and security
- 
+
 The second audience are corporate software engineers, or dot-com or app software companies. We'll call this the "developer
  perspective
+
   - need to easily create systems to run their software for demonstration and testing 
   - complete interelate
-   - goal is a robust sytem that can handle many users, e.g. "production" systems
+  - goal is a robust sytem that can handle many users, e.g. the performance of a "production" systems are often top of mind
 
 And finally most closely related to your work are data science, "machine learning" or an "analytical" perspective
+
   - systems to achieve computation.  
   - May work like our local HPC
   - systems built only for small work groups, not for public 
@@ -34,10 +36,10 @@ And finally most closely related to your work are data science, "machine learnin
 
 What is are the goals from research perspective for cloud computing?
 
-  - Custom: can create systems you need when you need it
-  - On-demand: can run Ad-hoc computations, as needed
-  - Reproducibile: a computation can be re-run as needed, meaning the systems to run- can documentation and script 
-  - Cost effective: unlike commerical applications, more users does not mean more revenue.   Budgets are fixed and pay-as-you-go model is good and bad. 
+  - Custom: can create customized resources only when you need it
+  - On-demand: can run ad-hoc computations on those on-demand resources
+  - Reproducible: a computation can be re-run as needed, meaning cloud resources can be easily re-recreated to re-run your computations. 
+  - Cost effective: unlike commerical applications, more users does not mean more revenue.   Budgets are fixed and the pay-as-you-go model requires vigilance to not over-spend.   
   - Others? <!-- discussion -->
 
 
@@ -53,7 +55,7 @@ There are general, conceptual introductions and dicussions for academics.
 
 #### NIST defintions of cloud: Service Levels and You
 
-What does "X as a service" actually mean, and where are the lines drawn?   Like the species concept in biology, it's not always cut and dried, but can be thought of as a spectrum
+The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) defines service models, but what does "X as a service" actually mean, and where are the lines drawn?   Like the species concept in biology, it's not always cut and dried, but can be thought of as a spectrum
 
 * Infrastructure (aaS):  Nuts and bolts, DIY, Lego.  You need understanding of computing architecture as these services 
 * Everything in between:  Platforms or pre-configured and managed infrastructure
@@ -86,9 +88,9 @@ As part of this fellowship, our goal is to help you translate documentation writ
   * There are new services and bundles created all the time that may be competing or superior choices for doing research
   * If you are unsure, ask us.  See the [contact page](../contact.md) or use our Teams channel.   During the cloud fellowship we are here to provide some answers, context for what you are seeing, or possible directions to explore.  
   * Cloud companies have help desks and many resources for anyone using their services or potential customers and we may be able to connect you with those. 
- 
 
-## [The interfaces to Cloud computing](intro_to_cloud_interfaces.md)
+
+## [The Interfaces to Cloud computing](intro_to_cloud_interfaces.md)
 
 A defining aspect of cloud computing is that it's "on-demand" hence creation of resources must be automated or "scriptable."  All Cloud providers have various 'interfaces' to their services that include both programmatic and web-based.   See [Intro to Cloud Interfaces]](intro_to_cloud_interfaces.md) for more information about Azure's interfaces. 
 
@@ -102,21 +104,40 @@ A major advantage to using workflows or code for provisioning your cloud computi
 
 ## About Cloud Security
 
+Security and Risk management is an important issue even for researchers who's data may not be sensitive or even open source.   Attackers  may use the services you create to launch attacks on other services, leaving you liable.  
+
+Finding a readable list of security recommendations for cloud computing is a challenge for all the reasons outlined above.  Our textbook has [a nice chaper outlining cloud security](https://s3.us-east-2.amazonaws.com/a-book/security.html)
+
+The "Shared responsibility" model for cloud computing takes a model of computing components, and shows how much of each component the user is responsible for security:
+
+![Microsoft Model of Shared Responsibility](../img/microsoft-shared-responsibility.svg)
+*[Microsoft Model of Shared Responsibility for Cloud Computing](https://docs.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)*
+
+We will come back to this model as we gain deeper understanding of research computing on the cloud.  
 
 ## Costs and Budget overview
 
-  * Costs = $ + Time + Risk
-  * Time = development time + wait time + compute time
+We will cover the details of pricing, examine costs, and controlling costs in future sessions.   Each participant has a budget for their Azure resources that they should stay under.   If you need to use Google or AWS we need to make additional arrangements but your first step would be to acquire a free starter account with these companies (e.g. using a gmail address). 
+
+Briefly: 
+
+  * Costs are more than just dollars for services.  Consider `[Total Cost] = ( $ + Time + Risk )`
+  * `[Total Time] = ( development time + wait time + compute time ) `
   * Risk is rarely non-significant.  Never say "I won't get hacked..."
+  * In the Service level spectrum, the higher level "platform" services may have higher monetary costs but often reduce time and risk
+
 
 ## HPCC vs Cloud
 
-just like many pre-developed workflows are diff to port from HPC to cloud, some cloud workflows are difficult run on HPC (but never say never):
+Dr. Parvizi's white paper outlines the challenges of adapting HPC workflows to cloud computing.  
+
+The HPC is amazing effective at running all kinds of systems at very list cost, if any, to MSU researchers.  Many systems not designed for HPC can be adjusted to run in that environment.  However, just like many workflows are difficult to port from HPC to cloud, some cloud workflows are difficult run on HPC (but never say never):
 
 - Big Data systems (see magpie project)
 - Long-running Data Systems like database servers
 - Web-based applications (see on-demand project)
 - Containers (see singularity project)
+
 
 ## Acknowledging bias in access to cloud computing across research cultures
 
@@ -126,15 +147,6 @@ just like many pre-developed workflows are diff to port from HPC to cloud, some 
 Summary and additional comments
 
 <!-- summary: freely explore cloud services using the portal as there are often free-tiers; try the programming interfaces  at least once as this will make your work reproducible ; security is always a concern and consideration of cost ; look to the higher level services, even though more expensive may be faster to results and more secure --> 
-
-## Questions?  
-
-Time for questions and discussion about to getting started with cloud computing.  
-
-  - What things are at the top of your mind as you begin this program?  
-  - Which of these topics resonates with your previous experience using computing or cloud computing (if any)?
-
-
 
 
 

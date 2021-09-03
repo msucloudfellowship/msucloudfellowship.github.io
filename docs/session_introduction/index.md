@@ -46,7 +46,7 @@ If you have any issues, trouble with these activities, or won't be able to atten
     
 ## Meeting: Introductions and program overview. 
 
-**September 3rd, 2021;  Location/Zoom TBD**
+**September 3rd, 2021**:   Zoom meeting included in introductory email to participants 
 
 ### Introductions
   * Brian O'shea, ICER
@@ -86,11 +86,16 @@ If you have any issues, trouble with these activities, or won't be able to atten
   * About cloud security
   * Costs and budget overview
   * Acknowledging bias in access to cloud computing across research cultures
-  * Additional comments (Mahmoud)
-  * Questions?  Discussion
+  * References: 
+     * The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) 
+  
+### Additional comments from program organizers
 
-### Demo: Using the Azure Portal
+### Demonstration: Using the Azure Portal
 
-A quick, live demonstration orienting you to the Azure portal.  Our next session activities will include a more thorough introduction. 
+A quick, live demonstration orienting you to the Azure portal.  Our next session activities will include a more thorough workshop on creating cloud computing resources
 
-### Discussion and Questions
+### Questions and Discussion
+
+  - What things are at the top of your mind as you begin this program?  
+  - Which of these topics resonates with your previous experience using computing or cloud computing (if any)?

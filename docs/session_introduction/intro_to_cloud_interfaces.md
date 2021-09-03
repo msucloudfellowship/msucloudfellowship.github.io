@@ -55,13 +55,9 @@ Note that Azure also has a service "Azure Cloud Functions" that run python that 
 
 Both AWS and Google Cloud have Python SDKs, and probably other vendors.  
 
-#### Python Notebooks
-
-this is nothing special or separate, just athat you can use the Python cloud libraries 
-
 #### R
 
-Unlike th other vendors, Microsoft maintains R packages to in
+Unlike the other vendors, Microsoft maintains an SDK for R Users which allows you to create cloud services directly from Rstudio.  See their github pages https://github.com/Azure/AzureR and excellent documentation throughout the packages.  
 
 ### Cloud company frameworks
 
