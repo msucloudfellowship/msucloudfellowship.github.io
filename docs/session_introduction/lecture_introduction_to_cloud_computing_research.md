@@ -1,81 +1,115 @@
-# Practical Suggestions for Researchers on Azure
+# Practical Introduction for Researchers on Azure
 
-<!-- goal: mapping of whitepaper and first chapter to azure services; fill gaps -->
+## Introducing cloud computing vs. research computing
+     
+### Learning how to learn about cloud
 
-### Methods to interact with Azure 
+The challenge for researchers learning about cloud is that they don't write cloud documentation for you (most of the time).  You may have looked at the various websites and poked around the web, and found it's just not clear at all how cloud computing may be helpful to you, even though it all sounds great.  
 
-Cloud systems are on-demand and hence need a programming interface to create cloud resources. 
+Cloud training and documentation are written for IT professionals like System admins and architects, Software Developers, Business people, and Agency managers.  Most researchers are a little of all of those things.   
  
-  * "REST" is synonymous for URL-based web interface
-     - for URL example, see https://catfact.ninja/fact from https://catfact.ninja/ 
-     - of course more complex and requires log-in
-     - all vendors use them
-     - most other interfaces are based on the API
-     - not friendly to use
-     - Azure calls their main cloud api "Azure Resource Manager" (ARM)
-  * Web Interface: Portal
-    -  User Interface to issue API calls via forms
-  * Command Line Interface
-    - Linux/Bash or Windows/Powershell
-    - similar but not the same. 
-    - requirer installation of azure utilty and library
-  * Programming interface aka SDK
-    - why leave python or R if don't have to?
-    - [AzureR](https://github.com/Azure/AzureR)
-        - example : 
-    - Azure for Python:
-        - Overview: https://docs.microsoft.com/en-us/azure/developer/python/
-        - SDK: https://azure.github.io/azure-sdk-for-python/
-  
-  * Third-party Programming Languages
-    - Terraform
-    - Can work with any vendor including Azure
-    - Focus on maintaining consistent systems 
-    - Syntax remarkably simple not does not cover all services
-
-  * Cloud from Cloud
-    - somee services can create other cloud services on demand
-    - Azure "Logic Apps" - given an event like a file is created, create and start other cloud resources like a computer to process data frrom the event
-    
-### Service Levels and You
-
-What does "X as a service" actually mean, and where are the lines drawn?   Like the species concept in biology, it's not always cut and dried.
+The conceptual models depense on your approach, and this is not obvious in most training materials.  Our goal as researchers is to get our work (or the work of our lab) done, not to build systems used by hundreds of people or for business purposes.   That can make it difficult to decipher which kind of cloud service will work best for your use case.   As Dr. Parvizi writes, cloud is very different from using traditional research-oriented technology like workstations or HPC.   There are hundreds of services to choose from but many users will find the conceptually straightfoward path of creating cloud computers and install what they need.   Our goal for this fellowship is to provide context and background, and help you explore some of the so-called "cloud native" technologies like "serverless" systems that let you run your scripts without dealing with operating system installs. 
 
 
-### The Packaging of Open Sources
+The target audience for most cloud companies are IT professional building IT systems for public or institutational use.  Let's call this the "Systems" perspective:
+  - built for someone else to use, e.g. a service
+  - must be available at scale and ultimately reliable
+  - documentation is in terms of historic IT systems house in on-premise corporate data centers 
+  - "production" systems
+  - often very concerned with authentication and security
+ 
+The second audience are corporate software engineers, or dot-com or app software companies. We'll call this the "developer
+ perspective
+  - need to easily create systems to run their software for demonstration and testing 
+  - complete interelate
+   - goal is a robust sytem that can handle many users, e.g. "production" systems
 
-**MySQL **
+And finally most closely related to your work are data science, "machine learning" or an "analytical" perspective
+  - systems to achieve computation.  
+  - May work like our local HPC
+  - systems built only for small work groups, not for public 
+  - can still scale 
+  - but must be reproducible to document methods
+  - even this documentation can quickly veer off in to building production systems for companies to re-run inference say many times a data or with a constant stream of corporate data
+
+What is are the goals from research perspective for cloud computing?
+
+  - Custom: can create systems you need when you need it
+  - On-demand: can run Ad-hoc computations, as needed
+  - Reproducibile: a computation can be re-run as needed, meaning the systems to run- can documentation and script 
+  - Cost effective: unlike commerical applications, more users does not mean more revenue.   Budgets are fixed and pay-as-you-go model is good and bad. 
+  - Others? <!-- discussion -->
+
+
+#### What documentation *is* available for researchers?
+
+There are general, conceptual introductions and dicussions for academics.   
+
+  * https://cloud4scieng.org/  Book and website from Ian Foster and Gannon (U. Chicago), the text used for this fellowship. 
+  * https://cloudmaven.github.io/documentation/  from the eScience institute of the University of Washington.   It doesn't appear to be maintained but may have some good resources.  Original github repositories are https://github.com/cloudmaven
+  * https://cloudbank-project.github.io/cb-resources/  Seems to be a succesor to the 'cloudmaven' documentation above as members from cloudmaven are contributing here. 
+     * [Cloudbank training videos](https://www.cloudbank.org/training/getting-started-using-cloud)
+
+
+#### NIST defintions of cloud: Service Levels and You
+
+What does "X as a service" actually mean, and where are the lines drawn?   Like the species concept in biology, it's not always cut and dried, but can be thought of as a spectrum
+
+* Infrastructure (aaS):  Nuts and bolts, DIY, Lego.  You need understanding of computing architecture as these services 
+* Everything in between:  Platforms or pre-configured and managed infrastructure
+* Software (aaS): Little to no configuration is needed but these system may be programmable and integrated with other services.  E.g. Office 365, Google Drive
+
+The sweet-spot for researhces who do not have time to aquire the expertise to manage low-level infrastructure and need something more flexible and programmable than Software, are the platforms.  These are often more expensive than DIY infrastruture, but are faster to provision and provide security controls. 
+
+#### Cloud "Services" and the Packaging of Open Source Systems
+
+Case Study on Open Source system as Cloud service: **MySQL **
 
 Open source, free Relational database, e.g. SQL. Relational databases store tabular, linked data.   Used by some bioinformatics packages (e.g. https://orthomcl.org/orthomcl/app) and millions of websites. 
 
   * project: https://www.mysql.com/products/community/ and  https://mariadb.org/
-  * DIY on Azure instructions: [someone's DIY Mysql](https://github.com/Huachao/azure-content/blob/master/articles/virtual-machines/virtual-machines-linux-install-mysql.md) - don't follow these, they are old and may not work, just an example of the steps involved
-  * AWS Vesion: [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
-  * Azure Version: [Azure Database for MySQL](https://azure.microsoft.com/en-us/services/mysql/) 
-  * Google Version [Cloud SQL](https://cloud.google.com/sql/) 
+  * DIY on Azure instructions (eg Iaas): [someone's DIY Mysql](https://github.com/Huachao/azure-content/blob/master/articles/virtual-machines/virtual-machines-linux-install-mysql.md) - don't follow these, they are old and may not work, just an example of the steps involved
+  * Azure MySQL Service (e.g PaaS): [Azure Database for MySQL](https://azure.microsoft.com/en-us/services/mysql/) 
+     * AWS MySQL Service: [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
+     * Google MySQL Service [Cloud SQL](https://cloud.google.com/sql/) 
   * other companies, such as [Aiven for MySQL](https://aiven.io/mysql)
 
   * Spin-offs: Amazon also offers [AWS Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)  which is a cloud scale database service that is MySQL-compatible see [Amazon Aurora Paper](https://dl.acm.org/doi/10.1145/3035918.3056101) 
 
-What would an SaaS for tabular datbases look like?   [https://www.airtable.com/](https://www.airtable.com/) ?
+What would a "SaaS" offering for tabular data look like?  A "Google Docs" for Databases?  Perhaps [https://www.airtable.com/](https://www.airtable.com/) ?
 
-### Security 
+#### Caveats and help
 
-TBD 
+As part of this fellowship, our goal is to help you translate documentation written for the systems and developer perspectives into a research perspective.  
 
-### Costs
+  * The cloud services themselves are always changing, even slightly, making technology-specific tutorials obsolete in months.  For example last year Azure had a "Notebook Service" for running Python notebooks, and now there is this  in place of the regular documentation: [What happened to Azure Notebooks?](https://docs.microsoft.com/en-us/azure/notebooks/quickstart-export-jupyter-notebook-project)
+  * There are new services and bundles created all the time that may be competing or superior choices for doing research
+  * If you are unsure, ask us.  See the [contact page](../contact.md) or use our Teams channel.   During the cloud fellowship we are here to provide some answers, context for what you are seeing, or possible directions to explore.  
+  * Cloud companies have help desks and many resources for anyone using their services or potential customers and we may be able to connect you with those. 
+ 
+
+## [The interfaces to Cloud computing](intro_to_cloud_interfaces.md)
+
+A defining aspect of cloud computing is that it's "on-demand" hence creation of resources must be automated or "scriptable."  All Cloud providers have various 'interfaces' to their services that include both programmatic and web-based.   See [Intro to Cloud Interfaces]](intro_to_cloud_interfaces.md) for more information about Azure's interfaces. 
+
+## Using workflow and computational thinking 
+
+Karl Popper stated that "non-reproducible single occurrences are of no significance to science" ( *K Popper, "The Logic of Scientific Discovery", English translation from Routledge, London, 1992, p. 66.*) and this is a significant issue for research computing and one of much academic work. 
+
+To enhance reproducibility in your own work, consider documenting all the steps needed for create the environment to run your computation.   For many on-premise academic systems (e.g. the MSU HPCC), we depend upon the system administrators to create that environment, but we may install and configure all the software we need to run our code.   Workflow thinking can apply to the scienfic domain itself (e.g. "Principles for data analysis workflows" https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008770 )  and to the provisioning of the cloud computing environment.   That is, we may use a workflow system for creating all the cloud stuff we need, and then a different workflow system that runs on that cloud stuff.   One example is we may [create an HPC system on Azure using templates](https://azure.microsoft.com/en-us/resources/templates/create-hpc-cluster/) and then launch the Slurm scheduler on that HPC to run our jobs.  (*note the complexity of running our own HPC is beyond the scope of this fellowship and used as an example only*)
+
+A major advantage to using workflows or code for provisioning your cloud computing components is that you can turn them off and delete them when you are done, and restart when needed.   This can dramatically save on costs  <!--  example for a gene network ML inference : a machine to run the ML would be $650/month, but if provisioned only when needed, it's 5 cents/job -->.   This does not necessarily have to be a complete programming system, but some combination of well written instructions and a collection of scripts so that your colleague (or yourself 6 months from now) can recreate everything you need.  
+
+## About Cloud Security
+
+
+## Costs and Budget overview
 
   * Costs = $ + Time + Risk
   * Time = development time + wait time + compute time
   * Risk is rarely non-significant.  Never say "I won't get hacked..."
 
-## Reading Cloud materials
-
-Cloud documentation is written for some main audiences:  executives/decision makes, systems administrators, programmers & developers.  Rarely for researchers with some exceptions.    The goal of this program is not to teach system administration or cloud programming but enough concepts for you to DIY computational resources for your personal research.    
-
-
-
-### HPCC vs Cloud
+## HPCC vs Cloud
 
 just like many pre-developed workflows are diff to port from HPC to cloud, some cloud workflows are difficult run on HPC (but never say never):
 
@@ -84,9 +118,23 @@ just like many pre-developed workflows are diff to port from HPC to cloud, some 
 - Web-based applications (see on-demand project)
 - Containers (see singularity project)
 
+## Acknowledging bias in access to cloud computing across research cultures
 
 
-## Discussion
+## Additional comments from instructors and organizers
+
+Summary and additional comments
+
+<!-- summary: freely explore cloud services using the portal as there are often free-tiers; try the programming interfaces  at least once as this will make your work reproducible ; security is always a concern and consideration of cost ; look to the higher level services, even though more expensive may be faster to results and more secure --> 
+
+## Questions?  
+
+Time for questions and discussion about to getting started with cloud computing.  
+
+  - What things are at the top of your mind as you begin this program?  
+  - Which of these topics resonates with your previous experience using computing or cloud computing (if any)?
+
+
 
 
 

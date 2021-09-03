@@ -76,18 +76,18 @@ If you have any issues, trouble with these activities, or won't be able to atten
      * Expectations
   * Projects: Mahmoud Parvizi
 
-### Lecture: About Cloud Computing <!-- []](lecture_introduction_to_cloud_computing_research.md -->
+### [Lecture: About Cloud Computing](lecture_introduction_to_cloud_computing_research.md)
   
   * Introducing computing vs. research computing vs. HPC vs. cloud computing
      - Learning how to learn about cloud
      - Cloud perceptions vantage points
      - Using workflow computational and computational thinking 
-  * The interfaces to Cloud computing <!--  [ ]](intro_to_cloud_interfaces.md) -->
-  * About Cloud Security
-  * Costs and Budget overview
+  * The interfaces to cloud computing 
+  * About cloud security
+  * Costs and budget overview
   * Acknowledging bias in access to cloud computing across research cultures
   * Additional comments (Mahmoud)
-  * Questions?
+  * Questions?  Discussion
 
 ### Demo: Using the Azure Portal
 
