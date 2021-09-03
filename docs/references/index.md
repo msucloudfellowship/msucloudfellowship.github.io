@@ -10,7 +10,7 @@ Azure Portal Documentation :  https://docs.microsoft.com/en-us/azure/azure-porta
 
 Azure Tips and Tricks : https://microsoft.github.io/AzureTipsAndTricks/
 
-Choosing an Azure Service:  https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+Azure Portal "How to" series - focused on using the Azure portal to do several different things.  Many do not apply to use (e.g. Azure Arc) but there are gems : https://youtube.com/playlist?list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR
 
 ## Interface: Command Line
 
@@ -58,12 +58,22 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-po
  
 
 ## Compute 
-Overview of Compute Options:
-https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-overview 
+
+Overview of Compute Options: https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-overview 
+
+Choosing an Azure Compute Service (Decision Tree):  https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
 
  
+## Interface: ARM templates
 
-## Programming
+explore quick start ARM templates (web): https://azure.microsoft.com/en-us/resources/templates/
+
+explore quick start ARM templates (github): https://github.com/Azure/AzureStack-QuickStart-Templates
+
+  * many of these github repositories include a "deploy to Azure" button that will run the template via the portal and create resources. 
+
+
+## Programming with SDKs
 
 ### R and Azure 
 
@@ -108,3 +118,21 @@ https://github.com/mathworks-ref-arch/matlab-on-azure
 https://www.itcentralstation.com/products/comparisons/mathworks-matlab_vs_microsoft-azure-machine-learning-studio 
 
 https://www.mathworks.com/solutions/cloud.html 
+
+
+### Cosmos DB
+
+CosmosDB is a very large scale data system that can act like other database systems including SQL, MongoDB (a popular no-sql database), and others.  
+It's advantage is that it can handle extremely large data sets  (65tB) but is easy to get started.    Google and AWS have similar offereings ( "BigQuery" and "Aurora" respectively). 
+
+If your data is not large, consider using SQL data systems which are also very widely used (and can be used on your own computer)
+
+Intro: https://docs.microsoft.com/en-us/azure/cosmos-db/introduction
+
+It can be free to use, but you have to turn that on when creating the service for your account: https://docs.microsoft.com/en-us/azure/cosmos-db/free-tier
+
+You can run a notebook inside the databaase to queery data with python : 
+
+  * Notebook Description: https://docs.microsoft.com/en-us/azure/cosmos-db/cosmosdb-jupyter-notebooks 
+  * Service announcement: https://azure.microsoft.com/en-us/blog/analyze-and-visualize-your-data-with-azure-cosmos-db-notebooks/
+  * Video: https://www.youtube.com/watch?v=OrnZMkP5Eq4&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=7
