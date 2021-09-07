@@ -14,7 +14,7 @@ In Azure, everything you could possibly create is called a "resource:" a machine
  
 ## Summary of Cloud Interfaces
 
-This summary is focused on Microsoft Azure, but the other cloud companies have similar concepts. 
+This summary is focused on Microsoft Azure, but the other cloud companies have similar concepts.   In addition to this guide, Chapter 1 of our text "Cloud Computing for Science and Engineering" has an excellent description and examples of these interfaces with examples from AWS.  See the section of that chapter titled "Accessing a cloud service" in https://s3.us-east-2.amazonaws.com/a-book/Orienting.html
 
 ### Graphical Web Interface
 
@@ -90,7 +90,11 @@ For example Azure [Logic Apps](https://azure.microsoft.com/en-us/services/logic-
 
 ## References
 
-See our [references page](../references) for curated Azure links.   For AWS, see [https://aws.amazon.com/tools/](https://aws.amazon.com/tools/) and more about the AWS CLI: https://aws.amazon.com/cli/
+See our [references page](../references) for curated Azure links.   For AWS, see 
+
+  * [https://aws.amazon.com/tools/](https://aws.amazon.com/tools/) 
+  * about the AWS CLI: https://aws.amazon.com/cli/
+  * Demo Using Python Notebook with AWS: https://s3.us-east-2.amazonaws.com/a-book/s3.html
  
 
 
