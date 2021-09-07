@@ -10,7 +10,7 @@ Azure Portal Documentation :  https://docs.microsoft.com/en-us/azure/azure-porta
 
 Azure Tips and Tricks : https://microsoft.github.io/AzureTipsAndTricks/
 
-Azure Portal "How to" series - focused on using the Azure portal to do several different things.  Many do not apply to use (e.g. Azure Arc) but there are gems : https://youtube.com/playlist?list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR
+Azure Portal "How to" series - focused on using the Azure portal to do several different things.  Many do not apply to us (e.g. Azure Arc) but there are some very useful videos : https://youtube.com/playlist?list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR
 
 ## Interface: Command Line
 
