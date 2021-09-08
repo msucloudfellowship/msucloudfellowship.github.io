@@ -90,9 +90,9 @@ As part of this fellowship, our goal is to help you translate documentation writ
   * Cloud companies have help desks and many resources for anyone using their services or potential customers and we may be able to connect you with those. 
 
 
-## [The Interfaces to Cloud computing](intro_to_cloud_interfaces.md)
+## The Interfaces to Cloud 
 
-A defining aspect of cloud computing is that it's "on-demand" hence creation of resources must be automated or "scriptable."  All Cloud providers have various 'interfaces' to their services that include both programmatic and web-based.   See [Intro to Cloud Interfaces]](intro_to_cloud_interfaces.md) for more information about Azure's interfaces. 
+A defining aspect of cloud computing is that it's "on-demand" hence creation of resources must be automated or "scriptable."  All Cloud providers have various 'interfaces' to their services that include both programmatic and web-based.   We will talk about about how these in detail next sesion, but at the end of this session we will do a walk through of using the Azure portal, which is also an exercise for next session.  
 
 ## Using workflow and computational thinking 
 

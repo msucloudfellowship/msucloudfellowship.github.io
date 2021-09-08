@@ -9,22 +9,24 @@
   - [What's the difference between cloud and virtualization?](https://www.redhat.com/en/topics/cloud-computing/cloud-vs-virtualization) from RedHat, a Linux Operating system company
   - [Orientation Azure Portal](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-overview#getting-around-the-portal)
 
+#### Fellowship Materials
 
+ - Top-down description of how [Azure is organized](azure_organization.md)
+ - [Summary of Cloud Interfaces](intro_to_cloud_interfaces.md)
+  
 ## Activities
 
-<!-- students will have theierr own resource groups alreaady -->
-create a storage account (link to page with details)
+  - [Using the Azure Portal : tutorial and video](azure_portal_walkthrough.md)
+  - Introduction to Virtual Machines (forthcoming)
  
-## Workshop
 
-**September 10, 2021.  Location TBD**
+## Fellowship Meeting
 
-[Creating (and deleting) a Virtual Machine with Azure](workshop-creatingvm.md)
+**September 10, 2021.  Zoom link sent via email**
 
-## Post-workshop discussion
+  - Review of Introduction to Cloud materials: discussion and questions
+  - Questions about the nature of cloud
+  - [Creating (and deleting) a Virtual Machine with Azure](workshop-creatingvm.md)
 
- - For those who've used HPC, compare this experience
- - Discussion prompts:
-     - security 
 
 
