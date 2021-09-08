@@ -9,6 +9,7 @@ nav:
       - 3. Cloud Storage: session_cloud_storage/index.md
       - Additional sessions TBD: index.md
     - References: references/index.md
+    - Cloud Glossary: cloud_glossary.md
 theme: 
   name: material
   features:
