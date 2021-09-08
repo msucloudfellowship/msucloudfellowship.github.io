@@ -15,6 +15,13 @@ Azure's own overview of the Portal is here: https://docs.microsoft.com/en-us/azu
 
 ## Orientation to the Azure Portal
 
+<a href="https://mediaspace.msu.edu/media/MSU+Cloud+FellowshipA+Introdcution+to+the+Azure+Portal+Web+Interface/1_8vo4141a">
+![Link to Video - Azure Portal Introduction](../img/video_titles/azure_portal_video_title.jpg)
+</a>
+
+The link above is to a video that walks through the description and tutorial steps below, hosted on  MSU MediaSpace ( requires MSU Log-in)
+
+
 ![Example Azure Portal Dashboard](../img/example_portal_dashboard.png)
 This assumes you have an Azure account and a valid subscription.   For the purposes of this introduction, we assume that your account currently does not have ability to create a new subscription, resource group, 
 
