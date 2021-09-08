@@ -247,7 +247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../session_introduction/" class="md-nav__link">
         1. Introduction
       </a>
     </li>
@@ -259,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../session_how_to_cloud/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         2. How does the cloud work?
       </a>
     </li>
@@ -306,6 +306,21 @@
     <li class="md-nav__item">
       <a href="../../references/" class="md-nav__link">
         References
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud_glossary/" class="md-nav__link">
+        Cloud Glossary
       </a>
     </li>
   
@@ -459,7 +474,7 @@
 <p>Very few researchers would ever use the REST api directly, instead would use the web interface or even better the command line or programming language interface which achieves the same goal with less work.  </p>
 <p>In Azure, everything you could possibly create is called a "resource:" a machine, a data service, a single network address.   The system to work with Azure resources is the "Azure Resource Manager" or ARM and the primary interface for the Resource Manager is their web (REST) api.    You may see references to resources in documentation and that means any web doo-dad. </p>
 <h2 id="summary-of-cloud-interfaces">Summary of Cloud Interfaces</h2>
-<p>This summary is focused on Microsoft Azure, but the other cloud companies have similar concepts. </p>
+<p>This summary is focused on Microsoft Azure, but the other cloud companies have similar concepts.   In addition to this guide, Chapter 1 of our text "Cloud Computing for Science and Engineering" has an excellent description and examples of these interfaces with examples from AWS.  See the section of that chapter titled "Accessing a cloud service" in <a href="https://s3.us-east-2.amazonaws.com/a-book/Orienting.html">https://s3.us-east-2.amazonaws.com/a-book/Orienting.html</a></p>
 <h3 id="graphical-web-interface">Graphical Web Interface</h3>
 <p>Most people want a graphical user interface, and for azure that's the "Portal" or <a href="https://portal.azure.com">https://portal.azure.com</a>.  For Google cloud it's the "console" and for AWS it's also called the console.  See below for an introduction to using the portal.   Note that the Azure portal and Google console both have web-based terminals that allow you to use the CLI directly in the web interface.    </p>
 <h3 id="desktop-applications">Desktop Applications</h3>
@@ -504,7 +519,12 @@ For Azure, these are "ARM Templates" and for AWS it's <a href="https://aws.amazo
 <p>This may not be an 'interface' but is operationally similar.  It's possible to use some of the above interfaces on existing cloud services, e.g.   creating new cloud resources automaticaly from existing cloud resources.   Your cloud architecture may need different types of resources, or parameterized resources only as needed (e.g. depending data inputs, a web-gateway for cloud on demand).    </p>
 <p>For example Azure <a href="https://azure.microsoft.com/en-us/services/logic-apps/">Logic Apps</a> can create resources when they are run (e.g. provision and start a computer) and a logic app can be triggered by events such as when a new file is created, or using a web api (e.g. REST POST command that sends data and parameters).   This adds significant complexity and is only valuable for event-based systems opens up using the cloud as a big computer programming language. </p>
 <h2 id="references">References</h2>
-<p>See our <a href="../references">references page</a> for curated Azure links.   For AWS, see <a href="https://aws.amazon.com/tools/">https://aws.amazon.com/tools/</a> and more about the AWS CLI: <a href="https://aws.amazon.com/cli/">https://aws.amazon.com/cli/</a></p>
+<p>See our <a href="../references">references page</a> for curated Azure links.   For AWS, see </p>
+<ul>
+<li><a href="https://aws.amazon.com/tools/">https://aws.amazon.com/tools/</a> </li>
+<li>about the AWS CLI: <a href="https://aws.amazon.com/cli/">https://aws.amazon.com/cli/</a></li>
+<li>Demo Using Python Notebook with AWS: <a href="https://s3.us-east-2.amazonaws.com/a-book/s3.html">https://s3.us-east-2.amazonaws.com/a-book/s3.html</a></li>
+</ul>
                 
               
               
