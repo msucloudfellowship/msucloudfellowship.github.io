@@ -11,7 +11,7 @@ The program runs from Fall 2021 to Spring 2022 semester.  Sessions are organized
 ### Schedule for Fall 2021
 
  * [Session 1](session_introduction): Introduction to the 21-22 Fellowship
-     * Sept 3: Meeing : program introductions and program overview (via zoom)
+     * Sept 3: Meeting : program introductions and program overview (via zoom)
  * [Session 2](session_how_to_cloud): Using the cloud for computing
     * Sept 10: Using Virtual Machines workshop 
  * [Session 3](session_cloud_storage): Cloud Storage
@@ -36,7 +36,7 @@ Fellows will present their projects during a symposium to be held April 2022.
 
 ## Text
 
-We will occaisionally link to the following book: 
+We will occasionally link to the following book: 
 
 **"Cloud Computing for Science and Engineering", Ian Foster and Dennis B. Gannon, September 2017**  
 
@@ -47,7 +47,7 @@ The book website does provide open access to individual chapters.
 
 ## Communications
 
- Fellows are encouraged to contact us with questions or if they are ever stuck on an activity we've assigned.  In addition to email, we are utilizing Microsoft Teams at MSU (Fellows recieve a link in the welcome email).   Please feel free to reach on out the MS Teams channel sent to participants at the beginning of the program.  Mentioning one of us e.g. @billspat or @parvizm will help get our attention.  Additionally you may email us at any time.   If you are not a participant but have questions about the program, see the [Contact page](contact.md) for how to get in touch with us.   
+ Fellows are encouraged to contact us with questions or if they are ever stuck on an activity we've assigned.  In addition to email, we are utilizing Microsoft Teams at MSU (Fellows receive a link in the welcome email).   Please feel free to reach on out the MS Teams channel sent to participants at the beginning of the program.  Mentioning one of us e.g. @billspat or @parvizm will help get our attention.  Additionally you may email us at any time.   If you are not a participant but have questions about the program, see the [Contact page](contact.md) for how to get in touch with us.   
 
 If you see a question or discussion on Teams please feel free to add any info or advice you may have, or even let us know that you have a similar question or issue.    
 
@@ -57,7 +57,7 @@ We also save time during our synchronous meetings for group discussions, so plea
 
 ## Meeting location
 
-Given the state of the pandemic in late summer 2021, we are hosting our first meeting (September 3) via zoom.  Particpants will be sent a link via email.   Locations for future meetings are to be determined and based on participant feedback.  
+Given the state of the pandemic in late summer 2021, we are hosting our first meeting (September 3) via zoom.  Participants will be sent a link via email.   Locations for future meetings are to be determined and based on participant feedback.  
 
 
 ---

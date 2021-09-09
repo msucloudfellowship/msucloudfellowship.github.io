@@ -1,4 +1,4 @@
-# What is the cloud and how does it work?
+# Session 2: What is the cloud and how does it work?  An introduction using Virtual Machines
 
 ![Chaplin still from Modern Times 1936](../img/chaplin_clockworks.jpg){ align=right} When many people think of "cloud computing" they think of computers in the cloud, or virtual machines.   Cloud computing companies offer much more than just virtualized hardware, but this is a good place to start.   This session is designed to be a hands-on workshop where we walk-through creating the resources needed for to run a computer in the cloud, logging into this computer, copying data and using that data in a program.    At the end of the session you should have a good introduction of what it means to "cloud compute."
 
@@ -26,7 +26,7 @@ IBM describing how companies (including MSU!) use virtualization to run multiple
 ## Activities
 
   - [Using the Azure Portal : tutorial and video](azure_portal_walkthrough.md)
-    *This is a more detailed tutorial and video of the quick walk-through we did during our live sessison for Week 1 on September 3*
+    *This is a more detailed tutorial and video of the quick walk-through we did during our live session for Week 1 on September 3*
 
  
 ## Fellowship Meeting
