@@ -56,6 +56,8 @@ If you have any issues, trouble with these activities, or won't be able to atten
      - Cloud facilitator
      - Participant in first Fellowship cohort
   * Pat Bills, Main Instructor
+
+[A video of our introductions](https://mediaspace.msu.edu/media/MSU+Cloud+Fellowship+2021-2022+Welcome+and+Introductions/1_ju6ahdve)is avaialble on the MSU MediaSpace (requires MSU log-in)
   
 ### Participant Introductions & Discussion
 
@@ -94,6 +96,8 @@ If you have any issues, trouble with these activities, or won't be able to atten
 ### Demonstration: Using the Azure Portal
 
 A quick, live demonstration orienting you to the Azure portal.  Our next session activities will include a more thorough workshop on creating cloud computing resources
+
+A more complete tutorial and video of this walk-through is available in [Session 2 activities](../session_how_to_cloud
 
 ### Questions and Discussion
 
