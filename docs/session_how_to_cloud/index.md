@@ -33,6 +33,7 @@ IBM describing how companies (including MSU!) use virtualization to run multiple
 
 **September 10, 2021.  Zoom link sent via email**
 
+  - [Presentation (PDF)](msu-cloud-fellowship21-session2.pdf)
   - Review of Introduction to Cloud materials: discussion and questions
   - Questions about the nature of cloud
   - Activity: Creating (and deleting) a Virtual Machine with Azure
