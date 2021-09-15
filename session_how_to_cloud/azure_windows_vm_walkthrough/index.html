@@ -372,8 +372,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requirements-for-both-activities" class="md-nav__link">
-    Requirements for both activities
+  <a href="#requirements" class="md-nav__link">
+    Requirements 
   </a>
   
 </li>
@@ -387,7 +387,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
+  <a href="#requirements_1" class="md-nav__link">
     Requirements
   </a>
   
@@ -483,8 +483,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-staring-and-stopping-the-vm" class="md-nav__link">
-    7. Staring and Stopping the VM
+  <a href="#7-starting-and-stopping-the-vm" class="md-nav__link">
+    7. Starting and Stopping the VM
   </a>
   
 </li>
@@ -517,7 +517,7 @@
                 <h1 id="exercise-creating-a-windows-virtual-machine-vm">Exercise: Creating a Windows Virtual Machine (VM)</h1>
 <p><strong>MSU Cloud Fellowship</strong></p>
 <h2 id="about">About</h2>
-<p>This is an exercise and introduction to creating Virtual Machines (VMs) and related resources using the Azure Portal.  This excercise assumes you understand how to use the Azure Portal, which is covered in the <a href="../azure_portal_walkthrough/">Azure Portal Walkthrough</a>.  In addition it's helpful to know what a virtual machine is but it's not crucial to complete the excercise.  For more information on VMs see the <a href="../msu-cloud-fellowship21-session2.pdf">slides from session 2</a> and readings from the <a href="../#readings">"Virtual Machine Background"</a> section</p>
+<p>This is an exercise and introduction to creating Virtual Machines (VMs) and related resources using the Azure Portal.  This exercise assumes you understand how to use the Azure Portal, which is covered in the <a href="../azure_portal_walkthrough/">Azure Portal Walkthrough</a>.  In addition it's helpful to know what a virtual machine is but it's not crucial to complete the exercise.  For more information on VMs see the <a href="../msu-cloud-fellowship21-session2.pdf">slides from session 2</a> and readings from the <a href="../#readings">"Virtual Machine Background"</a> section</p>
 <!-- 
 There are two nearly identical activities, and you only need complete one of them:  
 
@@ -525,13 +525,13 @@ There are two nearly identical activities, and you only need complete one of the
   1. creating a Linux Virtual machine and connection with the command line
 -->
 
-<p>We will use a pre-configured virtual machine with software already installed ( for both versions).  When creating a VM you can use an Azure template and there are many of these.  The Data Science Virtual Machine (DSVM) from Azure has R, Python and many data science and statistical libraries available.   For more information about the Azure DSVM see <a href="https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/">https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/</a></p>
+<p>We will use a pre-configured virtual machine with software already installed<!-- ( for both versions) -->.  When creating a VM you can use an Azure template and there are many of these.  The Data Science Virtual Machine (DSVM) from Azure has R, Python and many data science and statistical libraries available.   For more information about the Azure DSVM see <a href="https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/">https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/</a></p>
 <h4 id="alternative-activities">Alternative Activities</h4>
 <p>Azure has "quick starts" that are much more simplified than this demonstration:  </p>
-<h2 id="requirements-for-both-activities">Requirements for both activities</h2>
+<h2 id="requirements">Requirements <!-- for both activities --></h2>
 <p>You need an account in azure with an active subscription, and a resource group of your own to work in.   Fellows have these things provided.  </p>
 <h2 id="creating-and-connecting-to-a-windows-virtual-machine">Creating and Connecting to a Windows Virtual Machine</h2>
-<h4 id="requirements">Requirements</h4>
+<h4 id="requirements_1">Requirements</h4>
 <p>To connect to a Windows VM desktop, it's recommend you use the Microsoft Remote Desktop client.  </p>
 <ul>
 <li>MacOS : install the Microsoft Remote Desktop Client, only available on the App Store: <a href="https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12">https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12</a></li>
@@ -618,7 +618,7 @@ There are two nearly identical activities, and you only need complete one of the
 <ul>
 <li>in the top row are buttons to connect, start, restart and stop the vvm.   </li>
 <li>in the top, "essentials" section the  "status" should be "running."</li>
-<li>on the right side is the assigned <a href="../cloud_glossary/#ip-address">IP address</a> which you need to connect.   Hightlight and copy and paste this address.   If you click the link on the address, it will take you to a new resource page just for the IP address (which is a distinct resource assigned to this VM resource)</li>
+<li>on the right side is the assigned <a href="../cloud_glossary/#ip-address">IP address</a> which you need to connect.   Highlight and copy and paste this address.   If you click the link on the address, it will take you to a new resource page just for the IP address (which is a distinct resource assigned to this VM resource)</li>
 </ul>
 <h3 id="6-connecting">6. Connecting</h3>
 <p>You may connect to this VM running the Windows operating system with either graphical desktop, a command line connection, or both.  </p>
@@ -664,7 +664,7 @@ There are two nearly identical activities, and you only need complete one of the
 <p>You will be asked to add the host to your list hosts, and enter the password you used when you created the VM. </p>
 <p>When you log-in you will be connected to the Windows command prompt (e.g. <code>C:\Users\username&gt;</code> </p>
 <p>To Exit, type <code>exit</code> at the command prompt. </p>
-<h3 id="7-staring-and-stopping-the-vm">7. Staring and Stopping the VM</h3>
+<h3 id="7-starting-and-stopping-the-vm">7. Starting and Stopping the VM</h3>
 <p>There are three ways to "stop" or turn off a VM.<br />
 1. when connected to it, e.g. in the remote desktop, use  Windows to turn it off.  The VM is then "stopped."  The VM is not running, but it is still "allocated."  When you turn it back on, it will come on immediately. 
 1. Use the Azure portal to "stop" the VM which shuts down Windows (gracefully if possible) and 'deallocates' the VM.  Restarted the VM appears to be the same process, but Azure must allocate resources first to run it, then power it up.  This is cheaper then the first method in the long run
@@ -678,10 +678,10 @@ There are two nearly identical activities, and you only need complete one of the
 <li>There is a warning about losing your IP address, with a check box to reserve it.<ul>
 <li>If you plan on deleting the VM now, click "ok"</li>
 <li>If you plan on restarting the VM and reconnecting, first check the box "reserve the IP" then click OK</li>
-<li>The default is to use a "dynamic" address which is assigned everytime you turn on the VM</li>
+<li>The default is to use a "dynamic" address which is assigned every time you turn on the VM</li>
 <li>When using a dynamic address, you must copy/paste the ip address, or re-download the RDP connection file everytime you restart the machine</li>
-<li>the solution is to use a "Static IP" either when you create the VM, or assiging one after the VM is created. and checking the box does so. </li>
-<li>you can also convert to a static IP with the portal, but it is not a straightfoward process, see <a href="https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-static-private-ip-arm-pportal">https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-static-private-ip-arm-pportal</a></li>
+<li>the solution is to use a "Static IP" either when you create the VM, or assigning one after the VM is created. and checking the box does so. </li>
+<li>you can also convert to a static IP with the portal, but it is not a straightforward process, see <a href="https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-static-private-ip-arm-pportal">https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-static-private-ip-arm-pportal</a></li>
 <li>Pricing for a static ip is here: <a href="https://azure.microsoft.com/en-us/pricing/details/ip-addresses/">https://azure.microsoft.com/en-us/pricing/details/ip-addresses/</a> which as of now is $0.0036/hour which is charged even if the VM is turned off.  That is approx $2.70/month</li>
 </ul>
 </li>
