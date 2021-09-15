@@ -15,10 +15,6 @@ There are two nearly identical activities, and you only need complete one of the
 
 We will use a pre-configured virtual machine with software already installed<!-- ( for both versions) -->.  When creating a VM you can use an Azure template and there are many of these.  The Data Science Virtual Machine (DSVM) from Azure has R, Python and many data science and statistical libraries available.   For more information about the Azure DSVM see https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/
 
-#### Alternative Activities
-
-Azure has "quick starts" that are much more simplified than this demonstration:  
-
 ## Requirements <!-- for both activities -->
 
 You need an account in azure with an active subscription, and a resource group of your own to work in.   Fellows have these things provided.  
