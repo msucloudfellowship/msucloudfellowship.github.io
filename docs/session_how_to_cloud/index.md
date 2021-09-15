@@ -36,7 +36,7 @@ IBM describing how companies (including MSU!) use virtualization to run multiple
   - [Presentation (PDF)](msu-cloud-fellowship21-session2.pdf)
   - Review of Introduction to Cloud materials: discussion and questions
   - Questions about the nature of cloud
-  - Activity: Creating (and deleting) a Virtual Machine with Azure
+  - Activity: [Creating (and deleting) a Virtual Machine with Azure](azure_windows_vm_walkthrough.md)
 
 
 
