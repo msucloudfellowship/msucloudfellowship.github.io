@@ -4,7 +4,7 @@
 
 ## About 
 
-This is an exercise and introduction to creating Virtual Machines (VMs) and related resources using the Azure Portal.  This excercise assumes you understand how to use the Azure Portal, which is covered in the [Azure Portal Walkthrough](azure_portal_walkthrough.md).  In addition it's helpful to know what a virtual machine is but it's not crucial to complete the excercise.  For more information on VMs see the [slides from session 2](msu-cloud-fellowship21-session2.pdf) and readings from the ["Virtual Machine Background"](index.md#readings) section
+This is an exercise and introduction to creating Virtual Machines (VMs) and related resources using the Azure Portal.  This exercise assumes you understand how to use the Azure Portal, which is covered in the [Azure Portal Walkthrough](azure_portal_walkthrough.md).  In addition it's helpful to know what a virtual machine is but it's not crucial to complete the exercise.  For more information on VMs see the [slides from session 2](msu-cloud-fellowship21-session2.pdf) and readings from the ["Virtual Machine Background"](index.md#readings) section
 
 <!-- 
 There are two nearly identical activities, and you only need complete one of them:  
@@ -13,13 +13,13 @@ There are two nearly identical activities, and you only need complete one of the
   1. creating a Linux Virtual machine and connection with the command line
 -->
 
-We will use a pre-configured virtual machine with software already installed ( for both versions).  When creating a VM you can use an Azure template and there are many of these.  The Data Science Virtual Machine (DSVM) from Azure has R, Python and many data science and statistical libraries available.   For more information about the Azure DSVM see https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/
+We will use a pre-configured virtual machine with software already installed<!-- ( for both versions) -->.  When creating a VM you can use an Azure template and there are many of these.  The Data Science Virtual Machine (DSVM) from Azure has R, Python and many data science and statistical libraries available.   For more information about the Azure DSVM see https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/
 
 #### Alternative Activities
 
 Azure has "quick starts" that are much more simplified than this demonstration:  
 
-## Requirements for both activities
+## Requirements <!-- for both activities -->
 
 You need an account in azure with an active subscription, and a resource group of your own to work in.   Fellows have these things provided.  
 
@@ -119,7 +119,8 @@ Click "Create" and the deployment will start.  It will take at most 15 minutes.
     * They will have the same name prefix "CF21netid-dsvm" but may have a suffix indicating the kind of resource (e.g. CF21-netid-dsvm1-ip 
     * The second column is the "type" which helps identify what they are
 
-![Resource Group List](vm_activity/vm_activity_screenshot_resource_group_list.jpg)
+[![Resource Group List](vm_activity/vm_activity_screenshot_resource_group_list.jpg)](vm_activity/vm_activity_screenshot_resource_group_list.jpg){:target="_blank"}
+*click for a large view in a new tab/window*
 
 1. Select the item with type "virtual machine" and click on the name to open its resource page (for example, cf21-billspat-dsvmtest item in the screenshot above)
 
@@ -127,14 +128,15 @@ Click "Create" and the deployment will start.  It will take at most 15 minutes.
 
 To see the details for your virtual machine, click the VM in your resource group if you haven't already. 
 
-![Azure Portal view of an example VM](vm_activity/vm_activity_screenshot_vm_resource_portal_page_no_highlights.png)
+[![Azure Portal view of an example VM](vm_activity/vm_activity_screenshot_vm_resource_portal_page_no_highlights.png)](vm_activity/vm_activity_screenshot_vm_resource_portal_page_no_highlights.png){:target="_blank"}
+*click for larger view*
 
 There are many details here but some immediate things to notice: 
 
   * in the top row are buttons to connect, start, restart and stop the vvm.   
   * in the top, "essentials" section the  "status" should be "running."
-  * on the right side is the assigned [IP address](../cloud_glossary/#ip-address) which you need to connect.   Hightlight and copy and paste this address.   If you click the link on the address, it will take you to a new resource page just for the IP address (which is a distinct resource assigned to this VM resource)
-  * 
+  * on the right side is the assigned [IP address](../cloud_glossary/#ip-address) which you need to connect.   Highlight and copy and paste this address.   If you click the link on the address, it will take you to a new resource page just for the IP address (which is a distinct resource assigned to this VM resource)
+  
 
 ### 6. Connecting
 
@@ -192,7 +194,7 @@ When you log-in you will be connected to the Windows command prompt (e.g. `C:\Us
 To Exit, type `exit` at the command prompt. 
 
 
-### 7. Staring and Stopping the VM
+### 7. Starting and Stopping the VM
 
 There are three ways to "stop" or turn off a VM.  
 1. when connected to it, e.g. in the remote desktop, use  Windows to turn it off.  The VM is then "stopped."  The VM is not running, but it is still "allocated."  When you turn it back on, it will come on immediately. 
@@ -208,10 +210,10 @@ There are three ways to "stop" or turn off a VM.
 1. There is a warning about losing your IP address, with a check box to reserve it.
     * If you plan on deleting the VM now, click "ok"
     * If you plan on restarting the VM and reconnecting, first check the box "reserve the IP" then click OK
-    * The default is to use a "dynamic" address which is assigned everytime you turn on the VM
+    * The default is to use a "dynamic" address which is assigned every time you turn on the VM
     * When using a dynamic address, you must copy/paste the ip address, or re-download the RDP connection file everytime you restart the machine
-    * the solution is to use a "Static IP" either when you create the VM, or assiging one after the VM is created. and checking the box does so. 
-    * you can also convert to a static IP with the portal, but it is not a straightfoward process, see https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-static-private-ip-arm-pportal
+    * the solution is to use a "Static IP" either when you create the VM, or assigning one after the VM is created. and checking the box does so. 
+    * you can also convert to a static IP with the portal, but it is not a straightforward process, see https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-static-private-ip-arm-pportal
     * Pricing for a static ip is here: https://azure.microsoft.com/en-us/pricing/details/ip-addresses/ which as of now is $0.0036/hour which is charged even if the VM is turned off.  That is approx $2.70/month
 1. It's a good idea to leave VMs in a "stopped (deallocated)" state if you are not using them for computations or providing a service, just as you would turn off or put your laptop to sleep.   The main reason for this is for security.  
 
