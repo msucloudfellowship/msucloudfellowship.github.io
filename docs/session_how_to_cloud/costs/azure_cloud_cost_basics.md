@@ -2,7 +2,7 @@
 
 You've heard us say that nearly everything Azure has a cost, but how can you tell how much?
 
-[![Cost Analysis Video](CostAnalysisVideoTitle.jpg)](https://mediaspace.msu.edu/media/Short+Demonstration+of+Azure+Cost+Analysis+Using+the+Portal/1_fg2ohf2h)
+[![Cost Analysis Video](CostAnalysisVideoTitle.jpg)](#) (video processing)
 
 *Short video (3:30) Demonstrating Azure Portal Cost Analysis, on MSU MediaSpace (log-in required)*
 
