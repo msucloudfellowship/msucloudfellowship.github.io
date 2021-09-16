@@ -19,6 +19,9 @@ JSON-formatted file that the ARM can use to create resources for you.  Templates
 #### Blob Storage (Azure)
 Azure's object cloud storage, similar to S3 and google cloud storage buckets.  
 
+#### Client-Server
+Client/Server model of computing is something we use everyday but perhaps dont' use this term.   See https://techterms.com/definition/client-server_model   You are used to using maybe a dozen clients everyday (phone apps, web browser, ssh to connect to a remote linux, Remote Desktop client to connect to remote desktop server, etc).  Cloud computing provides all the infrastructure needed to create servers quickly and easily. 
+
 #### CPU
 Central Processing Unit
 
