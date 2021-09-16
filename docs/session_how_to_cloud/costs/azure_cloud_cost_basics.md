@@ -2,9 +2,11 @@
 
 You've heard us say that nearly everything Azure has a cost, but how can you tell how much?
 
-The content below assumes you have knowledge of how to use the Azure Portal, basic cloud operations, what a virtual machine is. See the links and materials for [session 2: how to cloud](../session_how_to_cloud) for the necessary background. 
+[![Cost Analysis Video](CostAnalysisVideoTitle.jpg)](https://mediaspace.msu.edu/media/Short+Demonstration+of+Azure+Cost+Analysis+Using+the+Portal/1_fg2ohf2h)
 
-There are several ways to identify costs but primarily we use
+*Short video (3:30) Demonstrating Azure Portal Cost Analysis, on MSU MediaSpace (log-in required)*
+
+The content below assumes you have knowledge of how to use the Azure Portal, basic cloud operations, what a virtual machine is. See the links and materials for [session 2: how to cloud](../session_how_to_cloud) for the necessary background. 
 
 ### 1. Pricing Pages. 
 
