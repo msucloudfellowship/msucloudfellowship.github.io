@@ -3,8 +3,6 @@
 **[Please see our updated version that covers both Windows and Linux](azure_vm_walkthrough.md)**
 
 
-<p>
-<p>
 
 
 [![Link to Video for this Excercise](vm_activity/CF21_creating windows vm video link.png)](https://mediaspace.msu.edu/media/Creating+a+Windows+Virtual+Machine+with+the+Azure+Portal/1_j3o4gsvf)
