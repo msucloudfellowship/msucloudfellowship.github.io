@@ -70,14 +70,22 @@ Organizational scheme unique to Azure.  Nearly all resources must be part of a g
 #### Resource Manager
 Azure calls the system they use to interface between you and cloud resources the "Azure Resource Manager" or ARM.   There used to be a different way to interact with resources hence this has a specific name, also becuase it adds consistency to the interface to 
 
-#### Virtual Machine
-(aka VM) Creating a simulated computer hardware using software, to be able run a guest operating system inside a host system, such that the guest thinks it's running on an actual computer.
-
-#### Tensor Processing Unit (TPU)
-[Google Tensor Processing Unit](https://en.wikipedia.org/wiki/Tensor_Processing_Unit) is specialized computer chip similar to [GPUs](#gpu), used by deep learning libraries such as [TensorFlow](https://www.tensorflow.org/) ( which leads to the question of "what is a tensor" and that depends on who you ask but similar to matrix.  
-
 #### Service Level Agreement (SLA)
 Level of service you expect from a vendor, laying out the metrics by which service is measured, as well as remedies or penalties should agreed-on service levels not be achieved.  In Cloud this is often spells out 'uptime,' which is percent of time the system is not down, e.g. 99.99%, and guarantees against data loss and availability.   For most research, uptime is not important as we are our own customer and can tolerate some downtime.
 
 #### Services
 Cloud "services" are often bundles of [resources](#resource) pulled together for coordinate function.   Cloud companies offer hundreds of often closely overlapping services.   
+
+#### Tags
+AWS and Azure allow you add meta data to resource in the form of tags (e.g. hashtags, etc) which are keys and values.     When you create a resource you can add a tag indicating the project it is for e.g. "project" = "dna-methylation"   To add more detail if your DNA methylation has multiple aspects or experiments, add more tags like "experiment" = "Fall 2021"
+
+For workgroups it's stronlgy suggested you add a "created_by" = your netid because it's often difficult in Azure to determine who created a resource if it needs to be turned off or deleted.  
+
+[Use tags to organize your Azure resources and management hierarchy](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json)
+
+#### Tensor Processing Unit (TPU)
+[Google Tensor Processing Unit](https://en.wikipedia.org/wiki/Tensor_Processing_Unit) is specialized computer chip similar to [GPUs](#gpu), used by deep learning libraries such as [TensorFlow](https://www.tensorflow.org/) ( which leads to the question of "what is a tensor" and that depends on who you ask but similar to matrix.  
+
+#### Virtual Machine
+(aka VM) Creating a simulated computer hardware using software, to be able run a guest operating system inside a host system, such that the guest thinks it's 
+running on an actual computer.
