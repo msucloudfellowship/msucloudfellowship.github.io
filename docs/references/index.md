@@ -170,3 +170,10 @@ You can run a notebook inside the databaase to queery data with python :
   * Video: https://www.youtube.com/watch?v=OrnZMkP5Eq4&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=7
 
 
+### Cloud Architecture
+
+This section has resources for advanced to intermediate cloud users who are interested in much more details that most researchers will ever need, and are really geared for IT staff.  However, sometimes to find insight into how to approach your problem (especially for cloud timing ooptimazation projects) these may have useful sections. 
+
+**Microsoft Azure Infrastructure Services for Architects** by John Savill, Oct 2019, available from the MSU Library : http://catalog.lib.msu.edu/record=b13538669~S39
+
+Azure has changed since 2019 but may still be relevant
