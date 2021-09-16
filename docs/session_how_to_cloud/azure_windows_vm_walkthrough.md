@@ -1,6 +1,6 @@
 # Exercise: Creating a Windows Virtual Machine (VM)
 
-**[Please see our updated version that covers both Windows and Linux](azure_vm_walkthrough.md)**
+[**Please see our updated version that covers both Windows and Linux**](azure_vm_walkthrough.md)
 
 
 
