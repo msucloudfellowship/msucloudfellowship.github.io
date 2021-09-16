@@ -38,5 +38,7 @@ IBM describing how companies (including MSU!) use virtualization to run multiple
   - Questions about the nature of cloud
   - Activity: [Creating (and deleting) a Virtual Machine with Azure](azure_vm_walkthrough.md)  <i style="color:red">**updated** 9/16; includes instructions for Linux</i>
 
+## Additional Post-session materials
 
+- [Determining Azure Costs](costs/azure_cloud_cost_basics.md)
 
