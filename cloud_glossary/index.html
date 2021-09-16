@@ -513,8 +513,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#virtual-machine" class="md-nav__link">
-    Virtual Machine
+  <a href="#service-level-agreement-sla" class="md-nav__link">
+    Service Level Agreement (SLA)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
   </a>
   
 </li>
@@ -527,15 +541,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#service-level-agreement-sla" class="md-nav__link">
-    Service Level Agreement (SLA)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#services" class="md-nav__link">
-    Services
+  <a href="#virtual-machine" class="md-nav__link">
+    Virtual Machine
   </a>
   
 </li>
@@ -740,8 +747,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#virtual-machine" class="md-nav__link">
-    Virtual Machine
+  <a href="#service-level-agreement-sla" class="md-nav__link">
+    Service Level Agreement (SLA)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
   </a>
   
 </li>
@@ -754,15 +775,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#service-level-agreement-sla" class="md-nav__link">
-    Service Level Agreement (SLA)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#services" class="md-nav__link">
-    Services
+  <a href="#virtual-machine" class="md-nav__link">
+    Virtual Machine
   </a>
   
 </li>
@@ -830,14 +844,19 @@ Containers are a way to create a Linux-in-a-box that is more effieccient than a 
 <p>Organizational scheme unique to Azure.  Nearly all resources must be part of a group and the resource group must be selected (or created ) when creating other resources.   Resource groups could be used for specific projects, for 'personal' resources used for multiple projects (or for azure things like cloud shell).  </p>
 <h4 id="resource-manager">Resource Manager</h4>
 <p>Azure calls the system they use to interface between you and cloud resources the "Azure Resource Manager" or ARM.   There used to be a different way to interact with resources hence this has a specific name, also becuase it adds consistency to the interface to </p>
-<h4 id="virtual-machine">Virtual Machine</h4>
-<p>(aka VM) Creating a simulated computer hardware using software, to be able run a guest operating system inside a host system, such that the guest thinks it's running on an actual computer.</p>
-<h4 id="tensor-processing-unit-tpu">Tensor Processing Unit (TPU)</h4>
-<p><a href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">Google Tensor Processing Unit</a> is specialized computer chip similar to <a href="#gpu">GPUs</a>, used by deep learning libraries such as <a href="https://www.tensorflow.org/">TensorFlow</a> ( which leads to the question of "what is a tensor" and that depends on who you ask but similar to matrix.  </p>
 <h4 id="service-level-agreement-sla">Service Level Agreement (SLA)</h4>
 <p>Level of service you expect from a vendor, laying out the metrics by which service is measured, as well as remedies or penalties should agreed-on service levels not be achieved.  In Cloud this is often spells out 'uptime,' which is percent of time the system is not down, e.g. 99.99%, and guarantees against data loss and availability.   For most research, uptime is not important as we are our own customer and can tolerate some downtime.</p>
 <h4 id="services">Services</h4>
 <p>Cloud "services" are often bundles of <a href="#resource">resources</a> pulled together for coordinate function.   Cloud companies offer hundreds of often closely overlapping services.   </p>
+<h4 id="tags">Tags</h4>
+<p>AWS and Azure allow you add meta data to resource in the form of tags (e.g. hashtags, etc) which are keys and values.     When you create a resource you can add a tag indicating the project it is for e.g. "project" = "dna-methylation"   To add more detail if your DNA methylation has multiple aspects or experiments, add more tags like "experiment" = "Fall 2021"</p>
+<p>For workgroups it's stronlgy suggested you add a "created_by" = your netid because it's often difficult in Azure to determine who created a resource if it needs to be turned off or deleted.  </p>
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json">Use tags to organize your Azure resources and management hierarchy</a></p>
+<h4 id="tensor-processing-unit-tpu">Tensor Processing Unit (TPU)</h4>
+<p><a href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">Google Tensor Processing Unit</a> is specialized computer chip similar to <a href="#gpu">GPUs</a>, used by deep learning libraries such as <a href="https://www.tensorflow.org/">TensorFlow</a> ( which leads to the question of "what is a tensor" and that depends on who you ask but similar to matrix.  </p>
+<h4 id="virtual-machine">Virtual Machine</h4>
+<p>(aka VM) Creating a simulated computer hardware using software, to be able run a guest operating system inside a host system, such that the guest thinks it's 
+running on an actual computer.</p>
                 
               
               
