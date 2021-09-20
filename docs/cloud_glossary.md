@@ -10,20 +10,20 @@ https://www.cloudbank.org/cloud-terms
 
 ## The Glossary
 
-#### Azure Resource Manager
-ARM
+#### Azure Resource Manager (ARM)
+see [Resource Manager](#resource-manager)
 
 #### ARM Template
-JSON-formatted file that the ARM can use to create resources for you.  Templates are a great shortcut and automation feature but difficult to edit.
+A specification file listing all of the cloud resources and configuration settings tha that the Azure [Resource Manager](#resource-manager) can use to create resources for you when you submit it a certain way.   Templates are a great shortcut and automation feature but difficult to edit.  For details see Azure Documentation: [What are ARM templates?](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview)
 
 #### Blob Storage (Azure)
-Azure's object cloud storage, similar to S3 and google cloud storage buckets.  
+Azure's object cloud storage, similar to S3 and google cloud storage buckets.   Azure Documentation: [Introduction to Azure Blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
 
 #### Client-Server
 Client/Server model of computing is something we use everyday but perhaps dont' use this term.   See https://techterms.com/definition/client-server_model   You are used to using maybe a dozen clients everyday (phone apps, web browser, ssh to connect to a remote linux, Remote Desktop client to connect to remote desktop server, etc).  Cloud computing provides all the infrastructure needed to create servers quickly and easily. 
 
 #### CPU
-Central Processing Unit
+Central Processing Unit, the main 'chip' of a computer, and a core component when specifying a [Virtual Machine](#virtual-machine) 'size'
 
 #### Arm CPU
 Most computers run Intel CPUs, but another company has compatible processessor that are slightly different.  Some computational work is sensitive to CPU choice, and CPU choice can affect costs.  
