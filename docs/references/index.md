@@ -11,22 +11,7 @@ Azure Tips and Tricks : https://microsoft.github.io/AzureTipsAndTricks/
 Azure Portal "How to" series - focused on using the Azure portal to do several different things.  This is mostly about the services themselves, not the portal, and many topics do not apply to us (e.g. Azure Arc) but there are some very useful videos : https://youtube.com/playlist?list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR
 
 
-## About Cloud In General Terms
-
-These resources are abstract introductions or discussions about cloud computing, mostly from an academic perspective.  However "academic" can also mean those responsible for maintaining a university's IT infrastructure or websites.   
-
-Written only 3 years after the launch of AWS, this is very insightful discussion of the value of cloud computing
-
-<i>M. Armbrust et al. "Above the Clouds: A Berkeley View of Cloud Computing. Technical Report UCB/EECS-2009-28," University of California at Berkeley, Electrical Engineering and Computer Sciences, 2009</i>  <br>
-https://www2.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-28.pdf
-
-
-<i>I. Porres, T. Mikkonen, A. Ashraf, eds.  "Developing Cloud Software Algorithms, Applications, and Tools." TUCS General Publication, No 60, October 2013 ISBN 978-952-12-2952-7 </i><br>
-https://www.researchgate.net/profile/Adnan-Ashraf-10/publication/258286578_Introduction_to_Cloud_Computing_Technologies/links/00b49527b8906bb0f4000000/Introduction-to-Cloud-Computing-Technologies.pdf?origin=publication_detail
-
-
-
-## Interace: Azure Portal
+## Interface: Azure Portal
 
 Azure Portal Documentation :  https://docs.microsoft.com/en-us/azure/azure-portal/ 
 
