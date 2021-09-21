@@ -10,27 +10,31 @@ https://www.cloudbank.org/cloud-terms
 
 ## The Glossary
 
-#### Azure Resource Manager (ARM)
-see [Resource Manager](#resource-manager)
+#### Arm CPU
+CPU from "Advanced RISC Machines, ltd.  While historically most computers used Intel CPUs, ARM provides an alternative CPU that is becoming more popular and present as an option in HPC and Cloud [Virtual Machine](#virtual-machine) options.  The vast majority of software written for Intel computers is compatible with ARM.  Some computational work is sensitive to CPU choice, and CPU choice can affect cost and speed of excecution, so it may be important to understand the implications of this choice of CPU.  
 
 #### ARM Template
 A specification file listing all of the cloud resources and configuration settings tha that the Azure [Resource Manager](#resource-manager) can use to create resources for you when you submit it a certain way.   Templates are a great shortcut and automation feature but difficult to edit.  For details see Azure Documentation: [What are ARM templates?](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview)
 
-#### Blob Storage
+#### Azure Resource Manager (ARM)
+see [Resource Manager](#resource-manager)
+
+=#### Blob Storage
 Azure calls there object cloud storage "Blobs".  It is similar to Amazon Web Service 'S3' and Google cloud storage buckets.   Azure Documentation: [Introduction to Azure Blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)  While it's possible to 'mount' blob storage to linux VMs using 'blob fuse' or similar packages, it can not work as you may expect and so in practice Azure Files are a better solution for that. See [File Storage](#file-storage-azure)
 
 #### Client-Server
 Client/Server model of computing is something we use everyday but perhaps dont' use this term.   See https://techterms.com/definition/client-server_model   You are used to using maybe a dozen clients everyday (phone apps, web browser, ssh to connect to a remote linux, Remote Desktop client to connect to remote desktop server, etc).  Cloud computing provides all the infrastructure needed to create servers quickly and easily. 
 
+#### Containers
+Or Docker Containers (not all containers need to be Docker the vast majority of container system use Docker).  For R users, see https://colinfay.me/docker-r-reproducibility/   For Python users, there is https://www.netguru.com/blog/python-docker-tutorial  although you could read either. 
+
+Linux Containers is a term for a collection of methods and technologies that allows a multiple isolated systems to be run on one Linux computer.   This is differnet from virtual machines in that a VM host provides abstract or virtualized hardware so each VM requires it's own portion of memory and CPU cores whereas containers share the main part of Linux (the kernel), memory and CPU more dynamically.   The primary comercial company for containers is "Docker" so Docker is sometimes used synonymously with 'container' but it is just one form. 
+
+In addition to being more efficient than VMs, most container systems have a system and scripting language for building containers.  The means onecan provision an entire system from code.   Containers are widely use to package and distribute complex research software systems for example Bioinformatics workflow system "Cromwell."  This way reseearches can download and use a pre-installed system without the trouble of getting all of the pre-requistes (dependencies) installed on their machine.   
+
 #### CPU
 Central Processing Unit, the main 'chip' of a computer, and a core component when specifying a [Virtual Machine](#virtual-machine) 'size'
 
-#### Arm CPU
-Most computers run Intel CPUs, but another company has compatible processessor that are slightly different.  Some computational work is sensitive to CPU choice, and CPU choice can affect costs.  
-
-#### Containers
-Or Docker Containers (not all containers need to be Docker the vast majority of container system use Docker).  For R users, see https://colinfay.me/docker-r-reproducibility/   For Python users, there is https://www.netguru.com/blog/python-docker-tutorial  although you could read either. 
-Containers are a way to create a Linux-in-a-box that is more effieccient than a VM, and has a language for building containers meaning you can provision an entire system from code down to installing all the packages you need and copying your own program into it.   Containers are widely use to package and distribute complex research software systems for example Bioinformatics workflow system "Cromwell."  This way reseearches can download and use a pre-installed system without the trouble of getting all of the pre-requistes (dependencies) installed on their machine.   Docker is great for DevOps. 
 
 #### DevOps
 This has many definitions but for researchers the shortcut is using code to make IT infrastructure.  Helping developers (like you) do Ops (like sysadmins) with code.   see IaC.
