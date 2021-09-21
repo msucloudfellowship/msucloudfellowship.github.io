@@ -1,3 +1,7 @@
+---
+title: MSU Cloud Fellowship
+---
+
 # MSU Cloud Fellowship 2021-2022
 
 ![Ebene_bei_Auvers_van_Gogh_1890](img/cropped_cloud_painting_Vincent_van_Gogh_Ebene_bei_Auvers_1890_Neue_Pinakothek_Munich.jpg)

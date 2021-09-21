@@ -7,7 +7,6 @@ nav:
       - 1. Introduction: session_introduction/index.md
       - 2. How does the cloud work?: session_how_to_cloud/index.md
       - 3. Cloud Storage: session_cloud_storage/index.md
-      - Additional sessions TBD: index.md
     - References: references/index.md
     - Cloud Glossary: cloud_glossary.md
 theme: 
