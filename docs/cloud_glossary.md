@@ -16,8 +16,8 @@ see [Resource Manager](#resource-manager)
 #### ARM Template
 A specification file listing all of the cloud resources and configuration settings tha that the Azure [Resource Manager](#resource-manager) can use to create resources for you when you submit it a certain way.   Templates are a great shortcut and automation feature but difficult to edit.  For details see Azure Documentation: [What are ARM templates?](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview)
 
-#### Blob Storage (Azure)
-Azure's object cloud storage, similar to S3 and google cloud storage buckets.   Azure Documentation: [Introduction to Azure Blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
+#### Blob Storage
+Azure calls there object cloud storage "Blobs".  It is similar to Amazon Web Service 'S3' and Google cloud storage buckets.   Azure Documentation: [Introduction to Azure Blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)  While it's possible to 'mount' blob storage to linux VMs using 'blob fuse' or similar packages, it can not work as you may expect and so in practice Azure Files are a better solution for that. See [File Storage](#file-storage-azure)
 
 #### Client-Server
 Client/Server model of computing is something we use everyday but perhaps dont' use this term.   See https://techterms.com/definition/client-server_model   You are used to using maybe a dozen clients everyday (phone apps, web browser, ssh to connect to a remote linux, Remote Desktop client to connect to remote desktop server, etc).  Cloud computing provides all the infrastructure needed to create servers quickly and easily. 
@@ -39,7 +39,7 @@ This has many definitions but for researchers the shortcut is using code to make
 Docker is the most prevalent form of "Containers", e.g Docker is to containers as google is to search.   See containers above for details.  Note that Docker is many things as once:  a method and format for Linux containers, a program for working with container ( e.g. `docker build...`), a Company, and that's company's hub or repository for storing and access free containers (or your own).    Cloud companies also have "hubs" or repositories for storing your own Docker containers.    
 
 #### File Storage (Azure)
-Azure cloud storage that is more traditional file sharing, and that can be connected (mounted) to computers and other services using the SMB protocal, making it similar experience to departmental shared fileserver
+Also called "Azure Files." Azure cloud storage that is more traditional file sharing, and that can be connected (mounted) to computers and other services using the SMB protocal, making it similar experience to departmental shared fileservers.   See https://azure.microsoft.com/en-us/services/storage/files/  and compare with [Blob Storage](#blob-storage)
 
 #### Firewall
 A common concept in networking, firewall software on a computer's networking components limits which kind of traffic can come in or out, and restricts which computer internet addresses can connect. Best practices suggest closing all connections via the firewall, only opening those connections for services you need, and only to those users (e.g. your own computer) you need to. Azure additionally has an option to "allow connections from Azure networks" so that you can freely connect from the portal, 'cloud shell', or connect from on azure service to another.   The implication is that you trust all Azure services. 
@@ -68,7 +68,15 @@ For AWS and Azure, a resource is an entity that you can work with.  The means so
 Organizational scheme unique to Azure.  Nearly all resources must be part of a group and the resource group must be selected (or created ) when creating other resources.   Resource groups could be used for specific projects, for 'personal' resources used for multiple projects (or for azure things like cloud shell).  
 
 #### Resource Manager
-Azure calls the system they use to interface between you and cloud resources the "Azure Resource Manager" or ARM.   There used to be a different way to interact with resources hence this has a specific name, also becuase it adds consistency to the interface to 
+Azure calls the system they use to interface between you and cloud resources the "Azure Resource Manager" or ARM.   There used to be a different way to interact with Azure resources, hence this has a specific name and is referred to in Microsoft documentation.  
+
+#### Serverless
+
+This buzz-word applies to many different cloud services, primarily those that the cloud company manages for you, usually referring to cloud functions (AWS Lamba) and sometimes others in the  "Platform As A Service" [service model](#service-models).    The origin is that, if you run virtual machines with operating systems and software install, your are maintaining servers to support that software.  If the cloud service does not require you to provision and maintain a server, it is often marketed as "serverless" (e.g. recent marketing of [Azure Files](https://azure.microsoft.com/en-us/services/storage/files/#overview) as "Serverless file shares" where on-premise File Sharing requires staff to manage and maintain Windows File Servers.  
+
+#### Service Models
+
+This is related to the "... as a service" (..aaS) phrases defined in the NIST document which included  "Infrastructure", "Platform" and "Softare" as a service  (IaaS, PaaS and SaaS).  It's a conceptual organization of cloud services based on the stack model of computating with the infrastructure (network, hardware, CPU, etc) at the bottom and Software on the top.  See [The NIST Definition of Cloud Computing](https://csrc.nist.gov/publications/detail/sp/800-145/final)
 
 #### Service Level Agreement (SLA)
 Level of service you expect from a vendor, laying out the metrics by which service is measured, as well as remedies or penalties should agreed-on service levels not be achieved.  In Cloud this is often spells out 'uptime,' which is percent of time the system is not down, e.g. 99.99%, and guarantees against data loss and availability.   For most research, uptime is not important as we are our own customer and can tolerate some downtime.
