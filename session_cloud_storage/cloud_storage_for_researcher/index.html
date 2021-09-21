@@ -8,13 +8,15 @@
       
       
       
+        <meta name="author" content="Patrick Bills">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
-        <title>Workshop : Creating your own cloud computer - MSU Cloud Fellowship</title>
+        <title>Intro to Cloud Storage For Researchers - MSU Cloud Fellowship</title>
       
     
     
@@ -65,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#workshop-creating-your-own-cloud-computer" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Workshop : Creating your own cloud computer
+              Intro to Cloud Storage For Researchers
             
           </span>
         </div>
@@ -259,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../session_how_to_cloud/" class="md-nav__link">
         2. How does the cloud work?
       </a>
     </li>
@@ -271,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../session_cloud_storage/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         3. Cloud Storage
       </a>
     </li>
@@ -330,8 +332,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -347,50 +347,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pre-requistites" class="md-nav__link">
-    Pre-requistites
+  <a href="#about-cloud-storage" class="md-nav__link">
+    About Cloud Storage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-the-azure-portal-to-create-a-resource-group" class="md-nav__link">
-    Using the Azure portal to create a resource group
+  <a href="#attached-storage-local-disks" class="md-nav__link">
+    Attached Storage = Local Disks
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-virtual-machine-using-a-template" class="md-nav__link">
-    Create a virtual machine using a template
+  <a href="#network-attached-storage" class="md-nav__link">
+    Network attached Storage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exploring-the-azure-portal" class="md-nav__link">
-    Exploring the Azure portal
+  <a href="#network-attached-sharing-with-no-code-re-write" class="md-nav__link">
+    Network attached: sharing with no code re-write
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connect" class="md-nav__link">
-    Connect
+  <a href="#organized-into-groups-called-containers-buckets-on-aws" class="md-nav__link">
+    organized into groups called containers  ( buckets on AWS )
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#download-data" class="md-nav__link">
-    Download Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#start-r-studio-server" class="md-nav__link">
-    Start R studio Server
+  <a href="#cloud-attached" class="md-nav__link">
+    Cloud attached.
   </a>
   
 </li>
@@ -408,107 +401,70 @@
               
                 
                 
-                <h1 id="workshop-creating-your-own-cloud-computer">Workshop : Creating your own cloud computer</h1>
-<h2 id="introduction">Introduction</h2>
-<p>This workshop walks you though , using Microsoft Azure, the creation of a cloud virtual machine and opens access to it.  We will use command line access to use the remote machine to download data and run a calculation.   this is a similar experience to using any remote Linux system, such as the MSU HPCC.   </p>
-<h2 id="pre-requistites">Pre-requistites</h2>
+                  <h1>Intro to Cloud Storage For Researchers</h1>
+                
+                <h2 id="introduction">Introduction</h2>
 <ul>
-<li>Microsoft Azure account (provisioned for participants)</li>
+<li>See Reading list in session page ( sharing data is a different lecture )</li>
+<li>Reading links</li>
+<li>intro to azure storage
+<a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction?toc=/azure/storage/blobs/toc.json">https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction?toc=/azure/storage/blobs/toc.json</a></li>
 </ul>
-<!--    Participants will have this tested during the first meeting 
-        instal the following on your computer : 
-    * Remote Desktop software
-    * Windows : comes with ensure it's available
-    * MacOS : install from app store [Microsoft Remote Desktop](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12) 
-  -->
+<hr />
+<h2 id="about-cloud-storage">About Cloud Storage</h2>
+<p>In Short, Cloud Storage is not like a disk because:</p>
 <ul>
-<li>No previous experience with cloud virtual machines necessary</li>
+<li>must be organized for worldwide internet access</li>
+<li>must hold billions of files from millions of customers</li>
+<li>must be fast</li>
+<li>must be ultra-dependable</li>
 </ul>
-<h2 id="using-the-azure-portal-to-create-a-resource-group">Using the Azure portal to create a resource group</h2>
-<p>(should this be creatd ahead of time?)</p>
-<h2 id="create-a-virtual-machine-using-a-template">Create a virtual machine using a template</h2>
-<p>Create a data science virtual machine using a template.  </p>
-<ol>
-<li>portal create...</li>
-<li>in search bar type "data science virtual machine</li>
-<li>select "d s v m Ubuntu"</li>
-<li>select "pre-configured"</li>
-<li>click "dev test" and then below click "general purpose", and then 'next'</li>
-<li>"Basics" Section: in next screen select or entered the following options. <ul>
-<li>Resource Group: select your resource group</li>
-<li>VM Name: please enter a name with the following pattern cf-dvsm-netid using your own netid</li>
-<li>Region : select the default</li>
-<li>Image : should say "Data Science Virtual machine - Unbuntu 18.0.4 - Gen 1"</li>
-<li>Azure Spot Instance : leave unchecked</li>
-<li>Size :  Standard_D2s_v3 ($80/month) <em>note: it will only cost pennies per hour</em></li>
-<li>Administrator account : select "password"  <em>note: ssh key is more secure but requires time consuming setup</em></li>
-<li>Username : enter your netid <em>this is easy to remember</em></li>
-<li>Password : please enter a complex password <em>don't use your actual netid password, also write it down as we will only use it once and it can't be recovered</em></li>
-<li>click "next (disks)"</li>
+<hr />
+<h2 id="attached-storage-local-disks">Attached Storage = Local Disks</h2>
+<ul>
+<li>Hard Drive attached internal</li>
+<li>disks and sticks attached via  USB</li>
+<li>"Direct Attached"</li>
+<li>access using paths <ul>
+<li>Mac: /Volumes/mydatadirive/myproject/myfile.csv</li>
+<li>Windows: D:\myproject\myfile.csv</li>
 </ul>
 </li>
-</ol>
-<!-- 1. "disks" section : use all defaults, simply click 'next...'
-1. "Networking" : use all defaults, simply click 'next...'
-1. "Advanced"  : use all deafults, simply click 'next...'
-1. "Tags:  -->
-<ol>
-<li>Note in this "Create a Virtual Machine page, there are several sections across the top
-    <code>Basics  Disks  Networking  Management  Advanced  Tags  Review + create</code>
-    We can skip all sections now and go to "Review + create"</li>
-<li>
-<p>Product details: </p>
-<ul>
-<li>note the costs (mine is 0.1100 USD/hr)</li>
-<li>click the <strong>"Create"</strong> button at the bottom of this screen</li>
+<li>aside: we are still using terms from the 70s and 80s for storage?</li>
 </ul>
-</li>
-<li>
-<p>wait. </p>
+<hr />
+<h2 id="network-attached-storage">Network attached Storage</h2>
+<p>Systems for sharing files over local network (wifi, ethernet)</p>
 <ul>
-<li>the screen should say "Deployment in Progress" report any errors or problems </li>
-<li>click "Go to Resource" when it's complete</li>
+<li>Disk system in a lab</li>
+<li>U or company data center</li>
+<li>great when all on same network</li>
+<li>research clusters have a disk system shared </li>
+<li>HPC has ultra high speed network and massive disks </li>
+<li>network methods windows SMB Linux NSF details aren't important others than your need a network protocol to mimic a direct attached disk and there are just a couple, of those AND they are tricky since disk is shared and networks error prone </li>
 </ul>
-</li>
-</ol>
-<h2 id="exploring-the-azure-portal">Exploring the Azure portal</h2>
-<p>this portal page lists details about this virtual machine.   </p>
-<h2 id="connect">Connect</h2>
-<!-- Notes: DSVM does not have a linux desktop.  see https://docs.microsoft.com/en-us/azure/virtual-machines/linux/use-remote-desktop for details on installing linux to allow remote access.  Requires students to install RDP client and get it working?  Is this even feasible?    -->
-
-<p>options to connect to remote linux computer: </p>
-<ul>
-<li>ssh , alwayws works, requires Mac terminal or windows or mobaxterm</li>
-<li>Rstudio Server (must be started)</li>
-<li>Jupyter Notebooks (must be started)</li>
-<li>Remote desktop (must be installed on VM, and a client must be installed on laptop)</li>
-</ul>
-<p>test connection: </p>
-<ul>
-<li>in the left hand menu of the VM resource, find the "connect" section</li>
-<li>click the "ssh" section if not already selected</li>
-<li>near the bottom click "test your connection"</li>
-<li></li>
-</ul>
-<p>connect with ssh:</p>
-<ol>
-<li>open your terminal program</li>
-<li>in the portal, find the machine ip address</li>
-<li>issue command <code>ssh azureuser@&lt;ip&gt;</code></li>
-</ol>
-<h2 id="download-data">Download Data</h2>
-<p>Using standard Linux tools we will download data onto this remote computer</p>
-<ol>
-<li>Log-in via ssh if you haven't already</li>
-<li>use the following command to download data set
-        <code>git clone https://github.com/fivethirtyeight/data/tree/master/college-majors</code></li>
-<li>review the files using linux commands<ol>
-<li><code>cd college-majors; ls</code></li>
-<li><code>head grad-students.csv</code></li>
-</ol>
-</li>
-</ol>
-<h2 id="start-r-studio-server">Start R studio Server</h2>
+<hr />
+<h2 id="network-attached-sharing-with-no-code-re-write">Network attached: sharing with no code re-write</h2>
+<p>Huge advantage of network attached is because they look like direct attached to your computer , you don't have to change your code ,</p>
+<p>just the path to the file ( windows and mac examples )</p>
+<h2 id="organized-into-groups-called-containers-buckets-on-aws">organized into groups called containers  ( buckets on AWS )</h2>
+<p>access items individually
+no file folder hierarchy ( BUT there is a way to fake it if necessary ) </p>
+<p>on your computer or a university computer like hpc or our web and data systems , the storage is "near" for fast transfer 
+cloud storage in same region is not fast</p>
+<p>cloud sync: one drive google 
+vs cloud storage </p>
+<hr />
+<h2 id="cloud-attached">Cloud attached.</h2>
+<p>there are ways to mount cloud storage But must be on the same location, is still slow, cloud storage is not like a regular disk </p>
+<p>Azure has a storage option that is more like network attached but it's more expensive.   for small data sets the cost may be worth it.  prices are in GB/time.  A terabyte for months can get expensive. </p>
+<p>see axure docs for details of these types</p>
+<hr />
+<p>table of disk types and practical aspects of accessing data ( direct attach/usb, network attach, blob, files,  disks ) </p>
+<p>columns: type, requirements/actions, access from an application, access from
+code </p>
+                
+                  
                 
               
               
