@@ -14,7 +14,7 @@
     
     
       
-        <title>Exercise: Using Azure Cloud Storage - MSU Cloud Fellowship</title>
+        <title>How to move data between the MSU HPC and Azure - MSU Cloud Fellowship</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercise-using-azure-cloud-storage" class="md-skip">
+        <a href="#how-to-move-data-between-the-msu-hpc-and-azure" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercise: Using Azure Cloud Storage
+              How to move data between the MSU HPC and Azure
             
           </span>
         </div>
@@ -340,37 +340,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pre-requisites" class="md-nav__link">
-    Pre-requisites
+  <a href="#introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#azure-quickstart-tutorials" class="md-nav__link">
-    Azure Quickstart Tutorials
+  <a href="#method-1-using-scp-with-a-virtual-machine" class="md-nav__link">
+    Method 1. using scp with a virtual machine
   </a>
   
-    <nav class="md-nav" aria-label="Azure Quickstart Tutorials">
+    <nav class="md-nav" aria-label="Method 1. using scp with a virtual machine">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#storage-account" class="md-nav__link">
-    Storage Account
+  <a href="#requirements" class="md-nav__link">
+    Requirements
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#blob-storage" class="md-nav__link">
-    Blob Storage
+  <a href="#a-little-about-the-scp-utility" class="md-nav__link">
+    A little about the scp utility
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-2-azcopy" class="md-nav__link">
+    Method 2. azcopy
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 2. azcopy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements_1" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternative-methods" class="md-nav__link">
+    Alternative Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternative Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-3-azure-data-factory" class="md-nav__link">
+    Method 3. Azure data factory
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#file-storage" class="md-nav__link">
-    File Storage
+  <a href="#method-4-python" class="md-nav__link">
+    Method 4. Python
   </a>
   
 </li>
@@ -393,27 +433,74 @@
               
                 
                 
-                <h1 id="exercise-using-azure-cloud-storage">Exercise: Using Azure Cloud Storage</h1>
-<h2 id="pre-requisites">Pre-requisites</h2>
+                <h1 id="how-to-move-data-between-the-msu-hpc-and-azure">How to move data between the MSU HPC and Azure</h1>
+<h2 id="introduction">Introduction</h2>
+<p>A common research cloud computing activity is moving data between cloud and on-premise (local) systems.   Many universities provice great local systems at little no costs, and some research groups have existing systems they've invested in, whereas cloud computing is an on-going costs. </p>
+<p>Azure has a rich data ecosystem and there are many methods to copy data from our local research cluster ([MSU ICER HPCC) to Azure Storage.  The follow are examples of methods that I've used, and all assume you are moving data to "Azure Blob" storage but may require minor adjustment to use "Azure Files" storage which should also work.  I don't discuss "queue" or "table" storage at all and that my require other services to use (events or data factory)  </p>
+<h2 id="method-1-using-scp-with-a-virtual-machine">Method 1. using scp with a virtual machine</h2>
+<p>Sometimes you don't need a durable storage account at all, you just need to get some data onto the virtual machine you are using for computation.  This method is useful for one-time workflow of copy, process, save results.   </p>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>an account on the MSU HPCC</li>
+<li>basic knowledge of Linux</li>
+<li>know how to create and use a Azure Virtual Machine</li>
+</ul>
+<h3 id="a-little-about-the-scp-utility">A little about the <code>scp</code> utility</h3>
+<p>The HPC runs Linux, and The <code>cp</code> utility copies files from one folder to another.   The <code>scp</code> utility allows us to do that across the network, using a secure method, providing you have an account on the remote system and <code>ssh</code> access.   There are many programs to help with network file transfers but <code>rsync</code> and <code>rclone</code> are two command (and really great) programs to checkout.  We will stick with <code>scp</code> for this example </p>
+<p>The basic format of the scp command is <code>scp user@remote.system.com:path/to/remote/file path/to/copy_of_file</code></p>
+<p>For examples see <a href="http://www.hypexr.org/linux_scp_help.php">http://www.hypexr.org/linux_scp_help.php</a></p>
+<p>Method 1a. simple method for a one-time copy to an Azure VM: </p>
+<p>Steps: 
+1. find the file on the MSU HPCC that you want to copy.  Note the location and full path
+1. create your Virtual Machine in Azure that you will use for your computations if it isn't already. 
+    - if the file is particularly large, make sure to create a VM disk that is large enough to contain it
+1. log-in to the virtual machine with the username and password you created (with remote desktop, or for Linux with ssh)
+1. if you are using Windows with remote desktop, start cmd.exe to get a terminal, if on Linux, you are already on the terminal
+1. use an scp command like this: 
+    - first, note the folder you are running this from (it defaults to the VM home directory)
+    - <code>scp mynetid@hpcc.msu.edu:path/to/file.ext file.ext</code>
+    - you may be asked to accept the host 'fingerprint' if this is the first time you are using scp
+    - enter your NetID password (it is not saved or visible on the command line)
+    - consider using ssh keys instead of your password (which is a whole 'nother lesson)
+    - see <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys">https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys</a>  </p>
 <ol>
-<li>Download the Storage Explorer</li>
-<li>Review Storage documentation for basic concepts.<br />
-Please review materials for <a href="../session_cloud_storage">this session</a> to understand cloud storage and the different types that Azure offers </li>
-<li>A valid subscription. </li>
-<li>A storage account is not always required for some tutorials, but if so, create a storage account with the first item.  </li>
+<li>Now you can access the file using the software from the
+I think of this as  "pulling" data from HPC to the VM disk. </li>
 </ol>
-<h2 id="azure-quickstart-tutorials">Azure Quickstart Tutorials</h2>
-<h3 id="storage-account">Storage Account</h3>
-<p>We created a storage account in one of the first activities, and you may use that storage account for many of the other activities below.  However  here is the Azure documentation for doing so if you want to review or practice creating a new one: </p>
-<p><a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal">Create a storage account</a></p>
-<p>*Note in the above there are options for "Portal", "PowerShell", "Azure CLI" and "Template" but the Portal version is what we covered so far. </p>
-<h3 id="blob-storage">Blob Storage</h3>
-<p><a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal">Azure Quickstart: Upload, download, and list blobs with the Azure portal</a></p>
-<p>The Azure Storage explorer is a desktop application for Mac and Windows, useful for occasional checking and working with cloud storage: </p>
-<p><a href="https://docs.microsoft.com/en-us/azure/storage/blobs/quickstart-storage-explorer">Azure Quickstart: Use Azure Storage Explorer to create a blob</a></p>
-<h3 id="file-storage">File Storage</h3>
-<p>In the following exercise, you can use your existing storage account, and skip to the section "create-an-azure-file-share" but feel free to create an additional storage account if you want to experiment (the storage account itself does not )</p>
-<p><a href="https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-portal?tabs=azure-portal">Quickstart: Create and manage Azure file shares</a></p>
+<h2 id="method-2-azcopy">Method 2. azcopy</h2>
+<h3 id="requirements_1">Requirements</h3>
+<ul>
+<li>A Storage account.  We created one in the first session, but create a storage account in your resource group if you don't have one yet. </li>
+<li>Create a container in storage account to hold files. This can be a Blob or Azure Files container</li>
+<li>You must be owner of the storage account, and able to assign permissions ('roles').  Azure requires special persmissions grant that are NOT granted by default to use azcopy.  Details in the instructions below</li>
+<li>OR you must be willing to go through the process of creating a "SAS Token" :  see my <a href="../creating_a_container_sas_token_from_the_azure_portal/">instructions for creating SAS token</a></li>
+</ul>
+<p>Assuming you have a storage account with a blob container already created.  In the portal, open the storage account container. </p>
+<p>Azure provides a command line tool <code>azcopy</code> which you can download for windows, mac and Linux.   see <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10">https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10</a></p>
+<p>How to install the azcopy utility </p>
+<ol>
+<li>Login to MSU HPCC  <code>ssh &lt;netid&gt;@hpcc.msu.edu</code></li>
+<li>download a copy of azcopy </li>
+<li>untar and put in your home directory</li>
+</ol>
+<p>How to use azcopy to upload to Azure using the "AD Login"</p>
+<ol>
+<li>Log in to HPCC</li>
+<li>assuming your copy of <code>azcopy</code> is in your home directory</li>
+<li></li>
+</ol>
+<p>References:
+ - <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10">Getting Started with azcopy</a>
+ - <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy-login">azcopy login reference</a>
+ - <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-authorize-azure-active-directory">Authorize access to blobs with AzCopy and Azure Active Directory (Azure AD)</a>
+ - <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/translator/document-translation/create-sas-tokens?tabs=Containers">Generate SAS tokens for your storage containers</a>  *(note I found this in the "cognitive services" documentation)</p>
+<h2 id="alternative-methods">Alternative Methods</h2>
+<h3 id="method-3-azure-data-factory">Method 3. Azure data factory</h3>
+<p>We will cover what "Azure Data Factory" is in session 4, but this is included in this session for completeness. </p>
+<p>If you have some familiarity with Azure data factory, note that a "source" for Azure Data Factory" can be an 'sftp' or 'secure file transfer protocol' which most systems that have 'ssh' (secure shell) access allow, and is simlar to using the 'scp' or 'secure copy' utility. </p>
+<h3 id="method-4-python">Method 4. Python</h3>
+<p>We won't cover using Python to copy files to/from blob storage, but see the optional exercise for using Azure cloud storage in Python. </p>
+<p>To use Azure python SDK on the HPC you need to installed the azure python sdk in a python environment in your home directory, for example using the Anaconda distribution of Python.  See <a href="https://wiki.hpcc.msu.edu/display/ITH/Using+conda">https://wiki.hpcc.msu.edu/display/ITH/Using+conda</a>.   </p>
                 
               
               

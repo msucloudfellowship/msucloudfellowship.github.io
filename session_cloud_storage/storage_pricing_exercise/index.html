@@ -8,15 +8,13 @@
       
       
       
-        <meta name="author" content="Patrick Bills">
-      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
-        <title>Intro to Cloud Storage For Researchers - MSU Cloud Fellowship</title>
+        <title>Storage pricing exercise - MSU Cloud Fellowship</title>
       
     
     
@@ -67,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#optional-compare-with-on-premise-storage-costs" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro to Cloud Storage For Researchers
+              Storage pricing exercise
             
           </span>
         </div>
@@ -340,50 +338,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about-cloud-storage" class="md-nav__link">
-    About Cloud Storage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#attached-storage-local-disks" class="md-nav__link">
-    Attached Storage = Local Disks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-attached-storage" class="md-nav__link">
-    Network attached Storage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-attached-sharing-with-no-code-re-write" class="md-nav__link">
-    Network attached: sharing with no code re-write
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#organized-into-groups-called-containers-buckets-on-aws" class="md-nav__link">
-    organized into groups called containers  ( buckets on AWS )
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cloud-attached" class="md-nav__link">
-    Cloud attached.
+  <a href="#optional-compare-with-on-premise-storage-costs" class="md-nav__link">
+    Optional: compare with On-premise storage costs
   </a>
   
 </li>
@@ -401,70 +357,53 @@
               
                 
                 
-                  <h1>Intro to Cloud Storage For Researchers</h1>
+                  <h1>Storage pricing exercise</h1>
                 
-                <h2 id="introduction">Introduction</h2>
+                <p><img src="../img/gaspump.gif"  style="display: block; float:right;margin:1em;" /></p>
+<p>Prior to doing this exercise, See the reading and lecture slides linked in this session for definitions of terms. </p>
+<p>How large, approximately, is your data?  If you are unsure, estimate 100 gb.   How much would it cost to keep it in the cloud?</p>
+<p>Compare the pricing for Blob, Files and Disk storage for 6 months</p>
+<p><strong>Aspects Of Storage:</strong></p>
 <ul>
-<li>See Reading list in session page ( sharing data is a different lecture )</li>
-<li>Reading links</li>
-<li>intro to azure storage
-<a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction?toc=/azure/storage/blobs/toc.json">https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction?toc=/azure/storage/blobs/toc.json</a></li>
-</ul>
-<hr />
-<h2 id="about-cloud-storage">About Cloud Storage</h2>
-<p>In Short, Cloud Storage is not like a disk because:</p>
-<ul>
-<li>must be organized for worldwide internet access</li>
-<li>must hold billions of files from millions of customers</li>
-<li>must be fast</li>
-<li>must be ultra-dependable</li>
-</ul>
-<hr />
-<h2 id="attached-storage-local-disks">Attached Storage = Local Disks</h2>
-<ul>
-<li>Hard Drive attached internal</li>
-<li>disks and sticks attached via  USB</li>
-<li>"Direct Attached"</li>
-<li>access using paths <ul>
-<li>Mac: /Volumes/mydatadirive/myproject/myfile.csv</li>
-<li>Windows: D:\myproject\myfile.csv</li>
+<li>Redunancy: Always slect "LRS" as that is almost always sufficient and for con</li>
+<li>Storage prices are not the same across regions, but the default ("East US") works for this exercise</li>
+<li>Consider only the "Hot" storage of the different tiers ("Premium", "Hot", "Cool", and "Archive")<ul>
+<li>for some high performance applications, Premium is required, but look at the price difference! </li>
 </ul>
 </li>
-<li>aside: we are still using terms from the 70s and 80s for storage?</li>
+<li>Operations, Transactions and data transfer costs<ul>
+<li>charged per 10K operations </li>
+<li>really hard to estimate unless you know your workload</li>
+<li>very low costs, e.g. reading 10K Blobs costs 1/2 of one cent.  </li>
+<li>I would not bother estimating this cost unless you know you will have very high disk operations</li>
 </ul>
-<hr />
-<h2 id="network-attached-storage">Network attached Storage</h2>
-<p>Systems for sharing files over local network (wifi, ethernet)</p>
+</li>
+</ul>
+<p><strong>Types of Storage to Compare:</strong> </p>
 <ul>
-<li>Disk system in a lab</li>
-<li>U or company data center</li>
-<li>great when all on same network</li>
-<li>research clusters have a disk system shared </li>
-<li>HPC has ultra high speed network and massive disks </li>
-<li>network methods windows SMB Linux NSF details aren't important others than your need a network protocol to mimic a direct attached disk and there are just a couple, of those AND they are tricky since disk is shared and networks error prone </li>
+<li>
+<p>Azure Blob Pricing: <a href="https://azure.microsoft.com/en-us/pricing/details/storage/blobs/">https://azure.microsoft.com/en-us/pricing/details/storage/blobs/</a>  select "Hierachcial namespace"
+   <!-- 0.021 = $12.60 --></p>
+</li>
+<li>
+<p>Azure Files Pricing: <a href="https://azure.microsoft.com/en-us/pricing/details/storage/files/">https://azure.microsoft.com/en-us/pricing/details/storage/files/</a> 
+   <!--  - $0.0287/gb for 100 gb for 6 months = $17.22 --></p>
+</li>
+<li>
+<p>Managed Disk Pricing : <a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">https://azure.microsoft.com/en-us/pricing/details/managed-disks/</a>  </p>
+<ul>
+<li>note these are in different sizes and types, select 128gb size if you are estimating 100gb data, Standard SSD</li>
+<li>when you create a disk in the protal, it defaults to 1 TiB size, which is quite expensive / month
+   <!-- E10 disk is $9.60/month 6 months = $57.60 -->
+</li>
 </ul>
-<hr />
-<h2 id="network-attached-sharing-with-no-code-re-write">Network attached: sharing with no code re-write</h2>
-<p>Huge advantage of network attached is because they look like direct attached to your computer , you don't have to change your code ,</p>
-<p>just the path to the file ( windows and mac examples )</p>
-<h2 id="organized-into-groups-called-containers-buckets-on-aws">organized into groups called containers  ( buckets on AWS )</h2>
-<p>access items individually
-no file folder hierarchy ( BUT there is a way to fake it if necessary ) </p>
-<p>on your computer or a university computer like hpc or our web and data systems , the storage is "near" for fast transfer 
-cloud storage in same region is not fast</p>
-<p>cloud sync: one drive google 
-vs cloud storage </p>
-<hr />
-<h2 id="cloud-attached">Cloud attached.</h2>
-<p>there are ways to mount cloud storage But must be on the same location, is still slow, cloud storage is not like a regular disk </p>
-<p>Azure has a storage option that is more like network attached but it's more expensive.   for small data sets the cost may be worth it.  prices are in GB/time.  A terabyte for months can get expensive. </p>
-<p>see axure docs for details of these types</p>
-<hr />
-<p>table of disk types and practical aspects of accessing data ( direct attach/usb, network attach, blob, files,  disks ) </p>
-<p>columns: type, requirements/actions, access from an application, access from
-code </p>
-                
-                  
+</li>
+</ul>
+<h3 id="optional-compare-with-on-premise-storage-costs">Optional: compare with On-premise storage costs</h3>
+<p>The MSU HPC offers 1TB storage with redundant backups and high-speed access for free, with each additional 1TB for <a href="https://icer.msu.edu/hpcc/storage">$125/year</a>.  Since this is network attached storaage is this comparable to Azure Files or Azure Blob storage?</p>
+<p>If you need 2TB storage ( 1 free + 1 paid), what is the approximate Azure cost for 2000gb for 12 months, ignoring all operatinal costs (just storage)?  </p>
+<!-- blob costs $504/yr , files cost $688.8 -->
+<!-- another note, 3PB / 2yrs ~ $1.2M -->
                 
               
               

@@ -14,7 +14,7 @@
     
     
       
-        <title>3. Cloud Storage - MSU Cloud Fellowship</title>
+        <title>Session 4: Moving Data in Azure - MSU Cloud Fellowship</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#session-3-cloud-storage" class="md-skip">
+        <a href="#session-4-moving-data-in-azure" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. Cloud Storage
+              Session 4: Moving Data in Azure
             
           </span>
         </div>
@@ -222,16 +222,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
         Sessions
@@ -271,79 +269,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          3. Cloud Storage
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../session_cloud_storage/" class="md-nav__link">
         3. Cloud Storage
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#readings" class="md-nav__link">
-    Readings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#activities" class="md-nav__link">
-    Activities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#meeting-september-24-200-330pm" class="md-nav__link">
-    Meeting September 24 2:00-3:30pm
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optional-activity" class="md-nav__link">
-    Optional Activity:
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -410,36 +340,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#reading" class="md-nav__link">
+    Reading
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#readings" class="md-nav__link">
-    Readings
+  <a href="#optional-reading" class="md-nav__link">
+    Optional Reading
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#activities" class="md-nav__link">
-    Activities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#meeting-september-24-200-330pm" class="md-nav__link">
-    Meeting September 24 2:00-3:30pm
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optional-activity" class="md-nav__link">
-    Optional Activity:
+  <a href="#physical-data-movement" class="md-nav__link">
+    Physical Data Movement
   </a>
   
 </li>
@@ -457,67 +373,17 @@
               
                 
                 
-                <h1 id="session-3-cloud-storage">Session 3: Cloud Storage</h1>
-<p><img alt="storage_units" src="../img/storage_units.jpg" /></p>
-<h2 id="introduction">Introduction</h2>
-<p>Central to using cloud for nearly all services is storing data.   Cloud storage is quite different from what most are used to related to saving a file to your disk or USB removable media or even our HPC.   During our <a href="../session_how_to_cloud">workshop on creating a VM</a> we didn't use cloud storage, we simply create a VM "virtual disk" that is attached to the VM just like your hard drive is attached to your own computer.   However there are disadvantages to this : 
-  1. the main OS disk is typically deleted when the VM is deleted, although you can create a 'durable' disk to share
-  1. the data on the main OS disk is tied to that Virtual Machine and hence that operating system, that is, it's typically inaccessible from other cloud services 
-  1. it is limited in size.  The largest of virtual disks are around 1 TB.  Azure Cloud storage accounts are limited to 5 TB and you may have multiple storage accounts. <br />
-  1. You can only move data to/from a virtual or shared disk storage using a virtual machine
-  1. Most importantly virtual disks very expensive compared to cloud storage </p>
-<p>Cloud companies think of "storage" as anything that save files, or perhaps more importantly anything they can market to you as something to save files.   </p>
-<h2 id="readings">Readings</h2>
-<ul>
-<li><a href="https://s3.us-east-2.amazonaws.com/a-book/storage.html">Storage as a Service</a> from "Cloud Computing for Science and Engineering"  </li>
-<li>Optional: this is long (27 minutes) but a good basic introduction to Azure storage: <br>
-    <a href="https://docs.microsoft.com/en-us/learn/modules/azure-storage-fundamentals/">Azure Training: Explore Azure Storage services</a> ( free training from Microsoft Learn)</li>
-<li><a href="https://azure.microsoft.com/en-us/product-categories/storage/">Table of Azure Storage Product Offerings</a></li>
-<li>Azure Documentation: <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction">Introduction to the core Azure Storage services
-</a></li>
-<li>
-<p>Slides/Lecture: <a href="azure_cloud_storage_for_researchers.html">Azure Cloud Storage for Researchers</a> with links for details on each slide</p>
-</li>
-<li>
-<p>optional <a href="https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs">Understanding block blobs, append blobs, and page blobs</a></p>
-</li>
-</ul>
-<h2 id="activities">Activities</h2>
-<ul>
-<li>Download and install the <a href="https://azure.microsoft.com/en-us/features/storage-explorer/">Azure Cloud Storage Explorer</a>  See the <strong>"Download now"</strong> button at the top of that page.  You may review the content of the page</li>
-<li>complete exercises in <a href="exercise_using_azure_cloud_storage/">Using Azure Cloud Storage</a> to create and use storage</li>
-<li><a href="storage_pricing_exercise/">Azure Storage Pricing Exercise</a> </li>
-</ul>
-<h2 id="meeting-september-24-200-330pm">Meeting September 24 2:00-3:30pm</h2>
-<ul>
-<li>About Projects, Mahmoud Parvizi</li>
-<li>Discussion and Review of previous sessions: <ul>
-<li>Using the Portal</li>
-<li>Creating and Using Virtual Machines</li>
-</ul>
-</li>
-<li>What is cloud storage? <ul>
-<li>concept review: cloud storage vs VM disks</li>
-<li>discuss exercises to be worked on next week</li>
-</ul>
-</li>
-<li>Review of Broad Cloud Concepts: <ul>
-<li>On-Demand, Compute, Storage, Identity Management</li>
-</ul>
-</li>
-<li>Discussion : future activities and needs</li>
-</ul>
-<h2 id="optional-activity">Optional Activity:</h2>
-<p><strong>Python And Cloud Storage</strong></p>
-<p>For Intermediate Python users, and if you have time and interest, consider this tutorial from Azure:
-   <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python">Quickstart: Manage blobs with Python v12 SDK</a></p>
-<ul>
-<li>Requirements:</li>
-<li>use the blob storage account you created in the exercise above</li>
-<li>familiarity with Azure portal </li>
-<li>Python installed on your computer (suggest python 3.6 minimal)</li>
-<li>familiarity with the terminal and command line</li>
-</ul>
+                <h1 id="session-4-moving-data-in-azure">Session 4: Moving Data in Azure</h1>
+<p>There are many ways to move data around in the cloud.  They are based on the limitations of data movement across complex and distant networks and the scale of cloud networks and storage, and the needs of companies to move and process huge amounts of data on a schedule.   </p>
+<h2 id="reading">Reading</h2>
+<h2 id="optional-reading">Optional Reading</h2>
+<p>This discusses the "data box" option quite a bit, which is not available to us (at this point). </p>
+<p><a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-choose-data-transfer-solution?toc=/azure/storage/files/toc.json">Microsoft Documentation: Choose an Azure solution for data transfer</a></p>
+<h2 id="physical-data-movement">Physical Data Movement</h2>
+<figure>
+  <img src="https://docs.microsoft.com/en-us/azure/databox/media/data-box-overview/data-box-combined.png">
+  <figcaption>Azure Databox</figcaption>
+</figure>
                 
               
               
@@ -533,41 +399,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../session_how_to_cloud/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. How does the cloud work?" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              2. How does the cloud work?
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: References" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              References
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

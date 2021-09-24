@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Azure Cloud Storage For Researchers</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:100,400,500,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Roboto'; font-weight: 400;}
+      h1 {
+        font-family: 'Roboto';
+        font-weight: 100;
+        font-size: 40px !important;
+      }
+      h2, h3 {
+        font-family: 'Roboto';
+        font-weight: 500;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-container { background-color: lightblue}
+
+      .cloudtitle { background-image: url('../img/chuttersnap-9AqIdzEc9pY-unsplash.jpg');
+          background-repeat:no-repeat;
+          background-size:contain;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <textarea id="source">
+
+class: cloudtitle,center, middle
+
+# Azure Cloud Storage For Researchers
+ 
+### Pat Bills, IT Services ADS
+
+for the [MSU Cloud Fellowship](../session_cloud_storage)
+
+---
+
+# Cloud Storage is not like Disk Storage
+
+- must be organized for worldwide internet access
+- must hold billions of files from millions of customers
+- must be fast
+- must be ultra-dependable
+ 
+.center[![storage unites](../img/storage_units.jpg)]
+
+---
+
+# Storage Connections
+
+*Before we talk about cloud, let's consider other types of storage for comparison...*
+
+Storage classed by how it's attached to the computer (or VM)
+
+- Direct Attached
+- Network Attached
+- Cloud attached
+
+![Playing Telephone with Tin Cans](../img/playing_telephone.jpg)
+
+---
+
+# Direct Attached = Local Disks
+
+![USB stick](../img/brina-blum-Bb_X4JgSqIM-unsplash.jpg)
+
+- Hard Drive attached internally
+- Disks and sticks attached via USB
+- access using paths 
+  - Mac: /Volumes/mydatadirive/myproject/myfile.csv
+  - Windows: D:\myproject\myfile.csv
+
+<br><br>*aside: we are still using terms from the 70s and 80s for storage?*
+
+---
+
+<div style="display: block; float:right;width:250px;margin:3em;"><img src="https://www.ucmadscientist.com/wp-content/uploads/2020/08/image-23-1024x683.png" width="300" style="align:center" /><br>
+  <caption><em>NAS for sharing files in a lab</em></caption> </div>
+  
+# Network Attached Storage (NAS)
+
+
+Systems for sharing files over local network (wifi, ethernet)
+
+- Workgroup/Lab (pictured)
+- Univ. or company data center
+- research clusters (Home directories, Scratch directories) 
+  - MSU HPC has ultra high speed network and massive disks attached to all nodes
+- requires your computer to have network connection software (built-in)
+   - Major techniques are SMB, NSF or FUSE
+   - emulating direct attach over network is tricky
+
+---
+
+<figure style="display: block; float:right;width:200px;height:300px;margin:3em;"><img src="../img/hpc_storage.jpg" /><br>
+  <figcaption><em>HPC Shared Storage Systems</em></figcaption> </figure>
+
+# Network Attached Storage
+
+Pros: 
+ - Easily Share files within a group or modest company size
+ - they look like direct attached to you
+    - use file path to access just like USB
+    - you don't have to change your code, just the path to access
+    - this is a huge advantage over some types of cloud Storage
+
+Cons:
+ - internal to the work group / company
+ - access from internet is possible, but often slow
+ - works best inside a company network 
+ - not designed for simultaneous access
+    - two users modifying the same CSV will conflict
+ - limited in size. 
+ - many have failure protection, but require maintenance
+
+---
+
+# Detour: File Sync Services
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" height="100" style="float:right">
+- OneDrive, Google Drive, DropBox
+- Stored in the cloud, but not "cloud storage"
+- not designed for direct access of files
+- files must be synced to a local machine and then accessed
+- for most users, the syncing is seamless and works like NAS
+- some formats allow for simultaneous access
+- for computation, data must be synced before operation 
+  - example: an MSU user had 100TB of data in google drive, 1000s of files in 1000s of folders
+  - could only really access a portion at a time
+
+  <img src="https://www.microsoft.com/en-us/microsoft-365/blog/uploads/2014/01/OneDrive-Logo.png" height="100">&nbsp;
+- accessing sync service from cloud service possible 
+   - for OneDrive to Azure, use the [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/connector-office-365?tabs=data-factory) covered next week  
+
+---
+
+# Cloud Attached Storage
+
+Most of us want cloud storage to be like Network storage, because programs want to read from paths...
+- Cloud is distant from your computer, transfer is not like an attached disk
+- Most services that access storage must be in same region
+- Requires extra thinking and programming utilize cloud storage
+
+Access is... different
+- Access via a web address (URL) with special care for authorization (use an authorization key)
+- Typically write special parts of your code to read/write from cloud
+- *possible* to create attachment to cloud storage but not as fast as Network attach
+   - Azure offers a "Files" storage for this... see below
+- very different pricing.  "Blob" or object storage is really cheap but more work to access than NAS
+
+![It's a long route through the cloud to your computer](../img/long_route_through_cloud.png)
+
+---
+
+# Azure Storage Organization
+
+Azure organizes storage into "Accounts" and within each account you can have a container.   Other cloud companies offere similar storage types, but 
+
+- Location/Region (data center)
+    - Resource Group
+        - Storage Accounts = Maps to url
+          - Containers = similar to file folders
+                 - Container Types : Blob, File, 
+                     - flat name space (no folders)
+                     - optional "virtual folders" by using "/" in blob name: 
+                       `myfolder/myfile1.csv`
+         - disks
+            - abstraction that relies on blob storage to hold the actual data
+            - can be connected to a VM directly   
+
+Like directories in a filesystem, containers provide a way to organize objects in Blob storage
+---
+
+# Types of Azure storage
+
+From [Introduction to the core Azure Storage services](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction?toc=/azure/storage/blobs/toc.json)
+
+ - **Azure Blobs**: A massively scalable object store for text and binary data. Also includes support for big data analytics through Data Lake Storage Gen2.
+ - **Azure Files**: Managed file shares for cloud or on-premises deployments.
+ - Azure Queues: A messaging store for reliable messaging between application components.
+ - Azure Tables: structured data storage only
+ - **Azure Disks**: For use with Azure VMs
+
+We will focus the bolded options for this session
+
+---
+
+# Azure Blob storage
+
+Azure Documentation: [Introduction to Azure Blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
+
+![Blob Storage Organization Diagram](https://docs.microsoft.com/en-us/azure/storage/blobs/media/storage-blobs-introduction/blob1.png)
+
+- "account" means the storage account, not Azure user account
+- Azure documentation mentions "Data Lake" storage frequently, which is a larger system for organizing storage for an enterprise and they want to sell it 
+- For reading data files for computation, use "Block" blobs 
+  - [Understanding block blobs, append blobs, and page blobs](https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs)
+- no file folders
+  - BUT you can use "virtualized folder" : names blobs like "project1/datafile1.csv" "project1/datafile2.csv"
+
+**Use case:** You have 1M image files and you need to analyze each one, organized in folders
+  - create a container for each folder to stay organized, use block blobs
+  - run your program in a virtual machine
+  - modify your code (R or Python) to read blobs into memory 
+  - modify your code to save output back to the blob container
+
+---
+
+# Azure Blob Storage : Summary
+
+#### Aspects of Storage, and typical choice for these options
+
+- [Storage Account Type](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview?toc=/azure/storage/blobs/toc.json#types-of-storage-accounts) : Standard/Premium ⇒
+**Standard**
+- [Reduncancy](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy): Local(LRS)/Zone(ZRS)/Geo(GRS) ⇒ **LRS**
+- [Access tiers](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers) : Hot/Cold ⇒
+**Hot**
+- [Blob Types](https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs):  Block,Append,Page ⇒
+**Block** for most blob storage
+- [Web Access](#) : Private/Public/Anonymous ⇒ **Public but not Anonymous**  
+  - "Public access" means access with authorization.  
+  - Anonymous must be manually enabled, and means anyone can access
+- [URL to access](#) : **`https://mystorageaccount.blob.core.windows.net/mycontainer`**
+  - you set the storage account name when you create it
+  - you add containers to the storage account as needed
+  - URL address is used to access from outside of the Portal, or with various programming systems, or using utilities like 'azcopy'
+
+
+---
+
+# Azure Files Storage
+
+Azure Documentation: [What is Azure Files?](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction)
+
+- alternative to blobs for those who want the "Network Attached Storage" experience
+- can attach to your computer at home, on campus, or a virtual machine
+- can attach to other services as another disk or mount point (App Service, Containers, etc)
+- not as fast as network storage but size is unlimited
+
+---
+
+# Azure Files Storage
+
+Pros: 
+- can attach to Windows VMS and campus computers easily
+- works with several other Azure services (that we haven't talked about) directly
+    - For services like "App Service" and "Container Instances", can specify a file share to mount when you create the service
+- when it works, then research code does not need major changes
+     - just change the path to access data files
+- when it's mounted, can just use standard file copy process to copy from Azure Files to local disk
+- it may not be fast but much cheaper the "Disk Storage" and can hold many Terabytes of data
+- it can also mount on linux, but...
+
+Cons:
+- To mount on linux requires installation of drivers and CLI commands
+   - must have some familiarity with Linux to add file shares
+   - for most of us, requires you to log-in to the VM at least once to configure
+- Not as fast as on-campus Network Attached Storage or as HPC storage
+- Not as fast 
+
+
+[How to mount Azure Files on Linux using SMB](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-linux?tabs=smb311) 
+<span style="color:darkorange">Caution:</span>Knowledge of Linux systems (mount points, fstab, etc) required 
+
+---
+
+# Azure Files Storage
+
+### Use cases:
+
+- you have code that uses file path and can't change to use Blob storage access
+- Or you are using MS Windows VM and want to connect to cloud storage
+- you have an application (e.g. MatLab) that requires 
+- you are comfortable installing software and configuring Linux 
+
+- you need to move data to and from your VM OS disk
+
+You already have data files copies to an existing Azure Files storage, but when accessing from VM, is not fast enough
+
+  - Log into the Linux VM you've created with ssh
+  - Mount the file share on the VM (see link in previous slide)
+  - Ensure the VM has enough disk space to access, or select a subset of data files to work with
+  - In the VM terminal/shell, copy the folders/files from mount
+  - modify your code (R or Python) to read blobs directly 
+  - modify your code to save output back to the blob container
+
+---
+
+# Azure "managed" Disk Storage
+
+When you created a virtual machine in session 2, Azure created a virtual 'disk' for you, and that resided in a storage account. 
+
+One method to avoid all extra work of using cloud storage is to create a 'data disk' reused for each VM you create.   
+
+- create a managed data disk using the Portal first, then
+- create a VM, create with a new operating system (OS) disk as usual
+- also add an extra 'data' disk, selecting the managed data disk you created
+- when using the VM, read/write files to the data disk for computation
+- when done computing, delete the VM and VM OS disk, but *not* the data disk
+- re-use the data disk for another VM computation
+
+Data disks can't be [accessed simultaneously without special software](https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared)
+
+Optional Activity: Azure Learning : [Add and size disks in Azure virtual machines](https://docs.microsoft.com/en-us/learn/modules/add-and-size-disks-in-azure-virtual-machines/)
+
+---
+
+# Azure Storage: How-To Overview
+
+1. given you have an existing resource group
+2. create a storage account to use with your project
+   - the Name you give the account determines the web address of the container
+   - 
+3. inside that storage account create the type of storage (blob/File)
+1. For 'file' and 'blob' storage, in the account you create containers
+1. Once the container is ready, you can use that in your cloud process (code, attach, explorer, data factory, etc)
+
+---
+
+# Attaching Blob Storage to  Linux : a last resort
+
+
+Microsoft sells Azure Files for the ability to mount and use standard paths to access files in your program.   
+But what if you have stuff in Blob storage that you need to access from Linux with only a file path ?
+
+**BlobFuse** 
+
+*Filesystem in USErspace* (FUSE) is a software interface for Unix and Unix-like computer operating systems that lets users attachefile systems.  
+
+This doesn't work exactly like regular attached files, so must be tested with your application.  
+
+[How to mount Blob storage as a file system with blobfuse](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-how-to-mount-container-linux)
+
+In my limited experience, it is not speedy as when you request a file it must 
+1. download the file to local disk, then 
+2. read the file from the local disk
+
+
+
+<!-- ---
+
+# Storage and Authentication
+
+Storage is private by default, of course.   But how to grant access to storage ?
+
+ - in the Portal, the access is managed automatically 
+ - using the Azure Storage Explorer App, you log-in to the app, and access is managed for you
+ - To access from a program or script, you can use several methods, but one is to provide a special code
+ - If other services want access you must tell the Storage account to allow access to that service 
+
+ This is Identity and Access Management (IAM), a complex topic and we can deal with it on a case-by-case. 
+ 
+
+ Example: 
+ >Every service on Azure has a unique ID.  
+ >Azure has a service called "data factory" for moving and processing data.  
+ >For a "data factory" service to read Blobs, you must configure the Storage 
+ >Account to allow the data factory access (using the data factory ID is one way)
+ >Analogy:  you grant access to a Zoom meeting by providing a list of user ids.  
+
+-->
+
+---
+
+# Command Line Cloud Copy: azcopy
+
+To access blob or file storage from Mac/Linux terminal or from Windows cmd.exe 
+
+#### Use Cases: to copy files...
+ - from your computer to Azure storage using commands; 
+ - from MSU HPC to Azure Storage;
+ - from Azure Storage to a folder on a VM, using commands;
+ - from a VM back to Azure storage (like output from your program or results);
+ - you have a shell script to automate copy files back/forth. 
+
+**Example**
+
+After downloading and unzip the azcopy program to your computer (or the HPCC)
+
+ ```bash
+ azcopy login   # follow the instructions and use browser to log-in
+ azcopy copy 'myTextFile.txt' 'https://mystorageaccount.blob.core.windows.net/mycontainer/myTextFile.txt'
+```
+
+
+[Upload files to Azure Blob storage by using AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload)
+
+---
+
+<img src="../img/walkinfridge.jpg" style="display: block; float:right;margin:1em;" />
+
+# Aspect of Storage: Hot vs. Cold
+
+Many want to keep a files in storage, but only access them rarely
+  - access a small subset at any one time
+  - infrequent access in general
+  - slower file access is acceptable in this case
+
+Global storage systems designed to retrieve files quickly (read optimized) are expensive.   
+- Cloud companies offer "access tiers" : cold= infrequent; hot=fast access
+- keeping files in cold storage is cheaper over time
+- reading files in cold storage has extra charges to discourage access
+
+For most active research work, use 'hot' or standard cloud storage options.  
+
+For details for Azure see [Azure Documentation: Access tiers for Azure Blob Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers)
+
+---
+
+# Aspect of Storage : Redundancy
+
+Azure allows companies with critical needs  (e.g. application developers) to have copies of data store across the world. 
+
+Rather than rely on expensive redundant backup schemes from Azure, I suggest creating backups or snapshots yourself in two locations at all times. 
+The MSU HPC proves 1TB of free storage and they also create backups in two locations.   
+
+Data loss more often happens because of user error (overwriting existing data, delete something you shouldn't and not realizing)
+
+Hence the lowest tier or Local Redundancy Storage (copies in the same data center) is the option I always choose.  
+If it's not possible to create copies yourself and your data is critical and can not be re-created, consider using higher level redundancy 
+
+For details see  https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy
+
+---
+
+# Aspect of Storage : Region
+
+For most cloud applications, it's best to keep the storage and other services (VMs, etc) in the same region. 
+
+For us in Michigan, choose either : 
+
+ - "East US" for the latest features, and other options if you find they are not available in North Central Region
+ - "North Central US" which is closest to our University if you will be transferring lots of data regularly between regions
+ - Some other region if you are coordinating with some other service in the world (another HPC center, or other cloud service)
+
+---
+
+# Other Resources
+
+
+-- 
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
