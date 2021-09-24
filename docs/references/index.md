@@ -10,6 +10,9 @@ Azure Tips and Tricks : https://microsoft.github.io/AzureTipsAndTricks/
 
 Azure Portal "How to" series - focused on using the Azure portal to do several different things.  This is mostly about the services themselves, not the portal, and many topics do not apply to us (e.g. Azure Arc) but there are some very useful videos : https://youtube.com/playlist?list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR
 
+These look like really good intros to Azure, but requires a time investment:
+
+Microsoft Learn: [Azure for Researchers part 1: Introduction to Cloud Computing](https://docs.microsoft.com/en-us/learn/paths/researcher-introduction-to-cloud-computing/)
 
 ## Interface: Azure Portal
 
