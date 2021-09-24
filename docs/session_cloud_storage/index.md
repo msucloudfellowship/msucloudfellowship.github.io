@@ -16,10 +16,11 @@ Cloud companies think of "storage" as anything that save files, or perhaps more 
 ## Readings
 
   - [Storage as a Service](https://s3.us-east-2.amazonaws.com/a-book/storage.html) from "Cloud Computing for Science and Engineering"  
-  - Optional, long but a good intro to Azure storage: 
-    Microsoft Learn [Explore Azure Storage services](https://docs.microsoft.com/en-us/learn/modules/azure-storage-fundamentals/)
+  - Optional: this is long (27 minutes) but a good basic introduction to Azure storage: <br>
+    [Azure Training: Explore Azure Storage services](https://docs.microsoft.com/en-us/learn/modules/azure-storage-fundamentals/) ( free training from Microsoft Learn)
   - [Table of Azure Storage Product Offerings](https://azure.microsoft.com/en-us/product-categories/storage/)
-  - [Azure : Intro to azure storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)
+  - Azure Documentation: [Introduction to the core Azure Storage services
+](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)
   - Slides/Lecture: [Azure Cloud Storage for Researchers](azure_cloud_storage_for_researchers.html) with links for details on each slide
 
   - optional [Understanding block blobs, append blobs, and page blobs](https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs)
