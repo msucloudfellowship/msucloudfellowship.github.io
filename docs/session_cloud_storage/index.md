@@ -4,12 +4,12 @@
 
 ## Introduction
 
-Central to using cloud for nearly all services is storing data.   Cloud storage is quite different from what most are used to related to saving a file to your disk or USB removable media or even our HPC.   During our [workshop on creating a VM](../session_how_to_cloud) we didn't use cloud storage, we simply create a VM "virtual disk" that is attached to the VM just like your hard drive is attached to your own computer.   However there are disadvantats to this : 
-  1. the main OS disk is typically deleted when the VM is deleted, although yuo can create a 'durable' disk to share
-  1. the data on the main OS disk is tied to that Virtual Machine and hence that operating system, that is, it's typically unacceesbile from other cloud services 
+Central to using cloud for nearly all services is storing data.   Cloud storage is quite different from what most are used to related to saving a file to your disk or USB removable media or even our HPC.   During our [workshop on creating a VM](../session_how_to_cloud) we didn't use cloud storage, we simply create a VM "virtual disk" that is attached to the VM just like your hard drive is attached to your own computer.   However there are disadvantages to this : 
+  1. the main OS disk is typically deleted when the VM is deleted, although you can create a 'durable' disk to share
+  1. the data on the main OS disk is tied to that Virtual Machine and hence that operating system, that is, it's typically inaccessible from other cloud services 
   1. it is limited in size.  The largest of virtual disks are around 1 TB.  Azure Cloud storage accounts are limited to 5 TB and you may have multiple storage accounts.   
   1. You can only move data to/from a virtual or shared disk storage using a virtual machine
-  1. Most importantly virtual disks very expensive comparewd to cloud storage 
+  1. Most importantly virtual disks very expensive compared to cloud storage 
   
 Cloud companies think of "storage" as anything that save files, or perhaps more importantly anything they can market to you as something to save files.   
 
@@ -32,7 +32,7 @@ Cloud companies think of "storage" as anything that save files, or perhaps more 
   - [Azure Storage Pricing Exercise](storage_pricing_exercise.md) 
   
 
-## Session 3 Meeting: About cloud storage
+## Meeting September 24 2:00-3:30pm
 
  - About Projects, Mahmoud Parvizi
  - Discussion and Review of previous sessions: 
@@ -48,19 +48,14 @@ Cloud companies think of "storage" as anything that save files, or perhaps more 
 
 ## Optional Activity: 
  
-For HPC Users, how do you move your data to and from the Cloud? [See our tutorial and try it yourself](how_to_hpc_and_cloudstorage.md)
-
-Requires using Azuyre po
-
-#### Python And Cloud Storage
+**Python And Cloud Storage**
 
 For Intermediate Python users, and if you have time and interest, consider this tutorial from Azure:
    [Quickstart: Manage blobs with Python v12 SDK](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)
 
 - Requirements:
-  - use the blob storage account you created in the excercise above
+  - use the blob storage account you created in the exercise above
   - familiarity with Azure portal 
-  - Python installed on your cmputer (suggest python 3.6 minimal)
+  - Python installed on your computer (suggest python 3.6 minimal)
   - familiarity with the terminal and command line
-- We can only provide help/troubleshooting after the workshop session
 

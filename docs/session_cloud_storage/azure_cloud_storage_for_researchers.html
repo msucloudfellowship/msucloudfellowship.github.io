@@ -115,10 +115,10 @@ Cons:
  - internal to the work group / company
  - access from internet is possible, but often slow
  - works best inside a company network 
- - not designed for simulataneous access
+ - not designed for simultaneous access
     - two users modifying the same CSV will conflict
  - limited in size. 
- - many have failure protection, but require maintainance
+ - many have failure protection, but require maintenance
 
 ---
 
@@ -315,7 +315,7 @@ Optional Activity: Azure Learning : [Add and size disks in Azure virtual machine
 
 1. given you have an existing resource group
 2. create a storage account to use with your project
-   - the Name you give the account determines the web adress of the container
+   - the Name you give the account determines the web address of the container
    - 
 3. inside that storage account create the type of storage (blob/File)
 1. For 'file' and 'blob' storage, in the account you create containers
@@ -349,7 +349,7 @@ In my limited experience, it is not speedy as when you request a file it must
 
 Storage is private by default, of course.   But how to grant access to storage ?
 
- - in the Portal, the access is managed automaticaly 
+ - in the Portal, the access is managed automatically 
  - using the Azure Storage Explorer App, you log-in to the app, and access is managed for you
  - To access from a program or script, you can use several methods, but one is to provide a special code
  - If other services want access you must tell the Storage account to allow access to that service 
@@ -405,7 +405,7 @@ Many want to keep a files in storage, but only access them rarely
 Global storage systems designed to retrieve files quickly (read optimized) are expensive.   
 - Cloud companies offer "access tiers" : cold= infrequent; hot=fast access
 - keeping files in cold storage is cheaper over time
-- reading files in cold storasge has extra charges to discourage access
+- reading files in cold storage has extra charges to discourage access
 
 For most active research work, use 'hot' or standard cloud storage options.  
 
@@ -420,10 +420,10 @@ Azure allows companies with critical needs  (e.g. application developers) to hav
 Rather than rely on expensive redundant backup schemes from Azure, I suggest creating backups or snapshots yourself in two locations at all times. 
 The MSU HPC proves 1TB of free storage and they also create backups in two locations.   
 
-Data loss more often happens becuase of user error (overwriting existing data, delete something you shouldn't and not realizing)
+Data loss more often happens because of user error (overwriting existing data, delete something you shouldn't and not realizing)
 
 Hence the lowest tier or Local Redundancy Storage (copies in the same data center) is the option I always choose.  
-If it's not possible to create copies yourself and your data is critical and can not be re-created, consider using higher level redunancy 
+If it's not possible to create copies yourself and your data is critical and can not be re-created, consider using higher level redundancy 
 
 For details see  https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy
 

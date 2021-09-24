@@ -24,7 +24,7 @@ We created a storage account in one of the first activities, and you may use tha
 [Azure Quickstart: Upload, download, and list blobs with the Azure portal](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal)
 
 
-The Azure Storage explorer is a desktop application for Mac and Windows, useful for occaisional checking and working with cloud storage: 
+The Azure Storage explorer is a desktop application for Mac and Windows, useful for occasional checking and working with cloud storage: 
 
 [Azure Quickstart: Use Azure Storage Explorer to create a blob](https://docs.microsoft.com/en-us/azure/storage/blobs/quickstart-storage-explorer)
 
