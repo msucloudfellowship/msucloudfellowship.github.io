@@ -43,6 +43,10 @@ Command-line progamming of Cloud Services
 
     * Introduction to Azure CLI https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest 
 
+ * Hybrid inferface: using the CLI inside the Azure Portal
+   You can install and use the `az` CLI program on your own computer, but Azure also has a way you can use the CLI without installing anything, with a cloud-based terminal interface called the "cloud shell."   For an overview see https://docs.microsoft.com/en-us/azure/cloud-shell/overview and for a great 'quickstart' see https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart for a quick tutorial for how to use it.   
+   In the quickstart, the first example shows you how to create a resource group using the CLI in the cloudshell.  If you don't have permissions to create a new resource group, skip to the next example ("Create a Linux VM") and put your own resource group in the command for the `-g` parameter and perhaps use a very unique name for the VM parameter. 
+
 
  
 ## Storage
