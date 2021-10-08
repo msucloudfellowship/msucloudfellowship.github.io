@@ -35,7 +35,7 @@ For those who completed the storage pricing activity from session #3, post your 
 
 Select any one or more of these activities that seems relevant to you for your project, or minimally the first exercise
 
-- [Exercise: moving data using storage URL](docs/session_moving_data/moving_data_with_url_activity.md)
+- [Exercise: moving data using storage URL](moving_data_with_url_activity.md)
 - [Attaching **Azure Files** to a Virtual machine for reading and writing data](how_to_azure_files.md)
 - Creating and re-using a data disk for virtual machines: [Attach a managed data disk to a Windows VM by using the Azure portal](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal)
 - Linux VMs: command line option using 'scp' command  [Use SCP to move files to and from a Linux VM](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/copy-files-to-linux-vm-using-scp)
