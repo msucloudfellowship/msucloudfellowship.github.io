@@ -20,7 +20,7 @@ The program runs from Fall 2021 to Spring 2022 semester.  Sessions are organized
     * Sept 10: Using Virtual Machines workshop 
  * [Session 3](session_cloud_storage): Cloud Storage
     * Sept 24: Cloud Storage Workshop 
- * Session 4: Moving data to the cloud
+ * [Session 4](session_moving_data): Moving data to the cloud
     * October 8: Data utilities and services workshop (Azure Data Factory)
  * Session 5: Big Data Systems and the cloud
     * Oct 22: Workshop: Using Azure DataBricks
