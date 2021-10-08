@@ -7,6 +7,7 @@ nav:
       - 1. Introduction: session_introduction/index.md
       - 2. How does the cloud work?: session_how_to_cloud/index.md
       - 3. Cloud Storage: session_cloud_storage/index.md
+      - 4. Moving Data: session_moving_data/index.md
     - References: references/index.md
     - Cloud Glossary: cloud_glossary.md
 theme: 
@@ -18,5 +19,12 @@ theme:
 markdown_extensions:
   - attr_list
   - pymdownx.magiclink
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      preserve_tabs: true
+  - pymdownx.highlight:
+      use_pygments: true
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
 extra:
   generator: false
