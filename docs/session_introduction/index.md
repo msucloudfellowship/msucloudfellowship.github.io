@@ -35,7 +35,7 @@ You should have all been given access to a Team "MSU ICER Cloud Fellowship" via 
   * Ensure you can access the Azure main web "portal."  
   * You don't need to (and shouldn't) create any new resources or work with this website; simply confirm you have access.   You may see a list of "resources" and will introduce Azure during our first meeting. 
 
-If you have any issues, trouble with these activities, or won't be able to attend the introductory meeting, or have any questions at all about your participating in the fellowship, please [contact us](contact.md).  Note there will be time for questions and dicussion during our first meeting. 
+If you have any issues, trouble with these activities, or won't be able to attend the introductory meeting, or have any questions at all about your participating in the fellowship, please [contact us](../contact.md).  Note there will be time for questions and dicussion during our first meeting. 
 
 ## Readings  
 
