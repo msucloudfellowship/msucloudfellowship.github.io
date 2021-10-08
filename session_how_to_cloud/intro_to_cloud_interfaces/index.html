@@ -278,6 +278,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_moving_data/" class="md-nav__link">
+        4. Moving Data
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -492,17 +504,17 @@
 For Azure, these are "ARM Templates" and for AWS it's <a href="https://aws.amazon.com/cloudformation/">Cloud Formation</a>. </p>
 <h4 id="azure-arm-templates">Azure: ARM templates</h4>
 <p>Azure has a system for submitting a template, or essentially a configuration file to the Azure Resource Manager (ARM) that dictates which cloud resources are to be created.   For Azure these are JSON-formatted files  that are "declaritive" (rather than procedural or imperative like Python).   The best way to understand these is to explore the many that Microsoft posts on github, and to try them.   If you do, be mindful to delete any resources you create so as not to be charged for them. </p>
-<pre><code>- Overview of ARM templates: https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
+<div class="highlight"><pre><span></span><code>- Overview of ARM templates: https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
 - Quick start ARM templates (github): https://github.com/Azure/AzureStack-QuickStart-Templates
-</code></pre>
+</code></pre></div>
 <h2 id="third-party-programming-with-terraform">Third-party programming with Terraform</h2>
 <p>There are other ways to 'program the cloud' from companies outside of the big three.  One widely used frame is "Terraform" from Hashicorp, not affiliated with any cloud company.   The ad</p>
-<pre><code>- Terraform: https://www.terraform.io
+<div class="highlight"><pre><span></span><code>- Terraform: https://www.terraform.io
 - Can work with any vendor including Azure
 - Often more readable than ARM templates, Syntax remarkably simple 
 - Focus on maintaining consistent systems ( declarative) 
 - Does not cover all services, but can fall back to ARM templates when necessary
-</code></pre>
+</code></pre></div>
 <h2 id="building-cloud-from-cloud">Building Cloud from Cloud</h2>
 <p>This may not be an 'interface' but is operationally similar.  It's possible to use some of the above interfaces on existing cloud services, e.g.   creating new cloud resources automaticaly from existing cloud resources.   Your cloud architecture may need different types of resources, or parameterized resources only as needed (e.g. depending data inputs, a web-gateway for cloud on demand).    </p>
 <p>For example Azure <a href="https://azure.microsoft.com/en-us/services/logic-apps/">Logic Apps</a> can create resources when they are run (e.g. provision and start a computer) and a logic app can be triggered by events such as when a new file is created, or using a web api (e.g. REST POST command that sends data and parameters).   This adds significant complexity and is only valuable for event-based systems opens up using the cloud as a big computer programming language. </p>

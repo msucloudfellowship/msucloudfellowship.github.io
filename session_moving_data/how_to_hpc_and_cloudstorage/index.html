@@ -271,8 +271,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../session_cloud_storage/" class="md-nav__link">
         3. Cloud Storage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        4. Moving Data
       </a>
     </li>
   
@@ -415,6 +427,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#method-5-python-with-url" class="md-nav__link">
+    Method 5. Python with URL
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -435,7 +454,7 @@
                 
                 <h1 id="how-to-move-data-between-the-msu-hpc-and-azure">How to move data between the MSU HPC and Azure</h1>
 <h2 id="introduction">Introduction</h2>
-<p>A common research cloud computing activity is moving data between cloud and on-premise (local) systems.   Many universities provice great local systems at little no costs, and some research groups have existing systems they've invested in, whereas cloud computing is an on-going costs. </p>
+<p>A common research cloud computing activity is moving data between cloud and on-premise (local) systems.   Many universities provide great local systems at low costs, and some research groups have existing systems they've invested in, whereas cloud computing is an on-going costs. </p>
 <p>Azure has a rich data ecosystem and there are many methods to copy data from our local research cluster ([MSU ICER HPCC) to Azure Storage.  The follow are examples of methods that I've used, and all assume you are moving data to "Azure Blob" storage but may require minor adjustment to use "Azure Files" storage which should also work.  I don't discuss "queue" or "table" storage at all and that my require other services to use (events or data factory)  </p>
 <h2 id="method-1-using-scp-with-a-virtual-machine">Method 1. using scp with a virtual machine</h2>
 <p>Sometimes you don't need a durable storage account at all, you just need to get some data onto the virtual machine you are using for computation.  This method is useful for one-time workflow of copy, process, save results.   </p>
@@ -480,15 +499,20 @@ I think of this as  "pulling" data from HPC to the VM disk. </li>
 <p>How to install the azcopy utility </p>
 <ol>
 <li>Login to MSU HPCC  <code>ssh &lt;netid&gt;@hpcc.msu.edu</code></li>
-<li>download a copy of azcopy </li>
-<li>untar and put in your home directory</li>
+<li>download a copy of azcopy.  This is the URL from Late september 2021: 
+   <code>curl -O https://azcopyvnext.azureedge.net/release20210920/azcopy_linux_amd64_10.12.2.tar.gz</code></li>
+<li>untar and put in your home directory
+   <code>tar -xvzf azcopy_linux_amd64_10.12.2.tar.gz</code></li>
 </ol>
 <p>How to use azcopy to upload to Azure using the "AD Login"</p>
 <ol>
-<li>Log in to HPCC</li>
-<li>assuming your copy of <code>azcopy</code> is in your home directory</li>
-<li></li>
+<li>Get a SAS URL from the Azure portal as described above</li>
+<li>Log-in to HPCC</li>
+<li>assuming your copy of <code>azcopy</code> is in your home directory, run a command like the following.  Note that the URL <em>must</em> but enclosed in single quotes (not double quotes)</li>
 </ol>
+<p>`azcopy copy myfile.csv '<a href="https://storageaccount.blob.core.windows.net/containername/myfile.csv?SASToken">https://storageaccount.blob.core.windows.net/containername/myfile.csv?SASToken</a>'</p>
+<p>For example, this copies a file and renames it when it's stored.  The container "from-hpcc" in this case must already be created.  </p>
+<p><code>azcopy copy 2008.csv 'https://cf21billspatstorage.blob.core.windows.net/from-hpcc/airlinedata_2008.csv?sp=racwdl&amp;st=2021-10-08T05:22:52Z&amp;se=2021-10-08T13:22:52Z&amp;sip=35.9.12.1-35.9.12.255&amp;spr=https&amp;sv=2020-08-04&amp;sr=c&amp;sig=abscus'</code></p>
 <p>References:
  - <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10">Getting Started with azcopy</a>
  - <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy-login">azcopy login reference</a>
@@ -499,8 +523,27 @@ I think of this as  "pulling" data from HPC to the VM disk. </li>
 <p>We will cover what "Azure Data Factory" is in session 4, but this is included in this session for completeness. </p>
 <p>If you have some familiarity with Azure data factory, note that a "source" for Azure Data Factory" can be an 'sftp' or 'secure file transfer protocol' which most systems that have 'ssh' (secure shell) access allow, and is simlar to using the 'scp' or 'secure copy' utility. </p>
 <h3 id="method-4-python">Method 4. Python</h3>
-<p>We won't cover using Python to copy files to/from blob storage, but see the optional exercise for using Azure cloud storage in Python. </p>
+<p>We won't really cover using Python to copy files to/from blob storage, but see the optional exercise for using Azure cloud storage in Python in <a href="../../session_cloud_storage/">session #3</a>.  </p>
 <p>To use Azure python SDK on the HPC you need to installed the azure python sdk in a python environment in your home directory, for example using the Anaconda distribution of Python.  See <a href="https://wiki.hpcc.msu.edu/display/ITH/Using+conda">https://wiki.hpcc.msu.edu/display/ITH/Using+conda</a>.   </p>
+<h3 id="method-5-python-with-url">Method 5. Python with URL</h3>
+<p>Another approach that does not require the Azure SDK, is  URL access, the same as for <code>azcopy</code>  via the <code>requests</code> library.  For example, to download a CSV file from cloud storage, generate a SAS URL just for that file in the portal, and run this code</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">azure_url</span> <span class="o">=</span> <span class="s2">&quot;https://cf21billspatstorage.blob.core.windows.net/from-hpcc/airlinedata_2008.csv?sp=racwdl&amp;st.... etc&quot;</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># see note below*</span>
+<span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">azure_url</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">r</span><span class="p">:</span>
+  <span class="n">lines</span> <span class="o">=</span> <span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">iter_lines</span><span class="p">())</span>
+  <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+     <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>don't put this code into github with the SAS url.  Use a technique to read from command line or environment </li>
+<li>This would work anywhere, not just the HPC.  </li>
+<li>This is the same example in the slides for this session</li>
+</ul>
                 
               
               

@@ -14,7 +14,7 @@
     
     
       
-        <title>Creating a container sas token from the azure portal - MSU Cloud Fellowship</title>
+        <title>Creating a Storage Account SAS token - MSU Cloud Fellowship</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-a-sas-token-for-use-with-azcopy" class="md-skip">
+        <a href="#creating-a-storage-account-sas-token" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creating a container sas token from the azure portal
+              Creating a Storage Account SAS token
             
           </span>
         </div>
@@ -271,8 +271,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../session_cloud_storage/" class="md-nav__link">
         3. Cloud Storage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        4. Moving Data
       </a>
     </li>
   
@@ -330,6 +342,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -338,8 +352,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-a-sas-token-for-use-with-azcopy" class="md-nav__link">
-    creating a SAS token for use with azcopy
+  <a href="#for-allowing-access-to-storage-from-another-service-or-person" class="md-nav__link">
+    for allowing access to storage from another service or person
   </a>
   
 </li>
@@ -364,11 +378,11 @@
               
                 
                 
-                  <h1>Creating a container sas token from the azure portal</h1>
-                
-                <h2 id="creating-a-sas-token-for-use-with-azcopy">creating a SAS token for use with azcopy</h2>
-<p>A SAS token is essentially a key you can add to the end of a storage URL To grant access to the storage acccount without having to log-in.  You need to  create this token from a command or from the portal for each container (or even one for each blob) with parameters including an expiration time and the address of where you are accessing it from </p>
-<p>To generate a SAS token using the Azure portal: </p>
+                <h1 id="creating-a-storage-account-sas-token">Creating a Storage Account SAS token</h1>
+<h3 id="for-allowing-access-to-storage-from-another-service-or-person">for allowing access to storage from another service or person</h3>
+<p>How can you provide another person't account, or more frequently an Azure service of some kind access to your storage account.   Granting access to each different service one by one may not be feasible,  Instead you can provide the service (or user) a special code that allows access.  One such code in Azure is a "shared access signature" (SAS).  You to the end of a storage URL To grant access to the storage acccount without having to log-in.  This is necessary when you want to copy data into storage account using another service or processs, for example copying files from your computer (or the HPC) to storage using the <code>azcopy</code> command.   </p>
+<p>You need to  create this token from a command or from the portal for each container (or even one for each blob) with parameters including an expiration time and the address of where you are accessing it from.  There are other ways to grant access to an azure storage container, but here is the documentation from Azure: <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview">Grant limited access to Azure Storage resources using shared access signatures (SAS)</a></p>
+<p>To generate a SAS token using the Azure portal (service SAS): </p>
 <ul>
 <li>
 <p>in the Portal, navigate to your storage account → containers → your container</p>
@@ -407,6 +421,7 @@
 <li>If you want to be extra secure and restrict to systems you are copying your data from.  For example your own computer</li>
 <li>If you are using MSU ICER, as of Fall 2021 this IP range should include all ICER/HPCC gateways : 35.9.12.1-35.9.12.255</li>
 <li>You could also use the MSU VPN address range and restrict to systems logged in via VPN.  Find that from IT Services</li>
+<li>For your or a colleague computer, google "what's my IP" to get your IP address</li>
 <li>
 <p>If you have authorization issues, then leave the IP field blank, but suggest limiting the time the key is active since anyone in the world could use it</p>
 </li>
@@ -418,12 +433,13 @@
 </li>
 </ul>
 <p>The Blob SAS token query string and Blob SAS URL will be displayed in the lower area of window.</p>
-<p>Copy the Blob SAS token, and save in a secure location.  They'll only be displayed once and cannot be retrieved once the window is closed.  Tread the SAS token like a password</p>
-<p>The "Blob SAS URL" includes the container but not the file name.  If you want to use a different file name from the original, you'll have to construct your own URL. </p>
+<p>Copy the Blob SAS URL (or token or both), and save in a secure location.  They'll only be displayed once and cannot be retrieved once the window is closed.  Treat the SAS token like a temporary password</p>
+<p>You can use the "Blob SAS URL" for most copy operations.  It includes the container but not the file name.  If you want to use a different file name from the original, you'll have to construct your own URL. </p>
 <p>To construct an SAS URL, append the SAS token (URI) to the URL for a storage service as follows</p>
-<pre><code>`https://mystorageaccount.blob.core.windows.net/mycontainername/destination_file_name.ext?reallylongSAStokengoesatend`
-</code></pre>
+<div class="highlight"><pre><span></span><code>`https://mystorageaccount.blob.core.windows.net/mycontainername/destination_file_name.ext?reallylongSAStokengoesatend`
+</code></pre></div>
 <p>If you need to change any aspect of this token (the dates, the IP addresses, etc) you have click Generate and get a new token (the old token may still work however)</p>
+<p>See <a href="../how_to_hpc_and_cloudstorage/">How to move data between the MSU HPC and Azure</a> for an example using the <code>azcopy</code> utility</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview#best-practices-when-using-sas">Best practices when using SAS token</a></li>

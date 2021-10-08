@@ -14,7 +14,7 @@
     
     
       
-        <title>Session 4: Moving Data in Azure - MSU Cloud Fellowship</title>
+        <title>4. Moving Data - MSU Cloud Fellowship</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#session-4-moving-data-in-azure" class="md-skip">
+        <a href="#session-4-moving-data-in-the-cloud" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Session 4: Moving Data in Azure
+              4. Moving Data
             
           </span>
         </div>
@@ -222,14 +222,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Sessions
@@ -274,6 +276,79 @@
       <a href="../session_cloud_storage/" class="md-nav__link">
         3. Cloud Storage
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          4. Moving Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        4. Moving Data
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reading" class="md-nav__link">
+    Reading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-reading" class="md-nav__link">
+    Optional Reading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activities" class="md-nav__link">
+    Activities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meeting-october-8-200-330pm" class="md-nav__link">
+    Meeting October 8 2:00-3:30pm
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -354,8 +429,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#physical-data-movement" class="md-nav__link">
-    Physical Data Movement
+  <a href="#activities" class="md-nav__link">
+    Activities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meeting-october-8-200-330pm" class="md-nav__link">
+    Meeting October 8 2:00-3:30pm
   </a>
   
 </li>
@@ -373,17 +455,67 @@
               
                 
                 
-                <h1 id="session-4-moving-data-in-azure">Session 4: Moving Data in Azure</h1>
+                <h1 id="session-4-moving-data-in-the-cloud">Session 4: Moving Data in The Cloud</h1>
+<p><img alt="moving boxes" src="https://media4.giphy.com/media/jYmGmDK3rKdkk/giphy.gif" /></p>
 <p>There are many ways to move data around in the cloud.  They are based on the limitations of data movement across complex and distant networks and the scale of cloud networks and storage, and the needs of companies to move and process huge amounts of data on a schedule.   </p>
 <h2 id="reading">Reading</h2>
+<ul>
+<li>Session Slides: <a href="techniques_for_moving_data_in_the_cloud.html">Azure Techniques for Moving Data</a></li>
+</ul>
 <h2 id="optional-reading">Optional Reading</h2>
-<p>This discusses the "data box" option quite a bit, which is not available to us (at this point). </p>
-<p><a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-choose-data-transfer-solution?toc=/azure/storage/files/toc.json">Microsoft Documentation: Choose an Azure solution for data transfer</a></p>
-<h2 id="physical-data-movement">Physical Data Movement</h2>
-<figure>
-  <img src="https://docs.microsoft.com/en-us/azure/databox/media/data-box-overview/data-box-combined.png">
-  <figcaption>Azure Databox</figcaption>
-</figure>
+<ul>
+<li>
+<p>Adding a data disk to virtual machine: 
+  A second disk may be faster to access than </p>
+<ul>
+<li>Linux: <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal">https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal</a></li>
+<li>Windows: <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal">https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal</a></li>
+</ul>
+</li>
+<li>
+<p>Chapter 3 <a href="https://s3.us-east-2.amazonaws.com/a-book/using_storage.html">Using Cloud Storage Services</a> in <a href="https://cloud4scieng.org/">Cloud Computing for Science and Engineering</a>  </p>
+<ul>
+<li>
+<p>Focus on the Introduction and Section 3.3 (Azure)</p>
+</li>
+<li>
+<p>This chapter is written for python programmers, and starts with Amazon Web Services (AWS) examples, then moves to Azure examples in comparison to AWS.   If you are not a programmer or haven't heard of AWS storage (known as 'S3'), then skim through to get an idea of how you may use these.   </p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Overview of Azure Data Factory (ADF): </p>
+<ul>
+<li>See a description and more links in the session slides above</li>
+<li>If ADS seems interesting to you, read the following introductory material</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/data-factory/introduction">https://docs.microsoft.com/en-us/azure/data-factory/introduction</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/data-factory/author-visually">Visual authoring in Azure Data Factory</a>  <em>this is interesting as a case study for gui-based 'plaform as a service' cloud computing</em></li>
+</ul>
+<h2 id="activities">Activities</h2>
+<p>For those who completed the storage pricing activity from session #3, post your estimated stoarge costs to teams.  If they are very different, from others, or different than you expect, please explain or ask how folks got their numbers</p>
+<p>Select any one or more of these activities that seems relevant to you for your project, or minimally the first exercise</p>
+<ul>
+<li><a href="docs/session_moving_data/moving_data_with_url_activity.md">Exercise: moving data using storage URL</a></li>
+<li><a href="how_to_azure_files/">Attaching <strong>Azure Files</strong> to a Virtual machine for reading and writing data</a></li>
+<li>Creating and re-using a data disk for virtual machines: <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal">Attach a managed data disk to a Windows VM by using the Azure portal</a></li>
+<li>Linux VMs: command line option using 'scp' command  <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/copy-files-to-linux-vm-using-scp">Use SCP to move files to and from a Linux VM</a></li>
+<li>
+<p><a href="how_to_hpc_and_cloudstorage/">How to move data between the MSU HPC and Azure</a> for an example using the <code>azcopy</code> utility, and other techniques
+  Requires an MSU HPC account offers free account to use HPC. However, this technique is applicable to any other mac or linux system you have access to.  </p>
+</li>
+<li>
+<p><strong>We want your feedback!</strong>
+    We have some topics we plan to cover, but at this stage you've looked at cloud documentation and thought about your projects, via teams or email, contact us to let us know if there are topics you would like to hear about.  These could be upcoming
+    topics that you are particularly interested in.  For example, we offered a specially session on "command line techniques" and we are prepping materials for that.  </p>
+</li>
+</ul>
+<h2 id="meeting-october-8-200-330pm">Meeting October 8 2:00-3:30pm</h2>
+<ul>
+<li>Questions from previous session on storage</li>
+<li>Presentation: Azure Techniques for Moving Data (slides linked in Reading section above)</li>
+<li>Note about future material and projects</li>
+<li>Discussion or questions about this or previous topic or projects</li>
+</ul>
                 
               
               
@@ -399,6 +531,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../session_cloud_storage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3. Cloud Storage" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              3. Cloud Storage
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: References" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              References
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -1,0 +1,106 @@
+// start on a template for running GPU deep learning on Azure
+// requires fixing the IP address, and a parameter file
+// also side-car container to allow SSL for all web connections
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "container_group_name": {            
+            "type": "String"
+        },
+        "azure_user_name": {            
+            "type": "String"
+        },
+        "docker_image_url": {
+            "default": "tensorflow/tensorflow:latest-gpu-jupyter",          
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.ContainerInstance/containerGroups",
+            "apiVersion": "2021-03-01",
+            "name": "[parameters('container_group_name')]",
+            "location": "eastus",
+            "tags": {
+                "created_by": "[parameters('azure_user_name')]",
+                "project": "Cloud Fellowship"
+            },
+            "properties": {
+                "sku": "Standard",
+                "containers": [
+                    {
+                        "name": "[parameters('container_group_name')]",
+                        "properties": {
+                            "image": "[parameters('docker_image_url')]",
+                            "ports": [
+                                {
+                                    "protocol": "TCP",
+                                    "port": 80
+                                },
+                                {
+                                    "protocol": "TCP",
+                                    "port": 8888
+                                },
+                                {
+                                    "protocol": "TCP",
+                                    "port": 22
+                                },
+                                {
+                                    "protocol": "TCP",
+                                    "port": 443
+                                },
+                                {
+                                    "protocol": "TCP",
+                                    "port": 8787
+                                }
+                            ],
+                            "environmentVariables": [],
+                            "resources": {
+                                "requests": {
+                                    "memoryInGB": 48,
+                                    "cpu": 6,
+                                    "gpu": {
+                                        "count": 1,
+                                        "sku": "K80"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "initContainers": [],
+                "restartPolicy": "Never",
+                "ipAddress": {
+                    "ports": [
+                        {
+                            "protocol": "TCP",
+                            "port": 80
+                        },
+                        {
+                            "protocol": "TCP",
+                            "port": 8888
+                        },
+                        {
+                            "protocol": "TCP",
+                            "port": 22
+                        },
+                        {
+                            "protocol": "TCP",
+                            "port": 443
+                        },
+                        {
+                            "protocol": "TCP",
+                            "port": 8787
+                        }
+                    ],
+                    "ip": "",
+                    "type": "Public",
+                    "dnsNameLabel": "[parameters('container_group_name')]"
+                },
+                "osType": "Linux"
+            }
+        }
+    ]
+}
