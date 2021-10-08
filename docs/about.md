@@ -24,9 +24,16 @@ We encourage cloud fellows to acknowledge the fellowship in publications arising
 
 ![Dr. Brian O'shea](img/people/b_oshea_headshot_0.jpg){ align=right } Dr. Brian O'Shea is a computational and theoretical astrophysicist studying cosmological structure formation, including galaxy formation and the behavior of the hot, diffuse plasma in the intergalactic medium and within galaxy clusters. He is also a co-author of the Enzo AMR code, an expert in high performance computing, and an advocate for open-source computing and open-source science. He received his B.S. in Engineering Physics at the University of Illinois in Urbana-Champaign (UIUC) in 2000, and his PhD in physics from UIUC in 2005 (with 2002-2005 being spent as a graduate student in residence at the Laboratory for Computational Astrophysics at UC San Diego and in the Theoretical Astrophysics Group at Los Alamos National Laboratory). Following that, he was a Director's Postdoctoral Fellow at Los Alamos National Laboratory, with a joint appointment between the Theoretical Astrophysics Group and the Applied Physics Division. Since 2008, he has been a member of the faculty at Michigan State University, with a joint appointment between the Department of Computational Mathematics, Science and Engineering (2015-present), the Department of Physics and Astronomy (2008-present), and the National Superconducting Cyclotron Laboratory (2014-present). From 2008-2015, Dr. O'Shea was a member of Lyman Briggs College. He has authored or co-authored over 75 peer-reviewed journal articles in astrophysics, computer science, and education research journals, and has received a variety of awards for his teaching and public outreach efforts. In 2016, he became a Fellow of the American Physical Society, and in 2019 he became the director of MSU's Institute for Cyber-Enabled Research.
 
-**Danielle Barnes** Assistant Director, ADS, MSU IT Services<br>
+![db](img/people/db.jpg){ align=right} **Danielle Barnes** Assistant Director, ADS, MSU IT Services<br>
 *Role: Program Lead, IT Services*
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
  
+
 **[Patrick Bills](mailto:billspat@msu.edu)**  Data Science Technical Lead, MSU IT Services<br>
 *Role: Lead Instructor* 
 
