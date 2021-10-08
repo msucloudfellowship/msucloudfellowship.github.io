@@ -55,7 +55,7 @@ Session #4 of the 2021 [MSU Cloud Fellowship](../session_moving_data)
   - Disk Storage : less less cheap, like a pluggable disk
   - *new* "Data Lake" : essentially Blob storage, but with actual folders (hierarchy) and more security 
 
-  ![Playing Telephone with Tin Cans](../img/playing_telephone_disconnected.jpeg)
+  ![Playing Telephone with Tin Cans](../img/sessions/playing_telephone_disconnected.jpeg)
 
 
 ---
@@ -74,17 +74,17 @@ how do we connect to cloud resources from our computer?
   - command line 
   - storage "REST" (web) interface (if enabled) <!-- to do exercise using cloud storage for web site-->
 
-![Playing Telephone](../img/playing_telephone.jpg)
+![Playing Telephone](../img/sessions/playing_telephone.jpg)
 
 ---
 
-# Our toolbox so far: Storage as a connections
+# Our toolbox so far: Storage as a connection
 
 How do we keep our data when we are delete resources (machines) as we use them?
 
 *persistent storage is the connection between ephemeral resources*
 
-![Playing Telephone](../img/playing_telephone_with_storage.jpeg)
+![Playing Telephone](../img/sessions/playing_telephone_with_storage.jpeg)
 
 
 ---
@@ -111,12 +111,14 @@ If:
 
 transfer is limited by your home or office network
 
+<hr>
 ```
-web ->+                   +--> cloud storage
-      |                   |
-      |--> your laptop -->| (slow uploads)
-           on broadband                
+      web ->+                   +--> cloud storage
+            |                   |
+            |--> your laptop -->| (slow uploads)
+                on broadband                
 ```
+<hr>
 
 For example, using a web browser to download data, then using storage explorer to upload to Azure
 
@@ -127,14 +129,16 @@ For example, using a web browser to download data, then using storage explorer t
 A better solution is to utilize cloud resources to move data.  You control those cloud resources via your 
 computer, you only send control signals over your network, not data. 
 
+<hr>
 ```
-     ( --Azure--)
-web --> cloud vm --> cloud storage
-           ^
-           |
-      remote control
-  ( --home/office network-- ) 
+            ( --Azure--)
+        web --> cloud vm --> cloud storage
+                  ^
+                  |
+              remote control
+          ( --home/office network-- ) 
 ```
+<hr>
 
 For example, use the Virtual machine as a transfer system, as described in previous slide
 
@@ -239,23 +243,33 @@ Two types of data movement in data factory:
 
 # Data Transfer Service: Azure Data Factory
 
- advantages to using Data transfer service vs VM:  
- - design complex pipelines with GUI/Portal (code not always necessary)
- - can do significant processing after acquiring the data
- - many possible types of data sources and sinks
- - can work with structured data, not just files (DataFlow)
- - can process items in a list (`foreach`) in parallel 
- 
- disadvantages: 
+*GUI data transfer workflow designer*
+
+![ADS screen](screen_from_adf.png)
+
+---
+
+# Data Transfer Service: Azure Data Factory
+
+advantages to using Data transfer service vs VM:  
+- design complex "pipelines" with GUI/Portal (code not always necessary)
+- can do significant processing after acquiring the data
+- many possible types of data sources and sinks
+- can work with structured data, not just files ("Dataflow")
+- given a list of items to process, can do in parallel
+- can set to automatically retry on failure
+
+disadvantages: 
  - complex to learn for simple work (e.g. simple data copy)
  - not code friendly, if you need code ( e.g. can export as code, but format is obtuse (MSFT says: use the GUI)
  - oriented for enterprise data systems ( see first point above)
 
- ---
+ 
+---
 
  # Azure Data Factory  : Example 1
 
- One example is moving data from an on-premise computer to cloud storage
+ Copy data from any source (even another cloud) to Azure cloud storage
 
 - you create "linked services" that describe the source and sink for data
   - source = Linux File system using ssh log-in.  I had to enter my MSU netid and pw and ssh key
@@ -265,6 +279,8 @@ Two types of data movement in data factory:
   - for sink set the storage account, indicating which container
 - manually trigger, wait 10-15 minutes.   can copy a very large number of files
 - COULD have additional steps (e.g. unzip or other file processing)
+
+![ADS copy](https://docs.microsoft.com/en-us/azure/data-factory/media/copy-activity-overview/resume-copy.png)
 
 ---
 
@@ -289,7 +305,7 @@ Organizing data using cloud services = **data orchestration**
 
 ---
 
-# Using Azure Data Factory in your projects
+# Azure Data Factory : Fellowship Projects
 
 **Could a data transfer service help your research processes?*
 
@@ -302,6 +318,29 @@ for the next step can be really valuable.
 
 A successful cloud fellowship project could focus on using a service like Data Factory for intensive data preparation. 
 This may not be an end-product but is an essential component and shows the value of cloud services. 
+
+---
+
+
+# Azure Data Factory : Platform as a Service
+
+<img src="service_level_triangle.png" align="right">
+The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-145.pdf)
+ refers to "service levels "
+
+
+- Infrastructure (IaaS): Networks, storage, disks, VMs,etc
+- Platform (PaaS): everything in between
+- Software (Saas): applications : Google Drive, Office365, etc 
+
+
+Azure Data Factory
+is the first "Platform as a Service" we've encountered.  You don't have to create
+a virtual machine and install software to your work - the computing aspect of data movement is 
+provided and managed.    
+
+*Image from [Understanding the basics of cloud computing](https://www.lucidchart.com/blog/cloud-computing-basics) from 
+LucidChart, which is a "Software As A Service" company*
 
 ---
 
