@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intro to Big Data for Researchers</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:100,400,500,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Roboto'; font-weight: 400;}
+      h1 {
+        font-family: 'Roboto';
+        font-weight: 100;
+        font-size: 40px !important;
+      }
+      h2, h3 {
+        font-family: 'Roboto';
+        font-weight: 500;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-container { background-color: lightblue}
+
+      .cloudtitle { background-image: url('../img/chuttersnap-9AqIdzEc9pY-unsplash.jpg');
+          background-repeat:no-repeat;
+          background-size:contain;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <textarea id="source">
+
+
+class: cloudtitle,center, middle
+
+# Intro to Big Data for For Researchers
+ 
+### Pat Bills, IT Services ADS
+
+for the [MSU Cloud Fellowship](../session_big_data)
+
+---
+
+# Intro
+
+a common challenge is working with data to large for your machine. 
+
+- study of how language changes over time: 
+  - count of unique words per day, aggregated per month of NYTimes on disk 
+- find DNA fragments (-mers) in 5gb genome file
+- calculating summaries satellite spectal imaging by partition in to the 2264 watersheds of the USA
+
+--- 
+
+# Why are we talking about Data and not cloud?  
+
+- this is not the "Data Fellowship"
+- we all have data to deal with, some of it large
+- we turn to cloud for solutions to large problems 
+- Big Data Tools "as a service"
+  - without cloud these systems arre out of reachh
+  - large a month of set-up and expertise are available 
+- Big data tools are becoming commonplace for data science
+
+--- 
+
+# Why are we talking about Data and not cloud?  
+
+- do you need to learn this stuff?  no.  
+- for some projects, great way to do parallel work
+
+---
+
+# Ways data can be 'too big' 
+
+- not enough storage space - doessn't fit on disk
+- not enough workspace -  can't fit into memory
+- not enough time - calculations or combinatorial work too slow
+
+---
+# Some solutions to the 'too big for machine' problem
+
+- just get a bigger box (or rent one)
+- split the data up and work with some at time
+- work with only the most interesting subset
+- use a data system such as a Relational Database Server
+- use a tool that combines these techniques
+
+---
+# Parallel Data Analysis
+
+- dividing up work and process concurrently is the core of what these tools do
+- parallel techniquees are important even for storage: 
+   - storing data across hundreds of disks. 
+- there are othre forms of parallel computing but that's beyond the scope, e.g. HPC 
+
+---
+# DIY Parallelism Recipe
+
+- adapt your code to process partitions
+  - e.g. given subset of row numbers, reads in just rows andd calculate summaries 
+- create an index of partitions (eg. each partition could have a lits of the row numbers)
+- create a new machine for each parallel worker you want to use, copy the software to each
+- for each paritition 
+  - send the partition index to one of the workers, 
+  - or have the worker check which piece needs doing next
+  - the worker reads and processes the rows it was given, then writes an output file (output01.txt)
+  - until all partitions are processed
+- combine all of the output files into one complete output file
+
+---
+
+# DIY Parallelism 
+
+ - so-called "Data parallelism"
+ - "split-apply-combine" strategy
+ - labor intensive:
+   - manage data & partitions
+   - manage worker machines
+   - coordinate (orchestration)
+   - handle failures
+ - for really BIG DATA impossible
+
+---
+
+# Big Data: What makes it "Big?"
+
+The three V’s (Laney, 2001, Gartner, 2011) that define "Bigness"
+
+ - **Volume**  too much data to house or process using commodity hardware and software. 
+ - **Velocity**  new data arrive too quickly to manage or analyze or analysis 
+ - **Variety**  so much variation in data records or too many diverse sources, e.g. not rigidly structured.    Highly structured data (tabular) can be handled by Relational Data base systems (even billions of rows)
+
+These are all intentionally vague as the bar is constantly moved higher
+
+---
+
+# Big Data Tools: what's the big deal?
+
+### innovations: 
+- optimize data movement in network
+- data partitioned across machines, operate data near machine
+- works on "commodity hardware" not expensive HPC
+- open source => democratized
+
+---
+# Big Data Tools Ecosystem
+
+The history of big data tools starts at Google, who published papers on thier systms, and others 
+who create open source software projects based on those papers, an other academic groups (e.g. Amplab Stanford)
+
+The history is not important, just common "big data" terms: 
+
+ - "Map Reduce" Algorithm invteed by Dean/Google that workeed on their distributeed file system   
+ - "Hadoop" was the efirst and still widely used in businesses, implements map reduce Algorithm
+ - HDFS = cluster file system invented along side Hadoop and still in use
+ - "spark" project general purpose, not limited to MapReduce, multi-language
+
+---
+
+# Big Data Technology:Spark
+
+- successor to Hadoop
+- general purpose parallel storage and execution engine 
+- can work with several storage systems
+- you provide the code, Spark evaluates and forms a parallel execution plan
+- automatically partitions the data, and can automatically 
+- code can be R, Python,  SQL, or Scala (a version of Java)
+- you can interact using Notebook, or with a remote connection
+
+---
+
+# DataBricks == Spark "Pro"
+
+- Databricks company started by Spark inventors
+- Databricks product packages and adds to spark interface and connections
+- The company builds an easy to use product on cloud services on cloud (Azure,AWS, Google)
+      - "Azure Databricks" is the Azure flavor of the Databricks product from Databricks
+- Don't need databricks to do big data, could DIY a Spark Cluster (cheaper)
+- Has a eally convenient web and notebook interface for immediate and interactive cluster computing
+
+----
+# Notees on Using Databricks
+
+ - Video Introudction and walk through from Doug Krum, MSU IT Services Data Architect
+ - 
+
+# Other Azure tools fo parallel work
+
+- VM 'scale sets' : launch dozens of identical VMS from an image
+- Azure Batch:  build a pool of works from a container
+    - has a management tool called "ship yard"
+    - could build and run a DIY spark cluster on this
+- HPC in the cloud : cycle cloud
+- HD Insight : Hadoop/Spark (old school big data)
+
+----
+
+# Databases may be enough
+
+- We will cover relational databases in a later session
+- but the were design to proceess zillions of  rows of tabular data in seconds with very small memory.  
+- Data is processed on the database server, not your computer 
+- 
+
+
+
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
