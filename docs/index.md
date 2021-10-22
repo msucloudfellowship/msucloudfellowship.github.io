@@ -22,8 +22,8 @@ The program runs from Fall 2021 to Spring 2022 semester.  Sessions are organized
     * Sept 24: Cloud Storage Workshop 
  * [Session 4](session_moving_data): Moving data to the cloud
     * October 8: Data utilities and services workshop (Azure Data Factory)
- * Session 5: Big Data Systems and the cloud
-    * Oct 22: Workshop: Using Azure DataBricks
+ * [Session 5](session_bigdata): Big Data Systems and the cloud
+    * Oct 22: Overview of Big Data on Azure with DataBricks
  * Session 6: Serverless, Workflow and Pipelines
     * Oct 29: Workshop: TBD
  * Session 7: Websites and applications
