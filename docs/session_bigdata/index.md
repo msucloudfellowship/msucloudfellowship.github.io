@@ -1,4 +1,4 @@
-# Session 5: Spark and Big Data on Azure Cloud
+# Session 5: Big Data on Azure Cloud Featuring Spark
 
 ![example big data map-reduce workflow](img/example_parallel_processing_workflow.png)
 
@@ -14,36 +14,27 @@ clusters with a few clicks.  The goal of this single session is introduce you to
 of it of big data, or they have their own parallel systems.  for those that it could help, it may save tremendous amount of time
 and make your research more repoducible than DIY data partitioning that requires manual handling. 
 
-## Introduction
+## Meeting October 22 2:00-3:30pm
 
-New companies in the early 21st century had to invent ways to handle the huge amount of data they were 
-handling, without the capabilities found in specialized science facilities.
- The classic
-big data algorithm is known as "map-reduce" from a 2004 paper from Google employees ( Jeffrey Dean and Sanjay Ghemawat. 2008. MapReduce: simplified data processing on large clusters. Commun. ACM 51, 1 (January 2008), 107–113. DOI:https://doi.org/10.1145/1327452.1327492 )
+- Discussion and Questions of material from previous sessions
+- Project related questions 
+- Lecture [Overview of Big Data with Spark for Researchers](big_data_intro_for_researchers.html)
+- Big Data Q & A
 
-The intial complexity of using these newly invented tools for analyzing huge amounts of data have matured now to
-the point where you can quickly provision a data processing system and cluster 
-and start using it with a notebook interface familiar to python and R users.  
+## Videos
 
-Like other cloud vendors Azure repackages and markets various open-source products for big data.   We will focus on
- just one: Apache Spark.  Spark is the general purpose big data tool that seems to be 
+1. [Using Azure Databricks](https://mediaspace.msu.edu/media/Using+Azure+Databricks+by+Doug+Krum+2021/1_etunq5g9) Doug Krum, Data Architect, Analytics and Data Solutions, MSU IT Services.    ( MSU log-in required for video)
+2. [Using Azure Databricks Part 2: Demonstration with Python](https://mediaspace.msu.edu/media/Using+Azure+Databricks+Part+2A+Demonstration/1_tsi9kyxp) Doug Krum, Data Architect, Analytics and Data Solutions, MSU IT Services.    ( MSU log-in required for video)
 
-Azure offers other big data tools becuase many businesses have expertise or code that uses these tools (Hadoop, Hadoop File System (HDFS), etc).   
-
-Azure also offers other clustering services but those may require you to build your own system for tracking
-parallel workflows.   Ap
-
+*These are detailed explanations of the commercial version of Apache Spark from the Databricks company, and exactly how to create and use a Databricks cluster on Azure to run Python code*
 ## Readings
 
-[Tools And Technologies For The Implementation Of Big Data, Richard J. Self, Dave Voorhis](https://michiganstate.sharepoint.com/sites/MSUICERCloudFellowship2/Shared%20Documents/General/Materials/TOOLS%20AND%20TECHNOLOGIES%20FOR%20THE%20IMPLEMENTATION%20OF%20BIG%20DATA_Self_Vorhis%20CH10%20DO%20NOT%20DISTRIBUTE.pdf)
-
-Chapter 10 from Application of Big Data for National Security. http://dx.doi.org/10.1016/B978-0-12-801967-2.00010-0 
+[Tools And Technologies For The Implementation Of Big Data, Richard J. Self, Dave Voorhis](https://michiganstate.sharepoint.com/sites/MSUICERCloudFellowship2/Shared%20Documents/General/Materials/TOOLS%20AND%20TECHNOLOGIES%20FOR%20THE%20IMPLEMENTATION%20OF%20BIG%20DATA_Self_Vorhis%20CH10%20DO%20NOT%20DISTRIBUTE.pdf)Chapter 10 from "Applications of Big Data for National Security." http://dx.doi.org/10.1016/B978-0-12-801967-2.00010-0 
 Copyright © 2015 Elsevier Inc. All rights reserved.
 
 *PDF copy, for use by cloud fellowship only (link is access restricted).  The book is available as an [electronic copy from the MSU Library](http://catalog.lib.msu.edu/record=b11321901~S39a)*
 
-While the book itself is really not of interest to us, this particular chapter is one of the better and readable introductions to "big data" I've seen, 
-written for professionals like yourselves.    Dr. Self studies ethics and big data for University of Derby in the UK. 
+While the book itself is really not of interest to us, this particular chapter is one of the better and readable introductions to "big data" I've ever seen, written for professionals like yourselves.    Dr. Self studies ethics and big data for University of Derby in the UK. 
 
 
 **Textbook: Cloud Computing for Science and Engineering**
@@ -58,30 +49,22 @@ written for professionals like yourselves.    Dr. Self studies ethics and big da
 [Introduction to Apache Spark](https://docs.microsoft.com/en-us/azure/databricks/getting-started/spark/) part of the **Azure Databricks Documentation**
 *This is the intro to an excellent tutorial on using Apache spark with Azure.  Read the introduction only (see activities below for info on the tutorial)*
 
-
-Video: [Using Azure Databricks](https://mediaspace.msu.edu/media/Using+Azure+Databricks+by+Doug+Krum+2021/1_etunq5g9) Doug Krum, Data Architect, Analytics and Data Solutions, MSU IT Services.    ( MSU log-in required for video)
-
-*This is a detailed explanation of the commercial version of Apache Spark from the Databricks company, and exactly how to create and use a Databricks cluster on Azure to run Python code*
-
 ### For R users
 
-For those interested in learning more and using Big Data tools inside R: 
+You can use R commands with Spark, and Databricks has the eoption of creating an R-based notebook.   Note this notebook is more similar to Python/Jupyter notebooks than Rstudio notebooks, but is an easy way to interactivtly issue  R commands.    Follow the video above up to entering commands in a notebok, and instead of python, select an R notebook.  
 
-https://therinspark.com/ open source book. 
+The easiest way to use R with Spark is with the package [sparklyr](https://spark.rstudio.com/) from Rstudio.  
 
-* This is a full book, but has details about using Spark with R on your laptop to get started. *
+"Mastering Spark with R" hosted on https://therinspark.com/ is a free book is very readable and comprehensive resource for learning all about big data focused on R and Spark. 
 
-Again, as Doug Krum describes in his video, Databricks is a commercial version of the open source Apache Spark, and Spark can be installed on a laptop for training and testing without Databricks.  The code you develop with Spark on your laptop can be moved to a cluster built in the cloud. 
+- This is a full book, so only suggested reading for those who deecide to use Databricks/Spark in their projects
+The book above describes how to use it in detail
+- As described in the video and slides above, Databricks is a commercial version of the open source Apache Spark, and the free/open version of Spark can be installed on a laptop for testing without Databricks.  The book has details for that. 
+- While it does not describee how to install databricks, all of the examples are useable in an R notebook in Azure databricks
+- The code you develop with Spark on your laptop can be moved to a cluster built in the cloud. 
 
-The easiest way to use R with Spark is with the package [sparklyr](https://spark.rstudio.com/) from Rstudio.  The book above describes how to use it in detail
+In addition to putting using R in Jupyter style notebooks, you can install and run a web-version of Rstudio inside of Databricks to get the full features of spark inside Rstudio.  It requires some setup, see [RStudio on Azure Databricks](https://docs.microsoft.com/en-us/azure/databricks/spark/latest/sparkr/rstudio) from Microsoft.  
 
-To use R with DataBricks on Azure requires some setup, see [RStudio on Azure Databricks](https://docs.microsoft.com/en-us/azure/databricks/spark/latest/sparkr/rstudio) from Microsoft.  
-
-
-
-
-
-author Tomaž Kaštrun has a series of 31 short blog posts describing Azure Databricks and how to use R with it on Azure.  
 
 ## Activities
 
@@ -93,13 +76,11 @@ geared towards researchers
 [Create an Azure Databricks workspace](https://docs.microsoft.com/en-us/azure/databricks/scenarios/quickstart-create-databricks-workspace-portal?tabs=azure-portal#create-an-azure-databricks-workspace)  which is part of [Quickstart: Run a Spark job on Azure Databricks Workspace using the Azure portal](https://docs.microsoft.com/en-us/azure/databricks/scenarios/quickstart-create-databricks-workspace-portal?tabs=azure-portal).   The quickstart 
 tutorial is based on running SQL (database structured query language) which may not be useful if you have not familiarity with SQL
 
-
 [Introduction to Spark Data Frames with Python and SQL](https://docs.microsoft.com/en-us/azure/databricks/spark/latest/dataframes-datasets/introduction-to-dataframes-python)
 
-A job is a way to run non-interactive code in an Azure Databricks cluster.   For details about Jobs and how they work, see [Databricks Data Science & Engineering: Jobs](https://docs.microsoft.com/en-us/azure/databricks/jobs)  or to simply try a quick example see 
+A job is a way to run non-interactive code in an Azure Databricks cluster.   Doug Krum discusses using Jobs in the videos above.  For details about Jobs and how they work, see [Databricks Data Science & Engineering: Jobs](https://docs.microsoft.com/en-us/azure/databricks/jobs)  or to simply try a quick example see 
 [Running Jobs in Databricks Quickstart (with Python)](https://docs.microsoft.com/en-us/azure/databricks/data-engineering/jobs/jobs-quickstart)
 
-## Meeting October 22 2:00-3:30pm
 
 
  
