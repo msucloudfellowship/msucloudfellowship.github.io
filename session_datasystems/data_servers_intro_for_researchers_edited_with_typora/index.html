@@ -1,0 +1,745 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>Data servers intro for researchers edited with typora - MSU Cloud Fellowship</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MSU Cloud Fellowship" class="md-header__button md-logo" aria-label="MSU Cloud Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSU Cloud Fellowship
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data servers intro for researchers edited with typora
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MSU Cloud Fellowship" class="md-nav__button md-logo" aria-label="MSU Cloud Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    MSU Cloud Fellowship
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Sessions
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sessions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Sessions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_introduction/" class="md-nav__link">
+        1. Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_how_to_cloud/" class="md-nav__link">
+        2. How does the cloud work?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_cloud_storage/" class="md-nav__link">
+        3. Cloud Storage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_moving_data/" class="md-nav__link">
+        4. Moving Data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_bigdata/" class="md-nav__link">
+        5. Big Data and the cloud
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        6. Cloud Data Systems
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_serverless/" class="md-nav__link">
+        7. Serverless, Containers, and FaaS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        References
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud_glossary/" class="md-nav__link">
+        Cloud Glossary
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Data servers intro for researchers edited with typora</h1>
+                
+                <!DOCTYPE html>
+<p><html>
+  <head>
+    <title>Overview of Data Servers and Databases on the Cloud for Researchers</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(<a href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,400italic">https://fonts.googleapis.com/css?family=Roboto:100,400,500,400italic</a>);
+      @import url(<a href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic">https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic</a>);
+      @import url(<a href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic">https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic</a>);</p>
+<div class="highlight"><pre><span></span><code>  body { font-family: &#39;Roboto&#39;; font-weight: 400;}
+  h1 {
+    font-family: &#39;Roboto&#39;;
+    font-weight: 100;
+    font-size: 40px !important;
+  }
+  h2, h3 {
+    font-family: &#39;Roboto&#39;;
+    font-weight: 500;
+  }
+  .remark-code, .remark-inline-code { font-family: &#39;Ubuntu Mono&#39;; }
+  .remark-container { background-color: lightblue}
+
+  .cloudtitle { background-image: url(&#39;../img/chuttersnap-9AqIdzEc9pY-unsplash.jpg&#39;);
+      background-repeat:no-repeat;
+      background-size:contain;
+  }
+
+&lt;/style&gt;
+</code></pre></div>
+<p></head></p>
+<body>
+    <textarea id="source">
+
+
+class: cloudtitle,center, middle
+
+# Data Servers on the Cloud for Researchers
+
+### Pat Bills, IT Services ADS
+
+for the [MSU Cloud Fellowship](../session_datasystems)
+
+---
+
+# Again, Why are we talking about Data?  
+
+**Session Goal:** understand the principles, how and why to use data servers in your research
+- we all have data to deal with
+- a common research struggle is working with complex data, or collaborating with others
+- Databases can offer a solution for collaboration among researchers and parallel processes
+- cloud computing offers Data servers  "as a service" (PAAS)
+  - without cloud these systems require a collection of hards, a month of installation, infrastructure expertise
+- Databases are common place in industry and have been used by researchers for decades
+- Potential gateway to whole new realm of solutions for data workflows
+
+---
+
+# Client/Server architecture
+
+- designed in the 1970s, common-place now
+- client does very little processing, used to send/receive messages
+- server houses all the data and processing power
+- now clients are apps and many have significant prrocessing power (chrome)
+- Most Research workflow:  download data and process it on our machine
+
+![server](https://assets-global.website-files.com/5debb9b4f88fbc3f702d579e/5ea0baf0b2840153a46b9128_Client-Server-Achitecture.png)
+
+---
+
+# What is a server?
+
+ - Running Program
+ - listens on specific port
+ - accepts messagess that match it's protocol/format
+ - optionally include mechanism for secure authetication 
+ - sends messages and data back using same protocol/format
+
+---
+
+# What is a server? web server example
+
+- listens for and accepts messages using the 'http' protocol (on port 80)
+
+- the http protocol tells  the web server which content to fetch (via the URL), and what formats the client can use (html)
+
+- the server returns a message indicating the format of the content (html, PDF, etc), other info, and the content itself
+
+-  the browser client determines what to do convert the content to something you can  read 
+
+
+
+---
+
+# Clients and Servers
+
+each server requires a specific protocol, so typically you can't mix clients and servers BUT
+
+ - some clientss are smart and can alter protocol to work with multipel server
+ - some sereves are smart and can respond to differnet protocols.   A data serever rmay have a webs interface
+
+For example, many database clients can communicate with many flavorrs of SQL dataabases
+
+- communication protocols are text and binarry, and client apps provide GUIs of those 
+- servers accept commands, programs, or data, formatted in propeer protocol
+- clients let you type to thee commands and format into th eprotocol for you
+
+---
+
+# Client/Server Connections
+
+- `user -> connects to server host -> enters commands -> 
+client formats and sends  ---> server accepts commands --> run process and returns value`
+
+- `user <-- client displays results <- client accepts results and displays`
+
+- communication can be about data, but also about server configuration, client output format, etc
+
+
+---
+
+# Client/Server : essential for data systems
+
+This session is focused on data systems that use a client/server model but we use services every day
+- email
+- remote desktop : the 'server' is a windows programs that returns views of the screen
+- most apps ( I have to use on to remote start my car )
+- others?  
+
+![db server architecture](img/db_server_topology.png)
+
+---
+
+# Cloud was made to  serve
+
+The cloud was invented to host servers
+
+Large institutions have to run servers for many aspects of their work  in addition to data
+
+
+
+
+
+# Steps for Client-Server-ing
+
+1. install a server
+   - physical machine or a VM that is running server software
+2. configure server
+   - network, securrity, user aaccounts, storagee, server prefs/config
+   - use managed cloud service (restuarant) 
+3. install client
+   - download any number of compatible programs
+
+---
+
+
+
+---
+
+# Server Connection Terms
+
+- *host*: computer that runs the server software "host" and id by it's internet address
+- *port*: too allow muliple servers linux has 65K ports
+- *user vs admin*  : accounts on the server , admin has full power, user limited.  For DIY server, you are the admin
+- *database vs server* : a "database server" can have multiple "databases" becuase servers are typicaly shared
+- *SSL* : secure sockets layer required to encrypt the communication for security, Azure takes care of this
+- *Connection string* : the combination of these parameters used to connect to a database, formated for the Client
+- *Client* : can be a package or library used inside a programming language
+
+---
+
+# Server Locality
+
+*Servers can run anywhere*
+
+ - on your laptop, running alongside your other  programs.  The *host* is called `localhost`   
+ - on a computer on campus (on-premise) the host is something like myservername.mydepartment.msu.edu 
+ - on a VM that you create in the cloud :  myvmname.east.azure.net (IAAS)
+ - as part of a service offerring, provisioned for you (PAAS)
+ - the service itself, you don't control the server, only access data serevices (SAAS)
+
+# 
+
+# Example session : terminal client
+
+#### Demo of Terminal session to Postgresql Server
+
+ - Create a Azure Postgresql Database Server
+ - Connect to the server with a command line interface
+
+![Example PSQL Terminal Session](img/psql_terminal_session.png)
+
+---
+
+# Example Session : GUI client
+
+  #### Demonstration using a free Graphical Client to connect to a Postgresql Database hosted on Azure
+
+  ![Example DB gui](img/database_gui_example.png)
+
+---
+
+# Example Session : Scripting Client
+
+
+
+# Example Data Command Language: SQL
+
+- Structured Query Language for Relational Databases
+- by far most common data processsing language since 1970s
+- declarative not procedural
+  - like ordering from a restaurant - you state what you want, with no direction for how to prepare
+- easy to learn and use and use the basics
+- like other Data Command languages, based the data model 
+= tabular data, linked on common ID values.  
+
+---
+
+# Example Data Command Language: SQL
+
+This is not a course on SQL but for Example to return rows of a table
+
+- *SELECT* the columns to show 
+- *FROM* the table 
+- **WHERE** a logical condition to match data in the rows
+- ordering
+
+ list some data for all flights for today in the US: 
+
+ <div class="highlight"><pre><span></span><code>SELECT flight_num, airport_code, airline, takeoff_time, aircraft_id 
+FROM flights WHERE fight_date = &#39;2021-10-28&#39; and country=&#39;US&#39;
+</code></pre></div>
+
+1. - 
+
+---
+
+
+
+---
+# Cloud-scale Database Services
+
+We covered a "Big Data" system last seesion (Spark) but cloud companies provide a data service for really big data.  These are proprietary, on-of-a-kind systems that can work on truly huge amouts of data
+
+- Google BigQuery (google invented the concept and unbelievable huge)
+- AWS Redshift
+- Azure ComosDB
+- Azure DataExplorer aka Kusto
+
+do not need to provision any resources, only an "account" in which you can store your data, queries/scripts, and the output.   Data storage is inside the db and  output can be exported to cloud storage in various formats 
+- SAAS for large database
+
+---
+
+# Cloud-scale Database Services: Azure Cosmos DB
+
+- Primarily a NoSQL database, but has a SQL API to make it easy
+- Compatible with other common open source NoSQL database "MongoDB"
+- Getting data ingested requires using a windows program, or using Azure DataFactory to move data from Cloud storage into Cosmos DB
+- Could be useful if you are analyzing a very large amount of semi-structured data that may already be in JSON format and don't want to manage a big data system like Databricks. 
+- Resource [Introduction to Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction) and the Azure [Quick Start using Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/sql/create-cosmosdb-resources-portal)
+
+---
+
+# Azure Data Explorer : Analytics as a Service
+
+<!-- <img alt="Azure Data Explorer User Experience" src="https://docs.microsoft.com/en-us/azure/data-explorer/media/data-explorer-overview/workflow.png" height="200px" align="right"> -->
+
+[Data Analytics Service on Cluster Computing  aka *"Kusto"*](https://docs.microsoft.com/en-us/azure/data-explorer/data-explorer-overview)
+
+- Useful for fast analytics of large data without provisioning a server
+- Data is read-only and  can't be changed. 
+- SQL-like query language called KQL unique to Kusto: [Overview with link to free example](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/)
+- Create a cluster: https://portal.azure.com/#create/Microsoft.AzureKusto then use https://dataexplorer.azure.com/ 
+
+![Kusto Example](img/azure_kusto_example.png)
+---
+
+# Google Detour
+
+<img src="https://michaelhoweely.com/wp-content/uploads/2019/12/image-34.png" align="right" width="250px">
+
+#### We could use a collection of Google services to accomplish data analytics on the cloud: 
+
+- Google Drive: Files as a Service
+- Google Colab: Python/R/SQL as a Service : free notebooks hosted in Google Drive`
+- Google BigQuery : Data query as a service
+
+<br>
+
+- [CoLab Example (PSB's drive)](https://colab.research.google.com/drive/1e_nObJODQ61-0NtaMI-jlEvT9eHgvkmd)
+- [Weather Tutorial using Google Services](https://cloud.google.com/blog/products/data-analytics/whats-the-weather-like-using-colab-to-get-more-out-of-bigquery) 
+   that access huge public dataset demonstrates the power of this approach
+
+#### *Google Colab + Google BigQuery + GoogleDrive*
+ - definitely cloud computing 
+ - is it cloud computing in the way we think about it?
+
+---
+
+# Cloud Serivce Levels and Responsibility
+
+- any server connected to the internet has security 
+- many ways to mitigate the risk including cloud private networking, firewalls, encryption
+- When chosing data services, consider responsibilities for security and configuration
+   - Infrastructure = IAAS : cheaper, more work, more responsibility, more risk
+   - Services = PAAS/SAAS:  more expensive, faster provisioning, less risk
+
+![Service levels](../img/service_levels_and_user_responsibility_stack.svg)
+
+
+---
+
+# Questions?
+
+![Example database diagram from US BLM](img/exampledatabase-FGDC-Cadastral-Standard-ERD-The-National-Integrated-Land-System-NILS-is-a-joint.png)
+
+*example Database Diagram from [Towards a Standard for the Cadastral Domain: Proposal to establish a Core Cadastral Data Model, 2002 Van Oosterom
+& Lemmen](https://www.researchgate.net/publication/27349321_Towards_a_Standard_for_the_Cadastral_Domain_Proposal_to_establish_a_Core_Cadastral_Data_Model)*
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+<p></html></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+    
+  </body>
+</html>
