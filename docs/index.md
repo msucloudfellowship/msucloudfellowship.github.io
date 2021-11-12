@@ -26,8 +26,8 @@ The program runs from Fall 2021 to Spring 2022 semester.  Sessions are organized
     * Oct 22: Overview of Big Data on Azure with DataBricks
  * [Session 6](session_datasystems): Databases and Data Analytics Systems on the Cloud
     * Oct 29: Overview of Databases on the cloud, SQL demonstration
- * Session 7: Serverless and Application Development 
-    * Nov 12: TBD
+ * [Session 7](session_serverless): Serverless and Application Development 
+    * Nov 12: Overview of Serverless and FaaS, Demonstration of Real-world project
  * Session 8: Wrap up and project proposals
     * Dec 3: Meeting : review and feedback on project proposals & general discussion
     * Dec 17: Final cloud fellowship project proposal submission date

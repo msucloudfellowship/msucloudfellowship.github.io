@@ -10,6 +10,7 @@ nav:
       - 4. Moving Data: session_moving_data/index.md
       - 5. Big Data and the cloud: session_bigdata/index.md
       - 6. Cloud Data Systems: session_datasystems/index.md
+      - 7. Serverless, Containers, and FaaS: session_serverless/index.md
     - References: references/index.md
     - Cloud Glossary: cloud_glossary.md
 theme: 
