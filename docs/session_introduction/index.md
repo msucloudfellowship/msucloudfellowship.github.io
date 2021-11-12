@@ -42,6 +42,7 @@ If you have any issues, trouble with these activities, or won't be able to atten
   * [Chapter 1: Orienting in the cloud universe](https://s3.us-east-2.amazonaws.com/a-book/Orienting.html) <br>from **"Cloud Computing for Science and Engineering", Foster and Gannon**  
      ( *[Alternative link to publisher preview chapter](https://mitpress.ublish.com/ereader/239/?preview#page/1)*  )
   * [Using Cloud Computing for Academic Research](../references/DRAFT_cloud_computing_for_academic_research_parvizi_2021.pdf), Mahmoud Parvizi (draft version)
+  * Optional Historical Note [Who Coined 'Cloud Computing'?](https://www.technologyreview.com/2011/10/31/257406/who-coined-cloud-computing/) by Antonio Regalado, October 2011, MIT Technology Review
 
     
 ## Meeting: Introductions and program overview. 
