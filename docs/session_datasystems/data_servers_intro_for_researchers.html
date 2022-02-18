@@ -78,12 +78,17 @@ for the [MSU Cloud Fellowship](../session_datasystems)
 
 ---
 
-# What is a server?
+# What is a server? web server example
 
- Web Server example: accepts messsages using the 'http' protocol, 
- http tellss thee web server which content to fetch by addresss, the server 
- returns a ameessagge indicating thee format of the content, other info, and the content
- the browser client determines what to do convert the content to something you can  read 
+- listens for and accepts messages using the 'http' protocol (on port 80)
+
+- the http protocol tells  the web server which content to fetch (via the URL), and what formats the client can use (html)
+
+- the server returns a message indicating the format of the content (html, PDF, etc), other info, and the content itself
+
+-  the browser client determines what to do convert the content to something you can  read 
+
+  
 
 ---
 
@@ -126,6 +131,26 @@ This session is focused on data systems that use a client/server model but we us
 
 ---
 
+# Cloud is Servers 
+
+
+
+
+
+# Steps for Client-Server-ing
+
+1. install a server
+   - physical machine or a VM that is running server software
+2. configure server
+   - network, securrity, user aaccounts, storagee, server prefs/config
+   - use managed cloud service (restuarant) 
+3. install client
+   - download any number of compatible programs
+
+---
+
+
+
 # Example Data Command Language: SQL
 
 - Structured Query Language for Relational Databases
@@ -154,18 +179,7 @@ This is not a course on SQL but for Example to return rows of a table
  FROM flights WHERE fight_date = '2021-10-28' and country='US'
  ```
 
----
-
-# Steps for Client-Server-ing
-
-1. install a server
-  - could install software on a VM (IAAS) (cooking at home)
-  - use managed cloud service (restuarant)
-2. configure server
-  - network, securrity, user aaccounts, storagee, server prefs/config
-  - use managed cloud service (restuarant) 
-3. install client
-  - download any number of compatible programs
+1. - 
 
 ---
 
@@ -177,17 +191,7 @@ This is not a course on SQL but for Example to return rows of a table
 
 ![Example PSQL Terminal Session](img/psql_terminal_session.png)
 
----
 
-# Server Locality
-
-*Servers can run anywhere*
-
- - on your laptop, rrunning along side your other erprograms: localhost
- - on a computer on campus myservername.mydepartment.msu.edu (on-premise), or in an IoT device
- - on a VM that you create in the cloud :  myvmname.east.azure.net (IAAS)
- - as part of a service offerring, provisioned for you (PAAS)
- - the service itself, you don't control the server, only access data serevices (SAAS)
 
 ---
 # Server Connection Terms
@@ -199,6 +203,18 @@ This is not a course on SQL but for Example to return rows of a table
 - *SSL* : secure sockets layer required to encrypt the communication for security, Azure takes care of this
 - *Connection string* : the combination of these parameters used to connect to a database, formated for the Client
 - *Client* : can be a package or library used inside a programming language
+
+---
+
+# Server Locality
+
+*Servers can run anywhere*
+
+ - on your laptop, running alongside your other  programs.  The *host* is called `localhost`   
+ - on a computer on campus (on-premise) the host is something like myservername.mydepartment.msu.edu 
+ - on a VM that you create in the cloud :  myvmname.east.azure.net (IAAS)
+ - as part of a service offerring, provisioned for you (PAAS)
+ - the service itself, you don't control the server, only access data serevices (SAAS)
 
 ---
 

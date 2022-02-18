@@ -1,6 +1,11 @@
 # Session 7: The Cloud Computing Grab Bag That is Serverless
 
-Introductory Material by topic
+![example cloud architecture](img/geneplexus_cloud_diagram.png)
+
+*example real-world cloud application*
+
+Introductory Material by topic 
+
 
 * [Overview of Serverless](serverless_overview.md)
 
@@ -10,6 +15,8 @@ Introductory Material by topic
 ## Serverless and FaaS Readings
 
 As you read these materials, do you think  "serverless" resources are IaaS or PaaS?   They sure feel like infrastructure as they require significant configuration, but run like PaaS, hence they are often called "Function as a Service." 
+
+![FaaS is a blackbox](img/blackboxgraphic.jpg)
 
 - Re-visit [Chapter 4 Computing as a service](https://s3.us-east-2.amazonaws.com/a-book/computing.html) 
 
