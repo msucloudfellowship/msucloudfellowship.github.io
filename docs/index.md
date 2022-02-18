@@ -34,11 +34,36 @@ The program runs from Fall 2021 to Spring 2022 semester.  Sessions are organized
 
 ### Schedule for Winter/Spring 2022
 
-We will schedule group discussion sessions on project progress, and additional monthly 1-1 sessions with fellowship coordinators to assist with participant projects. Dates to be determined. 
+#### 2022 Cloud Fellowship Meetings 
 
-Fellows will present their projects during a symposium to be held April 2022.  
+We will meet virtually according to the schedule below for 'project update' presentations and group discussions. If you have a scheduling conflict, please let us know as soon as possible. 
+ 
+ - **February 4th : Presentation of Revised Project and current status**
+ - **March 4th : TBD**
+ - **April 8th : TBD**
 
-## Text
+ - All sessions 2:00-4:00pm EST
+ - Zoom links and password will be sent over email. 
+         
+#### Virtual Office Hours Sessions
+
+We will also hold two Friday virtual helpdesk sessions per month.  Feel free to take advantage of these voluntary sessions for help with specifics on your project, presentations, and/or general research computing topics. 
+
+**January 14th and 28th <br>
+February 11th and 25th <br>
+March 18th and 25th <br>
+April 1st and 15th**
+
+ - all office hours sessions 2:00-3:30pm EST
+ - Zoom links and password will be sent over email but will be the same as for the meetings above. 
+ 
+We encourage you, especially during Winter/spring, to [contact us](contact) at any time with any questions related to your projects, the fellowship, or cloud computing in general.  We will get back with you when we can and schedule a time for a virtual 1-1 meeting.  
+
+#### Symposium and Project Presentations
+
+Participants will present projects in late April at a symposium for the Cloud Fellowship.  The exact date and time to be determined, and virtual vs in-person also to be determined.   
+
+## Textbook
 
 We will occasionally link to the following book: 
 
