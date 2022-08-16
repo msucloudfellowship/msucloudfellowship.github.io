@@ -6,7 +6,7 @@ title: MSU Cloud Computing Fellowship
 
 ![Ebene_bei_Auvers_van_Gogh_1890](img/cropped_cloud_painting_Vincent_van_Gogh_Ebene_bei_Auvers_1890_Neue_Pinakothek_Munich.jpg)
 
-Welcome to the website for the MSU Cloud Computing Fellowship for 2022-2022.  These pages are under developmente as we get organized for 2022.  See our "[about](about.md)" page for more information about the program.   
+Welcome to the website for the MSU Cloud Computing Fellowship for 2022-2022.  These pages are under development as we get organized for 2022.  See our "[about](about.md)" page for more information about the program.   
 
 ## Applications
 
