@@ -1,10 +1,10 @@
 ---
-title: MSU Cloud Computing Fellowship
+title: Previous MSU Cloud Computing Fellowship Schedule
 ---
-
+**This is the schedule for a previous year provided as an example.  Please see our [home page](index.md) for the current year**
 # MSU Cloud Computing Fellowship 2021-2022
 
-**This is the schedule for a previous year provided as an example.  Please see our [home page](index.md) for the current year**
+
 
 Welcome to the website for the MSU Cloud fellowship for 2021-2022.  See our "[about](about.md)" page for more information about the program.   
 
@@ -88,9 +88,12 @@ We also save time during our synchronous meetings for group discussions, so plea
 
 Given the state of the pandemic in late summer 2021, we are hosting our first meeting (September 3) via zoom.  Participants will be sent a link via email.   Locations for future meetings are to be determined and based on participant feedback.  
 
-
 ---
    
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>
 
 ---
+
+<style>
+.md-content {background-color:LightGray;}
+<style>
