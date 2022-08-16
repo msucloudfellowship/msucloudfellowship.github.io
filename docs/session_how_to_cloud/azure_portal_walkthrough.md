@@ -1,6 +1,6 @@
 # Exercise: Azure Portal Walk-through and Storage account creation
 
-**MSU Cloud Fellowship** ![From Marco Mons on Unsplash](../img/marco-mons-kgcA52f8XbE-unsplash.jpg){align='right'} 
+**MSU Cloud Computing Fellowship** ![From Marco Mons on Unsplash](../img/marco-mons-kgcA52f8XbE-unsplash.jpg){align='right'} 
 
 ## About 
 
@@ -56,7 +56,7 @@ You don't need to know about Cloud storage to complete this tutorial.  This is s
   * An Azure Account with valid subscription
   * A Resource group
 
-*All members of the current cloud fellowship cohort have these things*
+*All members of the current Cloud Computing Fellowship cohort have these things*
 
 ### Tutorial Steps. 
 
@@ -73,7 +73,7 @@ You don't need to know about Cloud storage to complete this tutorial.  This is s
 1. Click "create"
 1. The azure resource creation screens mostly work like this:   there are so many settings Azure has split these up into groups which are listed horizontally across the top.   You may work though these by clicking each group, OR finish a screen, and click "Next.." button on the bottom of the form.   At any time you may click "Review and Create" and if you've missed some crucial setting, Azure will not let you create the resource without fixing it.  We will go page-by-page for these settings
 1. Basics: 
-    1. Subscription: Cloud Fellowship
+    1. Subscription: Cloud Computing Fellowship
     1. Resource Group: Select your resource group (you may only have the one) \
         You may see a "create new" link below that but it may not work and for this tutorial we using an existing resource group
     1. Storage Account Name:   This name must be unique for this region in azure, so Use your NetID for part of the name

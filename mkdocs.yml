@@ -1,18 +1,19 @@
-site_name: MSU Cloud Fellowship
+site_name: MSU Cloud Computing Fellowship
 nav:
     - Home: index.md
     - Contact: contact.md
     - About: about.md 
-    - Sessions:
-      - 1. Introduction: session_introduction/index.md
-      - 2. How does the cloud work?: session_how_to_cloud/index.md
-      - 3. Cloud Storage: session_cloud_storage/index.md
-      - 4. Moving Data: session_moving_data/index.md
-      - 5. Big Data and the cloud: session_bigdata/index.md
-      - 6. Cloud Data Systems: session_datasystems/index.md
-      - 7. Serverless, Containers, and FaaS: session_serverless/index.md
+    - Sessions (TBD)
+      # - 1. Introduction: session_introduction/index.md
+      # - 2. How does the cloud work?: session_how_to_cloud/index.md
+      # - 3. Cloud Storage: session_cloud_storage/index.md
+      # - 4. Moving Data: session_moving_data/index.md
+      # - 5. Big Data and the cloud: session_bigdata/index.md
+      # - 6. Cloud Data Systems: session_datasystems/index.md
+      # - 7. Serverless, Containers, and FaaS: session_serverless/index.md
     - References: references/index.md
     - Cloud Glossary: cloud_glossary.md
+    - 2021-22 syllabus: index2021.md
 theme: 
   name: material
   features:

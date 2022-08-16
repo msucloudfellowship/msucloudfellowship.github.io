@@ -39,7 +39,7 @@ class: cloudtitle,center, middle
 
 ### Pat Bills, IT Services ADS
 
-for the [MSU Cloud Fellowship](../session_datasystems)
+for the [MSU Cloud Computing Fellowship](../session_datasystems)
 
 ---
 

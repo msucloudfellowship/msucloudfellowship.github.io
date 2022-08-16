@@ -1,67 +1,61 @@
 ---
-title: MSU Cloud Fellowship
+title: MSU Cloud Computing Fellowship
 ---
 
-# MSU Cloud Fellowship 2021-2022
+# MSU Cloud Computing Fellowship 2022-2022
 
 ![Ebene_bei_Auvers_van_Gogh_1890](img/cropped_cloud_painting_Vincent_van_Gogh_Ebene_bei_Auvers_1890_Neue_Pinakothek_Munich.jpg)
 
-Welcome to the website for the MSU Cloud fellowship for 2021-2022.  See our "[about](about.md)" page for more information about the program.   
+Welcome to the website for the MSU Cloud Computing Fellowship for 2022-2022.  These pages are under developmente as we get organized for 2022.  See our "[about](about.md)" page for more information about the program.   
+
+## Applications
+
+Applications are currently closed for this year but we encourage PhD students and MSU Post-doc faculty to look for an announcement in Summer of 2023.   We are reviewing applications and will contact all applications in August 2022.  
 
 ## Syllabus 
 
-The program runs from Fall 2021 to Spring 2022 semester.  Sessions are organized with pre-meeting materials (readings and videos), pre-requisites, and activities, which allow fellows to prepare for our Friday meetings where we will have hands-on activities and discussion.  
+The program runs from Fall 2022 to Spring 2023 semester.  Sessions are organized with pre-meeting materials (readings and videos), pre-requisites, and activities, which allow fellows to prepare for our Friday meetings where we will have hands-on activities and discussion.   For examples of previous materials, see the [schedule for 2021](index2021)
 
-### Schedule for Fall 2021
+### Schedule for Fall 2022 TBD
 
- * [Session 1](session_introduction): Introduction to the 21-22 Fellowship
-     * Sept 3: Meeting : program introductions and program overview (via zoom)
- * [Session 2](session_how_to_cloud): Using the cloud for computing
-    * Sept 10: Using Virtual Machines workshop 
- * [Session 3](session_cloud_storage): Cloud Storage
-    * Sept 24: Cloud Storage Workshop 
- * [Session 4](session_moving_data): Moving data to the cloud
-    * October 8: Data utilities and services workshop (Azure Data Factory)
- * [Session 5](session_bigdata): Big Data Systems and the cloud
-    * Oct 22: Overview of Big Data on Azure with DataBricks
- * [Session 6](session_datasystems): Databases and Data Analytics Systems on the Cloud
-    * Oct 29: Overview of Databases on the cloud, SQL demonstration
- * [Session 7](session_serverless): Serverless and Application Development 
-    * Nov 12: Overview of Serverless and FaaS, Demonstration of Real-world project
- * Session 8: Wrap up and project proposals
-    * Dec 3: Meeting : review and feedback on project proposals & general discussion
-    * Dec 17: Final cloud fellowship project proposal submission date
-
-### Schedule for Winter/Spring 2022
-
-#### 2022 Cloud Fellowship Meetings 
-
-We will meet virtually according to the schedule below for 'project update' presentations and group discussions. If you have a scheduling conflict, please let us know as soon as possible. 
+ * Session 1: Introduction to the 22-23 Fellowship
+     * Sept 2: Meeting : Program Overview and Seminar "What is cloud computing for Researchers?" 
+ * Session 2: Using the cloud for computing
+    * TBD Using Virtual Machines workshop 
+ * Session 3: Cloud Storage
+    * TBD Cloud Storage Workshop 
+ * Session 4: Moving data to the cloud
+    * TBD Data utilities and services workshop (Azure Data Factory)
+ * Session 5: Big Data Systems and the cloud
+    * TBD Overview of Big Data on Azure with DataBricks
+ * Session 6: Databases and Data Analytics Systems on the Cloud
+    * TBD Overview of Databases on the cloud, SQL demonstration
+ * Session 7: Serverless and Application Development 
+    * TBD Overview of Serverless and FaaS, Demonstration of Real-world project
+ * Session 8: TBD
+    * TBD
+ * Session 9 : review and feedback on project proposals & general discussion
+    * TBD December 
  
- - **February 4th : Presentation of Revised Project and current status**
- - **March 4th : TBD**
- - **April 8th : TBD**
+### Schedule for Winter/Spring 2023
 
- - All sessions 2:00-4:00pm EST
- - Zoom links and password will be sent over email. 
-         
+The second semester of the fellowship is focused on completing a project based on fellow research interests.   We will meet approximately bi-weekly for fellows to present, get feedback, ask questions, and group discussions.  For some of these dates/times, fellows will deliver a short presentation about their projects as follows:
+
+ - **Early January TBD**: Presentation of Project proposal
+ - **Late February TBD**: Presentation of Project status
+ - **April: TBD**: Presentation of Project status
+
+Other activities during our bi-weekly sessions 
+        
 #### Virtual Office Hours Sessions
 
-We will also hold two Friday virtual helpdesk sessions per month.  Feel free to take advantage of these voluntary sessions for help with specifics on your project, presentations, and/or general research computing topics. 
-
-**January 14th and 28th <br>
-February 11th and 25th <br>
-March 18th and 25th <br>
-April 1st and 15th**
-
- - all office hours sessions 2:00-3:30pm EST
- - Zoom links and password will be sent over email but will be the same as for the meetings above. 
+We will also hold two Friday virtual helpdesk sessions per month, and encourage fellows to take advantage of these voluntary sessions for help with specifics on your project, presentations, and/or general research computing topics. 
  
-We encourage you, especially during Winter/spring, to [contact us](contact) at any time with any questions related to your projects, the fellowship, or cloud computing in general.  We will get back with you when we can and schedule a time for a virtual 1-1 meeting.  
+We encourage you, especially during Winter/spring, to [contact us](contact) at any time with any questions related to your projects, the fellowship, or cloud computing in general.  
 
 #### Symposium and Project Presentations
 
-Participants will present projects in late April at a symposium for the Cloud Fellowship.  The exact date and time to be determined, and virtual vs in-person also to be determined.   
+We will hold a Symposium for participants for final presentations of the outcome projects in late April/Early May.   
 
 ## Textbook
 
@@ -86,7 +80,11 @@ We also save time during our synchronous meetings for group discussions, so plea
 
 ## Meeting location
 
-Given the state of the pandemic in late summer 2021, we are hosting our first meeting (September 3) via zoom.  Participants will be sent a link via email.   Locations for future meetings are to be determined and based on participant feedback.  
+At this time meetings are planned be in-person in the training room of the Institute for Cyber-Enabled Research, located on the first floor of the MSU Biomedical & Physical Sciences Building (off of the atrium)
+
+567 Wilson Road, Room 1440
+Michigan State University
+East Lansing, MI 48824
 
 
 ---

@@ -1,6 +1,6 @@
-# About The MSU Cloud Fellowship
+# About The MSU Cloud Computing Fellowship
 
-The MSU Cloud Fellowship is a cross-disciplinary program produced by MSU’s Institute of Cyber-Enabled Research (ICER) and the IT Services Analytics and Data Solutions (ADS) group for invited MSU doctoral students and postdoctoral researchers. As a part of this program, fellows will participate in a series of workshops during the fall semester to:
+The MSU Cloud Computing Fellowship is a cross-disciplinary program produced by MSU’s Institute of Cyber-Enabled Research (ICER) and the IT Services Analytics and Data Solutions (ADS) group for invited MSU doctoral students and postdoctoral researchers. As a part of this program, fellows will participate in a series of workshops during the fall semester to:
 
   * Determine the aspects of your research that can be accomplished with cloud computing;
   * Incorporate cloud-based systems into your research application or workflow; and
@@ -16,7 +16,7 @@ We encourage cloud fellows to acknowledge the fellowship in publications arising
 
 "This work was supported in part through Michigan State University’s Institute for Cyber-Enabled Research Cloud Computing Fellowship, with computational resources and services provided by Information Technology Services and the Office of Research and Innovation at Michigan State University.”  
  
-## Cloud Fellowship Organizers
+## Cloud Computing Fellowship Organizers
 
 **Dr. Brian O'Shea** Professor and Director, MSU ICER<br>
 
@@ -45,7 +45,7 @@ Like many, he has built and worked with on-campus linux systems for many years i
 **Dr. Mahmoud Parvizi**  Research Consultant, MSU ICER<br>
 *Role: Assistant Instructor* <!--add co-instructor 2020 session? ; list as secondary contact-->
 
-![Dr. Mahmoud Parvizi](img/people/Mahmoud_Parvizi.jpg){ align=right } Mahmoud earned his PhD in physics from Vanderbilt University with research in high-energy theory in the context of early universe cosmology as well as computational astrophysics. In addition, Mahmoud earned an MBA with a concentration in finance from the University of Michigan - Flint.  Mahmoud was formerly a postdoctoral research associate in the Department of Physics and Astronomy at Michigan State University with a focus on machine learning applications of cloud-computing workflows and currently a research consultant for the MSU Institute for Cyber-Enabled Research (ICER).   He participated as a cloud fellow in 2019 and co-instructor of the cloud fellowship in 2020. 
+![Dr. Mahmoud Parvizi](img/people/Mahmoud_Parvizi.jpg){ align=right } Mahmoud earned his PhD in physics from Vanderbilt University with research in high-energy theory in the context of early universe cosmology as well as computational astrophysics. In addition, Mahmoud earned an MBA with a concentration in finance from the University of Michigan - Flint.  Mahmoud was formerly a postdoctoral research associate in the Department of Physics and Astronomy at Michigan State University with a focus on machine learning applications of cloud-computing workflows and currently a research consultant for the MSU Institute for Cyber-Enabled Research (ICER).   He participated as a cloud fellow in 2019 and co-instructor of the Cloud Computing Fellowship in 2020. 
 
 Mahmoud’s diverse research interests include mathematical and theoretical physics, data-intensive astrophysics, machine learning for precision health, and cloud-computing platforms for academic research. His expertise includes 1) quantum field theory in curved/non-stationary spacetimes; 2) finite temperature quantum field theory and open quantum systems; 3) automated and end-to-end intelligent data pipelines for signal processing using compressed sensing and applied harmonic analysis; 4) machine learning and cloud-computing applications for precision health.
 

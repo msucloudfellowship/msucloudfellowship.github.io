@@ -1,15 +1,15 @@
-## Website for the MSU CloudFellowship 2021
+## Website for the MSU Computing CloudFellowship
 
 Website: https://msucloudfellowship.github.io
 
 Current home for website code:  https://github.com/msucloudfellowship/msucloudfellowship.github.io
 
-This (old) github repository for the source code for the website for materials for the 2021-2022 MSU Cloud fellowship, used by the fellowship organizers.   Students do not need to use this source code, simply visit the site above
+This (old) github repository for the source code for the website for materials for the MSU Cloud Computing Fellowship, used by the fellowship organizers.   Students do not need to use this source code, simply visit the site above
 
-See the home page of the site for information about the cloud fellowship.   
+See the home page of the site for information about the Cloud Computing Fellowship, or contact https://icer.msu.edu
+ 
 
-
-### Tech
+### Building
 
 The site was build with the amazing python package "MkDocs" and Markdown.   For details and full documentation visit [mkdocs.org](https://www.mkdocs.org).  The theme is the also amazing https://github.com/squidfunk/mkdocs-material
 

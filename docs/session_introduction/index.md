@@ -1,4 +1,4 @@
-# Session 1: Introduction to the 2021-22 MSU Cloud Fellowship
+# Session 1: Introduction to the 2021-22 MSU Cloud Computing Fellowship
 
 <figure>    
   <img src="../img/facing_the_atlantic_clouds_psbills_2021.gif" />
@@ -22,7 +22,7 @@ All 2021-22 participants were sent an introductory email that included a link to
 
 **Introduce yourself on Microsoft Teams**
  
-You should have all been given access to a Team "MSU ICER Cloud Fellowship" via your NetID.  
+You should have all been given access to a Team "MSU ICER Cloud Computing Fellowship" via your NetID.  
 
   * Please log in to Teams (via the web https://teams.microsoft.com/ or using the Teams client)
   * Post a new message in the "general" channel just saying "hello" and include your name, department and how you prefer to be addressed.   

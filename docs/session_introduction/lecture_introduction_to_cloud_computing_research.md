@@ -86,7 +86,7 @@ As part of this fellowship, our goal is to help you translate documentation writ
 
   * The cloud services themselves are always changing, even slightly, making technology-specific tutorials obsolete in months.  For example last year Azure had a "Notebook Service" for running Python notebooks, and now there is this  in place of the regular documentation: [What happened to Azure Notebooks?](https://docs.microsoft.com/en-us/azure/notebooks/quickstart-export-jupyter-notebook-project)
   * There are new services and bundles created all the time that may be competing or superior choices for doing research
-  * If you are unsure, ask us.  See the [contact page](../contact.md) or use our Teams channel.   During the cloud fellowship we are here to provide some answers, context for what you are seeing, or possible directions to explore.  
+  * If you are unsure, ask us.  See the [contact page](../contact.md) or use our Teams channel.   During the Cloud Computing Fellowship we are here to provide some answers, context for what you are seeing, or possible directions to explore.  
   * Cloud companies have help desks and many resources for anyone using their services or potential customers and we may be able to connect you with those. 
 
 

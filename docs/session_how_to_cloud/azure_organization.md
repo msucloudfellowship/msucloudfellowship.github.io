@@ -7,7 +7,7 @@ Microsoft Azure Documentation: [Organize your Azure resources effectively](https
 
 ![Azure Organization diagram from Microsoft Documentation](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/media/organize-resources/scope-levels.png)
 
-Azure is organized by directories of user accounts and subscriptions.  All resources must be created in exactly one "subscription" which is a method for billing and for setting permissions.  Your organizations "directory" is where your user account lives, but you may have access to multiple subscreiptions with one user.  MSU created a "cloud fellowship" subscription for all activities and resources for this, and we added your MSU directory accounts this subscription.   
+Azure is organized by directories of user accounts and subscriptions.  All resources must be created in exactly one "subscription" which is a method for billing and for setting permissions.  Your organizations "directory" is where your user account lives, but you may have access to multiple subscreiptions with one user.  MSU created a "Cloud Computing Fellowship" subscription for all activities and resources for this, and we added your MSU directory accounts this subscription.   
 
 Cloud computing components are known as "resources," which AWS defines as "an entity you can work with."   Anything you can create using a cloud interfaces is a "resource."   
 

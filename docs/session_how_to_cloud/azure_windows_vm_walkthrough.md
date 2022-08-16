@@ -67,7 +67,7 @@ Click "**Continue to create a VM**"
 The resource creation forms work as described in the Azure Portal but since we used a pre-set configuration some of the values will be completed. 
 
 ##### Basics 
-1. The **Subscription** should be "Cloud Fellowship" and
+1. The **Subscription** should be "Cloud Computing Fellowship" and
 **resource group** should be your CF resource group (with your netid).  As we create additional resource groups for this 
 
 1. **Virtual machine name**  Name: CF21-netid-dsvmtest
