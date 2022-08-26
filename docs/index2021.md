@@ -34,7 +34,7 @@ The program runs from Fall 2021 to Spring 2022 semester.  Sessions are organized
 
 ### Schedule for Winter/Spring 2022
 
-#### 2022 Cloud Computing Fellowship Meetings 
+#### Meetings
 
 We will meet virtually according to the schedule below for 'project update' presentations and group discussions. If you have a scheduling conflict, please let us know as soon as possible. 
  
