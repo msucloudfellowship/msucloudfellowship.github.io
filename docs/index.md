@@ -21,12 +21,11 @@ Sessions are at most bi-weekly. They include preparatory readings and activities
 ### Meeting location
 At this time all meetings are in-person in the training room of the Institute for Cyber-Enabled Research, located on the first floor of the MSU Biomedical & Physical Sciences Building
 
-Biomedical and Physical Science (BPS) Building, Room 1445
-567 Wilson Road
+[Biomedical and Physical Science (BPS) Building](https://maps.msu.edu/interactive/index.php?location=8ERY), Room 1445<br>
+567 Wilson Road<br>
 Michigan State University. East Lansing, MI 48824
 
- - [Map to BPS](https://maps.msu.edu/interactive/index.php?location=8ERY)  
- - enter the doors mark 1440, in the center of the BPS atrium 
+ - enter the doors marked 1440, in the center of the BPS atrium 
 
 ### Schedule for Fall 2022
 
