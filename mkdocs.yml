@@ -30,5 +30,6 @@ markdown_extensions:
       use_pygments: true
       linenums_style: pymdownx-inline
   - pymdownx.inlinehilite
+  - md_in_html
 extra:
   generator: false
