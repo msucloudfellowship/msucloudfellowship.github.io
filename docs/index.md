@@ -14,48 +14,64 @@ Applications are currently closed for this year but we encourage PhD students an
 
 ## Syllabus 
 
-The program runs from Fall 2022 to Spring 2023 semester.  Sessions are organized with pre-meeting materials (readings and videos), pre-requisites, and activities, which allow fellows to prepare for our Friday meetings where we will have hands-on activities and discussion.   For examples of previous materials, see the [schedule for 2021](index2021)
+The program runs from Fall 2022 to Spring 2023 semester.  
 
-### Schedule for Fall 2022 TBD
+Sessions are at most bi-weekly. They include preparatory readings and activities to orient you to the topic, followed by an in-person meeting Friday to review the materials, provide a venue for discussion, require fellows to present, or hands-on collaborative activities.
 
- * Session 1: Introduction to the 22-23 Fellowship
-     * Sept 2: Meeting : Program Overview and Seminar "What is cloud computing for Researchers?" 
- * Session 2: Using the cloud for computing
-    * TBD Using Virtual Machines workshop 
- * Session 3: Cloud Storage
-    * TBD Cloud Storage Workshop 
- * Session 4: Moving data to the cloud
-    * TBD Data utilities and services workshop (Azure Data Factory)
- * Session 5: Big Data Systems and the cloud
-    * TBD Overview of Big Data on Azure with DataBricks
- * Session 6: Databases and Data Analytics Systems on the Cloud
-    * TBD Overview of Databases on the cloud, SQL demonstration
- * Session 7: Serverless and Application Development 
-    * TBD Overview of Serverless and FaaS, Demonstration of Real-world project
- * Session 8: TBD
-    * TBD
- * Session 9 : review and feedback on project proposals & general discussion
-    * TBD December 
- 
+### Meeting location
+At this time all meetings are in-person in the training room of the Institute for Cyber-Enabled Research, located on the first floor of the MSU Biomedical & Physical Sciences Building
+
+Biomedical and Physical Science (BPS) Building, Room 1445
+567 Wilson Road
+Michigan State University. East Lansing, MI 48824
+
+ - [Map to BPS](https://maps.msu.edu/interactive/index.php?location=8ERY)  
+ - enter the doors mark 1440, in the center of the BPS atrium 
+
+### Schedule for Fall 2022
+
+ 1. [Introduction to the 22-23 Fellowship](session_introduction)
+    * Meeting September 2: In-person Meeting 2pm to 3:30pm, 1445A    
+ 2. Cloud for computing infrastructure: Storage, Virtual Machines and disks
+    * Meeting September 16: Working with Virtual Machines workshop 
+ 3. Cloud Storage and moving data
+    * Meeting September 30: Cloud Storage Workshop 
+ 4. Databases and Data Analytics Systems on the Cloud for research
+    * Meeting October 14: Seminar on Database and data systems. <br> Hands-on: Using Cosmos DB
+ 5. Big Data Systems and the cloud
+    * Meeting October 28: Overview of Big Data on Azure with DataBricks
+ 6. Cloud workflows & Serverless functions with Python
+    * Meeting November 4: Overview of Serverless and FaaS, Demonstration of Real-world project
+ 7. Overview of Web Application Development in the cloud.   
+    * Meeting November 18: Details about the Project
+ 8. Synthesis and time to develope project proposal
+    * Discussion of Fellowship Projects.  First draft proposal due (1-2 sentence)
+
+Session materials for 2022 are in development.  For examples of previous materials, see the [schedule for 2021](index2021)
+
 ### Schedule for Winter/Spring 2023
 
 The second semester of the fellowship is focused on completing a project based on fellow research interests.   We will meet approximately bi-weekly for fellows to present, get feedback, ask questions, and group discussions.  For some of these dates/times, fellows will deliver a short presentation about their projects as follows:
 
- - **Early January TBD**: Presentation of Project proposal
- - **Late February TBD**: Presentation of Project status
- - **April: TBD**: Presentation of Project status
+All meetings are in the ICER training room, 1455A BPS, from 2:00 to 3:30 pm 
 
-Other activities during our bi-weekly sessions 
-        
-#### Virtual Office Hours Sessions
-
-We will also hold two Friday virtual helpdesk sessions per month, and encourage fellows to take advantage of these voluntary sessions for help with specifics on your project, presentations, and/or general research computing topics. 
+ - **January 13** fellow presentations of project proposals
+ - **January 27** discussion & help session
+ - **February 10** discussion & helpsession
+ - **February 24** Presentation of Project status
+ - **March 10** discussion & help session
+ - **March 24** Presentation of Project status
+ - **April 10**: discussion & help session
+ - **April TBD**: Fellowship Symposium
  
+
+#### On-going help
+
 We encourage you, especially during Winter/spring, to [contact us](contact) at any time with any questions related to your projects, the fellowship, or cloud computing in general.  
 
 #### Symposium and Project Presentations
 
-We will hold a Symposium for participants for final presentations of the outcome projects in late April/Early May.   
+We will hold a Symposium for participants for final presentations of the outcome projects in late April   
 
 ## Textbook
 
@@ -78,13 +94,6 @@ If you need interactive, on-going help it may be better to schedule a help sessi
 
 We also save time during our synchronous meetings for group discussions, so please bring any concerns, difficulties, or successes to our sessions! 
 
-## Meeting location
-
-At this time meetings are planned be in-person in the training room of the Institute for Cyber-Enabled Research, located on the first floor of the MSU Biomedical & Physical Sciences Building (off of the atrium)
-
-567 Wilson Road, Room 1440
-Michigan State University
-East Lansing, MI 48824
 
 
 ---
