@@ -1,6 +1,72 @@
-# Practical Introduction for Researchers on Azure
 
-## Introducing cloud computing vs. research computing
+# Introducing cloud computing for research
+* **Practical Introduction for Researchers using Microsoft Azure** *
+
+Patrick Bills, Michigan State University <br/>
+For the 2022 MSU Cloud Computing Fellowship
+
+### First things first : what is computing
+
+Prior to understanding what "cloud computing" is, we need to have a base common understanding of what "computing" is.   You come to us with each a unique set of experiences with computing, with more or less experience depending on your previous needs.  This section is designed to provide concepts that most cloud computing courses, videos, etc assume you have. 
+
+Why are we doing this?
+- cloud computing is marketed to IT professionals and managers.  They are who will make the recommendations for checks to be written.  Cloud computing must tick their boxes.   Services are organized and documented for them, not for us. 
+
+- while cloud computing abstracts away the physical components of a computer but companies use computing concepts as metaphors.  see above.   
+
+- many of the capabilities that cloud computing offers could be done by purchasing computer hardware and software, setting it up and manageing it inside your lab.   These concepts may help you 
+
+### What is computer?
+
+ < insert generic diagram of computer >
+
+#### What is a server?
+
+there is much more to computing than computation.
+  
+### Why Cloud computing ?  History may help understand it
+
+
+
+### Cloud concepts vs Cloud Providers
+
+Three major cloud providers are in a constant arms race to provide the same tick-boxes to capture the large contracts (e.g. [Azure vs. Amazon competed for a $10B defense contract](https://www.theregister.com/2022/04/28/nsa_wands_aws/)):  Azure, Amazon Web Services and Google Cloud Platform
+
+Many others provide Cloud : Oracle, IBM, Salesforce, 
+
+Many provide 'servers' that have been around before it was called cloud: Rackspace, 
+
+Thousands of companies of specialized services to support the majorvendors (e.g. for billing, management, security, etc)
+
+
+### Services on the Cloud vs Cloud Providers
+
+Google Search vs Google Docs vs  Google Cloud Platform vs DIY
+
+Restaurant vs Box Preapred food vs. Cooking from scratch vs. Farming
+
+to push the analogy further, what would a growing supply company provide to a farmer vs a gardener?   As we begin, we are gardners, not farmers.   
+
+ - for us, Cloud Computing => DIY computing.  
+
+
+### On-prem vs On-cloud
+
+REview client/server.   Need for servers. 
+
+Example: D2L course management system web-based system.   Note about 'web-basd' being old school. Everything is web-based now.  
+ 
+MSU started by aquiring the web application software and associated systems, building all of the hardware (servers), disk space to hold it all, newtork to connect them, data center space and when you connected to D2L, you connected to a system on the MSU campus. 
+- Scalability : when demand was very high, the system was 'taxed'
+- Maintainablility: required many people to keep it running
+- Cost: The company "bright space" offered to host D2L for institutions.  The student experience is identical.  MSU switch to that model and saved money.  D2L was slow this week becuase now when we access D2L we share infrastructure with everyone in the world.  
+
+Example : Database systems.   MSU runs massive databases to manage student information. 
+
+Example: HPC
+
+
+ 
 
 ### Learning how to learn about cloud
 
@@ -34,7 +100,9 @@ And finally most closely related to your work are data science, "machine learnin
   - but must be reproducible to document methods
   - even this documentation can quickly veer off in to building production systems for companies to re-run inference say many times a data or with a constant stream of corporate data
 
-What is are the goals from research perspective for cloud computing?
+### Cloud for Research 
+
+What are the benefits from research perspective for cloud computing?
 
   - Custom: can create customized resources only when you need it
   - On-demand: can run ad-hoc computations on those on-demand resources
@@ -43,7 +111,7 @@ What is are the goals from research perspective for cloud computing?
   - Others? <!-- discussion -->
 
 
-#### What documentation *is* available for researchers?
+### What documentation *is* available for researchers?
 
 There are general, conceptual introductions and dicussions for academics.   
 
@@ -55,7 +123,11 @@ There are general, conceptual introductions and dicussions for academics.
 
 #### NIST defintions of cloud: Service Levels and You
 
-The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) defines service models, but what does "X as a service" actually mean, and where are the lines drawn?   Like the species concept in biology, it's not always cut and dried, but can be thought of as a spectrum
+The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) defines service models
+ * "service levels" are only a model (or abstraction) for discussion cloud computing, widely used in the IT fields. 
+ * "X as a service" where X is some aspect of IT, usually along the axis of customer responsibility.   
+ * the model is abused like all concepts or acronyms in IT:  iCloud.  If Cloud = internet and "i" stands for internet that means "Internet Internet"
+ * How well does this model apply to the services that cloud providers give us?  Like the species concept in biology, it's not always cut and dried, but can be thought of as a spectrum
 
 * Infrastructure (aaS):  Nuts and bolts, DIY, Lego.  You need understanding of computing architecture as these services 
 * Everything in between:  Platforms or pre-configured and managed infrastructure
@@ -108,7 +180,16 @@ Security and Risk management is an important issue even for researchers who's da
 
 Finding a readable list of security recommendations for cloud computing is a challenge for all the reasons outlined above.  Our textbook has [a nice chaper outlining cloud security](https://s3.us-east-2.amazonaws.com/a-book/security.html)
 
-The "Shared responsibility" model for cloud computing takes a model of computing components, and shows how much of each component the user is responsible for security:
+The "Shared responsibility" model for cloud computing takes a model of computing components, and shows how much of each component the user is responsible for security. 
+
+- Your computer, operating system, software
+   - security is your responsibility
+   - this includes the room in which the computer sits
+- << cloud computing >>
+- Office 365 or Google Docs:  
+   - other than password, security is all of their responsibility
+
+If your computer is a **server**, your responsibility just increased 100X as these are primary targets for hacking.    Consider each component of a server to be a point of vulnerability.   
 
 ![Microsoft Model of Shared Responsibility](../img/microsoft-shared-responsibility.svg)
 *[Microsoft Model of Shared Responsibility for Cloud Computing](https://docs.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)*
@@ -143,10 +224,65 @@ The HPC is amazing effective at running all kinds of systems at very list cost, 
 
 
 ## Additional comments from instructors and organizers
-
+<!-- 
 Summary and additional comments
 
-<!-- summary: freely explore cloud services using the portal as there are often free-tiers; try the programming interfaces  at least once as this will make your work reproducible ; security is always a concern and consideration of cost ; look to the higher level services, even though more expensive may be faster to results and more secure --> 
+summary: freely explore cloud services using the portal as there are often free-tiers; try the programming interfaces  at least once as this will make your work reproducible ; security is always a concern and consideration of cost ; look to the higher level services, even though more expensive may be faster to results and more secure 
 
 
+Types of services ( do not say "as a service or AAS)
+software, platform, infrastructure
 
+describe each, 3 is not part of CCF. some
+do not fit easily in this framework ( GEE ). on 2nd 2
+
+Pre-cloud history : important because services now use these words and metaphors to map on to services. the people who used tech historically were customers of the cloud so the cloud had to make sense to the IT people it was sold to.
+
+Client/Server: email, shared files, unix she'll, ftp. server = software that listens and acts
+web - more passive than any of the others.
+web search server system.
+server can be in office or on web. if on the web it's a computer that hosts server
+a website needs 1) web content 2) web server software 3 ) computer on the internet to run that software. 1 is easy.
+
+web site vs web application distinction.
+
+web 2.0so popular , web platform companies showed up in 90s : dreamhost, rack space
+service was limited to stuff to run a web app = content + code, server, db, storage
+( describe the customer , who uses this service ). example Bee Database
+advantages vs running your own web server
+big web company needed to still run their own stuff.
+
+different topic
+
+enterprise computing : bought rooms full of expensive hardware, networks and software: company data systems, file storage , company run email, moving huge data , etc. "main frame"
+
+HPC : bought rooms full of really expensive hardware and really expensive networks. software was free.
+
+computer == box. each box needs management hardware & software.
+
+box for not flexible. solution : virtualization
+one huge box, many virtual computers. can create
+
+"provisioning" is hard work. hardware,operating systems, software etc.
+
+how annoyed are you when you have to run an update? imaging you had hundreds or thousands of boxes to keep updated, that hundreds/thousands of people depend on. then hard drives crash. chips fail etc
+
+every work group has special needs.
+
+what does this mean for researchers? we have an HPC to run stuff. why do we also need cloud.
+- window apps
+- special configuration: eg getting the Unity game engine to run on our HPC ( for evolution simulations ) meant hacking the binary header of the program to trick it. many others are not so lucky that a solution is ever found.
+
+data systems
+web based programs.
+the HPC is amazing but it is not great for everyone or everything.
+Researchers had to DIY ( my friend Jason ) , find a computer person( like I was in the past ) or beg the IT department to get them what they need.
+
+other things were put in place for enterprise or google ( containers, custom hardware etc ) but
+
+--> 
+
+Source Materials
+---
+
+https://softwaresim.com/blog/introduction-to-cloud-computing-for-research/
