@@ -2,21 +2,18 @@
 title: MSU Cloud Computing Fellowship
 ---
 
-# MSU Cloud Computing Fellowship 2022-2022
+# MSU Cloud Computing Fellowship 2022-23
 
 ![Ebene_bei_Auvers_van_Gogh_1890](img/cropped_cloud_painting_Vincent_van_Gogh_Ebene_bei_Auvers_1890_Neue_Pinakothek_Munich.jpg)
 
-Welcome to the website for the MSU Cloud Computing Fellowship for 2022-2022.  These pages are under development as we get organized for 2022.  See our "[about](about.md)" page for more information about the program.   
+Welcome to the website for the MSU Cloud Computing Fellowship for 2022-2022.  See our "[about](about.md)" page for more information about the program.   
 
-## Applications
 
-Applications are currently closed for this year but we encourage PhD students and MSU Post-doc faculty to look for an announcement in Summer of 2023.   We are reviewing applications and will contact all applications in August 2022.  
+## Syllabus Fall 2022 - Spring 2023 
 
-## Syllabus 
+The program runs Fall semester through Winder/Spring semester.  
 
-The program runs from Fall 2022 to Spring 2023 semester.  
-
-Sessions are at most bi-weekly. They include preparatory readings and activities to orient you to the topic, followed by an in-person meeting Friday to review the materials, provide a venue for discussion, require fellows to present, or hands-on collaborative activities.
+Sessions are approximately bi-weekly with breaks for holidays.  A session includes preparatory readings and activities to orient you to the topic, followed by an in-person meeting on a Friday to review the materials, seminar, provide a venue for discussion,  hands-on collaborative activities, or presentations by the fellows. 
 
 ### Meeting location
 At this time all meetings are in-person in the training room of the Institute for Cyber-Enabled Research, located on the first floor of the MSU Biomedical & Physical Sciences Building
@@ -30,7 +27,7 @@ Michigan State University. East Lansing, MI 48824
 ### Schedule for Fall 2022
 
  1. [Introduction to the 22-23 Fellowship](session_introduction)
-    * Meeting September 2: In-person Meeting 2pm to 3:30pm, 1445A    
+    * Meeting **September 2**: In-person Meeting 2pm to 3:30pm, 1445A    
  2. Cloud for computing infrastructure: Storage, Virtual Machines and disks
     * Meeting September 16: Working with Virtual Machines workshop 
  3. Cloud Storage and moving data

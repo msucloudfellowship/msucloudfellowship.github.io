@@ -8,7 +8,7 @@
 
 ## Welcome! 
 
-This is the first 'session' of the MSU Cloud Computing Fellowship (CCF) for 2022-2023.  For a description of the program and how sessions are organized, see the [CCF home page](index.md)
+This is the first 'session' of the MSU Cloud Computing Fellowship (CCF) for 2022-2023.  For a description of the program and how sessions are organized, see the [CCF home page](../index.md)
 
 The goals of this introductory session are to orient you to this program, introduce ourselves to each other, provide some background on cloud computing, set up our technology, and discuss what all of our expectations are.  
 
@@ -17,7 +17,9 @@ If possible during the first week of this semester, please complete the followin
 
 ## Activities:
 
-<!-- **Complete a Brief Survey**
+<!--  note  - this was done in 2021 and this text is saved but commented out
+
+**Complete a Brief Survey**
 
 All 2021-22 participants were sent an introductory email that included a link to a brief survey describing preferences and techmology exposure.   Please complete this survey prior to our first meeting.  -->
 
@@ -46,7 +48,7 @@ You should have all been given access to a Team "MSU ICER Cloud Computing Fellow
   * Optional Historical Note [Who Coined 'Cloud Computing'?](https://www.technologyreview.com/2011/10/31/257406/who-coined-cloud-computing/) by Antonio Regalado, October 2011, MIT Technology Review
 
     
-## In Meeting: Introductions and program overview. 
+## In-person meeting: Introductions and program overview. 
 
 **September 2nd, 2022** 
 
@@ -59,7 +61,7 @@ You should have all been given access to a Team "MSU ICER Cloud Computing Fellow
      - Participant in first Fellowship cohort
   * Patrick Bills, Instructor & Staff, Data Management & Analytics Data Science Team. 
 
-[A video of our introductions](https://mediaspace.msu.edu/media/MSU+Cloud+Fellowship+2021-2022+Welcome+and+Introductions/1_ju6ahdve) recorded in 2021 is avaialble on MSU MediaSpace (requires MSU log-in)
+[A video of our introductions](https://mediaspace.msu.edu/media/MSU+Cloud+Fellowship+2021-2022+Welcome+and+Introductions/1_ju6ahdve) recorded in 2021 is avaialble on MSU MediaSpace (requires MSU log-in).   
   
 ### Participant Introductions & Discussion
 
@@ -73,7 +75,9 @@ Introductions from the 2022-23 Cloud Computing Fellows:
   
 ### Fellowship Program Overview
 
-Review our "[syllabus](../index.md#syllabus)" on the home page of this website.  Program synopsis:
+Review our "[syllabus](../index.md#syllabus)" on the home page of this website for the schedule and topics we will cover.   
+
+Program synopsis:
   * Fall semester materials, activities, seminars and discussions (Pat Bills):    
     * Goal, scope and expectation;
     * structure (pre-session materials and activities, "textbook");
@@ -95,29 +99,28 @@ Review our "[syllabus](../index.md#syllabus)" on the home page of this website. 
  - how can I use it?
  - Understanding of the context of the technology we are learning about.   
 
-**practical facility**
+**Help you get some practical experience**
  - apply cloud to some aspect of your own research
  - apply cloud to generic/canned research-like problem
  
- **Non Goals**
- - prepare for a cloud computing certificate
- - become experts
+ **Non Goals:**
+ - prepare you for a cloud computing certification (there are many existing resources for that.  )
+ - become experts in everything 
  - build a dot-com empire
  - cover all aspects of cloud
  - 
 ### Seminar: Introduction to Computing and Cloud Computing
 
-  * [Seminar Text](lecture_introduction_to_cloud_computing_research.md), Pat Bills  
+  * Presentations, Pat Bills <!-- [Seminar Text](lecture_introduction_to_cloud_computing_research.md)  -->
   * References: 
      * The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) 
-  
   * Discussion  <!-- what questions can we ask to see the dicussion? -->
 
 ### Demonstration: Using the Azure Portal
 
-A quick, live demonstration orienting you to the Azure portal.  Our next session activities will include a more thorough workshop on creating cloud computing resources
+A quick, live demonstration orienting you to the Azure portal.  Our next session activities will include a detailed workshop on creating cloud computing resources
 
- - Log into https://portal.azure.com with your MSU NetID
+ <!-- Log into https://portal.azure.com with your MSU NetID
  - confirm you have access to a "resource group"
      - aside: high level description of "what is a resource group?"  This is your locker.  
  - understanding the navigation of the Azure portal
@@ -125,6 +128,8 @@ A quick, live demonstration orienting you to the Azure portal.  Our next session
      - properties pane on left side
  - find the 'budgets' section of your resource group
  - edit the budget to add an alert at 50% spend using your preferred email address
+
+-->
 
 A video walk-through of the Azure portal is available in [Session 2](../session_how_to_cloud#Activties) activities. 
 

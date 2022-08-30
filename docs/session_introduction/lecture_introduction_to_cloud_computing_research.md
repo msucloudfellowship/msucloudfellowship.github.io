@@ -1,15 +1,30 @@
 
 # Introducing cloud computing for research
-* **Practical Introduction for Researchers using Microsoft Azure** *
+<em>**Practical Introduction for Researchers using Microsoft Azure for the MSU Cloud Computing Fellowship
+**</em>
 
 Patrick Bills, Michigan State University <br/>
-For the 2022 MSU Cloud Computing Fellowship
 
 ### First things first : what is computing
 
-Prior to understanding what "cloud computing" is, we need to have a base common understanding of what "computing" is.   You come to us with each a unique set of experiences with computing, with more or less experience depending on your previous needs.  This section is designed to provide concepts that most cloud computing courses, videos, etc assume you have. 
+You come to us with each a unique set of experiences with computing, with more or less experience depending on your previous needs.  
 
-Why are we doing this?
+**Computing in Cloud Computing**
+
+Part of this fellowship will be examining the 'computing' part of cloud computing. 
+
+The application asks the question : 
+> "How can cloud computing help your research?"
+
+I would like to re-frame the question as
+
+> "What kinds of computing could help my research?"
+> "How can cloud services support that kind of computing?"
+
+Understanding computational technology in general.  For example, while MSU provides email, storage, and high performance computing, it does not provide services for "big data" category, or relational databases for researchers.   But you can provision such a service in minutes using the cloud. 
+
+**Vocabulary**
+ 
 - cloud computing is marketed to IT professionals and managers.  They are who will make the recommendations for checks to be written.  Cloud computing must tick their boxes.   Services are organized and documented for them, not for us. 
 
 - while cloud computing abstracts away the physical components of a computer but companies use computing concepts as metaphors.  see above.   
@@ -17,19 +32,131 @@ Why are we doing this?
 - many of the capabilities that cloud computing offers could be done by purchasing computer hardware and software, setting it up and manageing it inside your lab.   These concepts may help you 
 
 ### What is computer?
+   
+![Generic Von Neumann Computer](https://en.wikipedia.org/wiki/Von_Neumann_architecture#/media/File:Von_Neumann_Architecture.svg) 
 
- < insert generic diagram of computer >
+![modern internal computer architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture#/media/File:Computer_system_bus.svg)
+
+#### Major components of personal computer used in cloud computing
+
+- User software (scripts, user code, etc)
+- Base Software
+- Operating System
+- CPU & Memory
+- Computer Architecture (model type)
+- Storage - disk
+- Storage - external ( accessible via network )
+- Network
+
+Open question: qhere is the data? 
+
 
 #### What is a server?
 
-there is much more to computing than computation.
+The 'Client/server' model invented in the 60s is so successful that we use servers for our daily lives and don't think about it (except when the server is down).  Knowing how to build servers is useful for research.
+
+This model of computing is important becaues it's at the basis for of cloud computing.   
+
+A server is any computer that is running software that listens for messages, and then responds.   
+ - The 'server' is actually the software
+ - The computer that runs the software is the 'host'
+ - A 'client' is software sends the message, and receives and interprets the response.   
+ - the form the message can take is the API.  
+
+
+Simple example is a web server: 
+
+ * client is the web browser
+ * message = URL which includes address, url paths, and additional parameters (this is only part of the message but is a necessary part)
+
+`https://www.amazon.com/Dyvicl-Hanging-Reflective-Woodpecker-Deterrent/dp/B09VXBNTJ1/ref=sr_1_93?brr=1`
+
+ * response = the code for the web page
+ * client interprets the code and renders the page.   
+ * an alternate client could be a script you write that constructs the request, reads in a web page,  and extract information from it.    
+
+
+- the server must be on the network that you can send message to
+- some networks block some traffic
+- servers that accept messages from the Internet are a major security risk
+
+**Data Servers**
+
+Example servers that do no use web clients are data servers, for example relational database server.  
+ - message : insert these 5 rows of data <data>
+ - response: `inserted 5 rows`
+ - message: select rows of students in Math 101
+ - response:  (this is fake data randomly generated)
+
+```
+"First Name","Last Name","Email","Level"
+"Lucy","Grant","l.grant@randatmail.com","7"
+"Emily","Russell","e.russell@randatmail.com","5"
+"Annabella","Ferguson","a.ferguson@randatmail.com","8"
+etc
+```
+
+#### Virtual Machines
+
+We will cover this in depth next session but the concept is the basis for cloud computing
+ 
+Given the strain on IT Departments to provide servers dynamically and the time to provision the hardware to do so, and the fact that many servers are idle much of the time.  Hardware was not utilitized a technique of hosting multiple software servers on a single hardware unit was invented.   
+
+Server =  hardware + [operating systemn + software] 
+
+Virtual Servers = [Hardware + Virtualization] + N X [OS + Software] 
+
+Virtualization was a necessary conceptual and technological innovation to pave the way for cloud computing and is widely used both on-premise and in the cloud. 
+
+#### Vocabulary: On-prem vs On-cloud
+
+Most institutions like MSU have a combination of on-campus or "on premise" IT and services they have moved to cloud providers. 
+
+### What is Cloud Computing?
+
+#### History
+
+Amazon built a revolutionary IT department by investing billions in making that process software-driven in 2000.  Any service had to have an API.    Teams could order and provision the IT servers they needed via the web forms and did not need to burden the IT staff, individual teams in IT worked with each others services with APIs.   They were great a running very large data centers as cheaply as possible, and they sold Target services as a web store.  
+
+In a start-up (or a research group!)  A software team could spend 70% of their time setting up the 'back end' 
+
+They realized that their innovations would help any IT organization and especially internet start-ups like themselves, and that they could sell it.  
+
+Their original and main customers are IT departments of organizations.  
+
+<!-- D2L course management system web-based system required 
+ 
+MSU originally ran, or 'hosted' started by aquiring the web application software and associated systems, building all of the hardware (servers), disk space to hold it all, newtork to connect them, data center space and when you connected to D2L, you connected to a system on the MSU campus. 
+- Scalability : when demand was very high, the system was overwhelmed
+- Maintainablility: required many people to keep it running
+- Cost: The company "bright space" offered to host D2L for institutions.  The student experience is identical.  MSU switch to that model and saved money.  D2L was slow this week becuase now when we access D2L we share infrastructure with everyone in the world.  
+-->
+
+The IT department at Amazon called all the infrastructor needed to run a massive dot-com "muck" and saw this as a secondary supporting role to application development.    
+Blog Post from 2006: ["We Build Muck, So You Don’t Have To"](https://aws.amazon.com/blogs/aws/we_build_muck_s/)
+
+#### NIST defintion of cloud
+
+The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) essential characteristics 
+
+- On-demand self-service. 
+- Measured service: pay for what you get.   
+- Broad network access: accessible from the internet
+- Rapid elasticity: no limits from a customer perspective.  This word was invented by AWS
+- Resource pooling: single resources serve many customers.  
+
+#### Prior Services that are _not_ cloud computing
+
+ **Web hosting** Focused on providing offered many of these features but was limited in service offerings.   I've used a company called dreamhost since early 2000 to provide websites for non-profits and commercial customers, but also email and storage and limited database services.  
+
+**Co-location** Bring your own hardware, eg. Data Center only
+
+**Server Rental** Servers on the internet you could use for various things, primarily web sites & applications.   
+
+**IT Accounting Services** EDS from the 80s 90s by Ross Perot provided IT and Data services to major corporations primarily GM. 
+
+#### Cloud concepts vs Cloud Providers
   
-### Why Cloud computing ?  History may help understand it
-
-
-
-### Cloud concepts vs Cloud Providers
-
 Three major cloud providers are in a constant arms race to provide the same tick-boxes to capture the large contracts (e.g. [Azure vs. Amazon competed for a $10B defense contract](https://www.theregister.com/2022/04/28/nsa_wands_aws/)):  Azure, Amazon Web Services and Google Cloud Platform
 
 Many others provide Cloud : Oracle, IBM, Salesforce, 
@@ -38,35 +165,63 @@ Many provide 'servers' that have been around before it was called cloud: Rackspa
 
 Thousands of companies of specialized services to support the majorvendors (e.g. for billing, management, security, etc)
 
+There is an open source version of cloud computing called "OpenStack" used by universities to build their own private or non-profit clouds.   MSU/UMich uses that for the Osiris project.   Indiana University uses it for their machine called "[JetSteam](https://jetstream-cloud.org/)"
 
 ### Services on the Cloud vs Cloud Providers
 
 Google Search vs Google Docs vs  Google Cloud Platform vs DIY
 
+vs. 
+
 Restaurant vs Box Preapred food vs. Cooking from scratch vs. Farming
 
 to push the analogy further, what would a growing supply company provide to a farmer vs a gardener?   As we begin, we are gardners, not farmers.   
 
- - for us, Cloud Computing => DIY computing.  
+### Cloud for Research 
+
+What are the benefits from research perspective for cloud computing?
+
+  - Custom: can create customized resources only when you need it
+  - On-demand: can run ad-hoc computations on those on-demand resources
+  - Reproducible: a computation can be re-run as needed, meaning cloud resources can be easily re-recreated to re-run your computations. 
+  - Cost effective: unlike commerical applications, more users does not mean more revenue.   Budgets are fixed and the pay-as-you-go model requires vigilance to not over-spend.   
+  - Others? <!-- discussion -->
 
 
-### On-prem vs On-cloud
+#### NIST defintion of cloud: Service Level Model
 
-REview client/server.   Need for servers. 
+The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) defines service models
+ * "service levels" are only a model (or abstraction) for discussion cloud computing, widely used in the IT fields. 
+ * "X as a service" where X is some aspect of IT, usually along the axis of customer responsibility.   
 
-Example: D2L course management system web-based system.   Note about 'web-basd' being old school. Everything is web-based now.  
+
+* Infrastructure as a service:  Replacement for hardware but perhaps not software levels.   This is often compared to making a data center and uses many of the terms.  You need understanding of computing architecture as these services 
+* Platform as a service: Everything in between:  pre-configured and managed infrastructure
+* Software as a service: Little to no configuration is needed but these system may be programmable and integrated with other services.  E.g. Office 365, Google Drive
+
+About this model
+ * the model is abused like all concepts or acronyms in IT:  <!--  for example, iCloud.  If Cloud = internet and "i" stands for internet that means "Internet Internet"  Many other things with "as a service"   network -->
+ * How well does this model apply to the services that cloud providers give us?  Like the species concept in biology, it's not always cut and dried, but can be thought of as a spectrum
  
-MSU started by aquiring the web application software and associated systems, building all of the hardware (servers), disk space to hold it all, newtork to connect them, data center space and when you connected to D2L, you connected to a system on the MSU campus. 
-- Scalability : when demand was very high, the system was 'taxed'
-- Maintainablility: required many people to keep it running
-- Cost: The company "bright space" offered to host D2L for institutions.  The student experience is identical.  MSU switch to that model and saved money.  D2L was slow this week becuase now when we access D2L we share infrastructure with everyone in the world.  
 
-Example : Database systems.   MSU runs massive databases to manage student information. 
+For many cases, the "plaform" is the sweet-spot for researchers who do not have time to aquire the expertise to manage low-level infrastructure and need something more flexible and programmable.     These are often more expensive than DIY infrastruture, but are faster to provision and provide security controls. 
 
-Example: HPC
+#### Cloud "Services" and the Packaging of Open Source Systems
 
+Case Study on Open Source system as Cloud service: **MySQL **
 
- 
+Open source, free Relational database, e.g. SQL. Relational databases store tabular, linked data.   Used by some bioinformatics packages (e.g. https://orthomcl.org/orthomcl/app) and millions of websites. 
+
+  * project: https://www.mysql.com/products/community/ and  https://mariadb.org/
+  * DIY on Azure instructions (eg Iaas): [someone's DIY Mysql](https://github.com/Huachao/azure-content/blob/master/articles/virtual-machines/virtual-machines-linux-install-mysql.md) - don't follow these, they are old and may not work, just an example of the steps involved
+  * Azure MySQL Service (e.g PaaS): [Azure Database for MySQL](https://azure.microsoft.com/en-us/services/mysql/) 
+     * AWS MySQL Service: [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
+     * Google MySQL Service [Cloud SQL](https://cloud.google.com/sql/) 
+  * other companies, such as [Aiven for MySQL](https://aiven.io/mysql)
+
+  * Spin-offs: Amazon also offers [AWS Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)  which is a cloud scale database service that is MySQL-compatible see [Amazon Aurora Paper](https://dl.acm.org/doi/10.1145/3035918.3056101) 
+
+What would a "SaaS" offering for tabular data look like?  A "Google Docs" for Databases?  Perhaps [https://www.airtable.com/](https://www.airtable.com/) ?
 
 ### Learning how to learn about cloud
 
@@ -100,17 +255,6 @@ And finally most closely related to your work are data science, "machine learnin
   - but must be reproducible to document methods
   - even this documentation can quickly veer off in to building production systems for companies to re-run inference say many times a data or with a constant stream of corporate data
 
-### Cloud for Research 
-
-What are the benefits from research perspective for cloud computing?
-
-  - Custom: can create customized resources only when you need it
-  - On-demand: can run ad-hoc computations on those on-demand resources
-  - Reproducible: a computation can be re-run as needed, meaning cloud resources can be easily re-recreated to re-run your computations. 
-  - Cost effective: unlike commerical applications, more users does not mean more revenue.   Budgets are fixed and the pay-as-you-go model requires vigilance to not over-spend.   
-  - Others? <!-- discussion -->
-
-
 ### What documentation *is* available for researchers?
 
 There are general, conceptual introductions and dicussions for academics.   
@@ -120,37 +264,6 @@ There are general, conceptual introductions and dicussions for academics.
   * https://cloudbank-project.github.io/cb-resources/  Seems to be a succesor to the 'cloudmaven' documentation above as members from cloudmaven are contributing here. 
      * [Cloudbank training videos](https://www.cloudbank.org/training/getting-started-using-cloud)
 
-
-#### NIST defintions of cloud: Service Levels and You
-
-The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) defines service models
- * "service levels" are only a model (or abstraction) for discussion cloud computing, widely used in the IT fields. 
- * "X as a service" where X is some aspect of IT, usually along the axis of customer responsibility.   
- * the model is abused like all concepts or acronyms in IT:  iCloud.  If Cloud = internet and "i" stands for internet that means "Internet Internet"
- * How well does this model apply to the services that cloud providers give us?  Like the species concept in biology, it's not always cut and dried, but can be thought of as a spectrum
-
-* Infrastructure (aaS):  Nuts and bolts, DIY, Lego.  You need understanding of computing architecture as these services 
-* Everything in between:  Platforms or pre-configured and managed infrastructure
-* Software (aaS): Little to no configuration is needed but these system may be programmable and integrated with other services.  E.g. Office 365, Google Drive
-
-The sweet-spot for researhces who do not have time to aquire the expertise to manage low-level infrastructure and need something more flexible and programmable than Software, are the platforms.  These are often more expensive than DIY infrastruture, but are faster to provision and provide security controls. 
-
-#### Cloud "Services" and the Packaging of Open Source Systems
-
-Case Study on Open Source system as Cloud service: **MySQL **
-
-Open source, free Relational database, e.g. SQL. Relational databases store tabular, linked data.   Used by some bioinformatics packages (e.g. https://orthomcl.org/orthomcl/app) and millions of websites. 
-
-  * project: https://www.mysql.com/products/community/ and  https://mariadb.org/
-  * DIY on Azure instructions (eg Iaas): [someone's DIY Mysql](https://github.com/Huachao/azure-content/blob/master/articles/virtual-machines/virtual-machines-linux-install-mysql.md) - don't follow these, they are old and may not work, just an example of the steps involved
-  * Azure MySQL Service (e.g PaaS): [Azure Database for MySQL](https://azure.microsoft.com/en-us/services/mysql/) 
-     * AWS MySQL Service: [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
-     * Google MySQL Service [Cloud SQL](https://cloud.google.com/sql/) 
-  * other companies, such as [Aiven for MySQL](https://aiven.io/mysql)
-
-  * Spin-offs: Amazon also offers [AWS Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)  which is a cloud scale database service that is MySQL-compatible see [Amazon Aurora Paper](https://dl.acm.org/doi/10.1145/3035918.3056101) 
-
-What would a "SaaS" offering for tabular data look like?  A "Google Docs" for Databases?  Perhaps [https://www.airtable.com/](https://www.airtable.com/) ?
 
 #### Caveats and help
 

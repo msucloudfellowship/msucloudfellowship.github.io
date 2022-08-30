@@ -13,7 +13,7 @@ nav:
       # - 7. Serverless, Containers, and FaaS: session_serverless/index.md
     - References: references/index.md
     - Cloud Glossary: cloud_glossary.md
-    - 2021-22 syllabus: index2021.md
+    - Previous 21-22 syllabus: index2021.md
 theme: 
   name: material
   features:
