@@ -274,7 +274,7 @@
   
     <li class="md-nav__item">
       <a href="../../index2021/" class="md-nav__link">
-        2021-22 syllabus
+        Previous 21-22 syllabus
       </a>
     </li>
   
@@ -322,8 +322,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#major-components-of-personal-computer-used-in-cloud-computing" class="md-nav__link">
+    Major components of personal computer used in cloud computing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#what-is-a-server" class="md-nav__link">
     What is a server?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machines" class="md-nav__link">
+    Virtual Machines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vocabulary-on-prem-vs-on-cloud" class="md-nav__link">
+    Vocabulary: On-prem vs On-cloud
   </a>
   
 </li>
@@ -334,16 +355,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-cloud-computing-history-may-help-understand-it" class="md-nav__link">
-    Why Cloud computing ?  History may help understand it
+  <a href="#what-is-cloud-computing" class="md-nav__link">
+    What is Cloud Computing?
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Cloud Computing?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    History
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#nist-defintion-of-cloud" class="md-nav__link">
+    NIST defintion of cloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prior-services-that-are-not-cloud-computing" class="md-nav__link">
+    Prior Services that are not cloud computing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cloud-concepts-vs-cloud-providers" class="md-nav__link">
     Cloud concepts vs Cloud Providers
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -355,9 +403,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#on-prem-vs-on-cloud" class="md-nav__link">
-    On-prem vs On-cloud
+  <a href="#cloud-for-research" class="md-nav__link">
+    Cloud for Research
   </a>
+  
+    <nav class="md-nav" aria-label="Cloud for Research">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nist-defintion-of-cloud-service-level-model" class="md-nav__link">
+    NIST defintion of cloud: Service Level Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-services-and-the-packaging-of-open-source-systems" class="md-nav__link">
+    Cloud "Services" and the Packaging of Open Source Systems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -369,33 +437,12 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cloud-for-research" class="md-nav__link">
-    Cloud for Research
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#what-documentation-is-available-for-researchers" class="md-nav__link">
     What documentation is available for researchers?
   </a>
   
     <nav class="md-nav" aria-label="What documentation is available for researchers?">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nist-defintions-of-cloud-service-levels-and-you" class="md-nav__link">
-    NIST defintions of cloud: Service Levels and You
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cloud-services-and-the-packaging-of-open-source-systems" class="md-nav__link">
-    Cloud "Services" and the Packaging of Open Source Systems
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#caveats-and-help" class="md-nav__link">
@@ -480,16 +527,28 @@
 
 
 <h1 id="introducing-cloud-computing-for-research">Introducing cloud computing for research</h1>
-<ul>
-<li><strong>Practical Introduction for Researchers using Microsoft Azure</strong> *</li>
-</ul>
-<p>Patrick Bills, Michigan State University <br/>
-For the 2022 MSU Cloud Computing Fellowship</p>
+<p><em><strong>Practical Introduction for Researchers using Microsoft Azure for the MSU Cloud Computing Fellowship
+</strong></em></p>
+<p>Patrick Bills, Michigan State University <br/></p>
 <h3 id="first-things-first-what-is-computing">First things first : what is computing</h3>
-<p>Prior to understanding what "cloud computing" is, we need to have a base common understanding of what "computing" is.   You come to us with each a unique set of experiences with computing, with more or less experience depending on your previous needs.  This section is designed to provide concepts that most cloud computing courses, videos, etc assume you have. </p>
-<p>Why are we doing this?
-- cloud computing is marketed to IT professionals and managers.  They are who will make the recommendations for checks to be written.  Cloud computing must tick their boxes.   Services are organized and documented for them, not for us. </p>
+<p>You come to us with each a unique set of experiences with computing, with more or less experience depending on your previous needs.  </p>
+<p><strong>Computing in Cloud Computing</strong></p>
+<p>Part of this fellowship will be examining the 'computing' part of cloud computing. </p>
+<p>The application asks the question : </p>
+<blockquote>
+<p>"How can cloud computing help your research?"</p>
+</blockquote>
+<p>I would like to re-frame the question as</p>
+<blockquote>
+<p>"What kinds of computing could help my research?"
+"How can cloud services support that kind of computing?"</p>
+</blockquote>
+<p>Understanding computational technology in general.  For example, while MSU provides email, storage, and high performance computing, it does not provide services for "big data" category, or relational databases for researchers.   But you can provision such a service in minutes using the cloud. </p>
+<p><strong>Vocabulary</strong></p>
 <ul>
+<li>
+<p>cloud computing is marketed to IT professionals and managers.  They are who will make the recommendations for checks to be written.  Cloud computing must tick their boxes.   Services are organized and documented for them, not for us. </p>
+</li>
 <li>
 <p>while cloud computing abstracts away the physical components of a computer but companies use computing concepts as metaphors.  see above.   </p>
 </li>
@@ -498,31 +557,148 @@ For the 2022 MSU Cloud Computing Fellowship</p>
 </li>
 </ul>
 <h3 id="what-is-computer">What is computer?</h3>
-<p>&lt; insert generic diagram of computer &gt;</p>
+<p><img alt="Generic Von Neumann Computer" src="https://en.wikipedia.org/wiki/Von_Neumann_architecture#/media/File:Von_Neumann_Architecture.svg" /> </p>
+<p><img alt="modern internal computer architecture" src="https://en.wikipedia.org/wiki/Von_Neumann_architecture#/media/File:Computer_system_bus.svg" /></p>
+<h4 id="major-components-of-personal-computer-used-in-cloud-computing">Major components of personal computer used in cloud computing</h4>
+<ul>
+<li>User software (scripts, user code, etc)</li>
+<li>Base Software</li>
+<li>Operating System</li>
+<li>CPU &amp; Memory</li>
+<li>Computer Architecture (model type)</li>
+<li>Storage - disk</li>
+<li>Storage - external ( accessible via network )</li>
+<li>Network</li>
+</ul>
+<p>Open question: qhere is the data? </p>
 <h4 id="what-is-a-server">What is a server?</h4>
-<p>there is much more to computing than computation.</p>
-<h3 id="why-cloud-computing-history-may-help-understand-it">Why Cloud computing ?  History may help understand it</h3>
-<h3 id="cloud-concepts-vs-cloud-providers">Cloud concepts vs Cloud Providers</h3>
+<p>The 'Client/server' model invented in the 60s is so successful that we use servers for our daily lives and don't think about it (except when the server is down).  Knowing how to build servers is useful for research.</p>
+<p>This model of computing is important becaues it's at the basis for of cloud computing.   </p>
+<p>A server is any computer that is running software that listens for messages, and then responds. <br />
+ - The 'server' is actually the software
+ - The computer that runs the software is the 'host'
+ - A 'client' is software sends the message, and receives and interprets the response. <br />
+ - the form the message can take is the API.  </p>
+<p>Simple example is a web server: </p>
+<ul>
+<li>client is the web browser</li>
+<li>message = URL which includes address, url paths, and additional parameters (this is only part of the message but is a necessary part)</li>
+</ul>
+<p><code>https://www.amazon.com/Dyvicl-Hanging-Reflective-Woodpecker-Deterrent/dp/B09VXBNTJ1/ref=sr_1_93?brr=1</code></p>
+<ul>
+<li>response = the code for the web page</li>
+<li>client interprets the code and renders the page.   </li>
+<li>
+<p>an alternate client could be a script you write that constructs the request, reads in a web page,  and extract information from it.    </p>
+</li>
+<li>
+<p>the server must be on the network that you can send message to</p>
+</li>
+<li>some networks block some traffic</li>
+<li>servers that accept messages from the Internet are a major security risk</li>
+</ul>
+<p><strong>Data Servers</strong></p>
+<p>Example servers that do no use web clients are data servers, for example relational database server.<br />
+ - message : insert these 5 rows of data <data>
+ - response: <code>inserted 5 rows</code>
+ - message: select rows of students in Math 101
+ - response:  (this is fake data randomly generated)</p>
+<div class="highlight"><pre><span></span><code>&quot;First Name&quot;,&quot;Last Name&quot;,&quot;Email&quot;,&quot;Level&quot;
+&quot;Lucy&quot;,&quot;Grant&quot;,&quot;l.grant@randatmail.com&quot;,&quot;7&quot;
+&quot;Emily&quot;,&quot;Russell&quot;,&quot;e.russell@randatmail.com&quot;,&quot;5&quot;
+&quot;Annabella&quot;,&quot;Ferguson&quot;,&quot;a.ferguson@randatmail.com&quot;,&quot;8&quot;
+etc
+</code></pre></div>
+<h4 id="virtual-machines">Virtual Machines</h4>
+<p>We will cover this in depth next session but the concept is the basis for cloud computing</p>
+<p>Given the strain on IT Departments to provide servers dynamically and the time to provision the hardware to do so, and the fact that many servers are idle much of the time.  Hardware was not utilitized a technique of hosting multiple software servers on a single hardware unit was invented.   </p>
+<p>Server =  hardware + [operating systemn + software] </p>
+<p>Virtual Servers = [Hardware + Virtualization] + N X [OS + Software] </p>
+<p>Virtualization was a necessary conceptual and technological innovation to pave the way for cloud computing and is widely used both on-premise and in the cloud. </p>
+<h4 id="vocabulary-on-prem-vs-on-cloud">Vocabulary: On-prem vs On-cloud</h4>
+<p>Most institutions like MSU have a combination of on-campus or "on premise" IT and services they have moved to cloud providers. </p>
+<h3 id="what-is-cloud-computing">What is Cloud Computing?</h3>
+<h4 id="history">History</h4>
+<p>Amazon built a revolutionary IT department by investing billions in making that process software-driven in 2000.  Any service had to have an API.    Teams could order and provision the IT servers they needed via the web forms and did not need to burden the IT staff, individual teams in IT worked with each others services with APIs.   They were great a running very large data centers as cheaply as possible, and they sold Target services as a web store.  </p>
+<p>In a start-up (or a research group!)  A software team could spend 70% of their time setting up the 'back end' </p>
+<p>They realized that their innovations would help any IT organization and especially internet start-ups like themselves, and that they could sell it.  </p>
+<p>Their original and main customers are IT departments of organizations.  </p>
+<!-- D2L course management system web-based system required 
+
+MSU originally ran, or 'hosted' started by aquiring the web application software and associated systems, building all of the hardware (servers), disk space to hold it all, newtork to connect them, data center space and when you connected to D2L, you connected to a system on the MSU campus. 
+- Scalability : when demand was very high, the system was overwhelmed
+- Maintainablility: required many people to keep it running
+- Cost: The company "bright space" offered to host D2L for institutions.  The student experience is identical.  MSU switch to that model and saved money.  D2L was slow this week becuase now when we access D2L we share infrastructure with everyone in the world.  
+-->
+
+<p>The IT department at Amazon called all the infrastructor needed to run a massive dot-com "muck" and saw this as a secondary supporting role to application development.  <br />
+Blog Post from 2006: <a href="https://aws.amazon.com/blogs/aws/we_build_muck_s/">"We Build Muck, So You Don’t Have To"</a></p>
+<h4 id="nist-defintion-of-cloud">NIST defintion of cloud</h4>
+<p>The <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">NIST definition of cloud computing</a> essential characteristics </p>
+<ul>
+<li>On-demand self-service. </li>
+<li>Measured service: pay for what you get.   </li>
+<li>Broad network access: accessible from the internet</li>
+<li>Rapid elasticity: no limits from a customer perspective.  This word was invented by AWS</li>
+<li>Resource pooling: single resources serve many customers.  </li>
+</ul>
+<h4 id="prior-services-that-are-not-cloud-computing">Prior Services that are <em>not</em> cloud computing</h4>
+<p><strong>Web hosting</strong> Focused on providing offered many of these features but was limited in service offerings.   I've used a company called dreamhost since early 2000 to provide websites for non-profits and commercial customers, but also email and storage and limited database services.  </p>
+<p><strong>Co-location</strong> Bring your own hardware, eg. Data Center only</p>
+<p><strong>Server Rental</strong> Servers on the internet you could use for various things, primarily web sites &amp; applications.   </p>
+<p><strong>IT Accounting Services</strong> EDS from the 80s 90s by Ross Perot provided IT and Data services to major corporations primarily GM. </p>
+<h4 id="cloud-concepts-vs-cloud-providers">Cloud concepts vs Cloud Providers</h4>
 <p>Three major cloud providers are in a constant arms race to provide the same tick-boxes to capture the large contracts (e.g. <a href="https://www.theregister.com/2022/04/28/nsa_wands_aws/">Azure vs. Amazon competed for a $10B defense contract</a>):  Azure, Amazon Web Services and Google Cloud Platform</p>
 <p>Many others provide Cloud : Oracle, IBM, Salesforce, </p>
 <p>Many provide 'servers' that have been around before it was called cloud: Rackspace, </p>
 <p>Thousands of companies of specialized services to support the majorvendors (e.g. for billing, management, security, etc)</p>
+<p>There is an open source version of cloud computing called "OpenStack" used by universities to build their own private or non-profit clouds.   MSU/UMich uses that for the Osiris project.   Indiana University uses it for their machine called "<a href="https://jetstream-cloud.org/">JetSteam</a>"</p>
 <h3 id="services-on-the-cloud-vs-cloud-providers">Services on the Cloud vs Cloud Providers</h3>
 <p>Google Search vs Google Docs vs  Google Cloud Platform vs DIY</p>
+<p>vs. </p>
 <p>Restaurant vs Box Preapred food vs. Cooking from scratch vs. Farming</p>
 <p>to push the analogy further, what would a growing supply company provide to a farmer vs a gardener?   As we begin, we are gardners, not farmers.   </p>
+<h3 id="cloud-for-research">Cloud for Research</h3>
+<p>What are the benefits from research perspective for cloud computing?</p>
 <ul>
-<li>for us, Cloud Computing =&gt; DIY computing.  </li>
+<li>Custom: can create customized resources only when you need it</li>
+<li>On-demand: can run ad-hoc computations on those on-demand resources</li>
+<li>Reproducible: a computation can be re-run as needed, meaning cloud resources can be easily re-recreated to re-run your computations. </li>
+<li>Cost effective: unlike commerical applications, more users does not mean more revenue.   Budgets are fixed and the pay-as-you-go model requires vigilance to not over-spend.   </li>
+<li>Others? <!-- discussion --></li>
 </ul>
-<h3 id="on-prem-vs-on-cloud">On-prem vs On-cloud</h3>
-<p>REview client/server.   Need for servers. </p>
-<p>Example: D2L course management system web-based system.   Note about 'web-basd' being old school. Everything is web-based now.  </p>
-<p>MSU started by aquiring the web application software and associated systems, building all of the hardware (servers), disk space to hold it all, newtork to connect them, data center space and when you connected to D2L, you connected to a system on the MSU campus. 
-- Scalability : when demand was very high, the system was 'taxed'
-- Maintainablility: required many people to keep it running
-- Cost: The company "bright space" offered to host D2L for institutions.  The student experience is identical.  MSU switch to that model and saved money.  D2L was slow this week becuase now when we access D2L we share infrastructure with everyone in the world.  </p>
-<p>Example : Database systems.   MSU runs massive databases to manage student information. </p>
-<p>Example: HPC</p>
+<h4 id="nist-defintion-of-cloud-service-level-model">NIST defintion of cloud: Service Level Model</h4>
+<p>The <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">NIST definition of cloud computing</a> defines service models
+ * "service levels" are only a model (or abstraction) for discussion cloud computing, widely used in the IT fields. 
+ * "X as a service" where X is some aspect of IT, usually along the axis of customer responsibility.   </p>
+<ul>
+<li>Infrastructure as a service:  Replacement for hardware but perhaps not software levels.   This is often compared to making a data center and uses many of the terms.  You need understanding of computing architecture as these services </li>
+<li>Platform as a service: Everything in between:  pre-configured and managed infrastructure</li>
+<li>Software as a service: Little to no configuration is needed but these system may be programmable and integrated with other services.  E.g. Office 365, Google Drive</li>
+</ul>
+<p>About this model
+ * the model is abused like all concepts or acronyms in IT:  <!--  for example, iCloud.  If Cloud = internet and "i" stands for internet that means "Internet Internet"  Many other things with "as a service"   network -->
+ * How well does this model apply to the services that cloud providers give us?  Like the species concept in biology, it's not always cut and dried, but can be thought of as a spectrum</p>
+<p>For many cases, the "plaform" is the sweet-spot for researchers who do not have time to aquire the expertise to manage low-level infrastructure and need something more flexible and programmable.     These are often more expensive than DIY infrastruture, but are faster to provision and provide security controls. </p>
+<h4 id="cloud-services-and-the-packaging-of-open-source-systems">Cloud "Services" and the Packaging of Open Source Systems</h4>
+<p>Case Study on Open Source system as Cloud service: <strong>MySQL </strong></p>
+<p>Open source, free Relational database, e.g. SQL. Relational databases store tabular, linked data.   Used by some bioinformatics packages (e.g. <a href="https://orthomcl.org/orthomcl/app">https://orthomcl.org/orthomcl/app</a>) and millions of websites. </p>
+<ul>
+<li>project: <a href="https://www.mysql.com/products/community/">https://www.mysql.com/products/community/</a> and  <a href="https://mariadb.org/">https://mariadb.org/</a></li>
+<li>DIY on Azure instructions (eg Iaas): <a href="https://github.com/Huachao/azure-content/blob/master/articles/virtual-machines/virtual-machines-linux-install-mysql.md">someone's DIY Mysql</a> - don't follow these, they are old and may not work, just an example of the steps involved</li>
+<li>Azure MySQL Service (e.g PaaS): <a href="https://azure.microsoft.com/en-us/services/mysql/">Azure Database for MySQL</a> <ul>
+<li>AWS MySQL Service: <a href="https://aws.amazon.com/rds/mysql/">Amazon RDS for MySQL</a></li>
+<li>Google MySQL Service <a href="https://cloud.google.com/sql/">Cloud SQL</a> </li>
+</ul>
+</li>
+<li>
+<p>other companies, such as <a href="https://aiven.io/mysql">Aiven for MySQL</a></p>
+</li>
+<li>
+<p>Spin-offs: Amazon also offers <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html">AWS Aurora</a>  which is a cloud scale database service that is MySQL-compatible see <a href="https://dl.acm.org/doi/10.1145/3035918.3056101">Amazon Aurora Paper</a> </p>
+</li>
+</ul>
+<p>What would a "SaaS" offering for tabular data look like?  A "Google Docs" for Databases?  Perhaps <a href="https://www.airtable.com/">https://www.airtable.com/</a> ?</p>
 <h3 id="learning-how-to-learn-about-cloud">Learning how to learn about cloud</h3>
 <p>You may have looked at the various websites and poked around the web, and found it's just not clear at all how cloud computing may be helpful to you, even though it all sounds great.  The challenge for researchers learning about cloud is that most cloud documentation for isn't written for you.  </p>
 <p>Cloud training and documentation are mostly written for IT professionals like system admins and architects, software developers, business people, and agency managers.  Researchers tend to be a little of all of those things.   </p>
@@ -551,15 +727,6 @@ For the 2022 MSU Cloud Computing Fellowship</p>
 <li>but must be reproducible to document methods</li>
 <li>even this documentation can quickly veer off in to building production systems for companies to re-run inference say many times a data or with a constant stream of corporate data</li>
 </ul>
-<h3 id="cloud-for-research">Cloud for Research</h3>
-<p>What are the benefits from research perspective for cloud computing?</p>
-<ul>
-<li>Custom: can create customized resources only when you need it</li>
-<li>On-demand: can run ad-hoc computations on those on-demand resources</li>
-<li>Reproducible: a computation can be re-run as needed, meaning cloud resources can be easily re-recreated to re-run your computations. </li>
-<li>Cost effective: unlike commerical applications, more users does not mean more revenue.   Budgets are fixed and the pay-as-you-go model requires vigilance to not over-spend.   </li>
-<li>Others? <!-- discussion --></li>
-</ul>
 <h3 id="what-documentation-is-available-for-researchers">What documentation <em>is</em> available for researchers?</h3>
 <p>There are general, conceptual introductions and dicussions for academics.   </p>
 <ul>
@@ -570,37 +737,6 @@ For the 2022 MSU Cloud Computing Fellowship</p>
 </ul>
 </li>
 </ul>
-<h4 id="nist-defintions-of-cloud-service-levels-and-you">NIST defintions of cloud: Service Levels and You</h4>
-<p>The <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">NIST definition of cloud computing</a> defines service models
- * "service levels" are only a model (or abstraction) for discussion cloud computing, widely used in the IT fields. 
- * "X as a service" where X is some aspect of IT, usually along the axis of customer responsibility. <br />
- * the model is abused like all concepts or acronyms in IT:  iCloud.  If Cloud = internet and "i" stands for internet that means "Internet Internet"
- * How well does this model apply to the services that cloud providers give us?  Like the species concept in biology, it's not always cut and dried, but can be thought of as a spectrum</p>
-<ul>
-<li>Infrastructure (aaS):  Nuts and bolts, DIY, Lego.  You need understanding of computing architecture as these services </li>
-<li>Everything in between:  Platforms or pre-configured and managed infrastructure</li>
-<li>Software (aaS): Little to no configuration is needed but these system may be programmable and integrated with other services.  E.g. Office 365, Google Drive</li>
-</ul>
-<p>The sweet-spot for researhces who do not have time to aquire the expertise to manage low-level infrastructure and need something more flexible and programmable than Software, are the platforms.  These are often more expensive than DIY infrastruture, but are faster to provision and provide security controls. </p>
-<h4 id="cloud-services-and-the-packaging-of-open-source-systems">Cloud "Services" and the Packaging of Open Source Systems</h4>
-<p>Case Study on Open Source system as Cloud service: <strong>MySQL </strong></p>
-<p>Open source, free Relational database, e.g. SQL. Relational databases store tabular, linked data.   Used by some bioinformatics packages (e.g. <a href="https://orthomcl.org/orthomcl/app">https://orthomcl.org/orthomcl/app</a>) and millions of websites. </p>
-<ul>
-<li>project: <a href="https://www.mysql.com/products/community/">https://www.mysql.com/products/community/</a> and  <a href="https://mariadb.org/">https://mariadb.org/</a></li>
-<li>DIY on Azure instructions (eg Iaas): <a href="https://github.com/Huachao/azure-content/blob/master/articles/virtual-machines/virtual-machines-linux-install-mysql.md">someone's DIY Mysql</a> - don't follow these, they are old and may not work, just an example of the steps involved</li>
-<li>Azure MySQL Service (e.g PaaS): <a href="https://azure.microsoft.com/en-us/services/mysql/">Azure Database for MySQL</a> <ul>
-<li>AWS MySQL Service: <a href="https://aws.amazon.com/rds/mysql/">Amazon RDS for MySQL</a></li>
-<li>Google MySQL Service <a href="https://cloud.google.com/sql/">Cloud SQL</a> </li>
-</ul>
-</li>
-<li>
-<p>other companies, such as <a href="https://aiven.io/mysql">Aiven for MySQL</a></p>
-</li>
-<li>
-<p>Spin-offs: Amazon also offers <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html">AWS Aurora</a>  which is a cloud scale database service that is MySQL-compatible see <a href="https://dl.acm.org/doi/10.1145/3035918.3056101">Amazon Aurora Paper</a> </p>
-</li>
-</ul>
-<p>What would a "SaaS" offering for tabular data look like?  A "Google Docs" for Databases?  Perhaps <a href="https://www.airtable.com/">https://www.airtable.com/</a> ?</p>
 <h4 id="caveats-and-help">Caveats and help</h4>
 <p>As part of this fellowship, our goal is to help you translate documentation written for the systems and developer perspectives into a research perspective.  </p>
 <ul>
