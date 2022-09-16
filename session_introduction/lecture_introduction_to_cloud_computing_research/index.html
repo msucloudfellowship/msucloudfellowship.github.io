@@ -314,8 +314,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-things-first-what-is-computing" class="md-nav__link">
-    First things first : what is computing
+  <a href="#part-1-what-is-computing" class="md-nav__link">
+    Part 1: what is computing
   </a>
   
 </li>
@@ -363,8 +363,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-computing-what-is-a-server_1" class="md-nav__link">
-    What is Computing: What is a server?
+  <a href="#what-is-computing-data-server-example" class="md-nav__link">
+    What is Computing: Data Server Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-computing-major-components-of-server-computer" class="md-nav__link">
+    What is computing: Major components of server computer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computing-concept-virtualization" class="md-nav__link">
+    Computing Concept: Virtualization
   </a>
   
 </li>
@@ -377,8 +391,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#computing-concept-virtualization" class="md-nav__link">
-    Computing Concept: Virtualization
+  <a href="#computing-concept-software-defined-networks" class="md-nav__link">
+    Computing Concept: Software-defined networks
   </a>
   
 </li>
@@ -412,11 +426,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prior-web-based-services-that-are-not-cloud-computing" class="md-nav__link">
-    Prior Web-based Services that are not cloud computing
+  <a href="#other-web-based-services-that-are-not-cloud-computing" class="md-nav__link">
+    Other Web-based services that are not cloud computing
   </a>
   
-    <nav class="md-nav" aria-label="Prior Web-based Services that are not cloud computing">
+    <nav class="md-nav" aria-label="Other Web-based services that are not cloud computing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -604,7 +618,7 @@ class: gaia
 <h4 id="practical-introduction-for-researchers-using-microsoft-azure-for-the-msu-cloud-computing-fellowship"><em>Practical Introduction for Researchers using Microsoft Azure for the MSU Cloud Computing Fellowship</em></h4>
 <p><strong>Patrick Bills, Michigan State University</strong></p>
 <hr />
-<h2 id="first-things-first-what-is-computing">First things first : what is computing</h2>
+<h2 id="part-1-what-is-computing">Part 1: what is computing</h2>
 <p>You come to us with each a unique set of experiences with computing, with more or less experience depending on your previous needs.  </p>
 <p>A challenge we have seen for the many years we've been helping people is understanding the context of computing in their research to understand the tools they have available</p>
 <p><strong>Goal:</strong> <em>help you connect cloud computing to your research in a meaningful way</em></p>
@@ -674,13 +688,14 @@ I/O is used for screen, printer, camera, sound, internal disk and network connec
 </ul>
 <!-- what is the host in this URL?  What is the message?  We could spend a week talking about web servers, protocols and a year about programming web server.  The important thing is that  there is a host, the 'web server' software on the host, and the client(s) connecting to it to get something.  -->
 <hr />
-<h2 id="what-is-computing-what-is-a-server_1">What is Computing: What is a server?</h2>
-<p><strong>Example: Data Servers</strong>
- - Client: special database client (not web browser)
- - message : insert these 5 rows of data <data>
- - response: <code>inserted 5 rows</code>
- - message: select rows of students in Math 101
- - response:  data such as </p>
+<h2 id="what-is-computing-data-server-example">What is Computing: Data Server Example</h2>
+<ul>
+<li>Client: special database client (not web browser)</li>
+<li>message : insert these 5 rows of data <data></li>
+<li>response: <code>inserted 5 rows</code></li>
+<li>message: select rows of students in Math 101</li>
+<li>response:  data such as </li>
+</ul>
 <div class="highlight"><pre><span></span><code>&quot;First Name&quot;,&quot;Last Name&quot;,&quot;Email&quot;,&quot;Level&quot;
 &quot;Lucy&quot;,&quot;Grant&quot;,&quot;l.grant@randatmail.com&quot;,&quot;7&quot;
 &quot;Emily&quot;,&quot;Russell&quot;,&quot;e.russell@randatmail.com&quot;,&quot;5&quot;
@@ -690,16 +705,18 @@ etc
 <!-- Example servers that do no use web clients are data servers, for example relational database server.  -->
 
 <hr />
-<h2 id="what-is-computing-servers-and-networks">What is Computing: Servers and Networks</h2>
-<p><strong>Networking Requirements to access a server:</strong></p>
+<h2 id="what-is-computing-major-components-of-server-computer">What is computing: Major components of server computer</h2>
+<p>The components are nearly the same as a personal computer</p>
 <ul>
-<li>the server must be on the same network as you to receive your message  <!-- I can run a web server right on my laptop, but you couldn't reach it.  the network is me talking to myself --></li>
-<li>some networks block some traffic (for security)</li>
-<li>servers that accept messages from the Internet are a major security risk</li>
-<li>IT people and cloud architects spend a lot of time designing secure networks</li>
+<li>Server Software set to listen on network</li>
+<li>(remote management systems)</li>
+<li>Operating System (hardened for security)</li>
+<li>Central Processor (CPU) &amp; Memory (RAM) (large)</li>
+<li>Computer Architecture (designed for high availability)</li>
+<li>Storage - local disk (designed for high availability)</li>
+<li>Storage - external ( attached or via network )</li>
+<li>Network (high-speed)</li>
 </ul>
-<!-- why do I think this is important?  not only can you make a server (web, data, cluster, etc with cloud but everything you interact with in cloud is a server.  Everything -->
-
 <hr />
 <h2 id="computing-concept-virtualization">Computing Concept: Virtualization</h2>
 <p>Given the strain on IT Departments to provide servers dynamically and the time to provision the hardware to do so, and the fact that many servers are idle much of the time.  A technique of hosting multiple software servers on a single hardware unit was invented.   </p>
@@ -708,6 +725,29 @@ etc
 <li>many virtual servers = 1 box: more efficient use of hardware</li>
 <li>Servers could be provisioned automatically!   </li>
 <li>Virtualization was a necessary conceptual and technological innovation to pave the way for cloud computing and is widely used both on-premise and in the cloud.</li>
+</ul>
+<hr />
+<h2 id="what-is-computing-servers-and-networks">What is Computing: Servers and Networks</h2>
+<p><strong>Networking Requirements to access a server:</strong></p>
+<ul>
+<li>the server must be on the same network as you to receive your message  <!-- I can run a web server right on my laptop, but you couldn't reach it.  the network is me talking to myself --></li>
+<li>some networks block some traffic (for security)</li>
+<li>servers that accept messages from the Internet are a major security risk</li>
+<li>network failure stops all work for everyone</li>
+<li>IT spend a lot of time designing efficient, robust, and secure networks</li>
+</ul>
+<!-- why do I think this is important?  not only can you make a server (web, data, cluster, etc with cloud but everything you interact with in cloud is a server.  Everything -->
+<hr />
+<h2 id="computing-concept-software-defined-networks">Computing Concept: Software-defined networks</h2>
+<ul>
+<li>A server on a network accessible to possible hackers is increases security vulnerability</li>
+<li>
+<p>Data networks can be designed to partition servers so only accessibles from some locations, or with credentials, or with a single point of entry e.g. gateway)</p>
+</li>
+<li>
+<p>In 1990s nnetwork systems configurable by software </p>
+</li>
+<li>Like virtual machines, system architecture could be flexibly changes with software.  </li>
 </ul>
 <hr />
 <h2 id="what-is-cloud-computing-history">What is Cloud Computing? History</h2>
@@ -757,7 +797,8 @@ li {
 <p>Blog Post from 2006: <a href="https://aws.amazon.com/blogs/aws/we_build_muck_s/">"We Build Muck, So You Don’t Have To"</a></p>
 <hr />
 <h2 id="what-is-cloud-computing-nist-defintion-of-cloud">What is Cloud Computing? NIST defintion of cloud</h2>
-<p>The <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">NIST definition of cloud computing</a> essential characteristics </p>
+<p>Government offices interested in purchasing cloud computing needed a definition of it to differentiate from other kinds of computing, hence...
+the <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">NIST definition of cloud computing</a> essential characteristics </p>
 <ul>
 <li><strong>On-demand self-service</strong>. </li>
 <li><strong>Measured service</strong>: pay for what you get.   </li>
@@ -766,7 +807,7 @@ li {
 <li><strong>Resource pooling</strong>: single resources serve many customers.  </li>
 </ul>
 <hr />
-<h2 id="prior-web-based-services-that-are-not-cloud-computing">Prior Web-based Services that are <em>not</em> cloud computing</h2>
+<h2 id="other-web-based-services-that-are-not-cloud-computing">Other Web-based services that are <em>not</em> cloud computing</h2>
 <ul>
 <li>
 <p><strong>Web hosting</strong> Focused on providing offered many of these features but was limited in service offerings.   I've used a company called dreamhost since early 2000 to provide websites for non-profits and commercial customers, but also email and storage and limited database services.  </p>
@@ -778,7 +819,7 @@ li {
 <p><strong>Server Rental</strong> Servers on the internet you could use for various things, primarily web sites &amp; applications.   (Rackspace) </p>
 </li>
 <li>
-<p><strong>IT Accounting Services</strong> EDS from the 80s 90s by Ross Perot provided IT and Data services to major corporations primarily GM. </p>
+<p><strong>Other remote computing services</strong> example sending your accounting data to an external service for processing (which now seems quaint).  EDS from the 80s 90s by Ross Perot provided IT and Data services to major corporations primarily GM. </p>
 </li>
 </ul>
 <hr />

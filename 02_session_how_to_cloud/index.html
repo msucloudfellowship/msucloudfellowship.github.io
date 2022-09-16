@@ -13,7 +13,7 @@
     
     
       
-        <title>MSU Cloud Computing Fellowship 2022-23 - MSU Cloud Computing Fellowship</title>
+        <title>Session 2: What is the cloud and how does it work? An introduction using Virtual Machines - MSU Cloud Computing Fellowship</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#msu-cloud-computing-fellowship-2022-23" class="md-skip">
+        <a href="#session-2-what-is-the-cloud-and-how-does-it-work-an-introduction-using-virtual-machines" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MSU Cloud Computing Fellowship 2022-23
+              Session 2: What is the cloud and how does it work?  An introduction using Virtual Machines
             
           </span>
         </div>
@@ -300,6 +300,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#readings" class="md-nav__link">
+    Readings
+  </a>
+  
+    <nav class="md-nav" aria-label="Readings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloud-background" class="md-nav__link">
+    Cloud background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-references" class="md-nav__link">
+    Other References
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fellowship-materials" class="md-nav__link">
+    Fellowship Materials
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine-background" class="md-nav__link">
+    Virtual Machine Background
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activities" class="md-nav__link">
+    Activities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fellowship-meeting" class="md-nav__link">
+    Fellowship Meeting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-post-session-materials" class="md-nav__link">
+    Additional Post-session materials
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -312,137 +382,57 @@
                 
 
 
-<h1 id="msu-cloud-computing-fellowship-2022-23">MSU Cloud Computing Fellowship 2022-23</h1>
-<h1 id="1-introduction-to-the-2022-23-msu-cloud-computing-fellowship">1: Introduction to the 2022-23 MSU Cloud Computing Fellowship</h1>
-<figure>    
-  <img src="../img/facing_the_atlantic_clouds_psbills_2021.gif" /
-  <figcaption><em>You don't have to face the clouds alone</em></figcaption>
-</figure>
-
-<h2 id="welcome">Welcome!</h2>
-<p>This is the first 'session' of the MSU Cloud Computing Fellowship (CCF) for 2022-2023.  For a description of the program and how sessions are organized, see the <a href="..">CCF home page</a></p>
-<p>The goals of this introductory session are to orient you to this program, introduce ourselves to each other, provide some background on cloud computing, set up our technology, and discuss what all of our expectations are.  </p>
-<p>If possible during the first week of this semester, please complete the following activities prior to our first synchronous meeting <strong>September 2</strong>.   If you have any issues, trouble with these activities, or won't be able to attend the introductory meeting, or have any questions at all about your participating in the fellowship, please <a href="../contact/">contact us</a>.  </p>
-<h2 id="activities">Activities:</h2>
-<!--  note  - this was done in 2021 and this text is saved but commented out
-
-**Complete a Brief Survey**
-
-All 2021-22 participants were sent an introductory email that included a link to a brief survey describing preferences and techmology exposure.   Please complete this survey prior to our first meeting.  -->
-
-<p><strong>Introduce yourself on Microsoft Teams</strong></p>
-<p>You should have all been given access to a Team "MSU ICER Cloud Computing Fellowship" via your NetID.    </p>
-<ul>
-<li>Please log in to Teams (via the web <a href="https://teams.microsoft.com/">https://teams.microsoft.com/</a> or using the Teams client)</li>
-<li>Post a new message in the "general" channel just saying "hello" and include your name, department and how you prefer to be addressed.   </li>
-<li>If necessary MSU IT has documentation about MS Teams here:  <a href="https://tech.msu.edu/technology/collaborative-tools/spartan365/">https://tech.msu.edu/technology/collaborative-tools/spartan365/</a>  ( the link on that page requires yet another MSU log-in)</li>
-</ul>
-<p><strong>Confirm Access to Azure Portal</strong></p>
-<ul>
-<li>Go to <a href="https://portal.azure.com">https://portal.azure.com</a>.</li>
-<li>Log in with your MSU netid and password.</li>
-<li>Ensure you can access the Azure main web "portal."  </li>
-<li>You don't need to (and shouldn't) create any new resources or work with this website; simply confirm you have access.   You may see a list of "resources" and will introduce Azure during our first meeting. </li>
-</ul>
+<h1 id="session-2-what-is-the-cloud-and-how-does-it-work-an-introduction-using-virtual-machines">Session 2: What is the cloud and how does it work?  An introduction using Virtual Machines</h1>
+<p><img align="right" alt="Chaplin still from Modern Times 1936" src="../img/chaplin_clockworks.jpg" /> When many people think of "cloud computing" they think of computers in the cloud, or virtual machines.   Cloud computing companies offer much more than just virtualized hardware, but this is a good place to start.   This session is designed to be a hands-on workshop where we walk-through creating the resources needed for to run a computer in the cloud, logging into this computer, copying data and using that data in a program.    At the end of the session you should have a good introduction of what it means to "cloud compute."</p>
 <h2 id="readings">Readings</h2>
+<h4 id="cloud-background">Cloud background</h4>
 <ul>
-<li><a href="https://s3.us-east-2.amazonaws.com/a-book/Orienting.html">Chapter 1: Orienting in the cloud universe</a> <br>from <strong>"Cloud Computing for Science and Engineering", Foster and Gannon</strong><br />
-     ( <em><a href="https://mitpress.ublish.com/ereader/239/?preview#page/1">Alternative link to publisher preview chapter</a></em>  )</li>
-<li><a href="../references/DRAFT_cloud_computing_for_academic_research_parvizi_2021.pdf">Using Cloud Computing for Academic Research</a>, Mahmoud Parvizi (draft version).   </li>
-<li>Optional Historical Note <a href="https://www.technologyreview.com/2011/10/31/257406/who-coined-cloud-computing/">Who Coined 'Cloud Computing'?</a> by Antonio Regalado, October 2011, MIT Technology Review</li>
+<li><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">The NIST Definition of Cloud Computing</a>  The framework that most widely used to describe aspects of cloud computing, and categorize cloud sevices. </li>
+<li><a href="https://social.technet.microsoft.com/wiki/contents/articles/4633.microsoft-reference-architecture-what-is-infrastructure-as-a-service.aspx">Microsoft Reference Architecture: What is Infrastructure as a Service?</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-overview#getting-around-the-portal">Orientation Azure Portal</a></li>
 </ul>
-<h3 id="introductions">Introductions</h3>
+<h4 id="other-references">Other References</h4>
+<p>These resources are abstract introductions or discussions about cloud computing, mostly from an academic perspective.  However "academic" can also mean those responsible for maintaining a university's IT infrastructure or websites.   </p>
 <ul>
-<li>Mahmoud Parvizi, Instructor &amp; Research Consultant, ICER<ul>
-<li>Past experience &amp; current role</li>
-<li>Cloud facilitator</li>
-<li>Participant in first Fellowship cohort</li>
-</ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Cloud_computing">Wikipedia article on cloud computing</a> is actually pretty good</p>
 </li>
-<li>Patrick Bills, Instructor &amp; Staff, Data Management &amp; Analytics Data Science Team. </li>
-<li>Brian O'shea, Director, MSU Institute for Cyber-Enabled Research (ICER)</li>
-<li>Danielle Barnes, Associate Director, Data Management &amp; Analytics (DMA), MSU IT Services. </li>
-</ul>
-<p><a href="https://mediaspace.msu.edu/media/MSU+Cloud+Fellowship+2021-2022+Welcome+and+Introductions/1_ju6ahdve">A video of our introductions</a> recorded in 2021 is avaialble on MSU MediaSpace (requires MSU log-in).   </p>
-<h3 id="participant-introductions-discussion">Participant Introductions &amp; Discussion</h3>
-<p><strong>Introductions from the 2022-23 Cloud Computing Fellows:</strong></p>
-<ul>
-<li>About you: your preferred name and pronouns, which degree program or department if faculty. </li>
-<li>Research synopsis and methods</li>
-<li>Previous experience with reseach computing including cloud computing (if any)</li>
-<li>Current research computing hurdles, roadblocks, challenges &amp; triumphs</li>
-<li>Your goals for this fellowship<ul>
-<li>For example, how could cloud computing support yuor research?  What do you think the cloud is or is good for, in general?</li>
-</ul>
+<li>
+<p>[M. Armbrust et al. "Above the Clouds: A Berkeley View of Cloud Computing. Technical Report UCB/EECS-2009-28 "University of California at Berkeley, Electrical Engineering and Computer Sciences, 2009 PDF](<a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-28.pdf">https://www2.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-28.pdf</a>} <br>
+   Written only 3 years after the launch of AWS, this is very insightful discussion of the value of cloud computing</p>
+</li>
+<li>
+<p><a href="https://www.researchgate.net/profile/Adnan-Ashraf-10/publication/258286578_Introduction_to_Cloud_Computing_Technologies/links/00b49527b8906bb0f4000000/Introduction-to-Cloud-Computing-Technologies.pdf?origin=publication_detail">I. Porres, T. Mikkonen, A. Ashraf, eds.  "Developing Cloud Software Algorithms, Applications, and Tools." TUCS General Publication, No 60, October 2013 ISBN 978-952-12-2952-7 (pdf)</a></p>
 </li>
 </ul>
-<h3 id="fellowship-program-overview">Fellowship Program Overview</h3>
-<p>Review our "<a href="..#syllabus">syllabus</a>" on the home page of this website for the schedule and topics we will cover.   </p>
-<p>Program synopsis:</p>
+<h4 id="fellowship-materials">Fellowship Materials</h4>
 <ul>
-<li>Fall semester materials, activities, seminars and discussions (Pat Bills):    <ul>
-<li>Goal, scope and expectation;</li>
-<li>structure (pre-session materials and activities, "textbook");</li>
-<li>in-person meeting approx bi-weekly and excluding holidays;</li>
-<li>our expectations.</li>
+<li>Top-down description of how <a href="azure_organization/">Azure is organized</a></li>
+<li><a href="intro_to_cloud_interfaces/">Summary of Cloud Interfaces</a></li>
 </ul>
-</li>
-<li>Winter/Spring semester Projects (Mahmoud Parvizi):<ul>
-<li>Goal, scope and expectation;</li>
-<li>Proposal write-up and presentation early January;</li>
-<li>Check-points to discuss progress and hurdles</li>
-<li>Office hours &amp; help</li>
-<li>Final presentation during Symposium late april</li>
-</ul>
-</li>
-</ul>
-<h4 id="goals">Goals</h4>
-<p><strong>Help you get an understanding of:</strong></p>
+<h4 id="virtual-machine-background">Virtual Machine Background</h4>
 <ul>
-<li>what is cloud computing?</li>
-<li>what is cloud computing useful for? </li>
-<li>when should it use it for my research computing?</li>
-<li>how can I use it?</li>
-<li>Understanding of the context of the technology we are learning about.   </li>
+<li><a href="https://azure.microsoft.com/en-us/overview/what-is-a-virtual-machine/">What is a virtual machine (VM)?</a>  Introduction from Microsoft</li>
+<li><a href="https://www.youtube.com/watch?v=42fwh_1KP_o">What is a Virtual Server?</a> Youtube Video from 
+IBM describing how companies (including MSU!) use virtualization to run multiple computers on one server to optimize the use of space in a data center. </li>
+<li><a href="https://www.redhat.com/en/topics/cloud-computing/cloud-vs-virtualization">What's the difference between cloud and virtualization?</a> from RedHat, a Linux Operating system company</li>
 </ul>
-<p><strong>Help you get some practical experience</strong></p>
+<h2 id="activities">Activities</h2>
 <ul>
-<li>apply cloud to some aspect of your own research</li>
-<li>apply cloud to generic/canned research-like problem</li>
+<li><a href="azure_portal_walkthrough/">Using the Azure Portal : tutorial and video</a>
+    <em>This is a more detailed tutorial and video of the quick walk-through we did during our live session for Week 1 on September 3</em></li>
 </ul>
-<p><strong>Non Goals:</strong></p>
+<h2 id="fellowship-meeting">Fellowship Meeting</h2>
+<p><strong>September 10, 2021.  Zoom link sent via email</strong></p>
 <ul>
-<li>prepare you for a cloud computing certification (there are many existing resources for that.  )</li>
-<li>become experts in everything </li>
-<li>build a dot-com empire</li>
-<li>cover all aspects of cloud</li>
+<li><a href="msu-cloud-fellowship21-session2.pdf">Presentation (PDF)</a></li>
+<li>Review of Introduction to Cloud materials: discussion and questions</li>
+<li>Questions about the nature of cloud</li>
+<li>Activity: <a href="azure_vm_walkthrough/">Creating (and deleting) a Virtual Machine with Azure</a>  <i style="color:red"><strong>updated</strong> 9/16; includes instructions for Linux</i></li>
 </ul>
-<h3 id="introduction-to-computing-and-cloud-computing">Introduction to Computing and Cloud Computing</h3>
+<h2 id="additional-post-session-materials">Additional Post-session materials</h2>
 <ul>
-<li><a href="brief_introduction_to_cloud_computing_research.html">Seminar, Pat Bills</a></li>
-<li>References: <ul>
-<li>The <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">NIST definition of cloud computing</a> </li>
-</ul>
-</li>
-<li>Discussion </li>
-</ul>
-<h3 id="demonstration-using-the-azure-portal">Demonstration: Using the Azure Portal</h3>
-<p>A quick, live demonstration orienting you to the Azure portal and working with budgets.  Our next session activities will include a detailed workshop on creating cloud computing resources such as a virtual machine. </p>
-<p>Tutorial: <a href="cost_alert/">"Setting a Cost Alert Using the Azure Portal"</a></p>
-<!-- Log into https://portal.azure.com with your MSU NetID
- - confirm you have access to a "resource group"
-     - aside: high level description of "what is a resource group?"  This is kind of like your "cloud locker"
- - understanding the navigation of the Azure portal
-     - resource
-     - properties pane on left side
- - find the 'budgets' section of your resource group
- - edit the budget to add an alert at 50% spend using your preferred email address -->
-
-<p>More information about the azure portal including a video walk-through of the Azure portal is available in <a href="../session_how_to_cloud#Activties">Session 2</a> activities. </p>
-<h3 id="questions-and-discussion">Questions and Discussion</h3>
-<ul>
-<li>What things are at the top of your mind as you begin this program?  </li>
-<li>Which of these topics resonates with your previous experience using computing or cloud computing (if any)?</li>
+<li><a href="costs/azure_cloud_cost_basics/">Determining Azure Costs</a></li>
 </ul>
 
 
