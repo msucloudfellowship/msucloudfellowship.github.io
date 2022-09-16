@@ -333,7 +333,7 @@ class: gaia
 
 -->
 
-<style>li { font-size: 1em; }
+<style>li { font-size: 0.9em; }
 section.gaia{--color-background: #209ECE;}
 </style>
 
@@ -375,7 +375,7 @@ A challenge we have seen for the many years we've been helping people is underst
 </li>
 </ul>
 <hr />
-<h2 id="what-is-computing-major-components-of-computer">What is computing: Major components of computer</h2>
+<h2 id="about-computing-major-components-of-computer">About Computing: Major components of computer</h2>
 <style scoped>
 li {
     font-size:1em;
@@ -397,7 +397,7 @@ li {
 I/O is used for screen, printer, camera, sound, internal disk and network connection.  I/O attachs to 'ports' on computer.  for Servers, we assign a 'port' a number.     For cloud we have only the network connection Q's 1) has anyone used mounted storage from a network file server?   Open question: where is the data? A: everywhere -->
 
 <hr />
-<h2 id="what-is-computing-what-is-a-server">What is Computing: What is a server?</h2>
+<h2 id="about-computing-what-is-a-server">About Computing: What is a server?</h2>
 <p>Cloud computing is all about "servers," so we should define that. </p>
 <p>A server is any computer connected to a network, running software that listens for, and responsed to, messages
  - The 'server' is actually the software, not the hardware <!-- you run a server on your laptop -->
@@ -407,7 +407,7 @@ I/O is used for screen, printer, camera, sound, internal disk and network connec
 <!-- The 'Client/server' model invented in the 60s is so successful that we use servers for our daily lives and don't think about it (except when the server is down).  This model of computing is important because it's at the basis for of cloud computing.    -->
 
 <hr />
-<h2 id="what-is-computing-example-server-web-server">What is Computing: Example Server: Web server?</h2>
+<h2 id="about-computing-example-server-web-server">About Computing: Example Server: Web server?</h2>
 <ul>
 <li>client is the web browser</li>
 <li>message = URL which includes address, url paths, and additional parameters <!-- this is only part of the message but is a necessary part --></li>
@@ -418,24 +418,20 @@ I/O is used for screen, printer, camera, sound, internal disk and network connec
 </ul>
 <!-- what is the host in this URL?  What is the message?  We could spend a week talking about web servers, protocols and a year about programming web server.  The important thing is that  there is a host, the 'web server' software on the host, and the client(s) connecting to it to get something.  -->
 <hr />
-<h2 id="what-is-computing-data-server-example">What is Computing: Data Server Example</h2>
+<h2 id="about-computing-other-types-of-servers">About Computing: Other Types of Servers</h2>
 <ul>
-<li>Client: special database client (not web browser)</li>
-<li>message : insert these 5 rows of data <data></li>
-<li>response: <code>inserted 5 rows</code></li>
-<li>message: select rows of students in Math 101</li>
-<li>response:  data such as </li>
+<li><strong>Database</strong> Client: special database client (not web browser) sends data commands as messages, response is tabular outputs</li>
+<li><strong>File Servers</strong>  Share files.  We use Cloud file sync services, but </li>
+<li><strong>Collaboration</strong> Email, calendaring etc</li>
+<li><strong>Enterprise Data Systems</strong> for loading, cataloging, transforming business data</li>
+<li><strong>Security</strong> Firewalls, Proxy, network traffic management</li>
+<li><strong>Monitoring</strong> system health data collection, accessible via another web server</li>
+<li><strong>Web-based services</strong> For example D2L.  </li>
 </ul>
-<div class="highlight"><pre><span></span><code>&quot;First Name&quot;,&quot;Last Name&quot;,&quot;Email&quot;,&quot;Level&quot;
-&quot;Lucy&quot;,&quot;Grant&quot;,&quot;l.grant@randatmail.com&quot;,&quot;7&quot;
-&quot;Emily&quot;,&quot;Russell&quot;,&quot;e.russell@randatmail.com&quot;,&quot;5&quot;
-&quot;Annabella&quot;,&quot;Ferguson&quot;,&quot;a.ferguson@randatmail.com&quot;,&quot;8&quot;
-etc
-</code></pre></div>
 <!-- Example servers that do no use web clients are data servers, for example relational database server.  -->
 
 <hr />
-<h2 id="what-is-computing-servers-and-networks">What is Computing: Servers and Networks</h2>
+<h2 id="about-computing-servers-and-networks">About Computing: Servers and Networks</h2>
 <p><strong>Networking Requirements to access a server:</strong></p>
 <ul>
 <li>the server must be on the same network as you to receive your message  <!-- I can run a web server right on my laptop, but you couldn't reach it.  the network is me talking to myself --></li>
@@ -447,12 +443,18 @@ etc
 <!-- why do I think this is important?  not only can you make a server (web, data, cluster, etc with cloud but everything you interact with in cloud is a server.  You will see many services dedicated to networking int he cloud and this is why/  -->
 <hr />
 <h2 id="too-much-hardware-virtualization-to-the-rescue">Too much hardware : Virtualization to the rescue</h2>
-<p>IT Departments for institutions 'serve' large user communities with large amounts of infrastructure (hardware, networking, data centers, power, etc)  Techniques were invented to seperate the 'server' or 'network' from the hardware.   </p>
+<ul>
+<li>
+<p>IT Departments for institutions 'serve' large user communities with large amounts of infrastructure (hardware, networking, data centers, power, etc)  Techniques were invented to separate the 'server' or 'network' from the hardware.   </p>
+</li>
+<li>
 <p>Virtualization: single box with a layer of software to share among different software. 
-Software-defined networks: 
-- Many servers could be created and managed with software on a single hardware<br />
-- Virtualization was a necessary conceptual and technological innovation to pave the way for cloud computing and is widely used both on-premise and in the cloud.
-- Networks followed suite with software to determine routes and paritioning on single physical layout</p>
+Software-defined networks: </p>
+</li>
+<li>Many servers could be created and managed with software on a single hardware  </li>
+<li>Virtualization was a necessary conceptual and technological innovation to pave the way for cloud computing and is widely used both on-premise and in the cloud.</li>
+<li>Networks followed suite with software to determine routes and paritioning on single physical layout</li>
+</ul>
 <hr />
 <!-- _class: lead -->
 <h1 id="part-2">Part 2:</h1>
@@ -461,7 +463,7 @@ Software-defined networks:
 <h2 id="some-motivation-at-amazoncom">Some Motivation at Amazon.com</h2>
 <ul>
 <li>Massive IT infrastructure supports  the Amazon store and company <!-- developers, accounting, sales, testing, administration, etc --></li>
-<li>They wanted to sell shopping application as a service to a company like Target who didn't want to run their own store. T This required the software developers to have lots of flexible infrastructure (servers) to run on.  </li>
+<li>They wanted to sell shopping application as a service to a company like Target who didn't want to r-un their own store. T This required the software developers to have lots of flexible infrastructure (servers) to run on.  </li>
 <li>They found team to build a service (with software) could spend 70% of their time setting up the 'back end' </li>
 <li>They called all the infrastructure needed to run a massive dot-com "muck" and saw this as a secondary supporting role to application development.    What they wanted in days actually took months.  </li>
 </ul>
