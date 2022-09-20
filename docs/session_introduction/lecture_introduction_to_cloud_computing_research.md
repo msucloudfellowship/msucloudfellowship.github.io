@@ -22,7 +22,7 @@ class: gaia
 
 --- 
 
-## First things first : what is computing
+## Part 1: what is computing
 
 You come to us with each a unique set of experiences with computing, with more or less experience depending on your previous needs.  
 
@@ -107,9 +107,8 @@ A server is any computer that is running software that listens for messages, and
 
 <!-- what is the host in this URL?  What is the message?  We could spend a week talking about web servers, protocols and a year about programming web server.  The important thing is that  there is a host, the 'web server' software on the host, and the client(s) connecting to it to get something.  -->
 ---
-## What is Computing: What is a server?
+## What is Computing: Data Server Example
 
-**Example: Data Servers**
  - Client: special database client (not web browser)
  - message : insert these 5 rows of data <data>
  - response: `inserted 5 rows`
@@ -126,19 +125,19 @@ etc
 <!-- Example servers that do no use web clients are data servers, for example relational database server.  -->
 
 ---
+## What is computing: Major components of server computer
+The components are nearly the same as a personal computer
 
-## What is Computing: Servers and Networks
-
-**Networking Requirements to access a server:**
-
-- the server must be on the same network as you to receive your message  <!-- I can run a web server right on my laptop, but you couldn't reach it.  the network is me talking to myself -->
-- some networks block some traffic (for security)
-- servers that accept messages from the Internet are a major security risk
-- IT people and cloud architects spend a lot of time designing secure networks
-
-<!-- why do I think this is important?  not only can you make a server (web, data, cluster, etc with cloud but everything you interact with in cloud is a server.  Everything -->
-
+- Server Software set to listen on network
+- (remote management systems)
+- Operating System (hardened for security)
+- Central Processor (CPU) & Memory (RAM) (large)
+- Computer Architecture (designed for high availability)
+- Storage - local disk (designed for high availability)
+- Storage - external ( attached or via network )
+- Network (high-speed)
 ---
+
 
 ## Computing Concept: Virtualization
  
@@ -148,6 +147,30 @@ Given the strain on IT Departments to provide servers dynamically and the time t
 - many virtual servers = 1 box: more efficient use of hardware
 - Servers could be provisioned automatically!   
 - Virtualization was a necessary conceptual and technological innovation to pave the way for cloud computing and is widely used both on-premise and in the cloud.
+
+---
+
+## What is Computing: Servers and Networks
+
+**Networking Requirements to access a server:**
+
+- the server must be on the same network as you to receive your message  <!-- I can run a web server right on my laptop, but you couldn't reach it.  the network is me talking to myself -->
+- some networks block some traffic (for security)
+- servers that accept messages from the Internet are a major security risk
+- network failure stops all work for everyone
+- IT spend a lot of time designing efficient, robust, and secure networks
+
+<!-- why do I think this is important?  not only can you make a server (web, data, cluster, etc with cloud but everything you interact with in cloud is a server.  Everything -->
+---
+
+## Computing Concept: Software-defined networks
+
+- A server on a network accessible to possible hackers is increases security vulnerability
+- Data networks can be designed to partition servers so only accessibles from some locations, or with credentials, or with a single point of entry e.g. gateway)
+
+- In 1990s nnetwork systems configurable by software 
+- Like virtual machines, system architecture could be flexibly changes with software.  
+
 
 ---
 ## What is Cloud Computing? History
@@ -201,7 +224,8 @@ Blog Post from 2006: ["We Build Muck, So You Don’t Have To"](https://aws.amazo
 ---
 ## What is Cloud Computing? NIST defintion of cloud
 
-The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) essential characteristics 
+Government offices interested in purchasing cloud computing needed a definition of it to differentiate from other kinds of computing, hence...
+the [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) essential characteristics 
 
 - **On-demand self-service**. 
 - **Measured service**: pay for what you get.   
@@ -210,7 +234,7 @@ The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legac
 - **Resource pooling**: single resources serve many customers.  
 
 ---
-## Prior Web-based Services that are _not_ cloud computing
+## Other Web-based services that are _not_ cloud computing
 
  - **Web hosting** Focused on providing offered many of these features but was limited in service offerings.   I've used a company called dreamhost since early 2000 to provide websites for non-profits and commercial customers, but also email and storage and limited database services.  
 
@@ -218,7 +242,7 @@ The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legac
 
 - **Server Rental** Servers on the internet you could use for various things, primarily web sites & applications.   (Rackspace) 
 
-- **IT Accounting Services** EDS from the 80s 90s by Ross Perot provided IT and Data services to major corporations primarily GM. 
+- **Other remote computing services** example sending your accounting data to an external service for processing (which now seems quaint).  EDS from the 80s 90s by Ross Perot provided IT and Data services to major corporations primarily GM. 
 
 ---
 ### What is Cloud Computing? Cloud concepts vs Cloud Providers

@@ -1,3 +1,5 @@
+# MSU Cloud Computing Fellowship 2022-23
+
 # 1: Introduction to the 2022-23 MSU Cloud Computing Fellowship
 
 <figure>    
@@ -12,7 +14,7 @@ This is the first 'session' of the MSU Cloud Computing Fellowship (CCF) for 2022
 
 The goals of this introductory session are to orient you to this program, introduce ourselves to each other, provide some background on cloud computing, set up our technology, and discuss what all of our expectations are.  
 
-If possible during the first week of this semester, please complete the following activities prior to our first synchronous meeting **September 2**.   If you have any issues, trouble with these activities, or won't be able to attend the introductory meeting, or have any questions at all about your participating in the fellowship, please [contact us](../contact.md).  Note there will be time for questions and dicussion during our first meeting. 
+If possible during the first week of this semester, please complete the following activities prior to our first synchronous meeting **September 2**.   If you have any issues, trouble with these activities, or won't be able to attend the introductory meeting, or have any questions at all about your participating in the fellowship, please [contact us](../contact.md).  
 
 
 ## Activities:
@@ -47,37 +49,39 @@ You should have all been given access to a Team "MSU ICER Cloud Computing Fellow
   * [Using Cloud Computing for Academic Research](../references/DRAFT_cloud_computing_for_academic_research_parvizi_2021.pdf), Mahmoud Parvizi (draft version).   
   * Optional Historical Note [Who Coined 'Cloud Computing'?](https://www.technologyreview.com/2011/10/31/257406/who-coined-cloud-computing/) by Antonio Regalado, October 2011, MIT Technology Review
 
-    
-## In-person meeting: Introductions and program overview. 
-
-**September 2nd, 2022** 
 
 ### Introductions
-  * Brian O'shea, Director, MSU Institute for Cyber-Enabled Research (ICER)
-  * Danielle Barnes, Associate Director, Data Management & Analytics (DMA), MSU IT Services. 
+
   * Mahmoud Parvizi, Instructor & Research Consultant, ICER
      - Past experience & current role
      - Cloud facilitator
      - Participant in first Fellowship cohort
   * Patrick Bills, Instructor & Staff, Data Management & Analytics Data Science Team. 
+  * Brian O'shea, Director, MSU Institute for Cyber-Enabled Research (ICER)
+  * Danielle Barnes, Associate Director, Data Management & Analytics (DMA), MSU IT Services. 
+
 
 [A video of our introductions](https://mediaspace.msu.edu/media/MSU+Cloud+Fellowship+2021-2022+Welcome+and+Introductions/1_ju6ahdve) recorded in 2021 is avaialble on MSU MediaSpace (requires MSU log-in).   
-  
+
+ 
 ### Participant Introductions & Discussion
 
-Introductions from the 2022-23 Cloud Computing Fellows:
+**Introductions from the 2022-23 Cloud Computing Fellows:**
+
   * About you: your preferred name and pronouns, which degree program or department if faculty. 
   * Research synopsis and methods
   * Previous experience with reseach computing including cloud computing (if any)
   * Current research computing hurdles, roadblocks, challenges & triumphs
   * Your goals for this fellowship
     * For example, how could cloud computing support yuor research?  What do you think the cloud is or is good for, in general?
-  
+
+
 ### Fellowship Program Overview
 
 Review our "[syllabus](../index.md#syllabus)" on the home page of this website for the schedule and topics we will cover.   
 
 Program synopsis:
+
   * Fall semester materials, activities, seminars and discussions (Pat Bills):    
     * Goal, scope and expectation;
     * structure (pre-session materials and activities, "textbook");
@@ -93,6 +97,7 @@ Program synopsis:
 #### Goals
 
 **Help you get an understanding of:**
+
  - what is cloud computing?
  - what is cloud computing useful for? 
  - when should it use it for my research computing?
@@ -100,40 +105,47 @@ Program synopsis:
  - Understanding of the context of the technology we are learning about.   
 
 **Help you get some practical experience**
+
  - apply cloud to some aspect of your own research
  - apply cloud to generic/canned research-like problem
  
  **Non Goals:**
+
  - prepare you for a cloud computing certification (there are many existing resources for that.  )
  - become experts in everything 
  - build a dot-com empire
  - cover all aspects of cloud
- - 
-### Seminar: Introduction to Computing and Cloud Computing
 
-  * Presentations, Pat Bills <!-- [Seminar Text](lecture_introduction_to_cloud_computing_research.md)  -->
+
+ 
+### Introduction to Computing and Cloud Computing
+
+  * [Seminar, Pat Bills](brief_introduction_to_cloud_computing_research.html)
   * References: 
      * The [NIST definition of cloud computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) 
-  * Discussion  <!-- what questions can we ask to see the dicussion? -->
+  * Discussion 
+
 
 ### Demonstration: Using the Azure Portal
 
-A quick, live demonstration orienting you to the Azure portal.  Our next session activities will include a detailed workshop on creating cloud computing resources
+A quick, live demonstration orienting you to the Azure portal and working with budgets.  Our next session activities will include a detailed workshop on creating cloud computing resources such as a virtual machine. 
 
- <!-- Log into https://portal.azure.com with your MSU NetID
+Tutorial: ["Setting a Cost Alert Using the Azure Portal"](cost_alert.md)
+
+<!-- Log into https://portal.azure.com with your MSU NetID
  - confirm you have access to a "resource group"
-     - aside: high level description of "what is a resource group?"  This is your locker.  
+     - aside: high level description of "what is a resource group?"  This is kind of like your "cloud locker"
  - understanding the navigation of the Azure portal
      - resource
      - properties pane on left side
  - find the 'budgets' section of your resource group
- - edit the budget to add an alert at 50% spend using your preferred email address
+ - edit the budget to add an alert at 50% spend using your preferred email address -->
 
--->
+More information about the azure portal including a video walk-through of the Azure portal is available in [Session 2](../session_how_to_cloud#Activties) activities. 
 
-A video walk-through of the Azure portal is available in [Session 2](../session_how_to_cloud#Activties) activities. 
 
 ### Questions and Discussion
 
   - What things are at the top of your mind as you begin this program?  
   - Which of these topics resonates with your previous experience using computing or cloud computing (if any)?
+

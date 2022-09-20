@@ -2,7 +2,7 @@
 title: MSU Cloud Computing Fellowship
 ---
 
-# MSU Cloud Computing Fellowship 2022-23
+
 
 ![Ebene_bei_Auvers_van_Gogh_1890](img/cropped_cloud_painting_Vincent_van_Gogh_Ebene_bei_Auvers_1890_Neue_Pinakothek_Munich.jpg)
 
@@ -26,11 +26,14 @@ Michigan State University. East Lansing, MI 48824
 
 ### Schedule for Fall 2022
 
+**Note since our meeting for September 2 was cancalled The schedule has been revised**
+
  1. [Introduction to the 22-23 Fellowship](session_introduction)
-    * Meeting **September 2**: In-person Meeting 2pm to 3:30pm, 1445A    
- 2. Cloud for computing infrastructure: Storage, Virtual Machines and disks
-    * Meeting September 16: Working with Virtual Machines workshop 
- 3. Cloud Storage and moving data
+    * Meeting September 16: Introductions, Cloud background and hands-on with Azure portal
+ 2. [Hands-on Introduction to Cloud computing Using Virtual Machines](session_how_to_cloud)
+    * self-paced activies: working with Virtual Machines
+    * Optional office hours Sept 23
+ 3. Storage, DisksCloud Storage and moving data
     * Meeting September 30: Cloud Storage Workshop 
  4. Databases and Data Analytics Systems on the Cloud for research
     * Meeting October 14: Seminar on Database and data systems. <br> Hands-on: Using Cosmos DB
