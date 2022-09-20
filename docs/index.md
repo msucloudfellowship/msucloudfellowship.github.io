@@ -31,8 +31,10 @@ Michigan State University. East Lansing, MI 48824
  1. [Introduction to the 22-23 Fellowship](session_introduction)
     * Meeting September 16: Introductions, Cloud background and hands-on with Azure portal
  2. [Hands-on Introduction to Cloud computing Using Virtual Machines](session_how_to_cloud)
-    * self-paced activies: working with Virtual Machines
-    * Optional office hours Sept 23
+    * self-paced readings and activies: 
+         - Using the Azure portal
+         - creating an connecting to a  virtual machine
+    * Optional help/office hours September 23 2pm
  3. Storage, DisksCloud Storage and moving data
     * Meeting September 30: Cloud Storage Workshop 
  4. Databases and Data Analytics Systems on the Cloud for research

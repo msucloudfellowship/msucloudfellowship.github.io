@@ -1,5 +1,15 @@
 # Session 2: What is the cloud and how does it work?  An introduction using storage and virtual machines
 
+### About this Session
+
+We are providing materials and activities for this session for you to read and attempt at your own pace.   Please attempt these and see how far you can get.   Feel free to post on Microsoft Teams if you have any issues, find things that need correcting, or have general questions.   
+
+We will host an optional, additional, in-person session to provide help to anyone who wants to attend, Friday September 23 2pm to 3:30p.  Since this is outside of pre-arranged schedule, anyone who would like help but can't attend during this please contact us and we will arrange a time for you.   
+
+We will discuss all of this material and more during our next regularly scheduled in-person session Friday September 30th. 
+
+### Overview
+
 ![Chaplin still from Modern Times 1936](../img/chaplin_clockworks.jpg){ align=right} When many people think of "cloud computing" they think of computers in the cloud, or virtual machines.   Cloud computing companies offer much more than just virtualized hardware, but this is a good place to start.   This session is designed to be a hands-on workshop where we walk-through creating the resources needed for to run a computer in the cloud, logging into this computer, copying data and using that data in a program.    At the end of the session you should have a good introduction of what it means to "cloud compute."
 
 - **Overview Presentation:** [Cloud Concepts & Virtualization (PDF)](CCF-session-2-how-to-cloud-slides.pdf) - Pat Bills, MSU

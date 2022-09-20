@@ -149,3 +149,23 @@ More information about the azure portal including a video walk-through of the Az
   - What things are at the top of your mind as you begin this program?  
   - Which of these topics resonates with your previous experience using computing or cloud computing (if any)?
 
+## Post-session 
+
+After our introduction, you may have more qeustions than answers.  Here are additional readings for details related 
+
+
+### Readings
+
+#### Additional Cloud background
+
+These resources are abstract introductions or discussions about cloud computing, mostly from an academic perspective.  However "academic" can also mean those responsible for maintaining a university's IT infrastructure or websites.   
+
+
+  - [Wikipedia article on cloud computing](https://en.wikipedia.org/wiki/Cloud_computing) is actually pretty good
+
+  - [M. Armbrust et al. "Above the Clouds: A Berkeley View of Cloud Computing. Technical Report UCB/EECS-2009-28 "University of California at Berkeley, Electrical Engineering and Computer Sciences, 2009 PDF](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-28.pdf} <br>
+   Written only 3 years after the launch of AWS, this is very insightful discussion of the value of cloud computing
+
+  - [I. Porres, T. Mikkonen, A. Ashraf, eds.  "Developing Cloud Software Algorithms, Applications, and Tools." TUCS General Publication, No 60, October 2013 ISBN 978-952-12-2952-7 (pdf)](https://www.researchgate.net/profile/Adnan-Ashraf-10/publication/258286578_Introduction_to_Cloud_Computing_Technologies/links/00b49527b8906bb0f4000000/Introduction-to-Cloud-Computing-Technologies.pdf?origin=publication_detail)
+ 
+

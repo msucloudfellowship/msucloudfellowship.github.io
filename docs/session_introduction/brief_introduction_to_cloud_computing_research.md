@@ -127,10 +127,9 @@ A server is any computer connected to a network, running software that listens f
 <!-- why do I think this is important?  not only can you make a server (web, data, cluster, etc with cloud but everything you interact with in cloud is a server.  You will see many services dedicated to networking int he cloud and this is why/  -->
 ---
 
+## Too much hardware? Virtualization to the rescue
 
-## Too much hardware : Virtualization to the rescue
-
-- IT Departments for institutions 'serve' large user communities with large amounts of infrastructure (hardware, networking, data centers, power, etc)  Techniques were invented to separate the 'server' or 'network' from the hardware.   
+- IT Departments 'serve' large user communities with large amounts of infrastructure, which is very in Techniques were invented to separate the 'server' or 'network' from the hardware.   
 
 - Virtualization: single box with a layer of software to share among different software. 
 Software-defined networks: 
