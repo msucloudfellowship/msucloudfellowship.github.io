@@ -318,6 +318,19 @@
     Overview
   </a>
   
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-presentation" class="md-nav__link">
+    Overview Presentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -329,15 +342,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#azure-portal-readings" class="md-nav__link">
-    Azure Portal Readings
+  <a href="#azure-portal-reading" class="md-nav__link">
+    Azure Portal Reading
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#azure-portal-activity-using-the-azure-portal-tutorial-and-video" class="md-nav__link">
-    Azure Portal Activity** Using the Azure Portal : tutorial and video
+  <a href="#azure-portal-activity" class="md-nav__link">
+    Azure Portal Activity
   </a>
   
 </li>
@@ -361,6 +374,13 @@
   
     <nav class="md-nav" aria-label="Virtual Machines">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readings" class="md-nav__link">
+    Readings:
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#why-create-a-vm" class="md-nav__link">
@@ -395,16 +415,14 @@
 <p>We will discuss all of this material and more during our next regularly scheduled in-person session Friday September 30th. </p>
 <h3 id="overview">Overview</h3>
 <p><img align="right" alt="Chaplin still from Modern Times 1936" src="../img/chaplin_clockworks.jpg" /> When many people think of "cloud computing" they think of computers in the cloud, or virtual machines.   Cloud computing companies offer much more than just virtualized hardware, but this is a good place to start.   This session is designed to be a hands-on workshop where we walk-through creating the resources needed for to run a computer in the cloud, logging into this computer, copying data and using that data in a program.    At the end of the session you should have a good introduction of what it means to "cloud compute."</p>
-<ul>
-<li><strong>Overview Presentation:</strong> <a href="CCF-session-2-how-to-cloud-slides.pdf">Cloud Concepts &amp; Virtualization (PDF)</a> - Pat Bills, MSU</li>
-</ul>
+<h4 id="overview-presentation">Overview Presentation</h4>
+<p><a href="CCF-session-2-how-to-cloud-slides.pdf">Cloud Concepts &amp; Virtualization Slides (PDF)</a></p>
 <h2 id="about-the-azure-portal">About the Azure Portal</h2>
 <p>We demonstrated the azure portal quickly in our last session when we <a href="../session_introduction/cost_alert/">set a budget alert</a>.   The following dives into more detail about 'resource groups' which is the core of how Azure is organized.  Note that, as we get started, fellows have access to just a single resource group that we've created for you.  You can't create your own but you can create as many resources as yuo need inside this single resource group.  </p>
-<h4 id="azure-portal-readings">Azure Portal Readings</h4>
-<ul>
-<li>Top-down description of how <a href="azure_organization/">Azure is organized</a></li>
-</ul>
-<h4 id="azure-portal-activity-using-the-azure-portal-tutorial-and-video">Azure Portal Activity** <a href="azure_portal_walkthrough/">Using the Azure Portal : tutorial and video</a></h4>
+<h4 id="azure-portal-reading">Azure Portal Reading</h4>
+<p>Top-down description of how <a href="azure_organization/">Azure is organized</a></p>
+<h4 id="azure-portal-activity">Azure Portal Activity</h4>
+<p><a href="azure_portal_walkthrough/">Using the Azure Portal : tutorial and video</a></p>
 <h3 id="optional-follow-ons">Optional Follow-ons:</h3>
 <p><strong>Azure Storage</strong></p>
 <p>The Activity above had you creat a 'storage account' with no background.   If you are interested in learning more about storage, this is a prety good, high-level introduction : </p>
@@ -413,14 +431,15 @@
 <p>We will re-visit concepts and usage of cloud storage in detail, as it's a core aspect of cloud computing.    </p>
 <h2 id="virtual-machines">Virtual Machines</h2>
 <p>We introduced "virtualization" during our introduction.  For IT this means flexibly creating multiple resources on one piece of hardware using software.  The main use case is many virtual computers (or servers) on one large computer hardware.   This was create prior to cloud, but when you create your own computer in the cloud, it's based on the technology.  To a user it may seem very similar, but to the systems IT engineer, it's very different.     However these readings may help give you an </p>
-<p><strong>Readings</strong>:
-- <a href="https://azure.microsoft.com/en-us/overview/what-is-a-virtual-machine/">What is a Virtual Machine (VM)?</a>  Introduction from Microsoft
-- <a href="https://www.youtube.com/watch?v=42fwh_1KP_o">What is a Virtual Server?</a> Youtube Video from 
-IBM describing how companies (including MSU!) use virtualization to run multiple computers on one server to optimize the use of space in a data center. 
-- <a href="https://www.redhat.com/en/topics/cloud-computing/cloud-vs-virtualization">What's the difference between cloud and virtualization?</a> from RedHat, a Linux Operating system company</p>
+<h4 id="readings">Readings:</h4>
 <ul>
-<li><strong>Activity:</strong> A long activity to <a href="azure_vm_walkthrough/">create (and deleting) a Virtual Machine with the Azure Portal</a> for both windows and Linux. </li>
+<li><a href="https://s3.us-east-2.amazonaws.com/a-book/computing.html">Chapter 4: Computing as a Service</a> from "Cloud Computing for Science and Engineering", Ian Foster and Dennis B. Gannon, September 2017</li>
+<li><a href="https://azure.microsoft.com/en-us/overview/what-is-a-virtual-machine/">What is a Virtual Machine (VM)?</a>  Introduction from Microsoft</li>
+<li><a href="https://www.youtube.com/watch?v=42fwh_1KP_o">What is a Virtual Server?</a> Youtube Video from 
+IBM describing how companies (including MSU!) use virtualization to run multiple computers on one server to optimize the use of space in a data center. </li>
+<li><a href="https://www.redhat.com/en/topics/cloud-computing/cloud-vs-virtualization">What's the difference between cloud and virtualization?</a> from RedHat, a Linux Operating system company</li>
 </ul>
+<p><strong>Activity:</strong> A long activity to <a href="azure_vm_walkthrough/">create (and delete) a Virtual Machine with the Azure Portal</a> for both windows and Linux. </p>
 <h4 id="why-create-a-vm">Why create a VM</h4>
 <p>What is a VM good for?   The activity above does not discuss why you'd create a VM and connect with remote desktop, only that you can do it.   We will discuss that at our next session.  Can you think of possible use cases for your research, or other types of research, for a remote computer that could be very powerful or very small?</p>
 <!-- note: move costs, service levels and other things to a later session -->
