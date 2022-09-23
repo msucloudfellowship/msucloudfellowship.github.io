@@ -14,7 +14,7 @@ If at any point you have an issue, please contact us!
 
 #### Adding "cost alert" to your resource group. 
 
-- Log into https://portal.msu.edu
+- Log into https://portal.azure.com
 - You should see a single resource group, or be put into one automatically.  
 - Open your resource group if is not already
 - The left side bar had properties for the resource group. 
