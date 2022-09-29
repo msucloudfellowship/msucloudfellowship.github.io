@@ -35,8 +35,8 @@ Michigan State University. East Lansing, MI 48824
          - Using the Azure portal
          - creating an connecting to a  virtual machine
     * Optional help/office hours September 23 2pm
- 3. Storage, DisksCloud Storage and moving data
-    * Meeting September 30: Cloud Storage Workshop 
+ 3. [Cloud Storage](session_cloud_storage)
+    * Meeting September 30: Discussion & Cloud Storage Workshop.  
  4. Databases and Data Analytics Systems on the Cloud for research
     * Meeting October 14: Seminar on Database and data systems. <br> Hands-on: Using Cosmos DB
  5. Big Data Systems and the cloud
@@ -66,11 +66,11 @@ All meetings are in the ICER training room, 1455A BPS, from 2:00 to 3:30 pm
  - **April TBD**: Fellowship Symposium
  
 
-#### On-going help
+### On-going help
 
 We encourage you, especially during Winter/spring, to [contact us](contact) at any time with any questions related to your projects, the fellowship, or cloud computing in general.  
 
-#### Symposium and Project Presentations
+### Symposium and Project Presentations
 
 We will hold a Symposium for participants for final presentations of the outcome projects in late April   
 
