@@ -13,7 +13,7 @@
     
     
       
-        <title>Azure tags - MSU Cloud Computing Fellowship</title>
+        <title>Storage pricing exercise - MSU Cloud Computing Fellowship</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-tags-to-organize-resources-in-azure" class="md-skip">
+        <a href="#optional-compare-with-on-premise-storage-costs" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Azure tags
+              Storage pricing exercise
             
           </span>
         </div>
@@ -227,10 +227,73 @@
   
   
   
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Sessions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sessions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Sessions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../Sessions (TBD)" class="md-nav__link">
-        None
+      <a href="../../session_introduction/" class="md-nav__link">
+        1. Introduction
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_how_to_cloud/" class="md-nav__link">
+        2. How does the cloud work?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        3. Cloud Storage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -305,22 +368,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-tags-to-organize-resources-in-azure" class="md-nav__link">
-    Using Tags to organize resources in Azure
+  <a href="#optional-compare-with-on-premise-storage-costs" class="md-nav__link">
+    Optional: compare with on-premise storage costs
   </a>
-  
-    <nav class="md-nav" aria-label="Using Tags to organize resources in Azure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-usage" class="md-nav__link">
-    Example usage:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -338,22 +388,53 @@
                 
 
 
-  <h1>Azure tags</h1>
+  <h1>Storage pricing exercise</h1>
 
-<h2 id="using-tags-to-organize-resources-in-azure">Using Tags to organize resources in Azure</h2>
-<p>Tags are notes to yourself about the resource, use them for metadata.  </p>
-<p>As the number of cloud resources blossom (e.g. cloud sprawl) it can be important to find related resources quickly.  The azure portal has a way to see resource within and across resource groups using different filtering methods.    One of those is the with resource meta-data, and you can add meta data using 'tags.'</p>
-<p>In my group we always have a tag with the key "created by" and value the netid of the creator.   This may be redundant here becuase all the resources you create will be a in resource group with your NetID already in it, but add this for practice. </p>
-<p>You may consider using a tag like "project" with value for the project if either 1) a project may have multiple resource goups or 2) a resource group would have multiple projects.  </p>
-<p>For now you have only one resource group, but tags are also used to find things across different resource groups, e.g. if by project name. </p>
-<p>Tags can be added and removed at will from resources without altering the resource, so add as many tags as you want when starting to see how they may work.   </p>
-<h3 id="example-usage">Example usage:</h3>
-<p>When creating resources using the wizard, many resources are created at once. For example creating a virtual machine may create 12 resources.  Adding a tagl to ID those resources together can really help to delet them. </p>
+<p><img src="../img/gaspump.gif"  style="display: block; float:right;margin:1em;" /></p>
+<p>Prior to doing this exercise, See the reading and lecture slides linked in this session for definitions of terms. </p>
+<p>How large, approximately, is your data?  If you are unsure, estimate 100 gb.   How much would it cost to keep it in the cloud?</p>
+<p>Compare the pricing for Blob, Files and Disk storage for 6 months</p>
+<p><strong>Aspects Of Storage:</strong></p>
 <ul>
-<li>use the Portal to create a test virtual machine (VM), which creates 12 resources</li>
-<li>add a unique tag to those during the VM creation process, e.g.  tag "id" = "test VM Oct 1"</li>
-<li>when you later need to delete the VM becuase you are done with it, or it wasn't what you needed, you can filter resources in your group on this this so you can select those 12 resources, and not any others, without having to hunt for them by name. </li>
+<li>Redunancy: Always slect "LRS" as that is almost always sufficient.  </li>
+<li>Storage prices are not the same across regions, but the default ("East US") works for this exercise</li>
+<li>Consider only the "Hot" storage of the different tiers ("Premium", "Hot", "Cool", and "Archive")<ul>
+<li>for some high performance applications, Premium is required, but look at the price difference! </li>
 </ul>
+</li>
+<li>Operations, Transactions and data transfer costs<ul>
+<li>charged per 10K operations </li>
+<li>really hard to estimate unless you know your workload</li>
+<li>very low costs, e.g. reading 10K Blobs costs 1/2 of one cent.  </li>
+<li>I would not bother estimating this cost unless you know you will have very high disk operations</li>
+</ul>
+</li>
+</ul>
+<p><strong>Types of Storage to Compare:</strong> </p>
+<ul>
+<li>
+<p>Azure Blob Pricing: <a href="https://azure.microsoft.com/en-us/pricing/details/storage/blobs/">https://azure.microsoft.com/en-us/pricing/details/storage/blobs/</a>  select "Hierachcial namespace"
+   <!-- 0.021 = $12.60 --></p>
+</li>
+<li>
+<p>Azure Files Pricing: <a href="https://azure.microsoft.com/en-us/pricing/details/storage/files/">https://azure.microsoft.com/en-us/pricing/details/storage/files/</a> 
+   <!--  - $0.0287/gb for 100 gb for 6 months = $17.22 --></p>
+</li>
+<li>
+<p>Managed Disk Pricing : <a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">https://azure.microsoft.com/en-us/pricing/details/managed-disks/</a>  </p>
+<ul>
+<li>note these are in different sizes and types, select 128gb size if you are estimating 100gb data, Standard SSD</li>
+<li>when you create a disk in the protal, it defaults to 1 TiB size, which is quite expensive / month
+   <!-- E10 disk is $9.60/month 6 months = $57.60 -->
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="optional-compare-with-on-premise-storage-costs">Optional: compare with on-premise storage costs</h3>
+<p>The MSU HPC offers 1TB storage free to any MSU Researcher with redundant backups and high-speed access, with each additional 1TB for <a href="https://icer.msu.edu/hpcc/storage">$125/year</a>.  Since this is network attached storaage is this comparable to Azure Files or Azure Blob storage?</p>
+<p>If you need 2TB storage ( 1 free + 1 paid), what is the approximate Azure cost for 2000gb for 12 months, ignoring all operatinal costs (just storage)?    There are a few options for redundancy (global vs local) and other aspects.   What is the cheapest combination of options?   </p>
+<!-- in 2021 blob costs $504/yr , files cost $688.8  -->
+<!-- another note, 3PB / 2yrs ~ $1.2M -->
 
 
 

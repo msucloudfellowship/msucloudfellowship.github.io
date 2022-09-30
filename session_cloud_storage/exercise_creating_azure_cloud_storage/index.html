@@ -13,7 +13,7 @@
     
     
       
-        <title>Workshop : Creating your own cloud computer - MSU Cloud Computing Fellowship</title>
+        <title>Exercise: Creating Azure Cloud Storage Accounts - MSU Cloud Computing Fellowship</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#workshop-creating-your-own-cloud-computer" class="md-skip">
+        <a href="#exercise-creating-azure-cloud-storage-accounts" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Workshop : Creating your own cloud computer
+              Exercise: Creating Azure Cloud Storage Accounts
             
           </span>
         </div>
@@ -227,10 +227,73 @@
   
   
   
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Sessions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sessions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Sessions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../Sessions (TBD)" class="md-nav__link">
-        None
+      <a href="../../session_introduction/" class="md-nav__link">
+        1. Introduction
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_how_to_cloud/" class="md-nav__link">
+        2. How does the cloud work?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        3. Cloud Storage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -300,6 +363,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-quickstart-tutorials" class="md-nav__link">
+    Azure Quickstart Tutorials
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Quickstart Tutorials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-account" class="md-nav__link">
+    Storage Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blob-storage" class="md-nav__link">
+    Blob Storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-storage" class="md-nav__link">
+    File Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -312,9 +424,28 @@
                 
 
 
-<h1 id="workshop-creating-your-own-cloud-computer">Workshop : Creating your own cloud computer</h1>
-<p>For Session 2 of the MSU Cloud Computing Fellowship</p>
-<p><strong>Details of the workshop and recording will be posted after our remote session on Sept 10</strong></p>
+<h1 id="exercise-creating-azure-cloud-storage-accounts">Exercise: Creating Azure Cloud Storage Accounts</h1>
+<p>These exercises are for the Cloud Computing Fellowship <a href="../">session on cloud storage</a>.   They focus on creating the account(s) necessary to use storage.  </p>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<ol>
+<li>Download the Storage Explorer</li>
+<li>Review Storage documentation for basic concepts.<br />
+Please review materials for <a href="../session_cloud_storage">this session</a> to understand cloud storage and the different types that Azure offers </li>
+<li>A valid subscription. </li>
+<li>A storage account is not always required for some tutorials, but if so, create a storage account with the first item.  </li>
+</ol>
+<h2 id="azure-quickstart-tutorials">Azure Quickstart Tutorials</h2>
+<h3 id="storage-account">Storage Account</h3>
+<p>We created a storage account in one of the first activities using the portal, and you may use that storage account for many of the other activities below.  However  here is the Azure documentation for doing so if you want to review or practice creating a new one: </p>
+<p><a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal">Create a storage account</a></p>
+<p>*Note in the above there are options for "Portal", "PowerShell", "Azure CLI" and "Template" but the Portal version is what we covered so far. </p>
+<h3 id="blob-storage">Blob Storage</h3>
+<p><a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal">Azure Quickstart: Upload, download, and list blobs with the Azure portal</a></p>
+<p>The Azure Storage explorer is a desktop application for Mac and Windows, useful for occasional checking and working with cloud storage: </p>
+<p><a href="https://docs.microsoft.com/en-us/azure/storage/blobs/quickstart-storage-explorer">Azure Quickstart: Use Azure Storage Explorer to create a blob</a></p>
+<h3 id="file-storage">File Storage</h3>
+<p>In the following exercise, you can use your existing storage account, and skip to the section "create-an-azure-file-share" but feel free to create an additional storage account if you want to experiment (the storage account itself does not )</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-portal?tabs=azure-portal">Quickstart: Create and manage Azure file shares</a></p>
 
 
 
