@@ -13,6 +13,11 @@ I'm lumping all of these last pieces into 'managing' cloud resources.  It may be
 
 [Cloud Costs Basics](costs/azure_cloud_cost_basics.md)
 
+
+Excercise: 
+  - [Azure Storage Pricing Exercise](storage_pricing_exercise.md) 
+  - 
+
 ## Service Level Model of Cloud
 
 how that affects costs and security 
