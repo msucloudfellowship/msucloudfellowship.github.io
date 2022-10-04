@@ -13,7 +13,17 @@ Welcome to the website for the MSU Cloud Computing Fellowship for 2022-2022.  Se
 
 The program runs Fall semester through Winder/Spring semester.  
 
-Sessions are approximately bi-weekly with breaks for holidays.  A session includes preparatory readings and activities to orient you to the topic, followed by an in-person meeting on a Friday to review the materials, seminar, provide a venue for discussion,  hands-on collaborative activities, or presentations by the fellows. 
+Fall Sessions are approximately bi-weekly with breaks for holidays.  A session includes preparatory readings and activities to orient you to the topic, followed by an in-person meeting on a Friday to review the materials, seminar, provide a venue for discussion,  hands-on collaborative activities, or presentations by the fellows. 
+
+Winter/Spring sessions are for discussion and to provide updates to your project.   
+
+### Symposium and Project Presentations
+
+The culmination of the fellowship is a project resulting in a write-up and presentation during the spring symposium, typically held late-April or early-May.   
+
+- [Slide deck with an overview of the projects](img/CCF_Project_Guide_Parvizi_2022.pdf) (PDF)
+- On January 13, 2023, fellows will present their project poposals to the group (briefly, 2-3 slides)
+- We will post more details about the project during the semeseter and a finalized symposium date
 
 ### Meeting location
 At this time all meetings are in-person in the training room of the Institute for Cyber-Enabled Research, located on the first floor of the MSU Biomedical & Physical Sciences Building
@@ -56,23 +66,20 @@ The second semester of the fellowship is focused on completing a project based o
 
 All meetings are in the ICER training room, 1455A BPS, from 2:00 to 3:30 pm 
 
- - **January 13** fellow presentations of project proposals
- - **January 27** discussion & help session
- - **February 10** discussion & helpsession
- - **February 24** Presentation of Project status
- - **March 10** discussion & help session
- - **March 24** Presentation of Project status
- - **April 10**: discussion & help session
- - **April TBD**: Fellowship Symposium
+ - **January 13** Fellow presentations of project proposals
+ - **January 27** Discussion & help session
+ - **February 10** Discussion & helpsession
+ - **February 24** Presentation of project status
+ - **March 10** Discussion & help session
+ - **March 24** Presentation of project status
+ - **April 10**: Discussion & help session
+ - **April TBD**: Fellowship symposium
  
 
 ### On-going help
 
 We encourage you, especially during Winter/spring, to [contact us](contact) at any time with any questions related to your projects, the fellowship, or cloud computing in general.  
 
-### Symposium and Project Presentations
-
-We will hold a Symposium for participants for final presentations of the outcome projects in late April   
 
 ## Textbook
 
