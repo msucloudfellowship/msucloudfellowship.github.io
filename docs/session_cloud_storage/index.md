@@ -32,6 +32,8 @@ Cloud storage was engineered to save millions of files for millions of users and
     [Azure Training: Explore Azure Storage services](https://docs.microsoft.com/en-us/learn/modules/azure-storage-fundamentals/) ( free training from Microsoft Learn)
 - optional [Understanding block blobs, append blobs, and page blobs](https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs)
 
+- [Introduction to Azure managed disks](https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview)  This has more techincal background than necessary but could be very helpful.  
+
 ## Activities
 
 - Download and install the [Azure Cloud Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)  See the **"Download now"** button at the top of that page.  You may review the content of the page
@@ -48,6 +50,8 @@ How would you share data with colleagues outside of MSU using cloud storage?    
 
 ## Optional Activities: 
 
+The following two activities walk through attaching Azure files to a VM so you can use it just like any other disk.   This is only one method for moving data to/from cloud storage to your VM, but it does not require changing your program code. 
+
 **For Windows Users: Using File Storage with Windows VM** 
 
 [Microsoft Tutorial: Create an SMB Azure file share and connect it to a Windows VM using the Azure portal](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-quick-create-use-windows)
@@ -56,14 +60,37 @@ Notes:
 - The tutorial has you create a storage account, but you can re-use the one you've already created (and change the names), or follow the tutorial and create another one.   
 - Not all versions of Windows can use this.  For much more detail, see the Azure documentation page ["Mount SMB Azure file share on Windows"](https://learn.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)
 
-**Python And Cloud Storage**
+**For Linux Users: Mounting File Storage with Linux VMs using NFS**
+
+[Microsoft Tutorial: Create an NFS Azure file share and mount it on a Linux VM using the Azure portal](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-quick-create-use-linux)
+
+[How to mount Azure Files on Linux using SMB](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-linux?tabs=smb311) 
+
+Notes: 
+- SMB (invented by Microsoft for Windows) and [NFS](https://learn.microsoft.com/en-us/windows-server/storage/nfs/nfs-overview) (invented by Sun Microsystems from Unix) are competing methods for attaching network storage.   Both were created for on-premise servers, but Azure Files storage brings this to the cloud.  
+- this tutorial uses command line, and requires an ssh connection to the VM you create.  
+- Knowledge of Linux systems (mount points, fstab, etc) required 
+
+
+**Optional: Python And Blob Storage**
+
+This describes an a different method for moving files to/from cloud storage: using code.   This does not require you to 'mount' the storage to your VM. 
 
 For Intermediate Python users, and if you have time and interest, consider this tutorial from Azure: [Quickstart: Manage blobs with Python v12 SDK](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)
 
 Requirements:
 
-- use the blob storage account you created in the exercise above
+- knowledge of Python 
+- use the blob storage account you created in the exercise above or createa a new one
 - familiarity with Azure portal 
 - Python installed on your computer (suggest python 3.6 minimal)
 - familiarity with the terminal and command line
+
+
+**Optional: Using Managed Disks with Linux
+
+Azure Learning Tutorial : [Add and size disks in Azure virtual machines](https://docs.microsoft.com/en-us/learn/modules/add-and-size-disks-in-azure-virtual-machines/)
+
+Notes: 
+- Uses the Azure Command line interface which we have not discussed.  For 
 

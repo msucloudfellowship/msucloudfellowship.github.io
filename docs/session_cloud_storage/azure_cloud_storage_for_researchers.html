@@ -44,10 +44,11 @@ for the [MSU Cloud Computing Fellowship](../session_cloud_storage)
 
 # Cloud Storage is not like Disk Storage
 
-- must be organized for worldwide internet access
-- must hold billions of files from millions of customers
-- must be fast
-- must be ultra-dependable
+
+- organized for worldwide internet access
+- hold billions of files from millions of customers
+- must be fast even though remote
+- provisioned dynamically and securely partitioned from other customers
  
 .center[![storage unites](../img/storage_units.jpg)]
 
@@ -122,6 +123,23 @@ Cons:
 
 ---
 
+# Cloud Attached Storage
+
+Most of us want cloud storage to be like Network storage, because programs want to read from paths...
+
+- Cloud is distant from your computer, transfer is not like an attached disk
+- Most services that access storage must be in same region
+- Requires extra thinking and programming utilize cloud storage
+- Access via a web address (URL) with special care for authorization (use an authorization key)
+- Typically write special parts of your code to read/write from cloud
+- *possible* to create attachment to cloud storage but not as fast as Network attach
+   - Azure offers a "Files" storage for this (see below)
+- very different pricing.  "Blob" or object storage is really cheap but more work to access than NAS
+
+![It's a long route through the cloud to your computer](../img/long_route_through_cloud.png)
+
+---
+
 # Detour: File Sync Services
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" height="100" style="float:right">
 - OneDrive, Google Drive, DropBox
@@ -138,21 +156,6 @@ Cons:
 - accessing sync service from cloud service possible 
    - for OneDrive to Azure, use the [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/connector-office-365?tabs=data-factory) covered next week  
 
----
-
-# Cloud Attached Storage
-
-Most of us want cloud storage to be like Network storage, because programs want to read from paths...
-- Cloud is distant from your computer, transfer is not like an attached disk
-- Most services that access storage must be in same region
-- Requires extra thinking and programming utilize cloud storage
-- Access via a web address (URL) with special care for authorization (use an authorization key)
-- Typically write special parts of your code to read/write from cloud
-- *possible* to create attachment to cloud storage but not as fast as Network attach
-   - Azure offers a "Files" storage for this (see below)
-- very different pricing.  "Blob" or object storage is really cheap but more work to access than NAS
-
-![It's a long route through the cloud to your computer](../img/long_route_through_cloud.png)
 
 ---
 
@@ -179,13 +182,12 @@ Like directories in a filesystem, containers provide a way to organize objects i
 
 From [Introduction to the core Azure Storage services](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction?toc=/azure/storage/blobs/toc.json)
 
- - **Azure Blobs**: A massively scalable object store for text and binary data. Also includes support for big data analytics through Data Lake Storage Gen2.
- - **Azure Files**: Managed file shares for cloud or on-premises deployments.
+ - Azure Blobs: A massively scalable object store for text and binary data. Also includes support for big data analytics through Data Lake Storage Gen2.
+ - Azure Files: Managed file shares for cloud or on-premises deployments.
  - Azure Queues: A messaging store for reliable messaging between application components.
  - Azure Tables: structured data storage only
- - **Azure Disks**: For use with Azure VMs
+ - Azure Managed Disks: For use with Azure VMs
 
-We will focus the bolded options for this session
 
 ---
 
@@ -303,11 +305,10 @@ One method to avoid all extra work of using cloud storage is to create a 'data d
 - when done computing, delete the VM and VM OS disk, but *not* the data disk
 - re-use the data disk for another VM computation
 
-Caveats: 
-
-- Data disks can't be [accessed simultaneously by multiple VMS](https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared)  without special software
+Caveat: data disks can't be [accessed simultaneously by multiple VMS](https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared)  without special software
 
 - Optional Activity: Azure Learning : [Add and size disks in Azure virtual machines](https://docs.microsoft.com/en-us/learn/modules/add-and-size-disks-in-azure-virtual-machines/)
+
 
 ---
 
@@ -346,24 +347,29 @@ In my limited experience, it is not speedy as when you request a file it must
 # Alternative Blob Storage Strategy: data staging
 
 ### Assumptions: 
-1. your process must read/write to files with a paths
-2. You want to read your inputs from, or save your outputs to blob Storage
+1. you want/need to read/write to files in the standard way ( with a standard file path)
+2. You want to keep your input and output data on    blob Storage
    - for example, file storage may be too slow or expensive
 3. you have enough VM disk space for your inputs and output files
 
 ### Process: 
-1. create the Virtual Machine with a large enough disk to save
+1. create the Virtual Machine with a large enough disk to save your inputs and outputs
+2. In the Virtual machine, use a process (there are many ways )
 
 
 
 --- 
 
 # Alternative for saving inputs/outputs: 
-<!-- ---
+
+
+<!-- 
+  
+---
 
 # Storage and Authentication
 
-Storage is private by default, of course.   But how to grant access to storage ?
+Storage is private by default. How to grant access to storage ?
 
  - in the Portal, the access is managed automatically 
  - using the Azure Storage Explorer App, you log-in to the app, and access is managed for you
@@ -374,11 +380,7 @@ Storage is private by default, of course.   But how to grant access to storage ?
  
 
  Example: 
- >Every service on Azure has a unique ID.  
- >Azure has a service called "data factory" for moving and processing data.  
- >For a "data factory" service to read Blobs, you must configure the Storage 
- >Account to allow the data factory access (using the data factory ID is one way)
- >Analogy:  you grant access to a Zoom meeting by providing a list of user ids.  
+ 
 
 -->
 
@@ -457,8 +459,10 @@ For us in Michigan, choose either :
 
 ---
 
-# Other Resources
+# Accessing Data in Storage
 
+
+Stay tuned for more in the next session!
 
 -- 
 
