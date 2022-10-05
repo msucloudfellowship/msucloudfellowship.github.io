@@ -31,12 +31,12 @@
 
   <body>
     <textarea id="source">
-
+---
 class: cloudtitle,center, middle
 
 # Azure Cloud Storage For Researchers
  
-### Pat Bills, IT Services ADS
+### Pat Bills, IT Services
 
 for the [MSU Cloud Computing Fellowship](../session_cloud_storage)
 
@@ -122,24 +122,6 @@ Cons:
 
 ---
 
-# Detour: File Sync Services
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" height="100" style="float:right">
-- OneDrive, Google Drive, DropBox
-- Stored in the cloud, but not "cloud storage"
-- not designed for direct access of files
-- files must be synced to a local machine and then accessed
-- for most users, the syncing is seamless and works like NAS
-- some formats allow for simultaneous access
-- for computation, data must be synced before operation 
-  - example: an MSU user had 100TB of data in google drive, 1000s of files in 1000s of folders
-  - could only really access a portion at a time
-
-  <img src="https://www.microsoft.com/en-us/microsoft-365/blog/uploads/2014/01/OneDrive-Logo.png" height="100">&nbsp;
-- accessing sync service from cloud service possible 
-   - for OneDrive to Azure, use the [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/connector-office-365?tabs=data-factory) covered next week  
-
----
-
 # Cloud Attached Storage
 
 Most of us want cloud storage to be like Network storage, because programs want to read from paths...
@@ -155,6 +137,24 @@ Access is... different
 - very different pricing.  "Blob" or object storage is really cheap but more work to access than NAS
 
 ![It's a long route through the cloud to your computer](../img/long_route_through_cloud.png)
+
+---
+
+# Detour: File Sync Services
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" height="100" style="float:right">
+- OneDrive, Google Drive, DropBox
+- Stored in the cloud, but not "cloud storage"
+- not designed for direct access of files
+- files must be synced to a local machine and then accessed
+- for most users, the syncing is seamless and works like NAS
+- some formats allow for simultaneous access
+- for computation, data must be synced before operation 
+  - example: an MSU user had 100TB of data in google drive, 1000s of files in 1000s of folders
+  - could only access a portion at a time
+
+  <img src="https://www.microsoft.com/en-us/microsoft-365/blog/uploads/2014/01/OneDrive-Logo.png" height="100">&nbsp;
+- accessing sync service from cloud service possible 
+   - for OneDrive to Azure, use the [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/connector-office-365?tabs=data-factory) covered next week  
 
 ---
 
@@ -307,7 +307,6 @@ One method to avoid all extra work of using cloud storage is to create a 'data d
 
 Data disks can't be [accessed simultaneously without special software](https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared)
 
-Optional Activity: Azure Learning : [Add and size disks in Azure virtual machines](https://docs.microsoft.com/en-us/learn/modules/add-and-size-disks-in-azure-virtual-machines/)
 
 ---
 
