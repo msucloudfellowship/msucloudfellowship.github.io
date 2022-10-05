@@ -3,7 +3,6 @@ title: MSU Cloud Computing Fellowship
 ---
 
 
-
 ![Ebene_bei_Auvers_van_Gogh_1890](img/cropped_cloud_painting_Vincent_van_Gogh_Ebene_bei_Auvers_1890_Neue_Pinakothek_Munich.jpg)
 
 Welcome to the website for the MSU Cloud Computing Fellowship for 2022-2022.  See our "[about](about.md)" page for more information about the program.   
@@ -22,8 +21,9 @@ Winter/Spring sessions are for discussion and to provide updates to your project
 The culmination of the fellowship is a project resulting in a write-up and presentation during the spring symposium, typically held late-April or early-May.   
 
 - [Slide deck with an overview of the projects](img/CCF_Project_Guide_Parvizi_2022.pdf) (PDF)
-- On January 13, 2023, fellows will present their project poposals to the group (briefly, 2-3 slides)
-- We will post more details about the project during the semeseter and a finalized symposium date
+- We will post more details about the project during the semeseter
+- See Winter 2023 schedule below for due dates
+- We will finalize the date for the cloud fellowship symposium date in 2023
 
 ### Meeting location
 At this time all meetings are in-person in the training room of the Institute for Cyber-Enabled Research, located on the first floor of the MSU Biomedical & Physical Sciences Building
@@ -66,14 +66,16 @@ The second semester of the fellowship is focused on completing a project based o
 
 All meetings are in the ICER training room, 1455A BPS, from 2:00 to 3:30 pm 
 
- - **January 13** Fellow presentations of project proposals
+ - **January 8th** Written project proposal due (via email).   
+ - **January 13** Project proposal presentations 
  - **January 27** Discussion & help session
  - **February 10** Discussion & helpsession
- - **February 24** Presentation of project status
+ - **February 24** Project status presentations
  - **March 10** Discussion & help session
- - **March 24** Presentation of project status
+ - **March 24** Project status presentations
  - **April 10**: Discussion & help session
- - **April TBD**: Fellowship symposium
+ - **April TBD**: Final project write-up due
+ - **April TBD**: Fellowship symposium and final presentation
  
 
 ### On-going help
