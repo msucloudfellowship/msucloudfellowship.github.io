@@ -4,13 +4,12 @@ nav:
     - Contact: contact.md
     - About: about.md 
     - Sessions:
-      - 1. Introduction: session_introduction/index.md
-      - 2. How does the cloud work?: session_how_to_cloud/index.md
-      - 3. Cloud Storage: session_cloud_storage/index.md
-      # - 4. Moving Data: session_moving_data/index.md
-      # - 5. Big Data and the cloud: session_bigdata/index.md
-      # - 6. Cloud Data Systems: session_datasystems/index.md
-      # - 7. Serverless, Containers, and FaaS: session_serverless/index.md
+       - · Introduction: session_introduction/index.md
+       - · How does the cloud work?: session_how_to_cloud/index.md
+       - · Cloud Storage: session_cloud_storage/index.md
+       - · Data Systems: session_datasystems/index.md
+       # - · Big Data and the cloud: session_bigdata/index.md      
+       # - · Serverless, Containers, and FaaS: session_serverless/index.md
     - References: references/index.md
     - Cloud Glossary: cloud_glossary.md
     - Previous 21-22 syllabus: index2021.md
