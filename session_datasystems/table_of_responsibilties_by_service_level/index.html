@@ -13,7 +13,7 @@
     
     
       
-        <title>Azure tags - MSU Cloud Computing Fellowship</title>
+        <title>Table of responsibilties by service level - MSU Cloud Computing Fellowship</title>
       
     
     
@@ -63,11 +63,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#using-tags-to-organize-resources-in-azure" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -97,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Azure tags
+              Table of responsibilties by service level
             
           </span>
         </div>
@@ -257,7 +252,7 @@
   
     <li class="md-nav__item">
       <a href="../../session_introduction/" class="md-nav__link">
-        1. Introduction
+        · Introduction
       </a>
     </li>
   
@@ -271,7 +266,7 @@
   
     <li class="md-nav__item">
       <a href="../../session_how_to_cloud/" class="md-nav__link">
-        2. How does the cloud work?
+        · How does the cloud work?
       </a>
     </li>
   
@@ -285,7 +280,21 @@
   
     <li class="md-nav__item">
       <a href="../../session_cloud_storage/" class="md-nav__link">
-        3. Cloud Storage
+        · Cloud Storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        · Data Systems
       </a>
     </li>
   
@@ -361,34 +370,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#using-tags-to-organize-resources-in-azure" class="md-nav__link">
-    Using Tags to organize resources in Azure
-  </a>
-  
-    <nav class="md-nav" aria-label="Using Tags to organize resources in Azure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-usage" class="md-nav__link">
-    Example usage:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -401,22 +382,86 @@
                 
 
 
-  <h1>Azure tags</h1>
+  <h1>Table of responsibilties by service level</h1>
 
-<h2 id="using-tags-to-organize-resources-in-azure">Using Tags to organize resources in Azure</h2>
-<p>Tags are notes to yourself about the resource, use them for metadata.  </p>
-<p>As the number of cloud resources blossom (e.g. cloud sprawl) it can be important to find related resources quickly.  The azure portal has a way to see resource within and across resource groups using different filtering methods.    One of those is the with resource meta-data, and you can add meta data using 'tags.'</p>
-<p>In my group we always have a tag with the key "created by" and value the netid of the creator.   This may be redundant here becuase all the resources you create will be a in resource group with your NetID already in it, but add this for practice. </p>
-<p>You may consider using a tag like "project" with value for the project if either 1) a project may have multiple resource goups or 2) a resource group would have multiple projects.  </p>
-<p>For now you have only one resource group, but tags are also used to find things across different resource groups, e.g. if by project name. </p>
-<p>Tags can be added and removed at will from resources without altering the resource, so add as many tags as you want when starting to see how they may work.   </p>
-<h3 id="example-usage">Example usage:</h3>
-<p>When creating resources using the wizard, many resources are created at once. For example creating a virtual machine may create 12 resources.  Adding a tagl to ID those resources together can really help to delet them. </p>
-<ul>
-<li>use the Portal to create a test virtual machine (VM), which creates 12 resources</li>
-<li>add a unique tag to those during the VM creation process, e.g.  tag "id" = "test VM Oct 1"</li>
-<li>when you later need to delete the VM becuase you are done with it, or it wasn't what you needed, you can filter resources in your group on this this so you can select those 12 resources, and not any others, without having to hunt for them by name. </li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Responsibility</th>
+<th>On-Prem</th>
+<th>IAAS (VM)</th>
+<th>PAAS</th>
+<th>SAAS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Network</td>
+<td>Connectivity &amp; Security</td>
+<td>Campus IT</td>
+<td>Service</td>
+<td>Service</td>
+<td>Service</td>
+</tr>
+<tr>
+<td>Hardware</td>
+<td>Disk Failures</td>
+<td>You</td>
+<td>Service</td>
+<td>Service</td>
+<td>Service</td>
+</tr>
+<tr>
+<td>Operating System</td>
+<td>Updates, installation, security</td>
+<td>You</td>
+<td>You</td>
+<td>Service</td>
+<td>Service</td>
+</tr>
+<tr>
+<td>Security Software</td>
+<td>Install and maintain</td>
+<td>You</td>
+<td>You</td>
+<td>Service</td>
+<td>Service</td>
+</tr>
+<tr>
+<td>Server Software</td>
+<td>Install, maintain</td>
+<td>You</td>
+<td>You</td>
+<td>Service</td>
+<td>Service</td>
+</tr>
+<tr>
+<td>Server Configuration</td>
+<td>Tune, Speed,</td>
+<td>You</td>
+<td>You</td>
+<td>You (limited)</td>
+<td>Service</td>
+</tr>
+<tr>
+<td>User Configuration</td>
+<td>Who can access, user accounts</td>
+<td>You</td>
+<td>You</td>
+<td>You</td>
+<td>Service</td>
+</tr>
+<tr>
+<td>Code/Data</td>
+<td></td>
+<td>You</td>
+<td>You</td>
+<td>You</td>
+<td>You</td>
+</tr>
+</tbody>
+</table>
 
 
 

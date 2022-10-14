@@ -1,0 +1,852 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
+    
+    
+      
+        <title>Cloud Services Organization - MSU Cloud Computing Fellowship</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cloud-services-organization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MSU Cloud Computing Fellowship" class="md-header__button md-logo" aria-label="MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSU Cloud Computing Fellowship
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cloud Services Organization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MSU Cloud Computing Fellowship" class="md-nav__button md-logo" aria-label="MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MSU Cloud Computing Fellowship
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Sessions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sessions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Sessions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../session_introduction/" class="md-nav__link">
+        · Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../session_how_to_cloud/" class="md-nav__link">
+        · How does the cloud work?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../session_cloud_storage/" class="md-nav__link">
+        · Cloud Storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../session_datasystems/" class="md-nav__link">
+        · Data Systems
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        References
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_glossary/" class="md-nav__link">
+        Cloud Glossary
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index2021/" class="md-nav__link">
+        Previous 21-22 syllabus
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    Goals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#costs" class="md-nav__link">
+    Costs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-level-model-of-cloud" class="md-nav__link">
+    Service Level Model of Cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces" class="md-nav__link">
+    Interfaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-of-api" class="md-nav__link">
+    Review of API
+  </a>
+  
+    <nav class="md-nav" aria-label="Review of API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rest" class="md-nav__link">
+    REST
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces_1" class="md-nav__link">
+    Interfaces
+  </a>
+  
+    <nav class="md-nav" aria-label="Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desktop-applications" class="md-nav__link">
+    Desktop Applications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-gui" class="md-nav__link">
+    Web GUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line" class="md-nav__link">
+    Command Line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arm-templates" class="md-nav__link">
+    ARM templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-languages" class="md-nav__link">
+    Programming Languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-infastructure-systems" class="md-nav__link">
+    Cloud Infastructure Systems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line_1" class="md-nav__link">
+    Command Line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sdk-software-developer-kit" class="md-nav__link">
+    SDK : Software Developer Kit
+  </a>
+  
+    <nav class="md-nav" aria-label="SDK : Software Developer Kit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-sdk" class="md-nav__link">
+    Python SDK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    R
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-company-frameworks" class="md-nav__link">
+    Cloud company frameworks
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud company frameworks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-arm-templates" class="md-nav__link">
+    Azure: ARM templates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#third-party-programming-with-terraform" class="md-nav__link">
+    Third-party programming with Terraform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-cloud-from-cloud" class="md-nav__link">
+    Building Cloud from Cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#staying-organized-in-azure" class="md-nav__link">
+    Staying Organized in Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Staying Organized in Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-in-it" class="md-nav__link">
+    "Environment' in IT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming-things" class="md-nav__link">
+    Naming things
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    Monitoring
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-examples" class="md-nav__link">
+    Monitoring Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-thinking" class="md-nav__link">
+    Workflow thinking
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="cloud-services-organization">Cloud Services Organization</h1>
+<h2 id="goals">Goals</h2>
+<p>Have options for interacting with cloud services
+Understand differencd between the cloud manager and resource you've created
+Know how to use scripting to create a cloud resource 
+How to find basic cost estimates</p>
+<h2 id="introduction">Introduction</h2>
+<p>We might think of using cloud computing in 3 areas: using the resources (which is our real goal), definining and creating these resources, and manageing them.  </p>
+<p>We may need a virtual machine to run our program to calculate or analyze our data, but we need to determine the properties of that virtual machine and create it first.  Surrounding all of that is how we interact with the cloud service to do that, how we estimate and observe the costs, manage and identify all the other components a cloud VM needs, and  make it as secure as possible.   </p>
+<p>I'm lumping all of these last pieces into 'managing' cloud resources.  It may be the most boring of all the topics.   The concepts may cover any resource you create in the cloud, and in general apply to all cloud service providers.  However the details of <em>how</em> you do it are very specific to each cloud vendor.   In fact the methods may be convoluted or less than straightforward, so there are many companies that provide additional tools just to manage cloud resources in a more consistent or easier way than the cloud providers allow you</p>
+<h2 id="costs">Costs</h2>
+<p><a href="costs/azure_cloud_cost_basics/">Cloud Costs Basics</a></p>
+<p>Excercise: 
+  - <a href="storage_pricing_exercise.md">Azure Storage Pricing Exercise</a> 
+  - </p>
+<h2 id="service-level-model-of-cloud">Service Level Model of Cloud</h2>
+<p>how that affects costs and security </p>
+<h2 id="interfaces">Interfaces</h2>
+<p>Cloud Services are by design DIY or on-demand and hence need a programming interface to create cloud resources.  This is only possible becuase inside the data center, computer configuration can be done completely with code, also knows as "Infrastructure as Code" (IaC).  <a href="https://en.wikipedia.org/wiki/Amazon_Web_Services#Founding_(2000–2005)">Amazon's insight</a> was that they could slap a website on top of that, put a system for tracking (metering) usage, and sell it. </p>
+<h2 id="review-of-api">Review of API</h2>
+<p>In session One we talked about the client/server model of computing which is so ubiquotous is seems like the <em>only</em> model of computing.  </p>
+<p>Some important terms for understanding cloud computing </p>
+<p>Client/Server: 
+API: Application Programming Interface:  the commands that can be used for code-to-code interaction. 
+REST API:  is a standard method for using the web protocol (HTTP)</p>
+<h3 id="rest">REST</h3>
+<p>Knowing the details of REST is not important but it's often the basis for all of the other style of interfaces.  </p>
+<p>Here is an <a href="https://www.7timer.info/bin/astro.php?lon=113.2&amp;lat=23.1&amp;ac=0&amp;unit=metric&amp;output=json&amp;tzshift=0">example web api URL for weather forecast</a>, with parameters for coordinates, units and format of output</p>
+<p><code>https://www.7timer.info/bin/astro.php?lon=113.2&amp;lat=23.1&amp;ac=0&amp;unit=metric&amp;output=json&amp;tzshift=0</code>  </p>
+<p>The parameters are lon, lat, ac, unit, output=json, tzshift</p>
+<p>Without reading the documentation, we can guess all but the 'ac' </p>
+<p>Few of us would ever use the Azure REST api directly, instead would use the web interface or even better the command line or programming language interface which achieves the same goal with less work.  </p>
+<p>This is a good explanation of REST and part 2 describes the details. </p>
+<p><a href="https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-1-introduction-b4a072f8740f">https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-1-introduction-b4a072f8740f</a></p>
+<p>These are important because the core method for interacting with cloud services is REST.    You don't have to use REST because their are other (easier?) ways that use REST.  </p>
+<h2 id="interfaces_1">Interfaces</h2>
+<p>The base of Azure is the "resource manager" which provides an API to create, view, destroy etc the things we've talked about. </p>
+<p><img alt="Azure Resource Manager Diagram" src="https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/media/overview/consistent-management-layer.png" /></p>
+<ul>
+<li>Web-based GUI: Azure Portal.  </li>
+<li>Command Line Interface with Bash or Powershell</li>
+<li>REST</li>
+<li>SDK = Programming Interface</li>
+<li>desktop applications</li>
+</ul>
+<p>Overview from Microsoft: <a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview">https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview</a></p>
+<p>In short, you can think of it this way</p>
+<div class="highlight"><pre><span></span><code>Your program -&gt; SDK/CLI (internal converts to REST) -&gt; Azure Resource Manager -&gt; Your Cloud Resource (storage, VM, )
+</code></pre></div>
+<p>Once the resource is created, you can connect to it directly. </p>
+<div class="highlight"><pre><span></span><code>You -&gt; client program -&gt; resource
+</code></pre></div>
+<p>for example : </p>
+<div class="highlight"><pre><span></span><code>Remote Desktop -&gt; Virtual Machine (running RD server)
+</code></pre></div>
+<h3 id="desktop-applications">Desktop Applications</h3>
+<p>Azure provides some desktop applications for working with a few of the widely used cloud services : </p>
+<ul>
+<li>Azure Storage Explorer: <a href="https://azure.microsoft.com/en-us/features/storage-explorer/">https://azure.microsoft.com/en-us/features/storage-explorer/</a><br />
+    Can create cloud storage and upload/download data.  We will use that for our session on Storage</li>
+<li>Azure Data Studio:  <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is-azure-data-studio?view=sql-server-ver15">https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is-azure-data-studio?view=sql-server-ver15</a> <br />
+    Can connect to and work with data systems (such as databases ) that are on your computer, on a system on campus, or hosted in Azure</li>
+</ul>
+<h3 id="web-gui">Web GUI</h3>
+<p>All Service providers have web-based interaction with their services.  Azure Portal, Google Cloud Console (screenshot), Amazon log-in (screenshot)</p>
+<p>( <a href="../docs/session_how_to_cloud/azure_portal_walkthrough.md">Portal Excerise from seesion 2</a>
+Portal has dashboard that can be changed. </p>
+<h3 id="command-line">Command Line</h3>
+<p>If you are used to using Linux to , then the Command Line Interface ( CLI ) is a gateway to using code to interfact with Azure. 
+"Shell" is tha command line interface to your computer.  </p>
+<ul>
+<li>Linux/Mac Terminal; Shell is "zsh" or Z-shell or bash, many others</li>
+<li>Windows CMD.exe: Shell is PowerShell</li>
+</ul>
+<p>this is important because Azure offers you a choice of which kind of commnand-line interface to use. <br />
+- select the command interface that aligns with how you work. <br />
+- HPC uses linux which uses 'bash' or 'zsh'
+- Can run bash/zsh in a windows computer
+- can run powershell on a Mac</p>
+<p>example command to create a storage account using Azure CLI:</p>
+<p><em>"Shell script"</em> is a list of commands that can be  saved in a file and re-run from the terminal/cmd.exe</p>
+<h3 id="arm-templates">ARM templates</h3>
+<ul>
+<li>'bicep' = simplified ARM templates</li>
+</ul>
+<h3 id="programming-languages">Programming Languages</h3>
+<ul>
+<li>overview</li>
+<li>example with python, read and write from blob storage</li>
+<li>show where to find info on other languages</li>
+<li>we don't have time to go into detail on using other languages </li>
+</ul>
+<h3 id="cloud-infastructure-systems">Cloud Infastructure Systems</h3>
+<ul>
+<li>overview, why?</li>
+<li>Terraform</li>
+<li>Cloud Foundry</li>
+<li>Ansible</li>
+</ul>
+<h3 id="command-line_1">Command Line</h3>
+<p>For those not familar wiht the command line, see <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-the-linux-terminal">https://www.digitalocean.com/community/tutorials/an-introduction-to-the-linux-terminal</a> for linux and for Windows Powershell see <a href="https://programminghistorian.org/en/lessons/intro-to-powershell">https://programminghistorian.org/en/lessons/intro-to-powershell</a></p>
+<p>The command line interface is a great way to interact with cloud services because it's imperative and all options are specified in a single command.   With the web interface, you may have to hunt through the user interface to find the checkbox for an option, but for command line </p>
+<p>Azure has two command line interfaces:  The "CLI" which is based on Linux and will work in any linux or Mac terminal (or shell script) and the "Powershell" interface which is for Windows Powershell users.   Since Powershell has been ported to Linux and Mac and the Linux Shell  and Azure CLI can also be used on Windows, so both are operating system independent but in practice, Windows users use powershell and everyone else uses the CLI.   Your choice depends on the kinds of other systems you'll be working with.  For example, the MSU HPC uses Linux command shell  but Windows servers and other Windows services like SQLServer work well with Powershell. </p>
+<h3 id="sdk-software-developer-kit">SDK : Software Developer Kit</h3>
+<p>A "software developer kit" is simply a collection of utilities, libraries/packages and documentation for a specific language to work with a specific service.  All the cloud vendors have SDKs, and they all have SDKs for Python.    SDK simply means you can create, delete, interact with cloud services from your program.</p>
+<p>Why leave python or R if don't have to?</p>
+<h4 id="python-sdk">Python SDK</h4>
+<p>All cloud vendors have SDKs to work with Python.   After installing the SDK, you import the libraries and issue commands to create resources, then use those cloud resources to do work via client libraries (either Azure libraries or others).   Azure has extensive documentation for using Python: <a href="https://docs.microsoft.com/en-us/azure/developer/python/?view=azure-python">https://docs.microsoft.com/en-us/azure/developer/python/?view=azure-python</a></p>
+<p>Example Azure code to create cloud storage, compared with how you would see the resources in the azure portal, and similar commands using the CLI : <a href="https://docs.microsoft.com/en-us/azure/developer/python/azure-sdk-example-storage?tabs=cmd">https://docs.microsoft.com/en-us/azure/developer/python/azure-sdk-example-storage?tabs=cmd</a></p>
+<p>Note that Azure also has a service "Azure Cloud Functions" that run python that are not the same thing as the SDK.  These are 'serverless' resources (similar to AWS Lambda), which we will learn about later in the course. </p>
+<p>Both AWS and Google Cloud have Python SDKs, and probably other vendors.  </p>
+<h4 id="r">R</h4>
+<p>Unlike the other vendors, Microsoft maintains an SDK for R Users which allows you to create cloud services directly from Rstudio.  See their github pages <a href="https://github.com/Azure/AzureR">https://github.com/Azure/AzureR</a> and excellent documentation throughout the packages.  </p>
+<h3 id="cloud-company-frameworks">Cloud company frameworks</h3>
+<p>In addition to the "SDKs" for existing languages, cloud companies often have their own frameworks for using code to build (provision) infrastructure. 
+For Azure, these are "ARM Templates" and for AWS it's <a href="https://aws.amazon.com/cloudformation/">Cloud Formation</a>. </p>
+<h4 id="azure-arm-templates">Azure: ARM templates</h4>
+<p>Azure has a system for submitting a template, or essentially a configuration file to the Azure Resource Manager (ARM) that dictates which cloud resources are to be created.   For Azure these are JSON-formatted files  that are "declaritive" (rather than procedural or imperative like Python).   The best way to understand these is to explore the many that Microsoft posts on github, and to try them.   If you do, be mindful to delete any resources you create so as not to be charged for them. </p>
+<div class="highlight"><pre><span></span><code>- Overview of ARM templates: https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
+- Quick start ARM templates (github): https://github.com/Azure/AzureStack-QuickStart-Templates
+</code></pre></div>
+<h2 id="third-party-programming-with-terraform">Third-party programming with Terraform</h2>
+<p>There are other ways to 'program the cloud' from companies outside of the big three.  One widely used frame is "Terraform" from Hashicorp, not affiliated with any cloud company.   The ad</p>
+<div class="highlight"><pre><span></span><code>- Terraform: https://www.terraform.io
+- Can work with any vendor including Azure
+- Often more readable than ARM templates, Syntax remarkably simple 
+- Focus on maintaining consistent systems ( declarative) 
+- Does not cover all services, but can fall back to ARM templates when necessary
+</code></pre></div>
+<h2 id="building-cloud-from-cloud">Building Cloud from Cloud</h2>
+<p>This may not be an 'interface' but is operationally similar.  It's possible to use some of the above interfaces on existing cloud services, e.g.   creating new cloud resources automaticaly from existing cloud resources.   Your cloud architecture may need different types of resources, or parameterized resources only as needed (e.g. depending data inputs, a web-gateway for cloud on demand).    </p>
+<p>For example Azure <a href="https://azure.microsoft.com/en-us/services/logic-apps/">Logic Apps</a> can create resources when they are run (e.g. provision and start a computer) and a logic app can be triggered by events such as when a new file is created, or using a web api (e.g. REST POST command that sends data and parameters).   This adds significant complexity and is only valuable for event-based systems opens up using the cloud as a big computer programming language. </p>
+<h2 id="references">References</h2>
+<p>See our <a href="../references">references page</a> for curated Azure links.   For AWS, see </p>
+<ul>
+<li><a href="https://aws.amazon.com/tools/">https://aws.amazon.com/tools/</a> </li>
+<li>about the AWS CLI: <a href="https://aws.amazon.com/cli/">https://aws.amazon.com/cli/</a></li>
+<li>Demo Using Python Notebook with AWS: <a href="https://s3.us-east-2.amazonaws.com/a-book/s3.html">https://s3.us-east-2.amazonaws.com/a-book/s3.html</a></li>
+</ul>
+<h2 id="staying-organized-in-azure">Staying Organized in Azure</h2>
+<p>You've seen that using the web portal to create a virtual machine creats a dozen resources.   Then you may have other resources (e.g. a storage account) you want to connect to them.  How do you keep them all straight?  </p>
+<h3 id="environment-in-it">"Environment' in IT</h3>
+<p>IT professionals tend to think of the world in two ways:  the stuff I'm doing to try things, and the stuff I've done that now the world can use.  That's because once a system is open or connected to a public interface, they have to keep it running.   Some use the term "production" or in-production. </p>
+<ul>
+<li>development (dev):  in progress experimental versions, never intended for public use, strictly for our use</li>
+<li>test:  optional state, the system is as close to finished as possible and given to staff to do formal testing to ensure it's ready for publication</li>
+<li>production (prod): final version released to the public</li>
+<li>optional "preview" or "beta" : companies use this to get themselves off the hook.   It's not really done and they may just remove the service, no guarantees.  </li>
+</ul>
+<p>A production environment is deploying resources so that they are unchanged, stable and don't have down time.  A "site reliability engineer" (SRE) is paid to avoid downtime.  </p>
+<h3 id="naming-things">Naming things</h3>
+<p>Microsoft suggestion for creating names: <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming">https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming</a></p>
+<p><strong>using Azure 'Tags'</strong></p>
+<ul>
+<li>Optional: Short note about <a href="azure_tags/">Using Azure Tags for Organization</a> ( Pat Bills, MSU)</li>
+<li><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json">"Use tags to organize your Azure resources and management hierarchy"</a> from Microsoft</li>
+</ul>
+<p><img alt="Microsoft Components of an Azure resource name." src="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming" />
+<em>Microsoft suggested naming scheme for Azure resources</em></p>
+<p><strong>Why do they call out 'region' in this naming scheme?</strong>  For global web companies, they may deploy duplicate resources in many regions.    In addition resources that interaction should be in the same region, e.g. a storage acccount and a VM that uses it should be in the same region to keep the connection fast.  </p>
+<h2 id="monitoring">Monitoring</h2>
+<p>You want to keep an eye on the resources you create: how healthy are they, are they performing as expected?  Is there some problem that makes them slow or unresponsive?  This is especially true of servers, created by IT staff, that others are using that need to stay up and running.    For us as researchers creating resources to do our calculations, we want to know how long it's taking and hence how much will it cost?  Do we need to add more power to get it to work?   </p>
+<p>This is an esoteric topic and is really specific to each type of service, but it's something to consider as 1) you may need to engage in a resource outside of the azure portal (e.g. in a VM, log-in and check the performance with standard tools like 'top' in Linux and the task manger in Windows) 2) create (and pay for!) yet another cloud resource for collective and 'managed' monitoring.     </p>
+<p>Why use cloud monitoring at all?  If you were running a bunch of your own computers in your lab, you would just sit down and check on them using tools the operating system provided.  In many systems you open and read the 'logs' or text files with a stream of the events and times they occured.  </p>
+<p>Machines in the cloud provide new challenges.  An obvious one is to be able to see statistics for many resources at once.   How then does Azure collect data from each machine into central place and then let you browse it?    A second challenge is, what happens to that information for a virtual machine that has crashed and is unresponsive, or has been intentionally turned off and deleted?   </p>
+<h3 id="monitoring-examples">Monitoring Examples</h3>
+<p>For Azure virtual machines, Azure offers <a href="https://learn.microsoft.com/en-us/azure/azure-monitor/vm/monitor-virtual-machine">"Azure Monitor"</a>.   Using it is completely optional and I don't have activities related to this service.   If for your project you are working with a group of VM's, you are interested in performance, or you need performance information because your analysis is not completing then I would investigate this service. </p>
+<h2 id="workflow-thinking">Workflow thinking</h2>
+<ul>
+<li>workflow thinking</li>
+<li>reproducibility in Science</li>
+<li>goals: not the much different from reproducibiel code easy maintainance</li>
+<li>Terms 'devops'  'IaC'  'CI/CD'   </li>
+<li>you will see professional workflows referenced and may find tutorials taking you down t this path but it's not essential.  Geared for System Admins and commercial software shops</li>
+<li>for large open source projects it may be essential</li>
+</ul>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>
