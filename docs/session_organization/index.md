@@ -4,13 +4,14 @@
 
 ## Goals
 
-We hope to provide you with the following understanding
-- what are the "service levels" and the related responsibilities for different kinds of cloud resources, and how does that help you choose a service
-- what options for interacting with cloud services
-- Understand difference between the cloud manager and resource you've created
-- Know how to use program to automate the creation and deletion of cloud resources 
-- How to find basic cost estimates
-- More options for moving your data between resources
+We hope to provide you with the following understanding of: 
+
+ - what are the "service levels" and the related responsibilities for different kinds of cloud resources, and how does that help you choose a service
+ - what options for interacting with cloud services
+ - Understand difference between the cloud manager and resource you've created
+ - Know how to use program to automate the creation and deletion of cloud resources 
+ - How to find basic cost estimates
+ - More options for moving your data between resources
 
 ## Introduction
 
