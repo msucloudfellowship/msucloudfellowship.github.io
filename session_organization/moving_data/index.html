@@ -13,7 +13,7 @@
     
     
       
-        <title>Azure tags - MSU Cloud Computing Fellowship</title>
+        <title>Index - MSU Cloud Computing Fellowship</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-tags-to-organize-resources-in-azure" class="md-skip">
+        <a href="#moving-data-in-the-cloud" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Azure tags
+              Index
             
           </span>
         </div>
@@ -306,6 +306,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        · Cloud Services Organization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_bigdata/" class="md-nav__link">
+        · Big Data and the cloud
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -382,16 +410,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-tags-to-organize-resources-in-azure" class="md-nav__link">
-    Using Tags to organize resources in Azure
+  <a href="#moving-data-in-the-cloud" class="md-nav__link">
+    Moving Data in The Cloud
   </a>
   
-    <nav class="md-nav" aria-label="Using Tags to organize resources in Azure">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excercises" class="md-nav__link">
+    Excercises
+  </a>
+  
+    <nav class="md-nav" aria-label="Excercises">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-usage" class="md-nav__link">
-    Example usage:
+  <a href="#optional-readings" class="md-nav__link">
+    Optional Readings
   </a>
   
 </li>
@@ -415,21 +450,38 @@
                 
 
 
-  <h1>Azure tags</h1>
-
-<h2 id="using-tags-to-organize-resources-in-azure">Using Tags to organize resources in Azure</h2>
-<p>Tags are notes to yourself about the resource, use them for metadata.  </p>
-<p>As the number of cloud resources blossom (e.g. cloud sprawl) it can be important to find related resources quickly.  The azure portal has a way to see resource within and across resource groups using different filtering methods.    One of those is the with resource meta-data, and you can add meta data using 'tags.'</p>
-<p>In my group we always have a tag with the key "created by" and value the netid of the creator.   This may be redundant here becuase all the resources you create will be a in resource group with your NetID already in it, but add this for practice. </p>
-<p>You may consider using a tag like "project" with value for the project if either 1) a project may have multiple resource goups or 2) a resource group would have multiple projects.  </p>
-<p>For now you have only one resource group, but tags are also used to find things across different resource groups, e.g. if by project name. </p>
-<p>Tags can be added and removed at will from resources without altering the resource, so add as many tags as you want when starting to see how they may work.   </p>
-<h3 id="example-usage">Example usage:</h3>
-<p>When creating resources using the wizard, many resources are created at once. For example creating a virtual machine may create 12 resources.  Adding a tagl to ID those resources together can really help to delet them. </p>
+<h2 id="moving-data-in-the-cloud">Moving Data in The Cloud</h2>
+<p><img alt="moving boxes" src="https://media4.giphy.com/media/jYmGmDK3rKdkk/giphy.gif" /></p>
+<h1 id="excercises">Excercises</h1>
 <ul>
-<li>use the Portal to create a test virtual machine (VM), which creates 12 resources</li>
-<li>add a unique tag to those during the VM creation process, e.g.  tag "id" = "test VM Oct 1"</li>
-<li>when you later need to delete the VM becuase you are done with it, or it wasn't what you needed, you can filter resources in your group on this this so you can select those 12 resources, and not any others, without having to hunt for them by name. </li>
+<li><a href="moving_data_with_url_activity/">Exercise: moving data using storage URL</a></li>
+<li><a href="how_to_azure_files.md">Attaching <strong>Azure Files</strong> to a Virtual machine for reading and writing data</a></li>
+<li>Creating and re-using a data disk for virtual machines: <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal">Attach a managed data disk to a Windows VM by using the Azure portal</a></li>
+<li>Linux VMs: command line option using 'scp' command  <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/copy-files-to-linux-vm-using-scp">Use SCP to move files to and from a Linux VM</a></li>
+<li><a href="how_to_hpc_and_cloudstorage/">How to move data between the MSU HPC and Azure</a> for an example using the <code>azcopy</code> utility, and other techniques
+  Requires an MSU HPC account offers free account to use HPC. However, this technique is applicable to any other mac or linux system you have access to. </li>
+</ul>
+<h2 id="optional-readings">Optional Readings</h2>
+<ul>
+<li>
+<p>Adding a data disk to virtual machine (review): 
+  A second disk may be faster to access than </p>
+<ul>
+<li>Linux: <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal">https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal</a></li>
+<li>Windows: <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal">https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal</a></li>
+</ul>
+</li>
+<li>
+<p>Chapter 3 <a href="https://s3.us-east-2.amazonaws.com/a-book/using_storage.html">Using Cloud Storage Services</a> in <a href="https://cloud4scieng.org/">Cloud Computing for Science and Engineering</a>  </p>
+<ul>
+<li>
+<p>Focus on the Introduction and Section 3.3 (Azure)</p>
+</li>
+<li>
+<p>This chapter is written for python programmers, and starts with Amazon Web Services (AWS) examples, then moves to Azure examples in comparison to AWS.   If you are not a programmer or haven't heard of AWS storage (known as 'S3'), then skim through to get an idea of how you may use these.  </p>
+</li>
+</ul>
+</li>
 </ul>
 
 
