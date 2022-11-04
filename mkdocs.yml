@@ -9,9 +9,8 @@ nav:
        - · Cloud Storage: session_cloud_storage/index.md
        - · Data Systems: session_datasystems/index.md
        - · Cloud Services Organization: session_organization/index.md
-       - · Big Data and the cloud: session_bigdata/index.md
-       
-       # - · Serverless, Containers, and FaaS: session_serverless/index.md
+       - · Big Data and the cloud: session_bigdata/index.md       
+       - · Serverless, Containers, and FaaS: session_serverless/index.md
     - References: references/index.md
     - Cloud Glossary: cloud_glossary.md
     - Previous 21-22 syllabus: index2021.md

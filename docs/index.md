@@ -47,11 +47,11 @@ Michigan State University. East Lansing, MI 48824
     * Optional help/office hours September 23 2pm
  3. [Cloud Storage](session_cloud_storage)
     * Meeting September 30: Discussion & Cloud Storage Workshop.  
- 4. Databases and Data Analytics Systems on the Cloud for research
+ 4. [Databases and Data Analytics Systems on the Cloud for research](session_datasystems)
     * Meeting October 14: Seminar on Database and data systems. <br> Hands-on: Using Cosmos DB
- 5. Big Data Systems and the cloud
+ 5. [Big Data Systems and the cloud](session_bigdata)
     * Meeting October 28: Overview of Big Data on Azure with DataBricks
- 6. Cloud workflows & Serverless functions with Python
+ 6. [Serverless Cloud Computing](session_serverless)
     * Meeting November 4: Overview of Serverless and FaaS, Demonstration of Real-world project
  7. Overview of Web Application Development in the cloud.   
     * Meeting November 18: Details about the Project
