@@ -1,4 +1,4 @@
-# Session 6: Data Servers on the Cloud 
+# Session 4: Data Servers on the Cloud 
 
 ![MSU Mara Hyena Project Database Entity Relationship Diagram](img/hyena-database-er.png)
 
@@ -33,9 +33,15 @@ If you are interested in using SQL for your project, consider the following two 
     - record the admin user name and password you used when creating the database
     - in the Azure portal, visit the Postgresql Database resource page, and look at the connection strings page to use in the next tutorial
 2. [Quickstart: Use Azure Data Studio to connect and query PostgreSQL](https://docs.microsoft.com/en-us/sql/azure-data-studio/quickstart-postgres?view=sql-server-ver15)
-3. Delete the database in your resource group when you have finished with the tutorial.  If you would like to estimate costs for using database, keep it for a few days, then visit the "Cost Analysis" page of your resource group in the Azure portal.  SQL services can get expensive quickly compared to VMs, but installing and running postgresql server software is a daunting task and comes with security risks.  
 
-Using a Database Server in the cloud has many layers so if you are interested in using SQL feel free to reach out for help provisioning and  connecting to a SQL system.   
+3. In depth SQL Tutorial:<br>
+After completing the two activities above, If you are interested in starting with SQL, this free tutorial looks pretty good.  Let us know if you tried it and it was not helpful:  
+ - [PostgreSQL Tutorial from TutorialsPoint.com ](https://www.tutorialspoint.com/postgresql/index.htm).  
+ - NOTE: A Database server can house many "databases" , and sometimes a database is called a "schema" so you can use the database server you created above, and the same steps for how to connect to the server, then create a new database inside the server for the tutorial.  
+ 
+4. Delete the database in your resource group when you have finished with the tutorial.  If you would like to estimate costs for using database, keep it for a few days, then visit the "Cost Analysis" page of your resource group in the Azure portal.  SQL services can get expensive quickly compared to VMs, but installing and running postgresql server software is a daunting task and comes with security risks.  
+
+Using a Database Server in the cloud has many layers so if you are interested in using SQL feel free to reach out for help for incorporating SQL into your research.   
 
 #### References
 
