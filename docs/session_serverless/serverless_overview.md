@@ -1,6 +1,6 @@
 # Introduction to Serverless Functions
 
-**For [Session 7: Overview of Serverless](../session_serverless/index.md)**
+**For [Session 6: Overview of Serverless](../session_serverless/index.md)**
 
 ![Serverless Graphic from Instana](https://www.instana.com/media/serverless-evolution-1024x455.jpeg)
 
