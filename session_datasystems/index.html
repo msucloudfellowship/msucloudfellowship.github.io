@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#session-6-data-servers-on-the-cloud" class="md-skip">
+        <a href="#session-4-data-servers-on-the-cloud" class="md-skip">
           Skip to content
         </a>
       
@@ -389,20 +389,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../session_organization/" class="md-nav__link">
-        · Cloud Services Organization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../session_bigdata/" class="md-nav__link">
         · Big Data and the cloud
       </a>
@@ -419,6 +405,20 @@
     <li class="md-nav__item">
       <a href="../session_serverless/" class="md-nav__link">
         · Serverless, Containers, and FaaS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../session_organization/" class="md-nav__link">
+        Cloud Services Organization
       </a>
     </li>
   
@@ -557,7 +557,7 @@
                 
 
 
-<h1 id="session-6-data-servers-on-the-cloud">Session 6: Data Servers on the Cloud</h1>
+<h1 id="session-4-data-servers-on-the-cloud">Session 4: Data Servers on the Cloud</h1>
 <p><img alt="MSU Mara Hyena Project Database Entity Relationship Diagram" src="img/hyena-database-er.png" /></p>
 <h2 id="introduction">Introduction</h2>
 <p>Data servers (like Relational Databases) can be a powerful tool for even small research projects.   When we say "Data Servers" or "Data Systems"  we mean any server with data processing capabilities that you connect to with a client to send data, commands and receive results.   The most widely used and classic example is the relational database management system (RDBMs) invented in the 1970s, but there are many other types.  A central advantage of data servers is ability to handle many conncurrent connections.  Connections can be from many users, a web application serving many uers, or many other concurrent processes.    Like other systems (such as VMs, File storage servers, big data tools, etc), these data systems don't require cloud computing, but cloud companies offer database services such taht with a few clicks you can have a server that would take a week to provision and years to maintain.  A data server could be a productive addition to your cloud architecturee, or the central aspect of your fellowship project.  </p>
@@ -587,10 +587,22 @@
 <li>in the Azure portal, visit the Postgresql Database resource page, and look at the connection strings page to use in the next tutorial</li>
 </ul>
 </li>
-<li><a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/quickstart-postgres?view=sql-server-ver15">Quickstart: Use Azure Data Studio to connect and query PostgreSQL</a></li>
-<li>Delete the database in your resource group when you have finished with the tutorial.  If you would like to estimate costs for using database, keep it for a few days, then visit the "Cost Analysis" page of your resource group in the Azure portal.  SQL services can get expensive quickly compared to VMs, but installing and running postgresql server software is a daunting task and comes with security risks.  </li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/quickstart-postgres?view=sql-server-ver15">Quickstart: Use Azure Data Studio to connect and query PostgreSQL</a></p>
+</li>
+<li>
+<p>In depth SQL Tutorial:<br>
+After completing the two activities above, If you are interested in starting with SQL, this free tutorial looks pretty good.  Let us know if you tried it and it was not helpful:  </p>
+</li>
+<li><a href="https://www.tutorialspoint.com/postgresql/index.htm">PostgreSQL Tutorial from TutorialsPoint.com </a>.  </li>
+<li>
+<p>NOTE: A Database server can house many "databases" , and sometimes a database is called a "schema" so you can use the database server you created above, and the same steps for how to connect to the server, then create a new database inside the server for the tutorial.  </p>
+</li>
+<li>
+<p>Delete the database in your resource group when you have finished with the tutorial.  If you would like to estimate costs for using database, keep it for a few days, then visit the "Cost Analysis" page of your resource group in the Azure portal.  SQL services can get expensive quickly compared to VMs, but installing and running postgresql server software is a daunting task and comes with security risks.  </p>
+</li>
 </ol>
-<p>Using a Database Server in the cloud has many layers so if you are interested in using SQL feel free to reach out for help provisioning and  connecting to a SQL system.   </p>
+<p>Using a Database Server in the cloud has many layers so if you are interested in using SQL feel free to reach out for help for incorporating SQL into your research.   </p>
 <h4 id="references">References</h4>
 <p>A list of the commands you may use to manage a database for the Postgresql variety: <a href="https://zaiste.net/posts/postgresql-primer-for-busy-people/">https://zaiste.net/posts/postgresql-primer-for-busy-people/</a></p>
 <h4 id="optional-data-analytics-on-the-google-platform">Optional : Data Analytics on the Google Platform</h4>
@@ -639,13 +651,13 @@
       
       
         
-        <a href="../session_organization/" class="md-footer__link md-footer__link--next" aria-label="Next: · Cloud Services Organization" rel="next">
+        <a href="../session_bigdata/" class="md-footer__link md-footer__link--next" aria-label="Next: · Big Data and the cloud" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              · Cloud Services Organization
+              · Big Data and the cloud
             </div>
           </div>
           <div class="md-footer__button md-icon">

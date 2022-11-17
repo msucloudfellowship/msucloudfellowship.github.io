@@ -13,7 +13,7 @@
     
     
       
-        <title>Linux Containers, Research & the cloud - MSU Cloud Computing Fellowship</title>
+        <title>Linux Containers, Research, & the cloud - MSU Cloud Computing Fellowship</title>
       
     
     
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linux Containers, Research & the cloud
+              Linux Containers, Research, & the cloud
             
           </span>
         </div>
@@ -312,20 +312,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../session_organization/" class="md-nav__link">
-        · Cloud Services Organization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../session_bigdata/" class="md-nav__link">
         · Big Data and the cloud
       </a>
@@ -342,6 +328,20 @@
     <li class="md-nav__item">
       <a href="../" class="md-nav__link">
         · Serverless, Containers, and FaaS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_organization/" class="md-nav__link">
+        Cloud Services Organization
       </a>
     </li>
   
@@ -447,11 +447,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#introductions-to-containers" class="md-nav__link">
-    Introductions to Containers
+  <a href="#introduction-to-containers" class="md-nav__link">
+    Introduction to Containers
   </a>
   
-    <nav class="md-nav" aria-label="Introductions to Containers">
+    <nav class="md-nav" aria-label="Introduction to Containers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -464,6 +464,20 @@
           <li class="md-nav__item">
   <a href="#how-can-i-used-them-on-the-cloud" class="md-nav__link">
     How can I used them on the Cloud?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-containers-on-the-cloud" class="md-nav__link">
+    Why use containers on the cloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages-of-vms-over-aci" class="md-nav__link">
+    Advantages of VMs over ACI
   </a>
   
 </li>
@@ -495,6 +509,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tutorial" class="md-nav__link">
+    Tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#activities" class="md-nav__link">
     Activities
   </a>
@@ -515,16 +536,17 @@
                 
 
 
-<h1 id="linux-containers-research-the-cloud">Linux Containers, Research &amp; the cloud</h1>
+<h1 id="linux-containers-research-the-cloud">Linux Containers, Research, &amp; the cloud</h1>
 <h4 id="for-session-6-serverless-cloud-computing">For <a href="../">Session 6: Serverless Cloud Computing</a></h4>
 <p><img alt="containers go everywhere" src="../img/container_loading_on_truck.png.jpg" /></p>
 <p><em>The container metaphor for this kind of computing relfects how a standard-sized box can be carried on ships, trains, and trucks at different scales</em></p>
 <h2 id="about-this-material">About this material</h2>
 <p>Understading this material is not necessary to use cloud computing, and being advanced is optional for the cloud computing fellowship.  However, Linux containers are the heart of much of the cloud works, and becoming more prevelant for running complex research software.  </p>
+<p>Container technology was invented to support IT Systems (to run servers), like many things we discussed in the first session.   However value was discovered for research (reproducibility, configuraiton management) and it's become more common to find research software and projects that provide a 'Dockerfile' and instructions for running using containers.   Some workflows, especially in bioinformatics, are complete container based.   One reason is that   containers can be run (and be useful) on your own computer, on an on-premise server, and especially in the cloud with nearly identical results.     </p>
 <h2 id="vms-are-great-but">VMs are great, but...</h2>
 <p>The abstraction of a "Virtual Machine" (VM) solves the problem of requiring 1-1 physcial hardware-to-server.  Now you can have one large computer that can host many smaller VMs which is more efficient.  In addition, a VM can be saved as a "virtual hard drive" and turned off, or moved to a different physical hardware, or even backedup.  Otherwise IT system administrators may have have to re-install everything over again.  </p>
 <p>However becauase of the architecture there Virtual Machines can be unflexible.    When you created your vitual machine, you specified how much memory you needed and how much disk space you needed.   The physical machine must then reserve a part of it's memory and disk permanently, even if you your VM may not be working that hard.   One IT Manager of a virtualization system reported that most of the VMs were only using 5% of what they had reserved.  That's very inefficient!  However the people that created the VMs (people like you ) wanted to ensure they had enough compute power to get done what they needed.    Another problem is that each VM has a full copy of an operating system, like any computer.  So a physical computer, you are responsible for keeping the operating system up-to-date, secure, and free from viruses.   What if there was a way to share a large computers memory, diskspace and underlying operating system dynamically?</p>
-<h2 id="introductions-to-containers">Introductions to Containers</h2>
+<h2 id="introduction-to-containers">Introduction to Containers</h2>
 <p>Many different groups contributed to solutions to the problems of process isolation and management including Google.  The most popular from a company called "Docker."   Docker is a company, a technology/method, software you install on your computer, and a place to host shared containers (a repository or hub)  So you may hear about "Docker containers" but this is a brand name (like "Kleenex").    On the MSU HPC we use <a href="https://wiki.hpcc.msu.edu/display/ITH/Singularity%3A+I.+Introduction">Singularity</a> containers but for now focus on Docker, which works with Azxure.  </p>
 <p>Like Virtual Machines, containers are a means to abstract a running system so that we can bundle muliple "machines" on larger equipment.   Unlike virtual machines, containers share the resources dynamically and are much more isolated.   In addition, unlike virtual machines, Docker containers can be created from a code/configuration file that specifies what goes in them.  That means someone can give you this file, and you can "run" it to create a whole system that does what you need, one time or many times.   </p>
 <ul>
@@ -541,11 +563,30 @@
 <p>Azure offers several options, but to start</p>
 <ul>
 <li>
-<p><a href="https://learn.microsoft.com/en-us/azure/container-instances/container-instances-overview">What is Azure Container Instances?</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/container-instances/container-instances-overview">Azure Container Instances (ACI)</a></p>
 </li>
 <li>
-<p>Azure alternative to "Docker hub" is the <a href="https://learn.microsoft.com/en-us/azure/container-registry/container-registry-intro">Azure Container Registry</a>.   You can use the ACR to build images for you so you don't have to install docker to use them on Azure. </p>
+<p>Azure alternative to "Docker hub" is the <a href="https://learn.microsoft.com/en-us/azure/container-registry/container-registry-intro">Azure Container Registry (ACR)</a>.   You can use the ACR to build images for you so you don't have to install docker to use them on Azure. </p>
 </li>
+</ul>
+<h3 id="why-use-containers-on-the-cloud">Why use containers on the cloud</h3>
+<p>The goal of using VMs and Containers can overlap.  However there are some advantages to using Container Instances : </p>
+<ul>
+<li>You can create a working container instance from code without having to install anything manually as you do with a VM.   The alternatives for VM is to find an existing VM image inthe azure marketplace, or to save your disk and use that as a template for additional VMs.   </li>
+<li>You can run exactly the same software configuration on your laptop, on Azure, or on any other cloud vendor</li>
+<li>Dockerfiles can be shared with a colleague easier than sharing a VM disk image</li>
+<li>When a container instance is off, there is no charge.   Yes!   That's because resources are only allocated when it's running. </li>
+<li>Much less to manage.  When a VM you are responsible for keeping the operation system up to date, all security patches installed and ensuring it does not get hacked.   </li>
+<li>Better security since you are not maintaining an operating system.  There are still some security implications for containers that run servers, but much fewer since you are reponsible for the application only.   </li>
+</ul>
+<h3 id="advantages-of-vms-over-aci">Advantages of VMs over ACI</h3>
+<ul>
+<li>more control over networking</li>
+<li>many more options for machine types and sizes.  Container instances are limited </li>
+<li>many more options for disk configurations, etc</li>
+<li>if you need to optimize performance or need very high performance from a single machine, VMS may be better choice</li>
+<li>more familiar and so conceptually easier to use</li>
+<li>can use Azure VM Scale Sets for multiple VMS (there is probably a similar service for )</li>
 </ul>
 <h3 id="what-can-i-use-it-for">What can I use it for?</h3>
 <p>Following this process, you may find that a large research software project has a "Dockerfile" as part of it's code base.   This is a set of instructions for building everything needed to run the software using containers.  You may find that two commands <code>docker build</code> and <code>docker run</code> are all you need to have a working environment to use a program.   </p>
@@ -562,8 +603,14 @@
 <p>This describes a really important use case of containers which is to enhance reproducibility.  How often have you been told "this code works for me" but you are unable to run it, or it's a huge task to get everything installed just right.   Reproducibility is crucial software development requires a complex developer or running environment.  Even simply the differences between Mac, Windows, and Linux!   </p>
 <p><a href="https://docs.docker.com/get-started/overview/">Docker Overview</a></p>
 <p><a href="https://azure.microsoft.com/en-us/services/container-instances/#overview">Azure Container Service Overview</a></p>
+<h2 id="tutorial">Tutorial</h2>
+<p>There are many many tutorials, blogs, videos, etc for Container Technology.   That didn't stop me from making one of my own, but geared for you, the researcher: <a href="../docker_tutorial_for_researchers/">Docker Tutorial for Researchers featuring Jupyter Lab</a>. </p>
 <h2 id="activities">Activities</h2>
 <ul>
+<li>
+<p>For Windows users : <br />
+<a href="https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10-linux?source=recommendations">Get started: Set up Linux Containers on Windows 10</a> and check the <a href="https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10-linux?source=recommendations#prerequisites">Pre-requisites</a> . Also note on Windows and <em>only</em> windows you can run either a Linux container or a Windows container.   The vast majority of published containers, and the containers we'll be using are Linux, and that's what this tutorial covers. </p>
+</li>
 <li>
 <p><a href="https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal">Quickstart: Deploy a container instance in Azure using the Azure portal</a> : copy a simple web application into a container and run it on Azure.  We aren't suggesting you run a web application for your project, but almost all of the tutorials are about </p>
 </li>
