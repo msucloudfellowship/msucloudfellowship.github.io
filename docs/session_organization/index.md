@@ -1,4 +1,4 @@
-#  Cloud Services Organization
+#  Special Session: Cloud Services Organization
 
 ![disorganized writing](http://www.itrw.net/wp-content/uploads/2016/06/server_spaghetti_1.jpg)
 
@@ -11,7 +11,6 @@ We hope to provide you with the following understanding of:
  - Understand difference between the cloud manager and resource you've created
  - Know how to use program to automate the creation and deletion of cloud resources 
  - How to find basic cost estimates
- - More options for moving your data between resources
 
 ## Introduction
 
