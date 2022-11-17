@@ -1,4 +1,4 @@
-# Session 7: The Cloud Computing Grab Bag That is Serverless
+# Session 6: Serverless Cloud Computing
 
 ![example cloud architecture](img/geneplexus_cloud_diagram.png)
 
