@@ -1,4 +1,4 @@
-# Linux Containers, Research & the cloud
+# Linux Containers, Research, & the cloud
 
 #### For [Session 6: Serverless Cloud Computing](../session_serverless/index.md)
 
@@ -10,15 +10,15 @@
 
 Understading this material is not necessary to use cloud computing, and being advanced is optional for the cloud computing fellowship.  However, Linux containers are the heart of much of the cloud works, and becoming more prevelant for running complex research software.  
 
+Container technology was invented to support IT Systems (to run servers), like many things we discussed in the first session.   However value was discovered for research (reproducibility, configuraiton management) and it's become more common to find research software and projects that provide a 'Dockerfile' and instructions for running using containers.   Some workflows, especially in bioinformatics, are complete container based.   One reason is that   containers can be run (and be useful) on your own computer, on an on-premise server, and especially in the cloud with nearly identical results.     
+
 ## VMs are great, but...
 
 The abstraction of a "Virtual Machine" (VM) solves the problem of requiring 1-1 physcial hardware-to-server.  Now you can have one large computer that can host many smaller VMs which is more efficient.  In addition, a VM can be saved as a "virtual hard drive" and turned off, or moved to a different physical hardware, or even backedup.  Otherwise IT system administrators may have have to re-install everything over again.  
 
 However becauase of the architecture there Virtual Machines can be unflexible.    When you created your vitual machine, you specified how much memory you needed and how much disk space you needed.   The physical machine must then reserve a part of it's memory and disk permanently, even if you your VM may not be working that hard.   One IT Manager of a virtualization system reported that most of the VMs were only using 5% of what they had reserved.  That's very inefficient!  However the people that created the VMs (people like you ) wanted to ensure they had enough compute power to get done what they needed.    Another problem is that each VM has a full copy of an operating system, like any computer.  So a physical computer, you are responsible for keeping the operating system up-to-date, secure, and free from viruses.   What if there was a way to share a large computers memory, diskspace and underlying operating system dynamically?
 
-## Introductions to Containers
-
-
+## Introduction to Containers
 
 Many different groups contributed to solutions to the problems of process isolation and management including Google.  The most popular from a company called "Docker."   Docker is a company, a technology/method, software you install on your computer, and a place to host shared containers (a repository or hub)  So you may hear about "Docker containers" but this is a brand name (like "Kleenex").    On the MSU HPC we use [Singularity](https://wiki.hpcc.msu.edu/display/ITH/Singularity%3A+I.+Introduction) containers but for now focus on Docker, which works with Azxure.  
 
@@ -41,9 +41,29 @@ The Docker is primarily an invisible background process, hidden system files, an
 
 Azure offers several options, but to start
 
-* [What is Azure Container Instances?](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-overview)
+* [Azure Container Instances (ACI)](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-overview)
 
-* Azure alternative to "Docker hub" is the [Azure Container Registry](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-intro).   You can use the ACR to build images for you so you don't have to install docker to use them on Azure. 
+* Azure alternative to "Docker hub" is the [Azure Container Registry (ACR)](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-intro).   You can use the ACR to build images for you so you don't have to install docker to use them on Azure. 
+
+### Why use containers on the cloud
+
+The goal of using VMs and Containers can overlap.  However there are some advantages to using Container Instances : 
+
+ -  You can create a working container instance from code without having to install anything manually as you do with a VM.   The alternatives for VM is to find an existing VM image inthe azure marketplace, or to save your disk and use that as a template for additional VMs.   
+ -  You can run exactly the same software configuration on your laptop, on Azure, or on any other cloud vendor
+ -  Dockerfiles can be shared with a colleague easier than sharing a VM disk image
+ -  When a container instance is off, there is no charge.   Yes!   That's because resources are only allocated when it's running. 
+ -  Much less to manage.  When a VM you are responsible for keeping the operation system up to date, all security patches installed and ensuring it does not get hacked.   
+ -  Better security since you are not maintaining an operating system.  There are still some security implications for containers that run servers, but much fewer since you are reponsible for the application only.   
+
+### Advantages of VMs over ACI
+
+ - more control over networking
+ - many more options for machine types and sizes.  Container instances are limited 
+ - many more options for disk configurations, etc
+ - if you need to optimize performance or need very high performance from a single machine, VMS may be better choice
+ - more familiar and so conceptually easier to use
+ - can use Azure VM Scale Sets for multiple VMS (there is probably a similar service for )
 
 ### What can I use it for?
 
@@ -78,8 +98,16 @@ This describes a really important use case of containers which is to enhance rep
 
 [Azure Container Service Overview](https://azure.microsoft.com/en-us/services/container-instances/#overview)
 
+## Tutorial 
+
+There are many many tutorials, blogs, videos, etc for Container Technology.   That didn't stop me from making one of my own, but geared for you, the researcher: [Docker Tutorial for Researchers featuring Jupyter Lab](docker_tutorial_for_researchers.md). 
 
 ## Activities
+
+- For Windows users :   
+[Get started: Set up Linux Containers on Windows 10](https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10-linux?source=recommendations) and check the [Pre-requisites](https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10-linux?source=recommendations#prerequisites) . Also note on Windows and _only_ windows you can run either a Linux container or a Windows container.   The vast majority of published containers, and the containers we'll be using are Linux, and that's what this tutorial covers. 
+
+
 
 - [Quickstart: Deploy a container instance in Azure using the Azure portal](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal) : copy a simple web application into a container and run it on Azure.  We aren't suggesting you run a web application for your project, but almost all of the tutorials are about 
 
