@@ -1,6 +1,6 @@
 # Cloud Computing Fellowship Projects 2022-2023
 
-<img src="https://media.istockphoto.com/vectors/computer-floating-balloons-vector-id483818607?k=6&m=483818607&s=170667a&w=0&h=Y5SCqmFn4y2_mBgeR6qCjcrI62gi272isLVmgHoVFdk=" height="200px" align="right" alt="graphic of computer floating with ballons">
+<img src="https://media.istockphoto.com/vectors/computer-floating-balloons-vector-id483818607?k=6&m=483818607&s=170667a&w=0&h=Y5SCqmFn4y2_mBgeR6qCjcrI62gi272isLVmgHoVFdk=" width="200px" align="right" alt="graphic of computer floating with ballons">
 
 
 The primary activity of the Cloud Computing Fellowship is to support the fellows to create and present a cloud-computing-based project working with research data.  During Fall semseter the fellowship provides materials and help to learn core cloud concepts and activies, and Winter/Spring semester is devoted to project development.  
