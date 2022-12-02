@@ -1,4 +1,4 @@
-# Docker Tutorial for Researchers featuring Jupyter Lab: Part 1
+# Docker Tutorial for Researchers featuring Jupyter Lab
 
 **for the 2022 MSU Cloud Computing Fellowship Session 6: [Serverless, Containers, and FaaS](index.md)**
 
@@ -6,7 +6,7 @@
 
 This is a walkthrough for using Docker containers on your desktop and in the cloud using Microsoft Azure.  
 
-See the main page for this session and also the [introduction to containers](docs/session_serverless/linux_containers_and_the_cloud.md) along with other links for background on 
+See the main page for this session and also the [introduction to containers](docs/session_serverless/linux_containers_and_the_cloud.md) along with other links for background information. 
 
 ### requirements to follow along
  - azure account
@@ -20,26 +20,26 @@ Docker is not the only system for using containers, but it's the most popular an
 
 A reminder that Docker is a company that hosts a service to upload/download container images, and the name of the softwae ('docker') that can run containers and the name of a file ('Dockerfile' ) to create containers.    
 
-Windows users: Docker was created for Linux but Microsoft has worked hard to make it viable for Windows users as well.   The primary examples in this tutorial for for the command line will be for Mac/Linux, but there should be an equivalant option for Windows users.   One way to make your windows computer more like Linux is to install the Windows Subsystem for Linux (WSL) which would provide you with a Terminal program that runs the "bash" shell
+Windows users: Docker was created for Linux but Microsoft has worked hard to make it viable for Windows users as well.   The primary examples in this tutorial for for the command line will be for Mac/Linux, but there should be an equivalent option for Windows users.   One way to make your windows computer more like Linux is to install the Windows Subsystem for Linux (WSL) which would provide you with a Terminal program that runs the "bash" shell
 There are three parts to this tutorial: 
 
 1. working with containers on your computer (this document)
 2. Launching containers on Azure ( in development )
 3. Creating your own containers ( in development )
 
-Let's get started
+Let's get started.
 
 ## Part 1. Using Docker on your computer
 
 ### step 1: install Docker 
 
-Docker offers many products, some of which are underlying tools to use docker.   You minmimally need the "Docker Engine" to run and manage docker containers via the command line (only).   However they also offer "Docker Desktop": a GUI to work with images and containers, connect and download from Dockerhub, set preferences, and includes all the other tools they make (Docker Compose, etc).   
+Docker offers many products, some of which are underlying tools to use docker.   You minimally need the "Docker Engine" to run and manage docker containers via the command line (only).   However they also offer "Docker Desktop": a GUI to work with images and containers, connect and download from Dockerhub, set preferences, and includes all the other tools they make (Docker Compose, etc).   
 
 Hence we will install Docker Desktop to get everything but this tutorial will primarily work with Docker via command line interface.   Most software that is based on docker will have instructions for running it using the command line.  
 
 Install docker desktop using instructions here: https://docs.docker.com/desktop/
 
-Windows users: Microsoft has provided some good information on their site for using docker with the WSL, but you muse install that first : https://learn.microsoft.com/en-us/windows/wsl/install then see  https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
+Windows users: Microsoft has provided some good information on their site for using docker with the WSL, but you must install that first : https://learn.microsoft.com/en-us/windows/wsl/install then see  https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
 
 
 Note that Docker Desktop works differently on Mac and Windows.  I recommend that you take some time to review the introduction from Docker desktop.  Minimally, we want to open the "dashboard" and to that you find the docker icon ![docker whale](https://docs.docker.com/assets/images/whale-x.svg) in the system tray on windows, and menu bar on Mac, and select "dashboard" .  This may be helpful: https://docs.docker.com/desktop/use-desktop/#the-docker-menu 
@@ -72,13 +72,13 @@ In your terminal or cmd.exe program, use this command:
  docker run -p 8888:8888  --name jupyter-datascience jupyter/datascience-notebook:latest
 ```
 
-You can do somethign similar in the desktop dashboard, but only if you log-in to a repository like DockerHub.  So for this tutorial we'll be using the command line.   See https://docs.docker.com/desktop/use-desktop/images/ for more on the desktop interface for using Images.  
+You can do something similar in the desktop dashboard, but only if you log-in to a repository like DockerHub.  So for this tutorial we'll be using the command line.   See https://docs.docker.com/desktop/use-desktop/images/ for more on the desktop interface for using Images.  
 
 #### Command breakdown for "docker run":
 
  - **docker** - main program to work with images/containers
  - **run** - command to docker.  others include 'pull' to get image. this command will automatically pull the image from dockerhub first if you don't have it on your computer 
- - **-p = port** if the image runs a server, all servers need a 'port' to listen on, and you have to tell docker which port on your own computer you want to connect to the container. Note we could have used any port ( > 1024) but using the same port makes it easy to remember.  See this doc for descriptions of ports](https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/).  The important thing is anything over >1024 is fair game to use, but software tends to have a port they use by convention.   Jupyter lab uses 8888.   Rstudio uses 8787. and Postgresql uses 5432,  just because.
+ - **-p = port** if the image runs a server, all servers need a 'port' to listen on, and you have to tell docker which port on your own computer you want to connect to the container. Note we could have used any port ( > 1024) but using the same port makes it easy to remember.  See this doc for [descriptions of ports](https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/).  The important thing is anything over >1024 is fair game to use, but software tends to have a port they use by convention.   Jupyter lab uses 8888.   Rstudio uses 8787. and Postgresql uses 5432,  just because.
  - **name** this is optional and you can use whatever name you need to help organize your containers.  If you don't provide it, Docker will assign a random name.  when you have several images/containers running for a complex system or as you develop new containers, assigning names willhelp you keep track.     
 
 
@@ -102,22 +102,25 @@ When Jupyter Lab runs, it outputs messages, and Docker is simply forwarding thos
 
 To open Jupyter lab, use the last URl in the list.  
 
-Note about ports:  These Jupyter lab docker images are set to run on port 8888 and will always report that.  However, if you use a different port in the command, then that is the one  you want to use.   For exmaple the command 
-` docker run -p 9999:8888 jupyter/datascience-notebook:latest` the URL would be `http://127.0.0.1:9999/... etc` but the log message will still say 88888 becuase that's the port used by the container internally - it doesn't know about the external port map.    moral is to try to use the same port to reduce confusion.  
+Note about ports:  These Jupyter lab docker images are set to run on port 8888 and will always report that.  However, if you use a different port in the command, then that is the one  you want to use.   For example the command 
+` docker run -p 9999:8888 jupyter/datascience-notebook:latest` the URL would be `http://127.0.0.1:9999/... etc` but the log message will still say 8888 becuase that's the port used by the container internally - it doesn't know about the external port map.    The moral is to try to use the same port to reduce confusion.  
 
+When you run the jupyter notebook, you may see a page asking for a token.  Follow the instructions on the page to proceed.
 
-If it worked and you can log in, you can create a notebook, do some python (or R or Julia) and save the notebook.  Great!  But when yuo save, where does it go?  Right now, everything is instde  But that's all in the container.   If you shut down the container, that is all lost, because internal container storage is ephemeral.   
+If it worked and you can log in, you can create a notebook, do some python (or R or Julia) and save the notebook.  Great!  But when you save, where does it go?  Right now, everything is stored inside the container.   If you shut down the container, that is all lost, because internal container storage is ephemeral.   
 
 In the same terminal you ran the command, use Ctrl+C to cancel it and stop running.   You can also use the Docker desktop GUI to start and stop containers.  
 
 Note if you run this again, you'll get the error
 
-```docker: Error response from daemon: Conflict. The container name "jupyter-datascience" is already in use by container "...". You have to remove (or rename) that container to be able to reuse that name.
+```
+docker: Error response from daemon: Conflict. The container name "jupyter-datascience" is already in use by container "...". You have to remove (or rename) that container to be able to reuse that name.
+
 ```
 
 #### Working with Containers 
 
-After creating a container and stoppping it, you can do a copule things: re-start the container, delete it, start a second instance of the image in a new container, list all your containers.  Note these containers are distinct from the images from which they are made.   
+After creating a container and stopping it, you can do a couple of things: re-start the container, delete it, start a second instance of the image in a new container, or list all your containers.  Note these containers are distinct from the images from which they are made.   
 
 **Using the docker desktop user interface**
 
@@ -135,15 +138,15 @@ Note you use the name you assigned the container when you ran it, not the name o
 
 `docker container rm jupyter-datascience`
 
-Tou can run now a new one (perhaps to alter the port, or other options).  The syntax is based on the Linux 'rm' command 
+You can run now a new one (perhaps to alter the port, or other options).  The syntax is based on the Linux 'rm' command 
 
 3. start a different container from the same image
 
 `docker run -p 8889:8888  --name jupyter-datascience2  jupyter/datascience-notebook:latest`
 
-In this example I used a different port number, which would allow you to run _both_ containers at the same.  I don't think, for this image, there is a reason to do that, but it's possible.  Note that this will taks 
+In this example I used a different port number, which would allow you to run _both_ containers at the same.  I don't think, for this image, there is a reason to do that, but it's possible.  
 `
-4. An many others...
+4. And many others...
 
 https://docs.docker.com/engine/reference/commandline/container/
 
@@ -152,7 +155,7 @@ For example list all the containers on the system `docker container ls -a`
 
 ### Step 4. Connecting docker to your local files
 
-Containers are great because they are unchanging environments you can run repeatedly.  They are not great becuase they are unchanging environments and anything you 'save' or change is lost when you shut down or delete the container.   Computing is not very valuable unless you can save your output.   Docker containers are walled off from your computer unless you explicitly connect a folder from your disk to a folder location in the container.    There are two ways to do this but we are using "volumes" ( see docker Volumne documentation for details.  
+Containers are great because they are unchanging environments you can run repeatedly.  They are not great because they are unchanging environments and anything you 'save' or change is lost when you shut down or delete the container.   Computing is not very valuable unless you can save your output.   Docker containers are walled off from your computer unless you explicitly connect a folder from your disk to a folder location in the container.    There are two ways to do this but we are using "volumes" (see docker Volumne documentation for details).  
 
 The goal is to take a folder on your computer and tell Docker to make it look like it's a sub folder somewhere in the container.  The folder on your computer is up to you, but the location in the docker image is very dependent on the structure and nature of the container.    Some have strict requirments.   
 
@@ -162,58 +165,55 @@ Steps to use volumes on your computer
 1. use Docker desktop to give permission to use the folder
 1. run the container with the command to 'mount' the folder into the Linux container
 
-**Volumes step 1. Create the folder**
+#### **Volumes step 1. Create the folder**
 let's create a folder on your comptuer.  You can use wahatever you want, and this is just an example. 
 
-Let's create folder called "notebooks" right in your home directory.   If you are unfamiliar with the command line there are some instructions for using the Docker Desktop below.  
+Create folder a folder called "notebooks" in your Documents folder.  You can put it anywhere but for this tutorial we will assume the notebooks folder to be used with docker will be in the following location
 
-On Mac, the folder would be in your home directory,  or /Users/<username>/notebooks.  In Mac/Linux terminal the short cut for home directory is `$HOME` so the command would be
+ - Mac: `/Users/<username>/Documents/notebooks.`
+ - Windows: `C:\users\<userid>\Documents\notebooks`   
 
-mkdir $HOME/notebooks
 
-On Windows the shortcut is `%HOMEPATH%` so the path to the notebooks folder is %HOMEPATH%/notebooks (see https://www.thewindowsclub.com/system-user-environment-variables-windows for what an enviroment variable is in Windows).  
+#### **Volumes step 2. Give Docker permission to use the folder**
 
-**Volumes step 2. Give Permission to use the folder**
+To prevent your system from being deleted by roque containers, Docker requires you to grant it permission to use a folder in a container.   There is a way to edit the configuration file for Docker to allow access to folders on your computer, but here we'll use the Docker Desktop GUI app.  
 
-There is a way to edit the configuration file for Docker to allow access to folders on your computer, but here we'll use the Docker Desktop GUI app.  
-
-1. Open the Docker Desktop, and go to preferences.  See the bas
+Open the Docker Desktop Dashboard, and then open preferences (gear icon in top right of Dashboard). Inside preference, open the "resources" section.  Inside that is an "advanced" sub-menu; select "file sharing" that list folders Docker can access.  Click the blue "(+)" icon on the bottom right to add the "notebooks" folder you just created in Documents.  
 
 The Jupyter stack containers have a long discussion on this in the documentation, but in short, there is a special user account inside the container, and to see notebooks yuo have to create a subfolder in that account's home directory.  The user is named "jovyan" and so the home directory inside the container is "/home/jovyan" and that's where the notebooks are looked for. 
 
 
-**Volumes step 3.  Add volume when running the container**
+#### **Volumes step 3.  Add volume when running the container**
 
-To add a volume to the Jupyter stack containers, try this command
+To add a volume to the Jupyter stack containers, you add a command parameter with a pair of folders: the one on your computer and the path thats used in the container : 
 
+`-v /path/on/your/computer:/path/inside/container`
+
+On your computer it makes sense, but what about the container side of the ":" ?  I know from the  Jupyter Stacks documentation that this image uses the folder `/home/jovyan/` so we add "notebooks" to this path and Docker connects the folder 'notebooks' on our computer to folder 'notebooks' to inside the the container.
+
+      
+**Mac/Linux:  **
+
+You cam use mac environment variables to reference your home directory.  
+
+Given a  'notebooks' folder in Documents folder, the command would be 
 
 ```bash
-
-docker run -p 8888:8888 -v "enter path to notebooks here":/home/jovyan/notebooks  jupyter/datascience-notebook:latest
-```
-
-If you created the 'notebooks' folder under Document, the path on a Mac will look something like  `$HOME/Documents/notebooks` so the command would be 
-
-```bash
-
 docker run -p 8888:8888 -v $HOME/Documents/notebooks:/home/jovyan/notebooks  jupyter/datascience-notebook:latest
 ```
 
- On Windows I don't know exactly what this will look like but you could try using variable `%HOMEPATH%/Documents/notebooks` in the command.   
-
+ **On Windows** is similar but we could not bet the environment variable to work, so you'll have to put in your user name:
 
 ```bash
-# I don't have windows so this is a guess
-docker run -p 8888:8888 -v %HOMEPATH%/Documents/notebooks:/home/jovyan/notebooks  jupyter/datascience-notebook:latest
-
+docker run -p 8888:8888 -v c:\\users\\<your user id>\\Documents\\notebooks:/home/jovyan/notebooks  jupyter/datascience-notebook:latest
 ```
 
-But what about the other size of the ":" ?  I know from the  Jupyter Stacks documentation that this image uses the folder `/home/jovyan/` so this command maps the folder 'notebooks' on my computer to 'notebooks' to inside the the container.     
 
-Now when you open the browser and copy/paste the URL for the new notebook server you've started, you'll see the "notebooks" folder on the left side, and any notebook you save there can be found on your computer.    
+Now when you open the browser and copy/paste the URL for the new notebook server you've started (with the token), you'll see the "notebooks" folder on the left side, and any notebook you save there can be found on your computer.    
 
 note that there are aother potentially more sophisticated ways of using Volumes than this, but this works for us!   see the docker documenttaion for details.  
 
+---
 
 # Part 2: using Azure to run containers
 
@@ -246,7 +246,7 @@ the output is a long text in JSON format that has some crucial information in it
 
 `az container show -g $RG --name jupyterlab`
 
-but also from the Azure portal.   T\he information you need in the output is this: 
+but also from the Azure portal.   The information you need in the output is this: 
 
 ```JSON
 "ipAddress": {
@@ -302,7 +302,7 @@ Here is a shortened version based on the Portal
 
 2. Get some security information from the portal  
 
-STORAGE_ACCOUNT_NAME: the main name of the storage accoutn in which you created the File share
+STORAGE_ACCOUNT_NAME: the main name of the storage account in which you created the File share
 SHARE_NAME the name of the file share you  just created (or are using)
 STORAGE_KEY this takes the most work to find. 
   - in the Portal, open the storage account main page (not the file share, but the storage account) 
@@ -352,7 +352,7 @@ The portal has nice forms for creating container instances, but you will still n
 
 ### Managing Containers in Azure
 
-If you stop teh instance you are no longer charged.  You can start/stop from the command line or from the portal
+If you stop the instance you are no longer charged.  You can start/stop from the command line or from the portal
 
 ```bash
 az container stop --resource-group ccf22_billspat --name jupyterlab-test
@@ -363,7 +363,7 @@ az container start --resource-group ccf22_billspat --name jupyterlab-test
 
 However to keep your Resource group tidy, if you are finished with a container instannce for a while you should delete it. 
 
-`az container start --resource-group ccf22_billspat --name jupyterlab-test`
+`az container delete --resource-group ccf22_billspat --name jupyterlab-test`
 
 ### Azure Container Instance Alternate Method
 
@@ -387,7 +387,7 @@ I have not tested this but if it may be useful for debugging a complex Dockerfil
 
 While you may find a ready made Docker image that has all you need, chances are you'll need to modify it for your own work, and that means making your own images.   
 
-1. Select a Base Image.  We always start with an exissting image.  Could be a very basic version of Linux that we install everything into, or an existing full image that we just add a little to. 
+1. Select a Base Image.  We always start with an existing image.  Could be a very basic version of Linux that we install everything into, or an existing full image that we just add a little to. 
 1. Write a Dockerfile : instructions for adding things to the base image (install software, configuration, copying code or data)
 1. Build: from the Dockerfile create an image.  
     - on your own computer using the Docker software
@@ -398,7 +398,7 @@ While you may find a ready made Docker image that has all you need, chances are 
     - from the remote repository you just uploaed to (see optional step above) (e.g pull from remote and run)
 
 
-There is documentation from Docker about what does into a dockerfile, but I find that confusing as they talk about each command, but not how the commands go together.  There are many tutorials for building Dockerfiles to run websites, but not many (if any ) for researchers!  
+There is documentation from Docker about what does into a dockerfile, but I find that confusing as they talk about each command, but not how the commands go together.  There are many tutorials for building Dockerfiles to run websites, but not many (if any) for researchers!  
 
 We've been using Docker images from Jupyter-Stacks.  Here is their example Dockerfile that installs python packages on to their base image: https://github.com/jupyter/docker-stacks/blob/main/scipy-notebook/Dockerfile    This is a bit complex example but it has many of the ingredients of a standard Dockerfile. 
 
@@ -430,7 +430,7 @@ Note the command has a period / dot at the end and that's required if the docker
 
 To run this new container, use this command.  Notice that since this Image is on your 
 
-let's say you also wanted to copy a notebook file called "example.ipynb" from the same directoery that the docker  into this container for demonstration.   You could do this: 
+let's say you also wanted to copy a notebook file called "example.ipynb" from the same directory that the docker  into this container for demonstration.   You could do this: 
 
 ```dockerfile
 FROM jupyter/datascience-notebook:latest
@@ -445,7 +445,7 @@ This is the culmination of all of knowledge above, and actually what researchers
 
 The key concept here is a container registry, which contains "repositories" which are history and versions of container images.  A registry is a web application to build and store Docker images.   Dockerhub is the most widely used container repository and you could use that, but with Azure you can make your own private registry. 
 
-Here are instructions for using Dockerhub: https://www.docker.com/blog/how-to-build-and-test-your-docker-images-in-the-cloud-with-docker-hub/ . Dockerhub is a great option if you want to share your images with others (at no cost to you!).  However We will be using Azure since this 
+Here are instructions for using Dockerhub: https://www.docker.com/blog/how-to-build-and-test-your-docker-images-in-the-cloud-with-docker-hub/ . Dockerhub is a great option if you want to share your images with others (at no cost to you!).  However We will be using Azure since we are running a container on Azure.   
 
 A note about terminology:   A "registry" is a service that can hold many images.  Each image has versions (e.g. tags, latest, v1, v2, v2022, etc), and so this is called a "repository"
 
@@ -466,7 +466,7 @@ Create an ACR (azure container repository)/ with the command line (replace ACR n
 
 First, use `cd` to change to the directory with your dockerfile in it with `cd /path/to/my/Docker/folder`
 
-Assuming there is a Dockerfile in the currenct directory (e.g. if your terminal is in the same folder as the Dockerfile above)
+Assuming there is a Dockerfile in the current directory (e.g. if your terminal is in the same folder as the Dockerfile above)
 
 `az acr build -t jupyter-nltk:latest --file Dockerfile --registry UNIQUEREGISTRYNAME .`
 
@@ -481,7 +481,7 @@ get the  full name of the container registry login server using the command line
 `az acr show --name <UNIQUEREGISTRYNAME> --query loginServer`
 
 
-(this does not ahve storage account mounted):
+(this does not have storage account mounted):
 
 az container create --resource-group "ccf22_billspat" \
  --name jupyterlab-nltk --image jupyterlab-nltk:latest \
