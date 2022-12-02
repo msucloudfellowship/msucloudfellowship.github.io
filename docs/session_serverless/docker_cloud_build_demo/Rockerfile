@@ -1,0 +1,4 @@
+FROM rocker/rstudio:latest
+RUN R --vanilla -e 'install.packages(c("sf", "mapview"), repos="http://cran.us.r-project.org")'
+
+
