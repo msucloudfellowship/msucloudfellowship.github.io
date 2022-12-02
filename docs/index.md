@@ -39,27 +39,35 @@ Michigan State University. East Lansing, MI 48824
 **Note since our meeting for September 2 was cancalled The schedule has been revised**
 
  1. [Introduction to the 22-23 Fellowship](session_introduction)
-    * Meeting September 16: Introductions, Cloud background and hands-on with Azure portal
+    * Meeting **September 16**: Introductions, Cloud background and hands-on with Azure portal
  2. [Hands-on Introduction to Cloud computing Using Virtual Machines](session_how_to_cloud)
     * self-paced readings and activies: 
          - Using the Azure portal
          - creating an connecting to a  virtual machine
     * Optional help/office hours September 23 2pm
  3. [Cloud Storage](session_cloud_storage)
-    * Meeting September 30: Discussion & Cloud Storage Workshop.  
+    * Meeting **September 30**: Discussion & Cloud Storage Workshop.  
  4. [Databases and Data Analytics Systems on the Cloud for research](session_datasystems)
     * Meeting October 14: Seminar on Database and data systems. <br> Hands-on: Using Cosmos DB
  5. [Big Data Systems and the cloud](session_bigdata)
-    * Meeting October 28: Overview of Big Data on Azure with DataBricks
+    * Meeting **October 28**: Overview of Big Data on Azure with DataBricks
  6. [Serverless Cloud Computing](session_serverless)
-    * Meeting November 4: Overview of Serverless and FaaS, Demonstration of Real-world project
+    * Meeting **November 4**: Overview of Serverless and FaaS, Demonstration of Real-world project
  7. Overview of Web Application Development in the cloud.   
-    * Meeting November 18: Details about the Project
- 8. Synthesis and time to develope project proposal
-    * Discussion of Fellowship Projects.  First draft proposal due (1-2 sentence)
-
-Session materials for 2022 are in development.  For examples of previous materials, see the [schedule for 2021](index2021)
-
+    * Meeting **November 18**: Details about the Project
+ 
+ 8. Synthesis: projects and development of project proposal
+    * [Mini-project assignment](miniproject.md)
+    * [About Project](projects.md)
+    * **December 2**: optional office hours, time to work on mini-project, 1-1 help, project discussion
+    * **December 9**: Synthesis Session
+        - send by email 1-2 sentences describing your current thinking on your project
+        - discussion of Fellowship Projects.  
+        - additional 1-1 help with mini project
+    * **December 16**: 
+        - optional office hours, mini-project, project proposal or other help. 
+        - submit write-up for mini-project via email
+   
 ### Schedule for Winter/Spring 2023
 
 The second semester of the fellowship is focused on completing a project based on fellow research interests.   We will meet approximately bi-weekly for fellows to present, get feedback, ask questions, and group discussions.  For some of these dates/times, fellows will deliver a short presentation about their projects as follows:
