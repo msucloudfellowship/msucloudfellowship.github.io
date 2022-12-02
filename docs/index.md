@@ -61,9 +61,10 @@ Michigan State University. East Lansing, MI 48824
     * [About Project](projects.md)
     * **December 2**: optional office hours, time to work on mini-project, 1-1 help, project discussion
     * **December 9**: Synthesis Session
-        - send by email 1-2 sentences describing your current thinking on your project
-        - discussion of Fellowship Projects.  
+        - send by email 1-2 sentences describing your current thinking on your project by this time
+        - discussion of Fellowship Projects  
         - additional 1-1 help with mini project
+    * **December 5 - 16** : On going help available as needed, please contact us
     * **December 16**: 
         - optional office hours, mini-project, project proposal or other help. 
         - submit write-up for mini-project via email
@@ -74,13 +75,13 @@ The second semester of the fellowship is focused on completing a project based o
 
 All meetings are in the ICER training room, 1455A BPS, from 2:00 to 3:30 pm 
 
- - **January 8th** Written project proposal due (via email).   
- - **January 13** Project proposal presentations 
+ - **January 9th** Written project proposal due   
+ - **January 13** In-person session: project proposal presentations 
  - **January 27** Discussion & help session
- - **February 10** Discussion & helpsession
- - **February 24** Project status presentations
+ - **February 10** Discussion & help session
+ - **February 24** In-person session: project status presentations
  - **March 10** Discussion & help session
- - **March 24** Project status presentations
+ - **March 24** In-person session: project status presentations
  - **April 10**: Discussion & help session
  - **April TBD**: Final project write-up due
  - **April TBD**: Fellowship symposium and final presentation
