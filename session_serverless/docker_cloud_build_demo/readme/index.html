@@ -341,7 +341,21 @@
   
     <li class="md-nav__item">
       <a href="../../../session_organization/" class="md-nav__link">
-        Cloud Services Organization
+        · Cloud Services Organization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../miniproject/" class="md-nav__link">
+        · Mini-Project
       </a>
     </li>
   
@@ -350,6 +364,21 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/" class="md-nav__link">
+        About Fellowship Projects
+      </a>
     </li>
   
 
@@ -432,6 +461,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#using-this-code" class="md-nav__link">
+    Using this code.
+  </a>
+  
+    <nav class="md-nav" aria-label="Using this code.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-options" class="md-nav__link">
+    Run Options:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    Run:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -460,6 +516,27 @@ to an existing JupyterLab server from <a href="https://jupyter-docker-stacks.rea
 <li>Based on and depends on the Jupyter lab stack being available, see <a href="https://jupyter-docker-stacks.readthedocs.io/en/latest/">https://jupyter-docker-stacks.readthedocs.io/en/latest/</a></li>
 <li>Dockerfile in the current directory</li>
 </ul>
+<h2 id="using-this-code">Using this code.</h2>
+<p>The shell script code (sh) contains commands that will use Azure to build and run a docker container.   However it is not complete and <strong>you need to edit</strong> for it to work.  Open the script in a text editor and look where to add your own resource group and Azure ID.  </p>
+<h3 id="run-options">Run Options:</h3>
+<ul>
+<li>use your own terminal if the <code>az</code> cli is installed</li>
+<li>use the Microsoft Azure cloud shell if you have set it to use the CLI</li>
+<li>run the whole program at once (see below)</li>
+<li>copy and paste sections to examine how they run.  </li>
+</ul>
+<h3 id="run">Run:</h3>
+<p>several of the commands take a while to complete, especially the build command.  After editing the script and adding your resource group and ID.  To run in a Mac/Linux terminal, use</p>
+<div class="highlight"><pre><span></span><code>az login
+<span class="c1"># optionally set the subscription if you have are in multiple</span>
+<span class="nb">source</span> docker_build_jupyter_on_azure_demo.sh
+az_jupyter_create
+</code></pre></div>
+<p>the relevant information will be printed on the screen, and carefully cut out the token from the log output to put into the web browser. </p>
+<p>when you are done with the container, you can remove it and the container registry in the same, or a new terminal using </p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> ./docker_build_jupyter_on_azure_demo.sh
+az_jupyter_cleanup
+</code></pre></div>
 <p>written for the <a href="https://msucloudfellowship.github.io">MSU Cloud Computing Fellowship</a></p>
 
 

@@ -418,7 +418,21 @@
   
     <li class="md-nav__item">
       <a href="../session_organization/" class="md-nav__link">
-        Cloud Services Organization
+        · Cloud Services Organization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miniproject/" class="md-nav__link">
+        · Mini-Project
       </a>
     </li>
   
@@ -427,6 +441,21 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        About Fellowship Projects
+      </a>
     </li>
   
 
@@ -595,8 +624,10 @@
 After completing the two activities above, If you are interested in starting with SQL, this free tutorial looks pretty good.  Let us know if you tried it and it was not helpful:  </p>
 </li>
 <li><a href="https://www.tutorialspoint.com/postgresql/index.htm">PostgreSQL Tutorial from TutorialsPoint.com </a>.  </li>
+<li>Note: A Database server can house many "databases" , and sometimes a database is called a "schema" so you can use the database server you created above, and the same steps for how to connect to the server, then create a new database inside the server for the tutorial.  </li>
+<li>In the tutorial above, the chapter  "Environmental Setup" that walks you through installing Postgresql server on your laptop which also provides you a command-line interface on your laptop.  You could augment that chapter by provisioning a Postgresql server in Azure (see link above) and connecting to it. </li>
 <li>
-<p>NOTE: A Database server can house many "databases" , and sometimes a database is called a "schema" so you can use the database server you created above, and the same steps for how to connect to the server, then create a new database inside the server for the tutorial.  </p>
+<p>If you don't want to install Postgresql on your laptop, you can either 1) use the Azure Data Studio, but only for SQL commands (not commands like <code>\help</code> (see the activity #2 above ), OR 2) if you are familiar with command line, the Azure Cloud shell comes with the postgresql command <code>psql</code> as shown in Activity #1 above.  </p>
 </li>
 <li>
 <p>Delete the database in your resource group when you have finished with the tutorial.  If you would like to estimate costs for using database, keep it for a few days, then visit the "Cost Analysis" page of your resource group in the Azure portal.  SQL services can get expensive quickly compared to VMs, but installing and running postgresql server software is a daunting task and comes with security risks.  </p>
