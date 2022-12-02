@@ -37,7 +37,9 @@ If you are interested in using SQL for your project, consider the following two 
 3. In depth SQL Tutorial:<br>
 After completing the two activities above, If you are interested in starting with SQL, this free tutorial looks pretty good.  Let us know if you tried it and it was not helpful:  
  - [PostgreSQL Tutorial from TutorialsPoint.com ](https://www.tutorialspoint.com/postgresql/index.htm).  
- - NOTE: A Database server can house many "databases" , and sometimes a database is called a "schema" so you can use the database server you created above, and the same steps for how to connect to the server, then create a new database inside the server for the tutorial.  
+ - Note: A Database server can house many "databases" , and sometimes a database is called a "schema" so you can use the database server you created above, and the same steps for how to connect to the server, then create a new database inside the server for the tutorial.  
+ - In the tutorial above, the chapter  "Environmental Setup" that walks you through installing Postgresql server on your laptop which also provides you a command-line interface on your laptop.  You could augment that chapter by provisioning a Postgresql server in Azure (see link above) and connecting to it. 
+ - If you don't want to install Postgresql on your laptop, you can either 1) use the Azure Data Studio, but only for SQL commands (not commands like `\help` (see the activity #2 above ), OR 2) if you are familiar with command line, the Azure Cloud shell comes with the postgresql command `psql` as shown in Activity #1 above.  
  
 4. Delete the database in your resource group when you have finished with the tutorial.  If you would like to estimate costs for using database, keep it for a few days, then visit the "Cost Analysis" page of your resource group in the Azure portal.  SQL services can get expensive quickly compared to VMs, but installing and running postgresql server software is a daunting task and comes with security risks.  
 
@@ -46,6 +48,8 @@ Using a Database Server in the cloud has many layers so if you are interested in
 #### References
 
 A list of the commands you may use to manage a database for the Postgresql variety: https://zaiste.net/posts/postgresql-primer-for-busy-people/
+
+
 
 #### Optional : Data Analytics on the Google Platform
 
