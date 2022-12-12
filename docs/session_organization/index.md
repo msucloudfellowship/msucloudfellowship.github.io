@@ -55,6 +55,9 @@ What would a "SaaS" offering for your research look like?  A "Google Docs" for y
 
 [Review: About Cloud Costs](costs/azure_cloud_cost_basics.md)
 
+Cautionary Tale: [Google Cloud Charged Me $1000 For This Mistake](https://medium.com/@ikunalv/google-cloud-charged-me-1000-for-this-mistake-25a313412a1f) by Kunal Vaidya on Medium.   *tl;dr: he forgot to turn off a service even though he was no longer using it.   Good news it, Google does grant 1-time forgiveness if you can prove you are using the service to learn about it (e.g. you are student). *
+
+
 ## Interfaces 
 
 In session one we talked about the client/server model of computing which is so ubiquotous is seems like the _only_ model of computing.  
