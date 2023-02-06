@@ -5,17 +5,19 @@
 
 The primary activity of the Cloud Computing Fellowship is to support the fellows to create and present a cloud-computing-based project working with research data.  During Fall semseter the fellowship provides materials and help to learn core cloud concepts and activies, and Winter/Spring semester is devoted to project development.  
 
-For details about what's expected, see the [CCF Project Guilde](img/CCF_Project_Guide_Parvizi_2022.pdf), slides (PDF)
 
 ### Time-line and Due dates
 
+**Timeline and details about what's expected**: [Cloud Computing Fellowship Deliverables Timeline Spring 2023 pdf](img/cloud_computing_fellowship_deliverables_timeline_spring2023.pdf) <br>*this was sent via email in January, but also posted here in February*
+
+<!-- 
 - Project brief (email) : due **December 9th, 2022** \
 please send us a 1-2 sentence project description of your current thinking for what you'll tackle for your project.   If you unsure at this time, then send us 1-2 sentence about why you are unsure, or the kinds of things you are considering, and schedule a time to meet with one of us.     
 - Project Proposal Write-up: due **January 9th, 2022**  Refer to the project guide, above
 - Project proposal presentations (1-2 slides): **January 13th, 2pm**, BPS Building. 
 - In-person sessions for discussion and presentations on project progress: **January through March, 2023** (see schedule on main page)
 - Final project write-up: **April, 2023, date TBD**: 
-- Fellowship symposium and final presentation: **April 2023, date TBD**: 
+- Fellowship symposium and final presentation: **April 2023, date TBD**:  -->
 
 ### Questions, Answers and other Notes
 
@@ -35,11 +37,11 @@ No you don't, and in fact we encourage you to look for other services in the clo
 
 **Q. Do I have to use services that we've covered in the sessions?**
 
-A. Cloud companies provide many amazing services, and you are not limited to what we've talked about in the sessions.  In addition we don't require you to do hard computation or services.  If you are interested in using some other service, please contact us and we may find useful resources or connect you with a colleague who has used the service in mind.  
+A. Cloud companies provide many amazing services, and you are not limited to what we've talked about in the sessions.  In addition we don't require you to use "computation" based services alone .   If you are interested in using some other service, please contact us and we may find useful resources or connect you with a colleague who has used the service in mind.  
 
 **Q. Are there constraints on the things I want do with my project?  Can I do whatever I want?**
 
-A.  Our goal is to facilitate your education and advancing your research program as it relates to cloud computing.   This is a large topic  If you use the fellowship to develop only a small system to show what's possible or not possible, even on public data, that uses cloud computing, that is an acceptable project. 
+A.  Our goal is to facilitate your education and advancing your research program as it relates to cloud computing, and that is a very broad goal.  If you use the fellowship to develop only a small system to show what's possible or not possible, even on public data, that uses cloud computing, that is an acceptable project. 
 
 **Q. I want to make a web site or application for my project, can I use a VM?  how do I do that?**
 
