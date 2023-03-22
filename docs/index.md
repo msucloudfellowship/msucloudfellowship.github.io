@@ -74,24 +74,16 @@ For details, please see the timeline and details about what's expected: <br>
 **[Cloud Computing Fellowship Deliverables Timeline Spring 2023 pdf](img/cloud_computing_fellowship_deliverables_timeline_spring2023.pdf)** 
 <br>*this was sent via email in January, but also posted here in February and is the same schedule on the [projects](projects.md) page. *
 
-** Schedule Synopsis** (Updated Feb 6)
+** Schedule Synopsis** (Updated March 21)
 
 All meetings are in the ICER training room, 1455A BPS, from 2:00 to 3:30 pm 
 
   - January 9th Post Written Project Proposal to this MS Teams folder prior to 5:00pm January 9th
  - January 12th Post Project Proposal Slides to this MS Teams folder prior to 5:00pm 
  - **January 13** Present ‘in-person’ your Project Proposal Slides at 2:00pm 
- - February 20th: Post Written Project Proposal-Update1 to this MS Teams folder prior to 5:00pm  
- - February 23rd: Post Project Proposal Slides-Update1 to this MS Teams folder prior to 5:00pm 
- - **February 24th** Present ‘in-person’ your Project Proposal-Update1 Slides at 2:00pm 
- - March 20th: Post Written Project Proposal-Update2 to this MS Teams folder prior to 5:00pm 
- - March 23rd: Post Project Proposal Slides-Update2 to this MS Teams folder prior to 5:00pm 
- - **March 24th:** Present ‘in-person’ your Project Proposal-Update2 Slides at 2:00pm 
- - April 17th: Post CCF Symposium Talk Title & Abstract to this MS Teams folder prior to 5:00pm 
- - April 21st: Post CCF Final Project Writeup to this MS Teams folder prior to 5:00pm 
- - **Late April** (Date and Time to be determined):  Present ‘in-person’ at the CCF Annual Symposium
+ - **March 24th:** In-person discussion of projects and fellowship goals, 2:00pm 
+ - **May 5** Tenative date for in-person presentation of project summary at the CCF Annual Symposium
  
-For
 ### On-going help
 
 We encourage you, especially during Winter/spring, to [contact us](contact) at any time with any questions related to your projects, the fellowship, or cloud computing in general.  

@@ -8,7 +8,14 @@ The primary activity of the Cloud Computing Fellowship is to support the fellows
 
 ### Time-line and Due dates
 
-**Timeline and details about what's expected**: [Cloud Computing Fellowship Deliverables Timeline Spring 2023 pdf](img/cloud_computing_fellowship_deliverables_timeline_spring2023.pdf) <br>*this was sent via email in January, but also posted here in February*
+**March 24, 2pm**: In-person meeting to discuss fellowship participation
+
+**April 28**:  Final Project Writeup due by 5:00pm EDT
+
+**May 5** : Presentation of project experience at the Cloud Computing Fellowship Symposium (time and location TBD)
+
+ 
+*Note the Previous Timeline due date sare no longer relevant due to events on campus this semester* <!-- [Cloud Computing Fellowship Deliverables Timeline Spring 2023 pdf](img/cloud_computing_fellowship_deliverables_timeline_spring2023.pdf) <br>*this was sent via email in January, but also posted here in February* -->
 
 <!-- 
 - Project brief (email) : due **December 9th, 2022** \
