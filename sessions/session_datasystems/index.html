@@ -1,0 +1,690 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>Session 4: Data Servers on the Cloud - 2022 MSU Cloud Computing Fellowship</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#session-4-data-servers-on-the-cloud" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="2022 MSU Cloud Computing Fellowship" class="md-header__button md-logo" aria-label="2022 MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2022 MSU Cloud Computing Fellowship
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Session 4: Data Servers on the Cloud
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="2022 MSU Cloud Computing Fellowship" class="md-nav__button md-logo" aria-label="2022 MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    2022 MSU Cloud Computing Fellowship
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2022 Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fall 2022 Sessions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fall 2022 Sessions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_introduction/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1a. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_how_to_cloud/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1b. How to cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_cloud_storage/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Cloud Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_datasystems/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Data Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_bigdata/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Big Data and the cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_serverless/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Serverless, Containers, and FaaS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_organization/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bonus Cloud Services Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Fellowship Projects 2022-23
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud_glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#readings" class="md-nav__link">
+    Readings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activities" class="md-nav__link">
+    Activities
+  </a>
+  
+    <nav class="md-nav" aria-label="Activities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-data-analytics-on-the-google-platform" class="md-nav__link">
+    Optional : Data Analytics on the Google Platform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="session-4-data-servers-on-the-cloud">Session 4: Data Servers on the Cloud</h1>
+<p><img alt="MSU Mara Hyena Project Database Entity Relationship Diagram" src="img/hyena-database-er.png" /></p>
+<h2 id="introduction">Introduction</h2>
+<p>Data servers (like Relational Databases) can be a powerful tool for even small research projects.   When we say "Data Servers" or "Data Systems"  we mean any server with data processing capabilities that you connect to with a client to send data, commands and receive results.   The most widely used and classic example is the relational database management system (RDBMs) invented in the 1970s, but there are many other types.  A central advantage of data servers is ability to handle many conncurrent connections.  Connections can be from many users, a web application serving many uers, or many other concurrent processes.    Like other systems (such as VMs, File storage servers, big data tools, etc), these data systems don't require cloud computing, but cloud companies offer database services such taht with a few clicks you can have a server that would take a week to provision and years to maintain.  A data server could be a productive addition to your cloud architecturee, or the central aspect of your fellowship project.  </p>
+<p>I have use databases with many research projects that had significant data entry burden requiring many work-hours of students typing in data, or shared systems.   </p>
+<h2 id="readings">Readings</h2>
+<ul>
+<li>
+<p><a href="data_servers_intro_for_researchers.html">Introduction to Data Servers on the Cloud</a> Slide Presentation </p>
+</li>
+<li>
+<p><a href="https://textbook.coleridgeinitiative.org/chap-db.html">Chapter 4. Databases</a> From the free textbook "<a href="https://textbook.coleridgeinitiative.org/">Big Data and Social Science: Data Science Methods and Tools for Research and Practice</a>" by Foster, Ghani, Jarmin, Kreuter and Lane.  The book itself could be a valuable resource for learning about the data science methods that you may se on the cloud.  </p>
+</li>
+<li>
+<p>Textbook Chapter 3s: Blog Post from eScience: <a href="https://esciencegroup.com/2017/07/31/azures-new-cosmosdb-planet-scale-database/">Azure’s new CosmosDB Planet-Scale Database</a></p>
+</li>
+</ul>
+<p><strong>Difference between SQL and 'NoSQL' style databases</strong></p>
+<p>Towards DataScience blog <a href="https://towardsdatascience.com/databases-101-introduction-to-databases-for-data-scientists-ee18c9f0785d">Introduction to Databases for Data Scientists</a>  <em>Note this blog post may require a free account but reading in an incognito or private window worked for me</em></p>
+<p>A description of SQL vs NoSQL from a company called xplenty <a href="https://www.xplenty.com/blog/which-database/">Which Modern Database Is Right for Your Use Case?</a>   <em>this has many adds/pop-ups but is a good read</em></p>
+<h2 id="activities">Activities</h2>
+<p>Azure offers a database user interface for your computer called <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15">Azure Data Studio</a> and has a tutorial for using, but you need to create a database server first.   </p>
+<p>If you are interested in using SQL for your project, consider the following two activities based on the Open Source database system <a href="https://www.postgresql.org/">Postgresql</a></p>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/azure/postgresql/quickstart-create-server-database-portal">Quickstart: Create an Azure Database for PostgreSQL server by using the Azure portal</a><ul>
+<li>I suggest using a password rather than ssh key for now to make it easier, but not recommend for long-term use</li>
+<li>record the admin user name and password you used when creating the database</li>
+<li>in the Azure portal, visit the Postgresql Database resource page, and look at the connection strings page to use in the next tutorial</li>
+</ul>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/quickstart-postgres?view=sql-server-ver15">Quickstart: Use Azure Data Studio to connect and query PostgreSQL</a></p>
+</li>
+<li>
+<p>In depth SQL Tutorial:<br>
+After completing the two activities above, If you are interested in starting with SQL, this free tutorial looks pretty good.  Let us know if you tried it and it was not helpful:  </p>
+</li>
+<li><a href="https://www.tutorialspoint.com/postgresql/index.htm">PostgreSQL Tutorial from TutorialsPoint.com </a>.  </li>
+<li>Note: A Database server can house many "databases" , and sometimes a database is called a "schema" so you can use the database server you created above, and the same steps for how to connect to the server, then create a new database inside the server for the tutorial.  </li>
+<li>In the tutorial above, the chapter  "Environmental Setup" that walks you through installing Postgresql server on your laptop which also provides you a command-line interface on your laptop.  You could augment that chapter by provisioning a Postgresql server in Azure (see link above) and connecting to it. </li>
+<li>
+<p>If you don't want to install Postgresql on your laptop, you can either 1) use the Azure Data Studio, but only for SQL commands (not commands like <code>\help</code> (see the activity #2 above ), OR 2) if you are familiar with command line, the Azure Cloud shell comes with the postgresql command <code>psql</code> as shown in Activity #1 above.  </p>
+</li>
+<li>
+<p>Delete the database in your resource group when you have finished with the tutorial.  If you would like to estimate costs for using database, keep it for a few days, then visit the "Cost Analysis" page of your resource group in the Azure portal.  SQL services can get expensive quickly compared to VMs, but installing and running postgresql server software is a daunting task and comes with security risks.  </p>
+</li>
+</ol>
+<p>Using a Database Server in the cloud has many layers so if you are interested in using SQL feel free to reach out for help for incorporating SQL into your research.   </p>
+<h4 id="references">References</h4>
+<p>A list of the commands you may use to manage a database for the Postgresql variety: <a href="https://zaiste.net/posts/postgresql-primer-for-busy-people/">https://zaiste.net/posts/postgresql-primer-for-busy-people/</a></p>
+<h4 id="optional-data-analytics-on-the-google-platform">Optional : Data Analytics on the Google Platform</h4>
+<p>Google Offers a service called "BigQuery" which does not require you to create a server, only an account.  It can process huge amounts of data, and has several datasets available for free.  It also has </p>
+<p>You may try BigQuery for free in their Sandbox, with only a Google Account.  If you have a gmail account, use that to log in with an incognito/private browser window.   You may try your msu.edu email but it may or may not work. </p>
+<p><em>In the following tutorial you may ignore mentions of "firebase" which is another database offering for web apps from google</em></p>
+<p><a href="https://cloud.google.com/bigquery/docs/sandbox">Using the BigQuery sandbox </a></p>
+<p>If you are a python user, Google offeres a free notebook service called "Co-Lab" and you can connect to both google drive and big query from Colab.  </p>
+<ul>
+<li>getting started with Colab : <a href="https://colab.research.google.com/notebooks/intro.ipynb">https://colab.research.google.com/notebooks/intro.ipynb</a>   Log-in to Colab using <a href="https://colab.research.google.com/">https://colab.research.google.com/</a>   </li>
+<li>intro to BigQuery in Colab: <a href="https://colab.research.google.com/notebooks/bigquery.ipynb">https://colab.research.google.com/notebooks/bigquery.ipynb</a></li>
+<li>Complex tutorial examining periodicity in weather data: <a href="https://cloud.google.com/blog/products/data-analytics/whats-the-weather-like-using-colab-to-get-more-out-of-bigquery">https://cloud.google.com/blog/products/data-analytics/whats-the-weather-like-using-colab-to-get-more-out-of-bigquery</a></li>
+</ul>
+<p><em>Google Colab + Google BigQuery + GoogleDrive</em> is definitely cloud computing but not in the sense we usually think about it as these are all SAAS level services, chained together via a cloud computing backdrop.  </p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>

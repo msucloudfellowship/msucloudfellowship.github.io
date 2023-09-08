@@ -1,0 +1,673 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>Session 5: Big Data on Azure Cloud Featuring Spark - 2022 MSU Cloud Computing Fellowship</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#session-5-big-data-on-azure-cloud-featuring-spark" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="2022 MSU Cloud Computing Fellowship" class="md-header__button md-logo" aria-label="2022 MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2022 MSU Cloud Computing Fellowship
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Session 5: Big Data on Azure Cloud Featuring Spark
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="2022 MSU Cloud Computing Fellowship" class="md-nav__button md-logo" aria-label="2022 MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    2022 MSU Cloud Computing Fellowship
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2022 Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fall 2022 Sessions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fall 2022 Sessions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_introduction/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1a. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_how_to_cloud/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1b. How to cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_cloud_storage/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Cloud Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_datasystems/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Data Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_bigdata/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Big Data and the cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_serverless/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Serverless, Containers, and FaaS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_organization/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bonus Cloud Services Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Fellowship Projects 2022-23
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud_glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    Videos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#readings" class="md-nav__link">
+    Readings
+  </a>
+  
+    <nav class="md-nav" aria-label="Readings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-r-users" class="md-nav__link">
+    For R users
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activities" class="md-nav__link">
+    Activities
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="session-5-big-data-on-azure-cloud-featuring-spark">Session 5: Big Data on Azure Cloud Featuring Spark</h1>
+<p><img alt="example big data map-reduce workflow" src="img/example_parallel_processing_workflow.png" /></p>
+<p>You may have heard of 'Big Data' as a concept, which is a complex topic and at the heart of data science, introduced by Google in 2004.   "Big Data" processing generally means building a cluster of computers to apply parallel techniques to both store and analyze huge amounts of data.  </p>
+<p>Big data is truly big: hundreds of billions of datapoints or graphs with billions of edges, petabytes of data (1000 Terabytes).   However many of us more modest data sets find they are large enought that we can't work with them on our laptops or even a very a large computer.  To accomplish our data 
+processing task we look for ways to split up the work with parallel methods.  Modern big data tools offer this possibility without resorting to<br />
+custom coding or manually processing.   </p>
+<p>While big data technology doesn't require cloud computing, most cloud companies have a services that provide data processing clusters with a few clicks.  The goal of this single session is introduce you to basic concepts of  'big data' processing and peek at how it works and what it may do for you.   Your Python or R script Many applications can't take advantage 
+of it of big data, or they have their own parallel systems.  for those that it could help, it may save tremendous amount of time and make your research more repoducible than DIY data partitioning that requires manual handling. </p>
+<h2 id="videos">Videos</h2>
+<ol>
+<li><a href="https://mediaspace.msu.edu/media/Using+Azure+Databricks+by+Doug+Krum+2021/1_etunq5g9">Using Azure Databricks</a> Doug Krum, Data Architect, Analytics and Data Solutions, MSU IT Services.    ( MSU log-in required for video)</li>
+<li><a href="https://mediaspace.msu.edu/media/Using+Azure+Databricks+Part+2A+Demonstration/1_tsi9kyxp">Using Azure Databricks Part 2: Demonstration with Python</a> Doug Krum, Data Architect, Analytics and Data Solutions, MSU IT Services.    ( MSU log-in required for video)</li>
+</ol>
+<p><em>These are detailed explanations of the commercial version of Apache Spark from the Databricks company, and exactly how to create and use a Databricks cluster on Azure to run Python code</em></p>
+<h2 id="readings">Readings</h2>
+<p>Slide Deck: <a href="big_data_intro_for_researchers.html">Overview of Big Data with Spark for Researchers</a></p>
+<p><a href="https://michiganstate.sharepoint.com/sites/MSUICERCloudFellowship2/Shared%20Documents/General/Materials/TOOLS%20AND%20TECHNOLOGIES%20FOR%20THE%20IMPLEMENTATION%20OF%20BIG%20DATA_Self_Vorhis%20CH10%20DO%20NOT%20DISTRIBUTE.pdf">Tools And Technologies For The Implementation Of Big Data, Richard J. Self, Dave Voorhis</a>Chapter 10 from "Applications of Big Data for National Security." <a href="http://dx.doi.org/10.1016/B978-0-12-801967-2.00010-0">http://dx.doi.org/10.1016/B978-0-12-801967-2.00010-0</a> 
+Copyright © 2015 Elsevier Inc. All rights reserved.</p>
+<p><em>PDF copy, for use by Cloud Computing Fellowship only (link is access restricted).  The book is available as an <a href="http://catalog.lib.msu.edu/record=b11321901~S39a">electronic copy from the MSU Library</a></em></p>
+<p>While the book itself is really not of interest to us, this particular chapter is one of the better and more readable introductions to "big data" I've seen, written for professionals like yourselves.    Dr. Self studies ethics and big data for University of Derby in the UK. </p>
+<p><strong>Textbook: Cloud Computing for Science and Engineering</strong></p>
+<ul>
+<li>
+<p><a href="https://s3.us-east-2.amazonaws.com/a-book/scale.html">Chapter 7 "Scaling Deployments"</a>, <strong>only</strong> sections <em>7.4 "MapReduce and Bulk Synchronous Parallelism"</em> and <em>7.5 "Graph Dataﬂow Execution and Spark."</em><br />
+   This chapter discusses parallelism and begins with a focus on High Performance Computing (HPC).  If you are familiar with HPC, feel free to read the entire chapter which may help put "big data" in context for you (it did for me).   </p>
+</li>
+<li>
+<p><a href="https://s3.us-east-2.amazonaws.com/a-book/analytics.html">Chapter 8 "Data Analytics in the Cloud"</a> 
+   This is a technical introduction to big data including the first open source program "Hadoop" followed by "Spark"  We will only concentrate on spark for this session as it's much more approachable and more modern.   There are a handful of examples, but example 8.2.1 should be approachable any one with exposure to college-level Math (approximating Pi using infinite series)</p>
+</li>
+</ul>
+<p><a href="https://docs.microsoft.com/en-us/azure/databricks/getting-started/spark/">Introduction to Apache Spark</a> part of the <strong>Azure Databricks Documentation</strong>
+<em>This is the intro to an excellent tutorial on using Apache spark with Azure.  Read the introduction only (see activities below for info on the tutorial)</em></p>
+<h3 id="for-r-users">For R users</h3>
+<p>The Spark big data system we introduce above is focused on Python and it's native language (calls "Scala").  However you <em>can</em> use R commands with Spark, and Databricks has the option of creating an R-based notebook.   Note this notebook is more similar to Python/Jupyter notebooks than Rstudio notebooks, but is an easy way to interactivtly issue  R commands.    Follow the video above up to entering commands in a notebok, and instead of python, select an R notebook.  </p>
+<p>The easiest way to use R with Spark is with the package <a href="https://spark.rstudio.com/">sparklyr</a> from Rstudio.  </p>
+<p>"Mastering Spark with R" hosted on <a href="https://therinspark.com/">https://therinspark.com/</a> is a free book is very readable and comprehensive resource for learning all about big data focused on R and Spark. </p>
+<ul>
+<li>This is a full book, so only suggested reading for those who deecide to use Databricks/Spark with R in their projects.  The book above describes how to use it in great detail. </li>
+<li>As described in the video and slides above, Databricks is a commercial version of the open source Apache Spark, and the free/open version of Spark can be installed on a laptop for testing without Databricks.  The book has details for that. </li>
+<li>While it does not describe how to install databricks, all of the examples are useable in an R notebook in Azure databricks</li>
+<li>The code you develop with Spark on your laptop can be moved to a cluster built in the cloud. </li>
+</ul>
+<p>In addition to putting using R in Jupyter style notebooks, you can install and run a web-version of Rstudio inside of Databricks to get the full features of spark inside Rstudio.  It requires some setup, see <a href="https://docs.microsoft.com/en-us/azure/databricks/spark/latest/sparkr/rstudio">RStudio on Azure Databricks</a> from Microsoft.  </p>
+<h2 id="activities">Activities</h2>
+<p>There are dozens of tutorials related to databricks / Apache spark which is a complex product with many ways to access. This is a curated list 
+geared towards researchers</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/databricks/scenarios/quickstart-create-databricks-workspace-portal?tabs=azure-portal#create-an-azure-databricks-workspace">Create an Azure Databricks workspace</a>  which is part of <a href="https://docs.microsoft.com/en-us/azure/databricks/scenarios/quickstart-create-databricks-workspace-portal?tabs=azure-portal">Quickstart: Run a Spark job on Azure Databricks Workspace using the Azure portal</a>.   The quickstart 
+tutorial is based on running SQL (database structured query language) which may not be useful if you have not familiarity with SQL</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/databricks/spark/latest/dataframes-datasets/introduction-to-dataframes-python">Introduction to Spark Data Frames with Python and SQL</a></p>
+<p>A job is a way to run non-interactive code in an Azure Databricks cluster.   Doug Krum discusses using Jobs in the videos above.  For details about Jobs and how they work, see <a href="https://docs.microsoft.com/en-us/azure/databricks/jobs">Databricks Data Science &amp; Engineering: Jobs</a>  or to simply try a quick example see 
+<a href="https://docs.microsoft.com/en-us/azure/databricks/data-engineering/jobs/jobs-quickstart">Running Jobs in Databricks Quickstart (with Python)</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>

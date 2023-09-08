@@ -1,0 +1,724 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>Session 2: What is the cloud and how does it work? An introduction using storage and virtual machines - 2022 MSU Cloud Computing Fellowship</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#session-2-what-is-the-cloud-and-how-does-it-work-an-introduction-using-storage-and-virtual-machines" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="2022 MSU Cloud Computing Fellowship" class="md-header__button md-logo" aria-label="2022 MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2022 MSU Cloud Computing Fellowship
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Session 2: What is the cloud and how does it work?  An introduction using storage and virtual machines
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="2022 MSU Cloud Computing Fellowship" class="md-nav__button md-logo" aria-label="2022 MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    2022 MSU Cloud Computing Fellowship
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2022 Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fall 2022 Sessions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fall 2022 Sessions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_introduction/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1a. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_how_to_cloud/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1b. How to cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_cloud_storage/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Cloud Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_datasystems/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Data Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_bigdata/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Big Data and the cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_serverless/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Serverless, Containers, and FaaS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_organization/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bonus Cloud Services Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Fellowship Projects 2022-23
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud_glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-this-session" class="md-nav__link">
+    About this Session
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-presentation" class="md-nav__link">
+    Overview Presentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-azure-portal" class="md-nav__link">
+    About the Azure Portal
+  </a>
+  
+    <nav class="md-nav" aria-label="About the Azure Portal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-portal-reading" class="md-nav__link">
+    Azure Portal Reading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-portal-activity" class="md-nav__link">
+    Azure Portal Activity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-follow-ons" class="md-nav__link">
+    Optional Follow-ons:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-machines" class="md-nav__link">
+    Virtual Machines
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtual Machines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readings" class="md-nav__link">
+    Readings:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-create-a-vm" class="md-nav__link">
+    Why create a VM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="session-2-what-is-the-cloud-and-how-does-it-work-an-introduction-using-storage-and-virtual-machines">Session 2: What is the cloud and how does it work?  An introduction using storage and virtual machines</h1>
+<h3 id="about-this-session">About this Session</h3>
+<p>We are providing materials and activities for this session for you to read and attempt at your own pace.   Please attempt these and see how far you can get.   Feel free to post on Microsoft Teams if you have any issues, find things that need correcting, or have general questions.   </p>
+<p>We will host an optional, additional, in-person session to provide help to anyone who wants to attend, Friday September 23 2pm to 3:30p.  Since this is outside of pre-arranged schedule, anyone who would like help but can't attend during this please contact us and we will arrange a time for you.   </p>
+<p>We will discuss all of this material and more during our next regularly scheduled in-person session Friday September 30th. </p>
+<h3 id="overview">Overview</h3>
+<p><img align="right" alt="Chaplin still from Modern Times 1936" src="../img/chaplin_clockworks.jpg" /> When many people think of "cloud computing" they think of computers in the cloud, or virtual machines.   Cloud computing companies offer much more than just virtualized hardware, but this is a good place to start.   This session is designed to be a hands-on workshop where we walk-through creating the resources needed for to run a computer in the cloud, logging into this computer, copying data and using that data in a program.    At the end of the session you should have a good introduction of what it means to "cloud compute."</p>
+<h4 id="overview-presentation">Overview Presentation</h4>
+<p><a href="CCF-session-2-how-to-cloud-slides.pdf">Cloud Concepts &amp; Virtualization Slides (PDF)</a></p>
+<h2 id="about-the-azure-portal">About the Azure Portal</h2>
+<p>We demonstrated the azure portal quickly in our last session when we <a href="../session_introduction/cost_alert/">set a budget alert</a>.   The following dives into more detail about 'resource groups' which is the core of how Azure is organized.  Note that, as we get started, fellows have access to just a single resource group that we've created for you.  You can't create your own but you can create as many resources as yuo need inside this single resource group.  </p>
+<h4 id="azure-portal-reading">Azure Portal Reading</h4>
+<p>Top-down description of how <a href="azure_organization/">Azure is organized</a></p>
+<h4 id="azure-portal-activity">Azure Portal Activity</h4>
+<p><a href="azure_portal_walkthrough/">Using the Azure Portal : tutorial and video</a></p>
+<h3 id="optional-follow-ons">Optional Follow-ons:</h3>
+<p><strong>Azure Storage</strong></p>
+<p>The Activity above had you creat a 'storage account' with no background.   If you are interested in learning more about storage, this is a prety good, high-level introduction : </p>
+<p><a href="https://www.edureka.co/blog/azure-storage-tutorial/">Edureka Azure Storage Tutorial</a>  (there are several pop-ups and ads, but it's a good level of of information )</p>
+<p>You will see there are different types of storage, but all types must be inside a "storage account" and this "storage account" must be inside a resource group.  </p>
+<p>We will re-visit concepts and usage of cloud storage in detail, as it's a core aspect of cloud computing.    </p>
+<h2 id="virtual-machines">Virtual Machines</h2>
+<p>We introduced "virtualization" during our introduction.  For IT this means flexibly creating multiple resources on one piece of hardware using software.  The main use case is many virtual computers (or servers) on one large computer hardware.   This was create prior to cloud, but when you create your own computer in the cloud, it's based on the technology.  To a user it may seem very similar, but to the systems IT engineer, it's very different.     However these readings may help give you an </p>
+<h4 id="readings">Readings:</h4>
+<ul>
+<li><a href="https://s3.us-east-2.amazonaws.com/a-book/computing.html">Chapter 4: Computing as a Service</a> from "Cloud Computing for Science and Engineering", Ian Foster and Dennis B. Gannon, September 2017</li>
+<li><a href="https://azure.microsoft.com/en-us/overview/what-is-a-virtual-machine/">What is a Virtual Machine (VM)?</a>  Introduction from Microsoft</li>
+<li><a href="https://www.youtube.com/watch?v=42fwh_1KP_o">What is a Virtual Server?</a> Youtube Video from 
+IBM describing how companies (including MSU!) use virtualization to run multiple computers on one server to optimize the use of space in a data center. </li>
+<li><a href="https://www.redhat.com/en/topics/cloud-computing/cloud-vs-virtualization">What's the difference between cloud and virtualization?</a> from RedHat, a Linux Operating system company</li>
+</ul>
+<p><strong>Activity:</strong> A long activity to <a href="azure_vm_walkthrough/">create (and delete) a Virtual Machine with the Azure Portal</a> for both windows and Linux. </p>
+<h4 id="why-create-a-vm">Why create a VM</h4>
+<p>What is a VM good for?   The activity above does not discuss why you'd create a VM and connect with remote desktop, only that you can do it.   We will discuss that at our next session.  Can you think of possible use cases for your research, or other types of research, for a remote computer that could be very powerful or very small?</p>
+<!-- note: move costs, service levels and other things to a later session -->
+
+<!-- 
+
+  - [The NIST Definition of Cloud Computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)  The framework that most widely used to describe aspects of cloud computing, and categorize cloud sevices. 
+  - [Microsoft Reference Architecture: What is Infrastructure as a Service?](https://social.technet.microsoft.com/wiki/contents/articles/4633.microsoft-reference-architecture-what-is-infrastructure-as-a-service.aspx)
+  - [Orientation Azure Portal](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-overview#getting-around-the-portal)
+
+#### Cloud costs (it's own distinct topic)
+
+- [Determining Azure Costs](costs/azure_cloud_cost_basics.md) 
+- 
+additional topic
+[Summary of Cloud Interfaces](intro_to_cloud_interfaces.md)
+- -->
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
