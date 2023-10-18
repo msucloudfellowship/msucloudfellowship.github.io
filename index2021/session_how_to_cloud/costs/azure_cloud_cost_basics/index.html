@@ -1,0 +1,683 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>Intro to Cloud Costs on Azure - MSU Cloud Computing Fellowship</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#intro-to-cloud-costs-on-azure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="MSU Cloud Computing Fellowship" class="md-header__button md-logo" aria-label="MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSU Cloud Computing Fellowship
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro to Cloud Costs on Azure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="MSU Cloud Computing Fellowship" class="md-nav__button md-logo" aria-label="MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MSU Cloud Computing Fellowship
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Sessions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sessions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../session_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../session_how_to_cloud/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · How does the cloud work?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../session_cloud_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Cloud Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../session_datasystems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Data Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../session_bigdata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Big Data and the cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../session_serverless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Serverless, Containers, and FaaS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../session_organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Cloud Services Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../miniproject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Mini-Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Fellowship Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cloud_glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Previous 21-22 syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-pricing-pages" class="md-nav__link">
+    1. Pricing Pages.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-build-something-and-check-the-cost" class="md-nav__link">
+    2. Build something and check the cost
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-pricing-calculators" class="md-nav__link">
+    3. Pricing Calculators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-other-notes" class="md-nav__link">
+    Summary and other notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-pricing-resources" class="md-nav__link">
+    Azure Pricing Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="intro-to-cloud-costs-on-azure">Intro to Cloud Costs on Azure</h1>
+<p>You've heard us say that nearly everything Azure has a cost, but how can you tell how much?</p>
+<p><a href="https://mediaspace.msu.edu/media/Short+Demonstration+of+Azure+Cost+Analysis/1_puhs4749"><img alt="Cost Analysis Video" src="../CostAnalysisVideoTitle.jpg" /></a> </p>
+<p><em>Short video (3:30) Demonstrating Azure Portal Cost Analysis, on MSU MediaSpace (log-in required)</em></p>
+<p>The content below assumes you have knowledge of how to use the Azure Portal, basic cloud operations, what a virtual machine is. See the links and materials for <a href="../session_how_to_cloud">session 2: how to cloud</a> for the necessary background. </p>
+<h3 id="1-pricing-pages">1. Pricing Pages.</h3>
+<p>All cloud vendors have pricing pages that describe how they meter and charge for services.  For Azure this is <a href="https://azure.microsoft.com/en-us/pricing/#product-pricing">https://azure.microsoft.com/en-us/pricing/#product-pricing</a></p>
+<p>However I usually find the page I need quickly by simply googling <code>azure &lt;service name&gt; pricing</code> for example I wanted to see how much a static IP address costs in azure so <a href="https://www.google.com/search?q=azure+static+ip+pricing">googling 'azure static ip pricing'</a> takes me to <a href="https://azure.microsoft.com/en-us/pricing/details/ip-addresses/">https://azure.microsoft.com/en-us/pricing/details/ip-addresses/</a></p>
+<p>Some of these pages are  straightforward, but like the one above has addition knowledge.  What does this mean in practice?  For example, what does "classic" vs "ARM" even means? There is a link at the top of the page but this may take time to read and understand.  I'll tell you that we will never use 'classic' and only use 'resource manager (ARM).' so look at the ARM Prices.</p>
+<p>This kind of background info is very common for services.  </p>
+<h3 id="2-build-something-and-check-the-cost">2. Build something and check the cost</h3>
+<p>The other option is the empircal method: build something, use it, review the costs, and estimate.  </p>
+<p>At the resource group in the protal ( see  <a href="azure_organization">Azure Organization</a>), there is a link on the left-side menu, near the bottom labelled "Cost Analysis"   - click that</p>
+<p>This is a live report of your current costs, with the ability to filter by time period, resource type, tags, and other things.   </p>
+<p>Near the middle are rouded buttons controlling the view you see.   At the right side of this is a button "Add Filter"  which you can click to show costs only for some resources.  For example if you click that and select "Service Name" and then "virtual machines" you will see the costs for the current month. </p>
+<p>A powerful filtering technique is to use tagging in Azure, which is akin to adding meta-data to resources.   See the <a href="cloud_glossary/#tags">Cloud Glossary</a> </p>
+<p>In many of the filtering mechanisms in Azure (including costs), the tag names (keys) use use are listed in the options for filtering.    </p>
+<p>Carefully select the date range for which you want an estimate, especially if your trial run started a few days ago in the previous month as the default is a monthly estimate.  Use a custom date range for the time period that makes sense for the costs you want to observe. </p>
+<p><a href="../screenshot_azure_portal_cost_analysis_by_tag.png"><img alt="Example Azure Cost Analysis Screen, filtered by Tag" src="../screenshot_azure_portal_cost_analysis_by_tag.png" /></a></p>
+<p><em>Example Azure Cost Analysis Screen, filtered by Tag.  Click for larger view</em></p>
+<h3 id="3-pricing-calculators">3. Pricing Calculators</h3>
+<p>All the cloud companies have pricing calculators and they may be good for very rough estimates but I always multiple by 1.2 as I'm sure I missed some crucial resource that I didn't know I needed or didn't know costs money.  </p>
+<p>For Azure it's <a href="https://azure.microsoft.com/en-us/pricing/calculator/">https://azure.microsoft.com/en-us/pricing/calculator/</a></p>
+<h2 id="summary-and-other-notes">Summary and other notes</h2>
+<p>Combining these three methods is how we can estimate costs. </p>
+<p>Notes: </p>
+<ul>
+<li>
+<p>Pricing often depends on the location or region you select.  Most regions in the US are the same price.   </p>
+</li>
+<li>
+<p>Data transfer costs are really hard to estimate.   Transfer into the cloud (Ingress) is often free but out of the cloud (egress) usually has a charge.  This is because companies with web products *(e.g. websites, web stores, image sites, etc) make money when customers view their pages (more customers =&gt; more costs =&gt;but more revenue).  However note that MSU has a deal with Azure and data transfer from Azure to MSU is (mostly) free.   One way to mitigate data transfer costs in Research is to transfer large data inputs into azure, but only take out the smaller output (results, summaries).  </p>
+</li>
+</ul>
+<h2 id="azure-pricing-resources">Azure Pricing Resources</h2>
+<p><a href="https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis">Quickstart: Explore and analyze costs with cost analysis</a></p>
+<p>Video from John Saville on cost estimation including the pricing calculator: <a href="https://www.youtube.com/watch?v=rMKmbZ1SYQg">Master the Azure Pricing Calculator Jun 17, 2021</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.sections"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,832 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>Practical Introduction for Researchers on Azure - MSU Cloud Computing Fellowship</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practical-introduction-for-researchers-on-azure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="MSU Cloud Computing Fellowship" class="md-header__button md-logo" aria-label="MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSU Cloud Computing Fellowship
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practical Introduction for Researchers on Azure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="MSU Cloud Computing Fellowship" class="md-nav__button md-logo" aria-label="MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MSU Cloud Computing Fellowship
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Sessions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sessions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../session_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../session_how_to_cloud/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · How does the cloud work?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../session_cloud_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Cloud Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../session_datasystems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Data Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../session_bigdata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Big Data and the cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../session_serverless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Serverless, Containers, and FaaS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../session_organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Cloud Services Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../miniproject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Mini-Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Fellowship Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cloud_glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Previous 21-22 syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducing-cloud-computing-vs-research-computing" class="md-nav__link">
+    Introducing cloud computing vs. research computing
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducing cloud computing vs. research computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-how-to-learn-about-cloud" class="md-nav__link">
+    Learning how to learn about cloud
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning how to learn about cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-documentation-is-available-for-researchers" class="md-nav__link">
+    What documentation is available for researchers?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nist-defintions-of-cloud-service-levels-and-you" class="md-nav__link">
+    NIST defintions of cloud: Service Levels and You
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-services-and-the-packaging-of-open-source-systems" class="md-nav__link">
+    Cloud "Services" and the Packaging of Open Source Systems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caveats-and-help" class="md-nav__link">
+    Caveats and help
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-interfaces-to-cloud" class="md-nav__link">
+    The Interfaces to Cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-workflow-and-computational-thinking" class="md-nav__link">
+    Using workflow and computational thinking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-cloud-security" class="md-nav__link">
+    About Cloud Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#costs-and-budget-overview" class="md-nav__link">
+    Costs and Budget overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hpcc-vs-cloud" class="md-nav__link">
+    HPCC vs Cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledging-bias-in-access-to-cloud-computing-across-research-cultures" class="md-nav__link">
+    Acknowledging bias in access to cloud computing across research cultures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-comments-from-instructors-and-organizers" class="md-nav__link">
+    Additional comments from instructors and organizers
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="practical-introduction-for-researchers-on-azure">Practical Introduction for Researchers on Azure</h1>
+<h2 id="introducing-cloud-computing-vs-research-computing">Introducing cloud computing vs. research computing</h2>
+<h3 id="learning-how-to-learn-about-cloud">Learning how to learn about cloud</h3>
+<p>You may have looked at the various websites and poked around the web, and found it's just not clear at all how cloud computing may be helpful to you, even though it all sounds great.  The challenge for researchers learning about cloud is that most cloud documentation for isn't written for you.  </p>
+<p>Cloud training and documentation are mostly written for IT professionals like system admins and architects, software developers, business people, and agency managers.  Researchers tend to be a little of all of those things.   </p>
+<p>Training materials ofen have an embedded  conceptual models of computing, and this model depend on your approach.  Our goal as researchers is to get our work (or the work of our lab) done, not to build systems used by hundreds of people or for business purposes.   That can make it difficult to decipher which kind of cloud service will work best for your use case.   As Dr. Parvizi writes, cloud is very different from using traditional research-oriented technology like workstations or HPC.   There are hundreds of services to choose from but we find many researchers will reach for the conceptually straightfoward path of creating cloud computers and install what they need.   Our goal for this fellowship is to provide context and background, and help you explore some of the so-called "cloud native" technologies like "serverless" systems that let you run your scripts without dealing with operating system installs. </p>
+<p>The target audience for most cloud companies are IT professional building IT systems for public or institutational use.  Let's call this the "Systems" perspective:</p>
+<ul>
+<li>built for someone else to use, e.g. a service</li>
+<li>must be available at scale and ultimately reliable</li>
+<li>documentation is in terms of historic IT systems house in on-premise corporate data centers </li>
+<li>"production" systems</li>
+<li>often very concerned with authentication and security</li>
+</ul>
+<p>The second audience are corporate software engineers, or dot-com or app software companies. We'll call this the "developer
+ perspective</p>
+<ul>
+<li>need to easily create systems to run their software for demonstration and testing </li>
+<li>complete interelate</li>
+<li>goal is a robust sytem that can handle many users, e.g. the performance of a "production" systems are often top of mind</li>
+</ul>
+<p>And finally most closely related to your work are data science, "machine learning" or an "analytical" perspective</p>
+<ul>
+<li>systems to achieve computation.  </li>
+<li>May work like our local HPC</li>
+<li>systems built only for small work groups, not for public </li>
+<li>can still scale </li>
+<li>but must be reproducible to document methods</li>
+<li>even this documentation can quickly veer off in to building production systems for companies to re-run inference say many times a data or with a constant stream of corporate data</li>
+</ul>
+<p>What is are the goals from research perspective for cloud computing?</p>
+<ul>
+<li>Custom: can create customized resources only when you need it</li>
+<li>On-demand: can run ad-hoc computations on those on-demand resources</li>
+<li>Reproducible: a computation can be re-run as needed, meaning cloud resources can be easily re-recreated to re-run your computations. </li>
+<li>Cost effective: unlike commerical applications, more users does not mean more revenue.   Budgets are fixed and the pay-as-you-go model requires vigilance to not over-spend.   </li>
+<li>Others? <!-- discussion --></li>
+</ul>
+<h4 id="what-documentation-is-available-for-researchers">What documentation <em>is</em> available for researchers?</h4>
+<p>There are general, conceptual introductions and dicussions for academics.   </p>
+<ul>
+<li><a href="https://cloud4scieng.org/">https://cloud4scieng.org/</a>  Book and website from Ian Foster and Gannon (U. Chicago), the text used for this fellowship. </li>
+<li><a href="https://cloudmaven.github.io/documentation/">https://cloudmaven.github.io/documentation/</a>  from the eScience institute of the University of Washington.   It doesn't appear to be maintained but may have some good resources.  Original github repositories are <a href="https://github.com/cloudmaven">https://github.com/cloudmaven</a></li>
+<li><a href="https://cloudbank-project.github.io/cb-resources/">https://cloudbank-project.github.io/cb-resources/</a>  Seems to be a succesor to the 'cloudmaven' documentation above as members from cloudmaven are contributing here. <ul>
+<li><a href="https://www.cloudbank.org/training/getting-started-using-cloud">Cloudbank training videos</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="nist-defintions-of-cloud-service-levels-and-you">NIST defintions of cloud: Service Levels and You</h4>
+<p>The <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">NIST definition of cloud computing</a> defines service models, but what does "X as a service" actually mean, and where are the lines drawn?   Like the species concept in biology, it's not always cut and dried, but can be thought of as a spectrum</p>
+<ul>
+<li>Infrastructure (aaS):  Nuts and bolts, DIY, Lego.  You need understanding of computing architecture as these services </li>
+<li>Everything in between:  Platforms or pre-configured and managed infrastructure</li>
+<li>Software (aaS): Little to no configuration is needed but these system may be programmable and integrated with other services.  E.g. Office 365, Google Drive</li>
+</ul>
+<p>The sweet-spot for researhces who do not have time to aquire the expertise to manage low-level infrastructure and need something more flexible and programmable than Software, are the platforms.  These are often more expensive than DIY infrastruture, but are faster to provision and provide security controls. </p>
+<h4 id="cloud-services-and-the-packaging-of-open-source-systems">Cloud "Services" and the Packaging of Open Source Systems</h4>
+<p>Case Study on Open Source system as Cloud service: **MySQL **</p>
+<p>Open source, free Relational database, e.g. SQL. Relational databases store tabular, linked data.   Used by some bioinformatics packages (e.g. <a href="https://orthomcl.org/orthomcl/app">https://orthomcl.org/orthomcl/app</a>) and millions of websites. </p>
+<ul>
+<li>project: <a href="https://www.mysql.com/products/community/">https://www.mysql.com/products/community/</a> and  <a href="https://mariadb.org/">https://mariadb.org/</a></li>
+<li>DIY on Azure instructions (eg Iaas): <a href="https://github.com/Huachao/azure-content/blob/master/articles/virtual-machines/virtual-machines-linux-install-mysql.md">someone's DIY Mysql</a> - don't follow these, they are old and may not work, just an example of the steps involved</li>
+<li>Azure MySQL Service (e.g PaaS): <a href="https://azure.microsoft.com/en-us/services/mysql/">Azure Database for MySQL</a> <ul>
+<li>AWS MySQL Service: <a href="https://aws.amazon.com/rds/mysql/">Amazon RDS for MySQL</a></li>
+<li>Google MySQL Service <a href="https://cloud.google.com/sql/">Cloud SQL</a> </li>
+</ul>
+</li>
+<li>
+<p>other companies, such as <a href="https://aiven.io/mysql">Aiven for MySQL</a></p>
+</li>
+<li>
+<p>Spin-offs: Amazon also offers <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html">AWS Aurora</a>  which is a cloud scale database service that is MySQL-compatible see <a href="https://dl.acm.org/doi/10.1145/3035918.3056101">Amazon Aurora Paper</a> </p>
+</li>
+</ul>
+<p>What would a "SaaS" offering for tabular data look like?  A "Google Docs" for Databases?  Perhaps <a href="https://www.airtable.com/">https://www.airtable.com/</a> ?</p>
+<h4 id="caveats-and-help">Caveats and help</h4>
+<p>As part of this fellowship, our goal is to help you translate documentation written for the systems and developer perspectives into a research perspective.  </p>
+<ul>
+<li>The cloud services themselves are always changing, even slightly, making technology-specific tutorials obsolete in months.  For example last year Azure had a "Notebook Service" for running Python notebooks, and now there is this  in place of the regular documentation: <a href="https://docs.microsoft.com/en-us/azure/notebooks/quickstart-export-jupyter-notebook-project">What happened to Azure Notebooks?</a></li>
+<li>There are new services and bundles created all the time that may be competing or superior choices for doing research</li>
+<li>If you are unsure, ask us.  See the <a href="../contact.md">contact page</a> or use our Teams channel.   During the Cloud Computing Fellowship we are here to provide some answers, context for what you are seeing, or possible directions to explore.  </li>
+<li>Cloud companies have help desks and many resources for anyone using their services or potential customers and we may be able to connect you with those. </li>
+</ul>
+<h2 id="the-interfaces-to-cloud">The Interfaces to Cloud</h2>
+<p>A defining aspect of cloud computing is that it's "on-demand" hence creation of resources must be automated or "scriptable."  All Cloud providers have various 'interfaces' to their services that include both programmatic and web-based.   We will talk about about how these in detail next sesion, but at the end of this session we will do a walk through of using the Azure portal, which is also an exercise for next session.  </p>
+<h2 id="using-workflow-and-computational-thinking">Using workflow and computational thinking</h2>
+<p>Karl Popper stated that "non-reproducible single occurrences are of no significance to science" ( <em>K Popper, "The Logic of Scientific Discovery", English translation from Routledge, London, 1992, p. 66.</em>) and this is a significant issue for research computing and one of much academic work. </p>
+<p>To enhance reproducibility in your own work, consider documenting all the steps needed for create the environment to run your computation.   For many on-premise academic systems (e.g. the MSU HPCC), we depend upon the system administrators to create that environment, but we may install and configure all the software we need to run our code.   Workflow thinking can apply to the scienfic domain itself (e.g. "Principles for data analysis workflows" <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008770">https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008770</a> )  and to the provisioning of the cloud computing environment.   That is, we may use a workflow system for creating all the cloud stuff we need, and then a different workflow system that runs on that cloud stuff.   One example is we may <a href="https://azure.microsoft.com/en-us/resources/templates/create-hpc-cluster/">create an HPC system on Azure using templates</a> and then launch the Slurm scheduler on that HPC to run our jobs.  (<em>note the complexity of running our own HPC is beyond the scope of this fellowship and used as an example only</em>)</p>
+<p>A major advantage to using workflows or code for provisioning your cloud computing components is that you can turn them off and delete them when you are done, and restart when needed.   This can dramatically save on costs  <!--  example for a gene network ML inference : a machine to run the ML would be $650/month, but if provisioned only when needed, it's 5 cents/job -->.   This does not necessarily have to be a complete programming system, but some combination of well written instructions and a collection of scripts so that your colleague (or yourself 6 months from now) can recreate everything you need.  </p>
+<h2 id="about-cloud-security">About Cloud Security</h2>
+<p>Security and Risk management is an important issue even for researchers who's data may not be sensitive or even open source.   Attackers  may use the services you create to launch attacks on other services, leaving you liable.  </p>
+<p>Finding a readable list of security recommendations for cloud computing is a challenge for all the reasons outlined above.  Our textbook has <a href="https://s3.us-east-2.amazonaws.com/a-book/security.html">a nice chaper outlining cloud security</a></p>
+<p>The "Shared responsibility" model for cloud computing takes a model of computing components, and shows how much of each component the user is responsible for security:</p>
+<p><img alt="Microsoft Model of Shared Responsibility" src="../../img/microsoft-shared-responsibility.svg" />
+<em><a href="https://docs.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility">Microsoft Model of Shared Responsibility for Cloud Computing</a></em></p>
+<p>We will come back to this model as we gain deeper understanding of research computing on the cloud.  </p>
+<h2 id="costs-and-budget-overview">Costs and Budget overview</h2>
+<p>We will cover the details of pricing, examine costs, and controlling costs in future sessions.   Each participant has a budget for their Azure resources that they should stay under.   If you need to use Google or AWS we need to make additional arrangements but your first step would be to acquire a free starter account with these companies (e.g. using a gmail address). </p>
+<p>Briefly: </p>
+<ul>
+<li>Costs are more than just dollars for services.  Consider <code>[Total Cost] = ( $ + Time + Risk )</code></li>
+<li><code>[Total Time] = ( development time + wait time + compute time )</code></li>
+<li>Risk is rarely non-significant.  Never say "I won't get hacked..."</li>
+<li>In the Service level spectrum, the higher level "platform" services may have higher monetary costs but often reduce time and risk</li>
+</ul>
+<h2 id="hpcc-vs-cloud">HPCC vs Cloud</h2>
+<p>Dr. Parvizi's white paper outlines the challenges of adapting HPC workflows to cloud computing.  </p>
+<p>The HPC is amazing effective at running all kinds of systems at very list cost, if any, to MSU researchers.  Many systems not designed for HPC can be adjusted to run in that environment.  However, just like many workflows are difficult to port from HPC to cloud, some cloud workflows are difficult run on HPC (but never say never):</p>
+<ul>
+<li>Big Data systems (see magpie project)</li>
+<li>Long-running Data Systems like database servers</li>
+<li>Web-based applications (see on-demand project)</li>
+<li>Containers (see singularity project)</li>
+</ul>
+<h2 id="acknowledging-bias-in-access-to-cloud-computing-across-research-cultures">Acknowledging bias in access to cloud computing across research cultures</h2>
+<h2 id="additional-comments-from-instructors-and-organizers">Additional comments from instructors and organizers</h2>
+<p>Summary and additional comments</p>
+<!-- summary: freely explore cloud services using the portal as there are often free-tiers; try the programming interfaces  at least once as this will make your work reproducible ; security is always a concern and consideration of cost ; look to the higher level services, even though more expensive may be faster to results and more secure -->
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+    
+  </body>
+</html>

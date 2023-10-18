@@ -1,0 +1,785 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>Exercise: Azure Portal Walk-through and Storage account creation - MSU Cloud Computing Fellowship</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercise-azure-portal-walk-through-and-storage-account-creation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MSU Cloud Computing Fellowship" class="md-header__button md-logo" aria-label="MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSU Cloud Computing Fellowship
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exercise: Azure Portal Walk-through and Storage account creation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MSU Cloud Computing Fellowship" class="md-nav__button md-logo" aria-label="MSU Cloud Computing Fellowship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MSU Cloud Computing Fellowship
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Sessions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sessions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · How does the cloud work?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_cloud_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Cloud Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_datasystems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Data Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_bigdata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Big Data and the cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_serverless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Serverless, Containers, and FaaS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../session_organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Cloud Services Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../miniproject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    · Mini-Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Fellowship Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud_glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Previous 21-22 syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orientation-to-the-azure-portal" class="md-nav__link">
+    Orientation to the Azure Portal
+  </a>
+  
+    <nav class="md-nav" aria-label="Orientation to the Azure Portal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bonus-what-can-you-do-here" class="md-nav__link">
+    Bonus: What can you do here?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-activity-creating-a-storage-account-with-the-azure-portal" class="md-nav__link">
+    Optional Activity: creating a "storage account" with the Azure portal
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional Activity: creating a "storage account" with the Azure portal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-storage-account-tutorial-step-by-step" class="md-nav__link">
+    creating a "storage account" tutorial step-by-step.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-portal-resource-pages" class="md-nav__link">
+    About Portal "Resource" Pages
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="exercise-azure-portal-walk-through-and-storage-account-creation">Exercise: Azure Portal Walk-through and Storage account creation</h1>
+<p><strong>MSU Cloud Computing Fellowship</strong> <img align="right" alt="From Marco Mons on Unsplash" src="../../img/marco-mons-kgcA52f8XbE-unsplash.jpg" /> </p>
+<h2 id="about">About</h2>
+<p>This is an exercise and introduction to the web interface to manage Microsoft Azure cloud services.   Prior to doing this exercise, please read  <a href="../azure_organization/">Azure Organization</a> For more background on how azure is structured.   </p>
+<p>For definition of terms used in this walkthrough , refer to our <a href="../../cloud_glossary/">Cloud Glossary</a> 
+including "<a href="../../cloud_glossary/#resource">resource</a>", "<a href="#">azure resource manager</a>" and "<a href="../../cloud_glossary/#resource_group">resource group</a>"  or our <a href="../references">list of cloud references</a> for introduction to cloud computing. </p>
+<p>For this activity we'll be using the web interface which Azure calls the "Portal" but that is only one of several ways to interface with Azure that we will learn about.   Many of the activities you can accomplish in the portal you can accomplish with the other (command line or code) interfaces. </p>
+<p>Azure's own overview of the Portal is here: <a href="https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-overview">https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-overview</a>  Please refer to that as well as this material.  </p>
+<p>There is a corresponding video that we've made that includes infrmation about the portal, and also creating a storage account.  </p>
+<h2 id="orientation-to-the-azure-portal">Orientation to the Azure Portal</h2>
+<p><a href="https://mediaspace.msu.edu/media/MSU+Cloud+FellowshipA+Introdcution+to+the+Azure+Portal+Web+Interface/1_8vo4141a">
+<img alt="Link to Video - Azure Portal Introduction" src="../../img/video_titles/azure_portal_video_title.jpg" />
+</a></p>
+<p>The link above is to a video that walks through the description and tutorial steps below, hosted on  MSU MediaSpace ( requires MSU Log-in).  Note this video also walks through creating a storage account.   </p>
+<p><img alt="Example Azure Portal Dashboard" src="../../img/example_portal_dashboard.png" />
+This assumes you have an Azure account and a valid subscription.   For the purposes of this introduction, we assume that your account currently does not have ability to create a new subscription, resource group, </p>
+<ol>
+<li>Log-in to <a href="https://portal.azure.com">https://portal.azure.com</a> with your MSU Netid.   <ol>
+<li>If you  are a current member of the fellowship and you have difficulty logging in, please <a href="../../contact/">contact us</a> right away. </li>
+</ol>
+</li>
+<li>orientation: dashboard view. 
+   Azure portal first presents a "dashboard" which is organized into panels that show some aspect of your cloud account.  You may alter the panels on this dashboard  to show you the services and aspects of azure that are most important to you.   For information on how to create customize your dashboard, see "<a href="https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards">Create a dashboard in the Azure portal</a>."    In the standard, default version of the dashboard the first panel is a list of resources.  If you have not created any resources yet you won't see anything.  We will explorer resources later in this introduction. <br />
+   The standard dashboard panes are a list of your current resources (which may be in multiple resource groups), an advertisement with a link to learn about some new Azure service, and more links to create things the Azure has decided are most important to you.   We will focus on the "All Resources Pane"
+   If you click on anything here you can almost always use the back button to get back to the dashboard, or use the menu (described below)</li>
+<li>Top Bar Menu: the top menu ( three horizontal bars) is are links to many of the things also on the main dashboard. The "home" view is not the same as the dashboard but is a list of links to things Azure guess you may want to create, and a list of all of your resources.   If you click "resource groups" in this list, you should see only one resource group (if any) unless you've been added to others or a different subscription. </li>
+<li>Search bar: in the middle of the top of the screen is white box in which you can type search terms include the kind of resource you want to see or create, or part of the name of specific resource you've created.    This is what I use to create and find resources most of the time (and rarely use the links provided), more on that later. </li>
+<li>
+<p>Shortcut buttons: the next few icons are short cuts to other functionality in the portal that we will cover in the future.  Most are not critical. </p>
+</li>
+<li>
+<p>A note about portal navigation:  When you click anything in the portal, it creates a new window without reloading the browser and with an <strong>X</strong> at the top right.  This mimics a "close window" function and You can use the X return to the dashboard, or you may simply use the menu and go to where you need to  </p>
+</li>
+</ol>
+<p>Notice that like most things there are 4-5 ways to get to anywhere.  </p>
+<h4 id="bonus-what-can-you-do-here">Bonus: What can you do here?</h4>
+<p>The primary purpose of using the portal and your resource group is to create things, and manage and monitor those things.   For the purpose of this activity - since you don't really have anything - we can simply look at the 'activity log' in the left side-panel near the top.<br />
+   - this opens a new table of columns Operation name, Status, Time, Time stamp, etc that is probably empty for you.<br />
+   - Tables of information like this in the portal have filters at the top.  The default activity is just for the previous 6 hours.   If you click on the Find that filter called "timespan" and select 1 week (or longer) you can see when I created the resource group and the budget.    </p>
+<p><img alt="screen shot filtering a table in azure" src="../azure_portal_activity_log_filter_screenshot.jpg" /></p>
+<h2 id="optional-activity-creating-a-storage-account-with-the-azure-portal">Optional Activity: creating a "storage account" with the Azure portal</h2>
+<p>If you would like to explore the azure portal by creating a new resources, then read on.    We have not talked about cloud storage, and you don't need to know about Cloud storage to complete this tutorial.  This is simply an exercise to see how to create something use the Azure portal, and cloud storage is a benign (and very inexpensive) resource to use an example.  </p>
+<p>Note that a "storage account" is not the same as "disk" you will see when you create a virtual machine.  We will discuss the difference in detail in the session on storage. </p>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>An Azure Account with valid subscription</li>
+<li>A Resource group</li>
+</ul>
+<p><em>All members of the current Cloud Computing Fellowship cohort have these things</em></p>
+<h3 id="creating-a-storage-account-tutorial-step-by-step">creating a "storage account" tutorial step-by-step.</h3>
+<ol>
+<li>Log-in to the Azure portal if you have not already:  <a href="https://portal.azure.com">https://portal.azure.com</a></li>
+<li>Click the menu (top left, three horizontal bars) to open it</li>
+<li>Select "home" from the menu - this ensures we all have the same view</li>
+<li>In the upper part of the screen is a list of "Azure Services" : click "create a resource" \
+   <i>Yes we could have click "storage accounts" instead but we want to demonstrate how to use the next screen...</i></li>
+<li>This "create a resource" screen is where you can create almost any service Azure offers, and additional services created by third-parties or companies that are not Microsoft.   When you are starting, ensure you are creating a service from Microsoft (we'll show you how in the next step)</li>
+<li>Note there are now two search bars: one at the top of the screen, and on a bit lower titled "Search services and marketplace" - use that second search bar</li>
+<li>in the lower search bar, type "Storage account"   Note that "storage" alone lists many other kinds of resources. </li>
+<li>You may see a list of several services, select (click) the first one labelled "Storage account" (icon looks like a green spreadsheet).   </li>
+<li>The description of the service will say the provider, which should be Microsoft, if not go back using the back button and search for storage account again. </li>
+<li>Click "create" under "Storage account"</li>
+<li>The azure resource creation screens mostly work like this:   there are so many settings Azure has split these up into groups which are listed horizontally across the top.   You may work though these by clicking each group, OR finish a screen, and click "Next.." button on the bottom of the form.   At any time you may click "Review and Create" and if you've missed some crucial setting, Azure will not let you create the resource without fixing it.  We will go page-by-page for these settings</li>
+<li>
+<p>Basics: </p>
+<ol>
+<li>Subscription: Cloud Computing Fellowship</li>
+<li>Resource Group: Select your resource group (you may only have the one) \
+    You may see a "create new" link below that but it may not work and for this tutorial we using an existing resource group</li>
+<li>
+<p>Storage Account Name:  </p>
+<ul>
+<li>some resources have restrictions on naming.  Next to storage account is an "i" in a circle that has more information.  For storage accounts, they must be unique in region, and only numbers and  lowercase letters are allowed.  I don't know if Non-US letters are allowed (e.g.箱)</li>
+<li>use your MSU ID (NetID) when you name things so help me keep track and also to help find a name that is unique.  So, replace "NETID" with your MSU NetID here:  "stNETIDccf22"   e.g. stbillspatccf22</li>
+<li>If you are repeating this tutorial, simply add a "2" or "B" e.g. "stbillspatccf22B"  We can delete these experiments later.  </li>
+</ul>
+</li>
+<li>
+<p>Region (Location):  You may leave US East.  Click in here to see the options.   In practice, pick the region that is closest to you or where your data will be moving to (e.g. North Central US for MSU) but there are other considerations. </p>
+</li>
+<li>select Performance: Standard</li>
+<li>Redundancy: change from GeoRedundant to "Locally Redundant" (LRS).  We won't see a difference, and LRS is cheaper \</li>
+<li>beneath that, leave the "make read access...." box checked. </li>
+<li>Click "next...Advanced"</li>
+<li>Advanced: Leave all of these settings as-is.  click 'next...'  </li>
+<li>Networking: leave all of these settings as-is for this tutorial. click 'next...'</li>
+<li>Data Protection: leave all as is.  These settings allow you to recover files up to 7 days after deleting or over-writing. click 'next...'</li>
+<li>Encryption: leave all as is.  click 'next...'</li>
+<li>Tags</li>
+<li>tags are optional but, eventually highly recommended.  For now you can leave them blank.  </li>
+<li>Review and create</li>
+<li>review gives you a chance to double check your settings before committing</li>
+<li>click "create"</li>
+<li>Deployment</li>
+<li>Azure calls the process of creating cloud resources a "deployment."   This term comes from the software engineering process of first "building" an application or utility (or "compiling" which is often not necessary for scripting languages like Python or R) and then moving that application onto the IT servers that make it available.  On your own computer you download software that is already "built" (e.g. MS Word) and installing it is a form of deployment.   </li>
+<li>Deployment takes a while as the Azure Resource Manager takes your order and runs the code to generate the cloud resource you've described. </li>
+<li>You may leave this page and the deployment will continue in the background.   </li>
+<li>finish and review</li>
+<li>When the deployment is complete, in the top bar of the Azure portal, You'll see a number badge on the  "Notification" icon indicating the number of messages you have (probably just 1 ).   Click on the Notifications icon to show this message.   </li>
+<li>the message should be something like: 
+        Deployment succeeded
+        Deployment 'resourcename_12345678901234' to resource group 'group name' was successful.</li>
+<li>"Go to Resource" button will open the Portal page with options for the resource</li>
+<li>"Pin to Dashboard" will create a  new tile that is a shortcut to this resource on your dashboard for easy access.   If you want to experiment with dashboard arranging then it's ok to click this and easy to remove later from your Portal Dashboard (it will be added to the bottom)</li>
+</ol>
+</li>
+<li>
+<p>Examine Resource (storage )
+    We have not talked about how storage works but the storage resource page is a good example to learn how the Portal is organized.  </p>
+<ol>
+<li>If you didn't already click "go to resource", open the top menu and click "home"</li>
+<li>the Portal "Home" has a list of "recent resources" and this should be at the top.  </li>
+<li>Click on this new cloud storage to view aa</li>
+</ol>
+</li>
+</ol>
+<h2 id="about-portal-resource-pages">About Portal "Resource" Pages</h2>
+<p>Most cloud resources in the portal have a list of categories on the left side, and pages for each category in the center.  The first page is the "Overview"  which has the resource group, subscription, and other info important for that resource.   this followed by the "Activity Log" showing how the resource has been used.   Each of the following items on the left side is a new page of additional options to alter how the resource is configured.  For example if you click the "tags" section you see the tags you added (if any) and can modify or add new tags. </p>
+<p>Some of the options are not available on the forms when you create the resource, or the names of the options on these resource pages do not match the forms when you created the resources.   In that case you may have to use two steps to configure the resource as you like, or better consider using a programmatic <a href="intro_to_cloud_interfaces.md">interface</a></p>
+<p>Again we did not discuss any of the characteristics of cloud storage or how to use it but you should now have enough familiarity with the azure portal to follow other tutorials to create and use storage or other resources.  </p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+    
+  </body>
+</html>

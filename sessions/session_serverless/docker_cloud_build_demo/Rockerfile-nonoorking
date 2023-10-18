@@ -1,9 +1,0 @@
-FROM rocker/rstudio:latest
-# add software to the underlying Linux needed for map making
-RUN apt-get update && apt-get -y install software-properties-common  && add-apt-repository ppa:ubuntugis/ppa 
-RUN apt-get -y update 
-RUN apt-get -y install  libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
-# add R packages for map making
-RUN R --vanilla -e 'install.packages(c("sf", "mapview", repos="http://cran.us.r-project.org")'
-
-
