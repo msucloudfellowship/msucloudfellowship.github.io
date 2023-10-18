@@ -1,4 +1,4 @@
-#  Special Session: Cloud Services Organization
+#  Special Session 7: Cloud Services Organization
 
 ![disorganized writing](http://www.itrw.net/wp-content/uploads/2016/06/server_spaghetti_1.jpg)
 

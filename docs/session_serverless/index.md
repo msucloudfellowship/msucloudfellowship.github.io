@@ -1,4 +1,4 @@
-# Session 7: Serverless, Containers, and FaaS
+# Session 6: Serverless, Containers, and FaaS
 
 ![example cloud architecture](img/geneplexus_cloud_diagram.png)
 *example real-world cloud application*

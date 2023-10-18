@@ -50,7 +50,7 @@ Michigan State University. East Lansing, MI 48824
     * Meeting **October 28**: Overview of Big Data on Azure with DataBricks
  6. [Serverless Cloud Computing](session_serverless)
     * Meeting **November 4**: Overview of Serverless and FaaS, Demonstration of Real-world project
- 7. Overview of Web Application Development in the cloud.   
+ 7. [Cloud Services Organization](session_organization)   
     * Meeting **November 18**: Details about the Project
  
  8. Synthesis: projects and development of project proposal
